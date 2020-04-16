@@ -10,10 +10,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
 import com.sugarmount.sugaralbum.ImageResData;
 import com.sugarmount.sugaralbum.R;
-import com.sugarmount.sugaralbum.test.SingerItem;
 
 public class GridViewer extends LinearLayout {
     ImageView ivImage;

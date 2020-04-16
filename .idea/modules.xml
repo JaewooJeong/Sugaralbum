@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SugarAlbum.iml" filepath="$PROJECT_DIR$/SugarAlbum.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SugarAlbum/app" />
+      <module fileurl="file://$PROJECT_DIR$/sugaralbum-SugarAlbum.iml" filepath="$PROJECT_DIR$/sugaralbum-SugarAlbum.iml" group="SugarAlbum" />
     </modules>
   </component>
 </project>

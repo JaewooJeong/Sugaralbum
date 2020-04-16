@@ -1,10 +1,14 @@
 package com.sugarmount.sugaralbum.test;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.BlendMode;
+import android.graphics.BlendModeColorFilter;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -12,12 +16,11 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageView;
 
-import com.sugarmount.sugaralbum.ImageList;
 import com.sugarmount.sugaralbum.ImageResData;
 import com.sugarmount.sugaralbum.R;
 import com.sugarmount.sugaralbum.gridView.GridViewer;
@@ -27,10 +30,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
     GridView ImgGridView;
-    gridAdapter gridAdapter;
+    GridAdapter gridAdapter;
     LoadMediaDataThread mLoadMediaDataThread;
+    ImageView mIv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +55,8 @@ public class MainActivity extends Activity {
         }
 
         ImgGridView = findViewById(R.id.ImgGridView);
-        gridAdapter = new gridAdapter();
+        ImgGridView.setOnItemClickListener(this);
+        gridAdapter = new GridAdapter();
 
         mLoadMediaDataThread = new LoadMediaDataThread();
         mLoadMediaDataThread.start();
@@ -71,7 +76,39 @@ public class MainActivity extends Activity {
 //        ImgGridView.setAdapter(gridAdapter);
     }
 
-    class gridAdapter extends BaseAdapter {
+    private void onSetColorFilter(ImageView iv, boolean b){
+        if(b) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                iv.setColorFilter(new BlendModeColorFilter(R.color.transparent_, BlendMode.DST_OUT));
+            } else {
+                iv.setColorFilter(R.color.transparent_, PorterDuff.Mode.DST_OUT);
+            }
+        }else{
+            if(iv != null)
+                iv.setColorFilter(null);
+        }
+
+
+
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+
+        // 이전 선택 cell filter 제외
+        onSetColorFilter(mIv, false);
+
+        ImageResData rowData = gridAdapter.getItem(position);
+        rowData.setChecked(!rowData.checked);
+
+        // cell 선택
+        mIv = arg1.findViewById(R.id.ivImage);
+        onSetColorFilter(mIv, true);
+
+        slog.e("onItemClick: %s, %s", rowData.getContentPath(), rowData.getContentUri().toString());
+    }
+
+    class GridAdapter extends BaseAdapter {
         ArrayList<ImageResData> items = new ArrayList<ImageResData>();
         @Override
         public int getCount() {
@@ -116,7 +153,6 @@ public class MainActivity extends Activity {
         private Comparator<ImageResData> mMediaListDateComparator = new Comparator<ImageResData>() {
             @Override
             public int compare(ImageResData lhs, ImageResData rhs) {
-                // TODO Auto-generated method stub
                 return lhs.date > rhs.date ? -1 : lhs.date < rhs.date ? 1 : 0;
             }
         };
@@ -136,9 +172,9 @@ public class MainActivity extends Activity {
 
         @Override
         public void run() {
-            // TODO Auto-generated method stub
             gridAdapter.getList().clear();
 
+            //xx debug
 //            ImageResData mediaData;
 //            for(int i=0; i<60; i++) {
 //                mediaData = new ImageResData();
@@ -173,6 +209,7 @@ public class MainActivity extends Activity {
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     public class DownloadImagesTask extends AsyncTask<String, Void, Void> {
 
         @Override
@@ -183,6 +220,9 @@ public class MainActivity extends Activity {
         @Override
         protected void onPostExecute(Void v) {
             ImgGridView.setAdapter(gridAdapter);
+            if(gridAdapter.getCount() > 0 ){
+                ImgGridView.setSelection(0);
+            }
         }
     }
 

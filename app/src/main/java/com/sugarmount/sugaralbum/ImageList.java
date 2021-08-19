@@ -34,6 +34,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public class ImageList extends Activity implements ListView.OnScrollListener, GridView.OnItemClickListener{
 
@@ -50,7 +51,7 @@ public class ImageList extends Activity implements ListView.OnScrollListener, Gr
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.image_list_view);
+        setContentView(R.layout.activity_main);
         mContext = this;
 
 //        ResInfo res = new ResInfo();
@@ -91,7 +92,7 @@ public class ImageList extends Activity implements ListView.OnScrollListener, Gr
                 ImageResData tmp = null;
                 for(int i=0; i < mMediaDataList.size(); i++){
                     tmp = mMediaDataList.get(i);
-                    if(tmp.isChecked() == true) {
+                    if(tmp.checked) {
                         itemData.add(tmp);
                     }
                 }
@@ -173,7 +174,7 @@ public class ImageList extends Activity implements ListView.OnScrollListener, Gr
                 convertView = mLiInflater.inflate(mCellLayout, parent, false);
                 ImageViewHolder holder = new ImageViewHolder();
                 holder.ivImage = convertView.findViewById(R.id.ivImage);
-                holder.chkImage = convertView.findViewById(R.id.chkImage);
+//                holder.chkImage = convertView.findViewById(R.id.chkImage);
                 convertView.setTag(holder);
             }else{
                 slog.e("123213123");
@@ -185,7 +186,7 @@ public class ImageList extends Activity implements ListView.OnScrollListener, Gr
                     holder.chkImage.setChecked(mMediaDataList.get(position).checked);
 
                     Picasso.get()
-                            .load(mMediaDataList.get(position).getContentUri())
+                            .load(mMediaDataList.get(position).contentUri)
                             //.load(mMediaDataList.get(position).getContentPath())
                             .resize(300, 300)
                             .centerCrop()
@@ -240,13 +241,7 @@ public class ImageList extends Activity implements ListView.OnScrollListener, Gr
             isCancelled = true;
         }
 
-        private Comparator<ImageResData> mMediaListDateComparator = new Comparator<ImageResData>() {
-            @Override
-            public int compare(ImageResData lhs, ImageResData rhs) {
-                // TODO Auto-generated method stub
-                return lhs.date > rhs.date ? -1 : lhs.date < rhs.date ? 1 : 0;
-            }
-        };
+        private Comparator<ImageResData> mMediaListDateComparator = (lhs, rhs) -> Long.compare(rhs.date, lhs.date);
 
         private Cursor getMediaCursor() {
             final String[] projection = {
@@ -280,7 +275,8 @@ public class ImageList extends Activity implements ListView.OnScrollListener, Gr
 
             Cursor mediaCursor = getMediaCursor();
             if (mediaCursor != null) {
-                while (mediaCursor.moveToNext()) {
+                mediaCursor.moveToLast();
+                while (mediaCursor.moveToPrevious()) {
                     if (isCancelled) {
                         break;
                     }
@@ -295,7 +291,8 @@ public class ImageList extends Activity implements ListView.OnScrollListener, Gr
                     mMediaDataList.add(mediaData);
                 }
             }
-            Collections.sort(mMediaDataList, mMediaListDateComparator);
+            // Collections.sort(mMediaDataList, mMediaListDateComparator);
+
             new DownloadImagesTask().execute();
         }
     }

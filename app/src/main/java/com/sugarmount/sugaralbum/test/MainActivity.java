@@ -34,25 +34,25 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     GridView ImgGridView;
     GridAdapter gridAdapter;
     LoadMediaDataThread mLoadMediaDataThread;
-    ImageView mIv;
+    ImageView mIv, imageView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                    != PackageManager.PERMISSION_GRANTED) {
-                // Should we show an explanation?
-                if (shouldShowRequestPermissionRationale(
-                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                    // Explain to the user why we need to read the contacts
-                }
-                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-                return;
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Should we show an explanation?
+            if (shouldShowRequestPermissionRationale(
+                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                // Explain to the user why we need to read the contacts
             }
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+            return;
         }
+
+        imageView1 = findViewById(R.id.imageView1);
 
         ImgGridView = findViewById(R.id.ImgGridView);
         ImgGridView.setOnItemClickListener(this);
@@ -76,20 +76,18 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 //        ImgGridView.setAdapter(gridAdapter);
     }
 
+    @SuppressLint("ResourceAsColor")
     private void onSetColorFilter(ImageView iv, boolean b){
         if(b) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                iv.setColorFilter(new BlendModeColorFilter(R.color.transparent_, BlendMode.DST_OUT));
+                iv.setColorFilter(new BlendModeColorFilter(R.color.transparent_, BlendMode.DST_IN));
             } else {
-                iv.setColorFilter(R.color.transparent_, PorterDuff.Mode.DST_OUT);
+                iv.setColorFilter(R.color.transparent_, PorterDuff.Mode.DST_IN);
             }
         }else{
             if(iv != null)
                 iv.setColorFilter(null);
         }
-
-
-
     }
 
     @Override
@@ -105,7 +103,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         mIv = arg1.findViewById(R.id.ivImage);
         onSetColorFilter(mIv, true);
 
-        slog.e("onItemClick: %s, %s", rowData.getContentPath(), rowData.getContentUri().toString());
+//        slog.e("onItemClick: %s, %s", rowData.getContentPath(), rowData.getContentUri().toString());
     }
 
     class GridAdapter extends BaseAdapter {
@@ -130,6 +128,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
         @Override
         public long getItemId(int i) {
+            imageView1.setImageURI(gridAdapter.getItem(i).contentUri);
             return i;
         }
 
@@ -150,12 +149,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
             isCancelled = true;
         }
 
-        private Comparator<ImageResData> mMediaListDateComparator = new Comparator<ImageResData>() {
-            @Override
-            public int compare(ImageResData lhs, ImageResData rhs) {
-                return lhs.date > rhs.date ? -1 : lhs.date < rhs.date ? 1 : 0;
-            }
-        };
+        private Comparator<ImageResData> mMediaListDateComparator = (lhs, rhs) -> Long.compare(rhs.date, lhs.date);
 
         private Cursor getMediaCursor() {
             final String[] projection = {
@@ -174,22 +168,10 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         public void run() {
             gridAdapter.getList().clear();
 
-            //xx debug
-//            ImageResData mediaData;
-//            for(int i=0; i<60; i++) {
-//                mediaData = new ImageResData();
-//                mediaData._id = (long) i;
-//                if(i%4 == 0){
-//                    mediaData.contentPath = "https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png";
-//                }else {
-//                    mediaData.contentPath = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png";
-//                }
-//                mMediaDataList.add(mediaData);
-//            }
-
             Cursor mediaCursor = getMediaCursor();
             if (mediaCursor != null) {
-                while (mediaCursor.moveToNext()) {
+                mediaCursor.moveToLast();
+                while (mediaCursor.moveToPrevious()) {
                     if (isCancelled) {
                         break;
                     }
@@ -199,12 +181,11 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
                             MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                             mediaData._id.toString());
 
-                    slog.e("id: %d, uri: %s", mediaData._id, mediaData.contentUri.toString());
+//                    slog.e("id: %d, uri: %s", mediaData._id, mediaData.contentUri.toString());
 
                     gridAdapter.addItem(mediaData);
                 }
             }
-            Collections.sort(gridAdapter.getList(), mMediaListDateComparator);
             new DownloadImagesTask().execute();
         }
     }
@@ -222,6 +203,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
             ImgGridView.setAdapter(gridAdapter);
             if(gridAdapter.getCount() > 0 ){
                 ImgGridView.setSelection(0);
+                imageView1.setImageURI(gridAdapter.getItem(0).contentUri);
             }
         }
     }

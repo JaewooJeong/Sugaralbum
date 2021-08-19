@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SugarAlbum.iml" filepath="$PROJECT_DIR$/SugarAlbum.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SugarAlbum/app" />
-      <module fileurl="file://$PROJECT_DIR$/sugaralbum-SugarAlbum.iml" filepath="$PROJECT_DIR$/sugaralbum-SugarAlbum.iml" group="SugarAlbum" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.iml" />
     </modules>
   </component>
 </project>

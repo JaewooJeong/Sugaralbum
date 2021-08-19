@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 import com.sugarmount.sugaralbum.ImageResData;
 import com.sugarmount.sugaralbum.R;
 
@@ -39,16 +40,10 @@ public class GridViewer extends LinearLayout {
     }
 
     public void setItem(ImageResData singerItem){
-//        Picasso.get()
-//                .load(singerItem.contentUri)
-//                //.load(singerItem.contentPath)
-//                .centerCrop()
-//                .into(ivImage);
-
         Glide.with(this)
                 .load(singerItem.contentUri)
                 .centerCrop()
-                .thumbnail(0.05f)
+                .thumbnail(0.1f)
                 .into(ivImage);
 
         chkImage.setChecked(singerItem.checked);

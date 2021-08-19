@@ -16,7 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.image_list_view.*
+import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -40,7 +40,7 @@ class ImageListV2: Activity(), AbsListView.OnScrollListener, AdapterView.OnItemC
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.image_list_view)
+        setContentView(R.layout.activity_main)
         mContext = this
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -73,7 +73,7 @@ class ImageListV2: Activity(), AbsListView.OnScrollListener, AdapterView.OnItemC
             var tmp: ImageResData? = null
             for (i in mMediaDataList.indices) {
                 tmp = mMediaDataList[i]
-                if (tmp.isChecked == true) {
+                if (tmp.checked) {
                     itemData.add(tmp)
                 }
             }
@@ -147,7 +147,7 @@ class ImageListV2: Activity(), AbsListView.OnScrollListener, AdapterView.OnItemC
                 convertView = mLiInflater.inflate(mCellLayout, parent, false)
                 val holder = ImageViewHolder()
                 holder.ivImage = convertView.findViewById(R.id.ivImage)
-                holder.chkImage = convertView.findViewById(R.id.chkImage)
+//                holder.chkImage = convertView.findViewById(R.id.chkImage)
                 convertView.tag = holder
             }
             if (!bScroll) {
@@ -159,7 +159,7 @@ class ImageListV2: Activity(), AbsListView.OnScrollListener, AdapterView.OnItemC
 //                    Bitmap bmp = BitmapFactory.decodeFile(mMediaDataList.get(position).contentPath, bo);
 //                    holder.ivImage.setImageBitmap(bmp);
                     Picasso.get()
-                        .load(mMediaDataList.get(position).getContentUri())
+                        .load(mMediaDataList[position].contentUri)
                         .resize(300, 300)
                         .centerCrop()
                         .into(holder.ivImage)

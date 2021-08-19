@@ -1,13 +1,13 @@
 package com.sugarmount.sugaralbum;
 
 import android.net.Uri;
-
-import java.io.Serializable;
+import lombok.Data;
 
 /**
  * Created by Jaewoo on 2017-02-16.
  */
-public class ImageResData implements Serializable {
+@Data
+public class ImageResData {
     public Long _id;	// cursor id
     public String contentPath;
     public long date;

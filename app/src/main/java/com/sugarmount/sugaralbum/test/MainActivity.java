@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BlendMode;
@@ -13,28 +14,37 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.kiwiple.multimedia.canvas.Resolution;
+import com.lguplus.pluscamera.api.MovieContentApi;
+import com.lguplus.pluscamera.story.gallery.ConstantsGallery;
+import com.lguplus.pluscamera.story.gallery.SelectManager;
+import com.lguplus.pluscamera.story.movie.MovieEditMainActivity;
 import com.sugarmount.sugaralbum.ImageResData;
 import com.sugarmount.sugaralbum.R;
 import com.sugarmount.sugaralbum.gridView.GridViewer;
 import com.sugarmount.sugaralbum.slog;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainActivity extends Activity implements AdapterView.OnItemClickListener {
     GridView ImgGridView;
     GridAdapter gridAdapter;
     LoadMediaDataThread mLoadMediaDataThread;
     ImageView mIv, imageView1;
+    Button mMovDiaryCreate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,19 +71,75 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         mLoadMediaDataThread = new LoadMediaDataThread();
         mLoadMediaDataThread.start();
 
-//        ImageResData mediaData;
-//        for(int i=0; i<1000; i++) {
-//            mediaData = new ImageResData();
-//            mediaData._id = (long) i;
-//            if(i%4 == 0){
-//                mediaData.contentPath = "https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png";
-//            }else {
-//                mediaData.contentPath = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png";
-//            }
-//            gridAdapter.addItem(mediaData);
-//        }
-//
-//        ImgGridView.setAdapter(gridAdapter);
+        mMovDiaryCreate = (Button)findViewById(R.id.gogo);
+        mMovDiaryCreate.setOnClickListener(view -> {
+            ArrayList<com.lguplus.pluscamera.ImageResData> itemData = new ArrayList<>();
+
+//            gridAdapter.getList().forEach(it -> {
+//                if(it.isChecked()) {
+//                    com.lguplus.pluscamera.ImageResData tmp = new com.lguplus.pluscamera.ImageResData();
+//                    tmp._id = it._id;
+//                    tmp.checked = it.checked;
+//                    tmp.date = it.date;
+//                    tmp.contentPath = it.contentPath;
+//                    tmp.isVideo = it.isVideo;
+//                    itemData.add(tmp);
+//                }
+//            });
+
+            for(int k=0; k<5; k++){
+                com.lguplus.pluscamera.ImageResData tmp = new com.lguplus.pluscamera.ImageResData();
+                ImageResData it = gridAdapter.getItem(k);
+                tmp._id = it._id;
+                tmp.checked = it.checked;
+                tmp.date = it.date;
+                tmp.contentPath = it.contentUri.toString();
+                tmp.isVideo = it.isVideo;
+                itemData.add(tmp);
+            }
+
+            MovieEditMainActivity.ERROR_HANDLER er = MovieContentApi.checkDataValidate(getApplicationContext(), itemData);
+
+            switch (er) {
+                case SUCCESS:
+                    slog.e("SUCCESS");
+                    Intent intent = new Intent(getApplicationContext(), MovieEditMainActivity.class);
+                    intent.putExtra(SelectManager.SELECTED_VIDEOS, MovieContentApi.videoData);
+                    intent.putExtra(SelectManager.SELECTED_IMAGES, MovieContentApi.photoData);
+                    intent.putExtra(SelectManager.SELECTED_RESOLUTION, Resolution.NHD);
+                    intent.putExtra(SelectManager.OUTPUT_DIR,
+                            String.format("%s/%s", getApplicationContext().getExternalMediaDirs()[0].getPath(), getString(R.string.app_name)));
+                    startActivityForResult(intent, ConstantsGallery.REQ_CODE_CONTENT_DETAIL);
+                    break;
+                case UNKNOWN_ERROR:
+                    slog.e("UNKNOWN_ERROR");
+                    break;
+                case ITEM_COUNT:
+                    slog.e("ITEM_COUNT");
+                    break;
+                case VIDEO_COUNT:
+                    slog.e("VIDEO_COUNT");
+                    break;
+                case IMAGE_COUNT:
+                    slog.e("IMAGE_COUNT");
+                    break;
+                case VIDEO_MAX_DURATION:
+                    slog.e("VIDEO_MAX_DURATION");
+                    break;
+                case VIDEO_MIN_DURATION:
+                    slog.e("VIDEO_MIN_DURATION");
+                    break;
+                case NOT_FOUND:
+                    slog.e("NOT_FOUND");
+                    break;
+                case CODEC_ERROR:
+                    slog.e("CODEC_ERROR");
+                    break;
+                default:
+                    break;
+            }
+        });
+
     }
 
     @SuppressLint("ResourceAsColor")
@@ -107,7 +173,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     }
 
     class GridAdapter extends BaseAdapter {
-        ArrayList<ImageResData> items = new ArrayList<ImageResData>();
+        ArrayList<ImageResData> items = new ArrayList<>();
         @Override
         public int getCount() {
             return items.size();
@@ -154,7 +220,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         private Cursor getMediaCursor() {
             final String[] projection = {
                     MediaStore.Files.FileColumns._ID,
-                    MediaStore.Images.Media.DISPLAY_NAME};
+                    MediaStore.Images.Media.DISPLAY_NAME
+            };
 
             return getContentResolver().query(
                     MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
@@ -185,6 +252,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
 
                     gridAdapter.addItem(mediaData);
                 }
+                mediaCursor.close();
             }
             new DownloadImagesTask().execute();
         }
@@ -208,4 +276,54 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        try {
+            if (data != null) {
+                MovieEditMainActivity.ERROR_HANDLER er = (MovieEditMainActivity.ERROR_HANDLER) data.getSerializableExtra(SelectManager.ERROR_CODE);
+
+                switch (er) {
+                    case SUCCESS:
+                        String file_uri = (String) data.getSerializableExtra(SelectManager.FILE_URI);
+                        slog.e("SUCCESS: " + file_uri);
+                        
+                        break;
+                    case UNKNOWN_ERROR:
+                        slog.e("UNKNOWN_ERROR");
+                        break;
+                    case ITEM_COUNT:
+                        slog.e("ITEM_COUNT");
+                        break;
+                    case VIDEO_COUNT:
+                        slog.e("VIDEO_COUNT");
+                        break;
+                    case IMAGE_COUNT:
+                        slog.e("IMAGE_COUNT");
+                        break;
+                    case VIDEO_MAX_DURATION:
+                        slog.e("VIDEO_MAX_DURATION");
+                        break;
+                    case VIDEO_MIN_DURATION:
+                        slog.e("VIDEO_MIN_DURATION");
+                        break;
+                    case NOT_FOUND:
+                        slog.e("NOT_FOUND");
+                        break;
+                    case CODEC_ERROR:
+                        slog.e("CODEC_ERROR");
+                        break;
+                    default:
+                        slog.e("??");
+                        break;
+                }
+//                new test_v2().execute();
+            }
+        }catch(Exception e){
+            slog.e("############### ex:" + e);
+        }
+
+
+    }
 }

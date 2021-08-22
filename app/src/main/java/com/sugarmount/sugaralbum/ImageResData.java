@@ -4,12 +4,11 @@ import android.net.Uri;
 import lombok.Data;
 
 /**
- * Created by Jaewoo on 2017-02-16.
+ * Created by Jaewoo on 2021-08-30.
  */
 @Data
 public class ImageResData {
     public Long _id;	// cursor id
-    public String contentPath;
     public long date;
     public boolean isVideo;
     public boolean checked;
@@ -21,14 +20,6 @@ public class ImageResData {
 
     public void set_id(Long _id) {
         this._id = _id;
-    }
-
-    public String getContentPath() {
-        return contentPath;
-    }
-
-    public void setContentPath(String contentPath) {
-        this.contentPath = contentPath;
     }
 
     public long getDate() {

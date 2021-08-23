@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">SugarAlbum</string>
+    <string name="title_text">SugarAlbum</string>
+    <string name="tab_menu_vr">SugarAlbum</string>
+    <string name="app_title">Create your own video.</string>
+
+    <!-- Clip details -->
+    <string name="string_clip_wrong">wrong</string>
+    <string name="string_clip_words">words</string>
+    <string name="string_clip_characters">characters</string>
+    <string name="string_clip_sentences">sentences</string>
+    <string name="string_clip_whitespaces">whitespaces</string>
+    <string name="string_clip_share">share</string>
+
+    <!-- Login -->
+    <string name="string_login_kakao">Kakao sign in</string>
+    <string name="string_login_line">Line sign in</string>
+    <string name="string_login_facebook">Facebook sign in</string>
+    <string name="string_login_social">Social Login</string>
+    <string name="string_login_sorry">Coming soon.</string>
+    <string name="string_login_already">Already logged in.</string>
+
+    <!-- Clip app -->
+    <string name="string_clip_app">Save Clip</string>
+
+    <!-- Menu -->
+    <string name="string_menu_test_account">sugarmount21@gmail.com</string>
+    <string name="string_menu_account">Sign in</string>
+    <string name="string_menu_select_share">Select share</string>
+    <string name="string_menu_logout">Logout</string>
+    <string name="string_menu_history">Search activity</string>
+    <string name="string_menu_collection">Collections</string>
+    <string name="string_menu_export_settings">Export social settings</string>
+    <string name="string_menu_backup_restore">Backup/Restore</string>
+    <string name="string_menu_notice">Notice</string>
+    <string name="string_menu_faq">FAQ</string>
+    <string name="string_menu_open_source_license">Open source license</string>
+
+    <!-- Popup go update -->
+    <string name="string_gp_update">Update</string>
+
+    <!-- Common use -->
+    <string name="string_time_seconds">seconds</string>
+    <string name="string_time_minutes">minutes</string>
+    <string name="string_time_hours">hours</string>
+    <string name="string_time_days">days</string>
+    <string name="string_time_months">months</string>
+    <string name="string_time_years">years</string>
+
+    <string name="string_time_second">second</string>
+    <string name="string_time_minute">minute</string>
+    <string name="string_time_hour">hour</string>
+    <string name="string_time_day">day</string>
+    <string name="string_time_month">month</string>
+    <string name="string_time_year">year</string>
+
+    <string name="string_time_ago">ago</string>
+
+    <!-- Common message -->
+    <string name="string_common_permission_description1">The following permissions are required\nwhen using SugarAlbum.</string>
+    <string name="string_common_permission_description2">Media / File Permissions</string>
+    <string name="string_common_permission_description3">You need permission to access storage to save and files on your device.</string>
+    <string name="string_common_permission_description4">You need permission to use SugarAlbum.</string>
+    <string name="string_common_original">Input</string>
+    <string name="string_common_output">Result</string>
+    <string name="string_common_origin_hint">Enter the word or sentence you want to check Korean spelling.</string>
+    <string name="string_common_google">Play Store</string>
+    <string name="string_common_pause">pause</string>
+    <string name="string_common_start">start</string>
+    <string name="string_common_exit">exit</string>
+    <string name="string_common_ok">confirm</string>
+    <string name="string_common_close">close</string>
+    <string name="string_common_next">next</string>
+    <string name="string_common_send">send</string>
+    <string name="string_common_remove">remove all</string>
+    <string name="string_common_cancel">cancel</string>
+    <string name="string_common_edit">edit</string>
+    <string name="string_common_copy">copy</string>
+    <string name="string_common_retry">retry</string>
+    <string name="string_common_select_result">SEARCH RESULTS</string>
+    <string name="string_common_leave">Leave</string>
+    <string name="string_common_delete_clip">Are you sure you want to delete the clip?</string>
+    <string name="string_common_search_text">Search</string>
+    <string name="string_common_back_button">\'back\' Press the button again to exit the app.</string>
+    <string name="string_common_offline">Offline</string>
+    <string name="string_common_video_check">Sorry about that.</string>
+    <string name="string_common_error_handler_network">Please check your network connection. (##code)</string>
+    <string name="string_common_error_network">Network not found</string>
+    <string name="string_common_download_check">There is content being downloaded. If you proceed, the download will end. Do you want to continue?</string>
+    <string name="string_common_version_title">Update Notice</string>
+    <string name="string_common_version_alarm_description1">A new version has been released!\nPlease update!</string>
+    <string name="string_common_version_alarm_description2">If the update does not proceed, the app will not work properly.</string>
+    <string name="string_common_go_update">update</string>
+    <string name="string_common_clipboard_copy">Copied to clipboard</string>
+    <string name="string_common_error_retry">An error has occurred. Please try again.</string>
+
+</resources>
+

@@ -1,8 +1,9 @@
-apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
 
 android {
     compileSdkVersion 30
@@ -17,8 +18,30 @@ android {
     }
     buildTypes {
         release {
+            debuggable false
+            zipAlignEnabled true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            proguardFile 'proguard-common.pro'
+            proguardFile 'proguard-firebase.pro'
+            proguardFile 'proguard-okhttp3.pro'
+            proguardFile 'proguard-kakao.pro'
+            proguardFile 'proguard-glide.pro'
+
+            resValue "string", "app_version", "VERSION "+"${defaultConfig.versionName}"
+        }
+
+        debug {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            proguardFile 'proguard-common.pro'
+            proguardFile 'proguard-firebase.pro'
+            proguardFile 'proguard-okhttp3.pro'
+            proguardFile 'proguard-kakao.pro'
+            proguardFile 'proguard-glide.pro'
+
+            resValue "string", "app_version", "VERSION "+"${defaultConfig.versionName}"
         }
     }
 
@@ -38,6 +61,10 @@ android {
             abiFilters 'armeabi-v7a', 'x86', 'armeabi'
         }
     }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 repositories {
@@ -51,6 +78,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.5.0-alpha02'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -58,20 +86,44 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    // room
+    implementation 'androidx.room:room-runtime:2.3.0'
+    kapt 'androidx.room:room-compiler:2.3.0'
+    implementation 'androidx.room:room-rxjava2:2.3.0'
+
+    // firebase
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    // Declare the dependencies for the Remote Config and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    // https://square.github.io/okhttp/
+    implementation 'com.squareup.okhttp3:okhttp:3.14.7'
 
     // https://square.github.io/picasso/
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     // https://github.com/bumptech/glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     // https://projectlombok.org/setup/gradle
-    compileOnly 'org.projectlombok:lombok:1.18.20'
+    compileOnly "org.projectlombok:lombok:1.18.20"
     annotationProcessor "org.projectlombok:lombok:1.18.20"
 
-    implementation files('libs/json-simple-1.1.1.jar')
+    // https://github.com/airbnb/lottie-android
+    implementation 'com.airbnb.android:lottie:3.4.0'
 
+    implementation files('libs/json-simple-1.1.1.jar')
     implementation 'com.cluver.mediaframework:videoEngine-v2r@aar'
     implementation 'com.cluver.imageframework:imageFrameworkLibrary-v2r@aar'
     implementation 'com.cluver.multimedia:multimediaFramework-v2r@aar'
@@ -81,3 +133,5 @@ dependencies {
 //    implementation 'com.lguplus.pluscamera:cozycamera-v2d@aar'
 
 }
+
+apply plugin: 'com.google.gms.google-services'

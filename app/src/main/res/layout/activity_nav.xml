@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/main4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- 로고 -->
+            <RelativeLayout
+                android:id="@+id/temp2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_icon_size">
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:src="@drawable/ic_logo_g" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="@dimen/default_icon_size"
+                    android:layout_height="@dimen/default_icon_size"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:src="@drawable/ic_btn_close"
+                    app:tint="@color/main1" />
+            </RelativeLayout>
+
+            <!-- 설정 -->
+            <RelativeLayout
+                android:id="@+id/temp1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/temp2"
+                android:layout_marginTop="@dimen/margin_8">
+
+
+                <com.sugarmount.common.utils.CustomScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <View
+                            android:id="@+id/viewLine1"
+                            style="@style/ViewStyle_Line2"
+                            android:visibility="gone" />
+
+                        <!-- 활동 -->
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout4"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/viewLine1"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:id="@+id/relativeLayout4_1"
+                                style="@style/RelativeLayout_Ripple2">
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    style="@style/ImageView_Style1"
+                                    android:src="@drawable/ic_history" />
+
+                                <TextView
+                                    android:id="@+id/temp4"
+                                    style="@style/TextView_Style1"
+                                    android:layout_toEndOf="@+id/imageView4"
+                                    android:text="@string/string_menu_history" />
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <!-- 컬렉션 -->
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout5"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/relativeLayout4"
+                            android:visibility="gone">
+
+                            <RelativeLayout style="@style/RelativeLayout_Ripple2">
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    style="@style/ImageView_Style1"
+                                    android:src="@drawable/ic_bookmarks" />
+
+                                <TextView
+                                    android:id="@+id/temp5"
+                                    style="@style/TextView_Style1"
+                                    android:layout_toEndOf="@+id/imageView5"
+                                    android:text="@string/string_menu_collection" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewLine2"
+                            style="@style/ViewStyle_Line2"
+                            android:layout_below="@+id/relativeLayout5"
+                            android:visibility="gone" />
+
+                        <!-- 소셜 보내기 설정 -->
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout6"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/viewLine2"
+                            android:visibility="gone">
+
+                            <RelativeLayout style="@style/RelativeLayout_Ripple2">
+
+                                <ImageView
+                                    android:id="@+id/imageView6"
+                                    style="@style/ImageView_Style1"
+                                    android:src="@drawable/ic_save" />
+
+                                <TextView
+                                    android:id="@+id/temp6"
+                                    style="@style/TextView_Style1"
+                                    android:layout_toEndOf="@+id/imageView6"
+                                    android:text="@string/string_menu_export_settings" />
+
+                                <androidx.appcompat.widget.SwitchCompat
+                                    android:id="@+id/switch1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/margin_8"
+                                    android:checked="true"
+                                    android:theme="@style/SwitchStyle" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <!-- 백업/복구 -->
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout7"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/relativeLayout6"
+                            android:visibility="gone">
+
+                            <RelativeLayout style="@style/RelativeLayout_Ripple2">
+
+                                <ImageView
+                                    android:id="@+id/imageView7"
+                                    style="@style/ImageView_Style1"
+                                    android:src="@drawable/ic_cloud_upload" />
+
+                                <TextView
+                                    android:id="@+id/temp7"
+                                    style="@style/TextView_Style1"
+                                    android:layout_toEndOf="@+id/imageView7"
+                                    android:text="@string/string_menu_backup_restore" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewLine3"
+                            style="@style/ViewStyle_Line2"
+                            android:layout_below="@+id/relativeLayout7" />
+
+                        <!-- 공지사항 -->
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout8"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/viewLine3">
+
+                            <RelativeLayout style="@style/RelativeLayout_Ripple2">
+
+                                <ImageView
+                                    android:id="@+id/imageView8"
+                                    style="@style/ImageView_Style1"
+                                    android:src="@drawable/ic_assignment" />
+
+                                <TextView
+                                    android:id="@+id/temp8"
+                                    style="@style/TextView_Style1"
+                                    android:layout_toEndOf="@+id/imageView8"
+                                    android:text="@string/string_menu_notice" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <!-- FAQ -->
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout9"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/relativeLayout8">
+
+                            <RelativeLayout style="@style/RelativeLayout_Ripple2">
+
+                                <ImageView
+                                    android:id="@+id/imageView9"
+                                    style="@style/ImageView_Style1"
+                                    android:src="@drawable/ic_library_books" />
+
+                                <TextView
+                                    android:id="@+id/temp9"
+                                    style="@style/TextView_Style1"
+                                    android:layout_toEndOf="@+id/imageView9"
+                                    android:text="@string/string_menu_faq" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <!-- 오픈 소스 -->
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout10"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/relativeLayout9">
+
+                            <RelativeLayout style="@style/RelativeLayout_Ripple2">
+
+                                <ImageView
+                                    android:id="@+id/imageView10"
+                                    style="@style/ImageView_Style1"
+                                    android:src="@drawable/ic_library_add" />
+
+                                <TextView
+                                    android:id="@+id/temp10"
+                                    style="@style/TextView_Style1"
+                                    android:layout_toEndOf="@+id/imageView10"
+                                    android:text="@string/string_menu_open_source_license" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewLine4"
+                            style="@style/ViewStyle_Line2"
+                            android:layout_below="@+id/relativeLayout10" />
+
+                        <RelativeLayout
+                            android:id="@+id/relativeLayout11"
+                            style="@style/RelativeLayout_Ripple1"
+                            android:layout_below="@+id/viewLine4"
+                            android:layout_marginStart="0dp">
+
+                            <TextView
+                                android:id="@+id/temp11"
+                                style="@style/TextView_Style1"
+                                android:layout_width="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="@dimen/margin_16"
+                                android:text="@string/app_version"
+                                android:textSize="@dimen/default_font_size_12" />
+
+                            <TextView
+                                android:id="@+id/temp12"
+                                android:layout_width="wrap_content"
+                                style="@style/TextView_Style1"
+                                android:layout_toEndOf="@+id/temp11"
+                                android:layout_marginStart="@dimen/margin_2"
+                                android:textSize="@dimen/default_font_size_12" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/viewLine5"
+                            style="@style/ViewStyle_Line2"
+                            android:layout_below="@+id/relativeLayout11" />
+
+
+                    </RelativeLayout>
+
+                </com.sugarmount.common.utils.CustomScrollView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

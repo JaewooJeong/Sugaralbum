@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ActivityIntro"
+    android:background="@color/main1">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_title_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/imageView1"
+        android:layout_marginTop="60dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"/>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/default_font_size_38"
+        android:textStyle="bold"
+        android:text="@string/app_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logo_w"
+            android:scaleX="0.4"
+            android:scaleY="0.4"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

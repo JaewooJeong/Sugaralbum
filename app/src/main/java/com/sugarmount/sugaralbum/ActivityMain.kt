@@ -160,11 +160,9 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener,
             }
         }
 
-//        selectImage.scaleType = ImageView.ScaleType.MATRIX
-//        TouchImageView(selectImage)
-
         selectImage.setOnTouchListener(selectImage.onTouch)
-        selectImage.scaleType = ImageView.ScaleType.MATRIX
+//        selectImage.scaleType = ImageView.ScaleType.MATRIX
+        selectRestore.setOnClickListener(this)
     }
 
     private fun showToast(id: Int){
@@ -385,6 +383,9 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener,
                 }
                 intent.putExtra(EXTRA_INFO_TYPE, infoType.rc)
                 startActivity(intent)
+            }
+            selectRestore -> {
+                selectImage.restore()
             }
         }
     }

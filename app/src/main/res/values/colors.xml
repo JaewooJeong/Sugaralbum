@@ -12,7 +12,9 @@
     <color name="vr_transparent_30">#4D000000</color>
     <color name="vr_transparent_40">#66000000</color>
     <color name="vr_transparent_60">#99000000</color>
+    <color name="vr_transparent_80">#991b1b1b</color>
     <color name="transparent">#99000000</color>
+
 
     <!-- main (material color tool Blue 700)-->
     <color name="main1">#3f74ff</color>

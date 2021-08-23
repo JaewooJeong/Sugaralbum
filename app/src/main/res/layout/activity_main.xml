@@ -45,14 +45,15 @@
 		<RelativeLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:background="@color/font1"
+			android:background="@color/font3"
 			android:layout_weight="1.5">
 
 			<com.sugarmount.common.view.TouchImageView
-				android:layout_alignParentTop="true"
 				android:id="@+id/selectImage"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
+				android:layout_alignParentTop="true"
+				android:src="@drawable/ic_logo_w"
 				android:scaleType="centerCrop" />
 
 			<View
@@ -60,6 +61,21 @@
 				android:layout_width="match_parent"
 				android:layout_height="1dp"
 				android:background="@color/black"/>
+
+			<ImageView
+				android:id="@+id/selectRestore"
+				android:layout_width="@dimen/default_icon_size"
+				android:layout_height="@dimen/default_icon_size"
+				android:layout_margin="@dimen/margin_8"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentStart="true"
+				android:scaleX="0.8"
+				android:scaleY="0.8"
+				android:paddingBottom="@dimen/margin_8"
+				android:paddingTop="@dimen/margin_8"
+				android:paddingEnd="@dimen/margin_2"
+				android:background="@drawable/circle_restore"
+				android:src="@drawable/ic_round_restore_24"/>
 
 		</RelativeLayout>
 

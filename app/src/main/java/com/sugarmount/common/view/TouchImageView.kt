@@ -6,8 +6,11 @@ import android.graphics.Matrix
 import android.graphics.PointF
 import android.util.AttributeSet
 import android.view.MotionEvent
+import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
 import com.sugarmount.common.utils.log
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import java.lang.Math.sqrt
 import kotlin.math.atan2
 
@@ -35,8 +38,10 @@ class TouchImageView @JvmOverloads constructor(
     }
 
     private fun downSingleEvent(event: MotionEvent) {
+        matrixx = this.imageMatrix
         savedMatrix!!.set(matrixx)
         startPoint = PointF(event.x, event.y)
+        log.e("downSingleEvent:%f, %f", startPoint!!.x, startPoint!!.y)
     }
 
     private fun downMultiEvent(event: MotionEvent) {
@@ -67,6 +72,9 @@ class TouchImageView @JvmOverloads constructor(
         matrixx!!.set(savedMatrix)
         matrixx!!.postTranslate(event.x - startPoint!!.x, event.y - startPoint!!.y)
         this.imageMatrix = matrixx
+
+        log.e("moveSingleEvent#1:%f, %f", event.x, event.y)
+        log.e("moveSingleEvent#2:%f, %f", event.x - startPoint!!.x, event.y - startPoint!!.y)
     }
 
     private fun moveMultiEvent(event: MotionEvent) {
@@ -85,9 +93,26 @@ class TouchImageView @JvmOverloads constructor(
         }
     }
 
+    fun restore() {
+        matrixx = Matrix()
+        savedMatrix = Matrix()
+        startPoint = PointF()
+        midPoint = PointF()
+        oldDistance = 0f
+        oldDegree = 0.0
+        selectImage.scaleType = ScaleType.CENTER_CROP
+        selectImage.invalidate()
+    }
+
+    fun startRotate() {
+        selectImage.scaleType = ScaleType.MATRIX
+        selectImage.invalidate()
+    }
+
     @SuppressLint("ClickableViewAccessibility")
-    public val onTouch = OnTouchListener { v, event ->
+    val onTouch = OnTouchListener { v, event ->
         if (v == this) {
+            startRotate()
             val action = event.action
             when (action and MotionEvent.ACTION_MASK) {
                 MotionEvent.ACTION_DOWN -> {

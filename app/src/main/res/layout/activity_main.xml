@@ -46,14 +46,13 @@
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:background="@color/font3"
-			android:layout_weight="1.5">
+			android:layout_weight="1.8">
 
 			<com.sugarmount.common.view.TouchImageView
 				android:id="@+id/selectImage"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_alignParentTop="true"
-				android:src="@drawable/ic_logo_w"
 				android:scaleType="centerCrop" />
 
 			<View
@@ -84,7 +83,7 @@
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:layout_weight="2.5">
+			android:layout_weight="2.2">
 			<GridView
 				android:id="@+id/ImgGridView"
 				android:layout_width="match_parent"

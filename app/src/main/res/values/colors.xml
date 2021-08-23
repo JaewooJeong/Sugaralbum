@@ -46,6 +46,7 @@
     <color name="blue" type="color">#1565C0</color>
     <color name="barcode" type="color">#616161</color>
     <color name="test" type="color">#3c3c3c</color>
+    <color name="white_30">#4DFFFFFF</color>
 
     <color name="holo_blue_bright">#ff00ddff</color>
     <color name="holo_green_light">#ff99cc00</color>

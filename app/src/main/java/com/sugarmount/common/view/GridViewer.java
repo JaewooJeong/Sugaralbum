@@ -41,7 +41,6 @@ public class GridViewer extends LinearLayout {
     public void setItem(ImageResData singerItem){
         Glide.with(this)
                 .load(singerItem.contentUri)
-                .centerCrop()
                 .thumbnail(0.1f)
                 .into(ivImage);
 

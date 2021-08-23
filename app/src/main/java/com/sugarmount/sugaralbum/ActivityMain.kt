@@ -1,5 +1,6 @@
 package com.sugarmount.sugaralbum
 
+import android.R.attr
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.content.Intent
@@ -43,6 +44,20 @@ import android.graphics.PointF
 import com.sugarmount.common.view.TouchImageView
 import kotlin.math.atan2
 import kotlin.math.sqrt
+import android.R.attr.thumbnail
+
+import android.graphics.BitmapFactory
+import android.R.attr.bitmap
+
+import android.media.ThumbnailUtils
+
+import android.graphics.Bitmap
+
+
+
+
+
+
 
 
 class ActivityMain : CustomAppCompatActivity(), View.OnClickListener,
@@ -286,6 +301,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener,
                     null
                 )
             }
+
 
         override fun run() {
             gridAdapter?.list?.clear()

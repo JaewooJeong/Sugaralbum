@@ -170,7 +170,7 @@ public class ImageListTest extends Activity implements ListView.OnScrollListener
             if (convertView == null){
                 convertView = mLiInflater.inflate(mCellLayout, parent, false);
                 ImageViewHolder holder = new ImageViewHolder();
-                holder.ivImage = convertView.findViewById(R.id.ivImage);
+                holder.ivImage = convertView.findViewById(R.id.thumbnail_iv);
 //                holder.chkImage = convertView.findViewById(R.id.chkImage);
                 convertView.setTag(holder);
             }else{

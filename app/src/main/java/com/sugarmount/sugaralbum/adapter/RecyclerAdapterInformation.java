@@ -42,6 +42,7 @@ public class RecyclerAdapterInformation extends RecyclerView.Adapter<RecyclerVie
         final InfoT item = mItemList.get(position);
         final RecyclerItemViewHolder holder = (RecyclerItemViewHolder) viewHolder;
 
+
         //Utils.setAnimation(holder.itemView);
 
         holder.itemTextView1.setText(item.getTitle());

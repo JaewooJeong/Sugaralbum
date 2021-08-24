@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_main.view.*
 import java.lang.Math.sqrt
 import kotlin.math.atan2
 
-
 class TouchImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : AppCompatImageView(context, attrs) {
@@ -32,9 +31,9 @@ class TouchImageView @JvmOverloads constructor(
     }
 
     internal enum class TOUCH_MODE {
-        NONE,  // 터치 안했을 때
-        SINGLE,  // 한손가락 터치
-        MULTI //두손가락 터치
+        NONE,
+        SINGLE,
+        MULTI
     }
 
     private fun downSingleEvent(event: MotionEvent) {
@@ -104,7 +103,7 @@ class TouchImageView @JvmOverloads constructor(
         selectImage.invalidate()
     }
 
-    fun startRotate() {
+    private fun startRotate() {
         selectImage.scaleType = ScaleType.MATRIX
         selectImage.invalidate()
     }

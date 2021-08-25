@@ -139,13 +139,3 @@ class ImageAdapter(
 
     fun getItemList(): List<ImageResData> = items
 }
-
-object ImageDiffCallback : DiffUtil.ItemCallback<ImageResData>() {
-    override fun areItemsTheSame(oldItem: ImageResData, newItem: ImageResData): Boolean {
-        return oldItem == newItem
-    }
-
-    override fun areContentsTheSame(oldItem: ImageResData, newItem: ImageResData): Boolean {
-        return oldItem._id == newItem._id
-    }
-}

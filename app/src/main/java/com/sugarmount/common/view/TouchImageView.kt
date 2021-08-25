@@ -6,28 +6,22 @@ import android.graphics.Matrix
 import android.graphics.PointF
 import android.util.AttributeSet
 import android.view.MotionEvent
-import android.widget.ImageView
 import androidx.appcompat.widget.AppCompatImageView
 import com.sugarmount.common.utils.log
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
-import java.lang.Math.sqrt
+import com.sugarmount.sugaralbum.model.ImageResData
 import kotlin.math.atan2
 
 class TouchImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
 ) : AppCompatImageView(context, attrs) {
     private var touchMode: TOUCH_MODE? = null
-    private var matrixx: Matrix? = null  //기존 매트릭스
-    private var savedMatrix: Matrix? = null  //작업 후 이미지에 매핑할 매트릭스
-    private var startPoint: PointF? = null  //한손가락 터치 이동 포인트
-    private var midPoint: PointF? = null  //두손가락 터치 시 중신 포인트
-    private var oldDistance= 0f  //터치 시 두손가락 사이의 거리
-    private var oldDegree = 0.0 // 두손가락의 각도
+    private var image: ImageResData = ImageResData()
 
     init {
-        matrixx = Matrix()
-        savedMatrix = Matrix()
+        image.matrix = Matrix()
+        image.savedMatrix = Matrix()
+        image.oldDistance = 0f
+        image.oldDegree = 0.0
     }
 
     internal enum class TOUCH_MODE {
@@ -37,20 +31,20 @@ class TouchImageView @JvmOverloads constructor(
     }
 
     private fun downSingleEvent(event: MotionEvent) {
-        matrixx = this.imageMatrix
-        savedMatrix!!.set(matrixx)
-        startPoint = PointF(event.x, event.y)
-        log.e("downSingleEvent:%f, %f", startPoint!!.x, startPoint!!.y)
+        image.matrix = this.imageMatrix
+        image.savedMatrix!!.set(image.matrix)
+        image.startPoint = PointF(event.x, event.y)
+        log.e("downSingleEvent:%f, %f", image.startPoint!!.x, image.startPoint!!.y)
     }
 
     private fun downMultiEvent(event: MotionEvent) {
-        oldDistance = getDistance(event)
-        if (oldDistance > 5f) {
-            savedMatrix!!.set(matrixx)
-            midPoint = getMidPoint(event)
+        image.oldDistance = getDistance(event)
+        if (image.oldDistance > 5f) {
+            image.savedMatrix!!.set(image.matrix)
+            image.midPoint = getMidPoint(event)
             val radian =
-                atan2((event.y - midPoint!!.y).toDouble(), (event.x - midPoint!!.x).toDouble())
-            oldDegree = radian * 180 / Math.PI
+                atan2((event.y - image.midPoint!!.y).toDouble(), (event.x - image.midPoint!!.x).toDouble())
+            image.oldDegree = radian * 180 / Math.PI
         }
         log.e("downMultiEvent")
     }
@@ -68,49 +62,49 @@ class TouchImageView @JvmOverloads constructor(
     }
 
     private fun moveSingleEvent(event: MotionEvent) {
-        matrixx!!.set(savedMatrix)
-        matrixx!!.postTranslate(event.x - startPoint!!.x, event.y - startPoint!!.y)
-        this.imageMatrix = matrixx
+        image.matrix!!.set(image.savedMatrix)
+        image.matrix!!.postTranslate(event.x - image.startPoint!!.x, event.y - image.startPoint!!.y)
+        this.imageMatrix = image.matrix
 
         log.e("moveSingleEvent#1:%f, %f", event.x, event.y)
-        log.e("moveSingleEvent#2:%f, %f", event.x - startPoint!!.x, event.y - startPoint!!.y)
+        log.e("moveSingleEvent#2:%f, %f", event.x - image.startPoint!!.x, event.y - image.startPoint!!.y)
     }
 
     private fun moveMultiEvent(event: MotionEvent) {
         val newDistance = getDistance(event)
         if (newDistance > 5f) {
-            matrixx!!.set(savedMatrix)
-            val scale = newDistance / oldDistance
-            matrixx!!.postScale(scale, scale, midPoint!!.x, midPoint!!.y)
-            val nowRadian = atan2((event.y - midPoint!!.y).toDouble(), (event.x - midPoint!!.x).toDouble())
+            image.matrix!!.set(image.savedMatrix)
+            val scale = newDistance / image.oldDistance
+            image.matrix!!.postScale(scale, scale, image.midPoint!!.x, image.midPoint!!.y)
+            val nowRadian = atan2((event.y - image.midPoint!!.y).toDouble(), (event.x - image.midPoint!!.x).toDouble())
             val nDegress = nowRadian * 180 / Math.PI
-            val degree = (nDegress - oldDegree).toFloat()
-            matrixx!!.postRotate(degree, midPoint!!.x, midPoint!!.y)
-            this.imageMatrix = matrixx
+            val degree = (nDegress - image.oldDegree).toFloat()
+            image.matrix!!.postRotate(degree, image.midPoint!!.x, image.midPoint!!.y)
+            this.imageMatrix = image.matrix
 
 //            log.e("moveMultiEvent")
         }
     }
 
     fun restore() {
-        matrixx = Matrix()
-        savedMatrix = Matrix()
-        startPoint = PointF()
-        midPoint = PointF()
-        oldDistance = 0f
-        oldDegree = 0.0
-        selectImage.scaleType = ScaleType.CENTER_CROP
-        selectImage.invalidate()
+        image.matrix = Matrix()
+        image.savedMatrix = Matrix()
+        image.startPoint = PointF()
+        image.midPoint = PointF()
+        image.oldDistance = 0f
+        image.oldDegree = 0.0
+        this.scaleType = ScaleType.FIT_CENTER
+        this.invalidate()
     }
 
     private fun startRotate() {
-        selectImage.scaleType = ScaleType.MATRIX
-        selectImage.invalidate()
+        this.scaleType = ScaleType.MATRIX
+        this.invalidate()
     }
 
     @SuppressLint("ClickableViewAccessibility")
     val onTouch = OnTouchListener { v, event ->
-        if (v == this) {
+        if (v == this && image.checked) {
             startRotate()
             val action = event.action
             when (action and MotionEvent.ACTION_MASK) {
@@ -131,6 +125,14 @@ class TouchImageView @JvmOverloads constructor(
             }
         }
         true
+    }
+
+    fun setImagePosition(image: ImageResData) {
+        this.image = image
+        if(this.image.midPoint == null) {
+            restore()
+        }
+
     }
 
 

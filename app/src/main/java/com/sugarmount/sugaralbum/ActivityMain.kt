@@ -139,11 +139,12 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     @SuppressLint("NotifyDataSetChanged")
     private fun adapterOnClick(image: ImageResData) {
         if(image.checked)
-            showImage(image.contentUri)
+            showImage(image)
         else{
             photos.filter { it.checked && it.selectOrder == 1 }.forEach { data ->
-                showImage(data.contentUri)
+                showImage(data)
             }
+            selectImage.restore()
         }
     }
     private fun adapterOnCounterUpdate(image: ImageResData) {
@@ -171,12 +172,13 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private fun showData(data: List<ImageResData>) {
         recycler_view.visibility = View.VISIBLE
         val image = data[0]
-        showImage(image.contentUri)
+        showImage(image)
         setRecyclerView(data)
     }
-    private fun showImage(uri: Uri) {
+    private fun showImage(image: ImageResData) {
+        selectImage.setImagePosition(image)
         Glide.with(this)
-            .load(uri)
+            .load(image.contentUri)
             .placeholder(circularDrawable)
             .into(selectImage)
 //        selectImage.setImageURI(uri)
@@ -315,31 +317,22 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 selectImage.restore()
             }
             send -> {
-                val itemData =
+                val images =
                     ArrayList<com.lguplus.pluscamera.ImageResData>()
 
-//            gridAdapter.getList().forEach(it -> {
-//                if(it.isChecked()) {
-//                    com.lguplus.pluscamera.ImageResData tmp = new com.lguplus.pluscamera.ImageResData();
-//                    tmp._id = it._id;
-//                    tmp.checked = it.checked;
-//                    tmp.date = it.date;
-//                    tmp.contentPath = it.contentPath;
-//                    tmp.isVideo = it.isVideo;
-//                    itemData.add(tmp);
-//                }
-//            });
-                for (k in 0..4) {
-//                val tmp = com.lguplus.pluscamera.ImageResData()
-//                val it = gridAdapter!!.getItem(k)
-//                tmp._id = it._id
-//                tmp.checked = it.checked
-//                tmp.date = it.date
-//                tmp.contentPath = it.contentUri.toString()
-//                tmp.isVideo = it.isVideo
-//                itemData.add(tmp)
+                photos.filter { it.checked }.forEach { data ->
+                    val tmp = com.lguplus.pluscamera.ImageResData()
+                    tmp._id = data._id
+                    tmp.checked = data.checked
+                    tmp.date = data.date
+                    tmp.contentUri = data.contentUri
+                    tmp.isVideo = data.isVideo
+                    tmp.selectOrder = data.selectOrder
+                    images.add(tmp)
                 }
-                when (MovieContentApi.checkDataValidate(applicationContext, itemData)) {
+                images.sortBy { it.selectOrder }
+
+                when (MovieContentApi.checkDataValidate(applicationContext, images)) {
                     ERROR_HANDLER.SUCCESS -> {
                         log.e("SUCCESS")
                         val intent =

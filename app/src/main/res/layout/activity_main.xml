@@ -54,7 +54,8 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_alignParentTop="true"
-				android:scaleType="centerCrop" />
+				android:src="@drawable/ic_logo_w"
+				android:scaleType="fitCenter"/>
 
 			<View
 				android:layout_alignParentBottom="true"

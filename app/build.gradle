@@ -1,41 +1,142 @@
-apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 30
+
     defaultConfig {
         applicationId "com.sugarmount.sugaralbum"
-        minSdkVersion 17
-        targetSdkVersion 29
+        minSdkVersion 24
+        targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.001"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            zipAlignEnabled true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+            proguardFile 'proguard-common.pro'
+            proguardFile 'proguard-firebase.pro'
+            proguardFile 'proguard-okhttp3.pro'
+            proguardFile 'proguard-kakao.pro'
+            proguardFile 'proguard-glide.pro'
+
+            resValue "string", "app_version", "VERSION "+"${defaultConfig.versionName}"
         }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            proguardFile 'proguard-common.pro'
+            proguardFile 'proguard-firebase.pro'
+            proguardFile 'proguard-okhttp3.pro'
+            proguardFile 'proguard-kakao.pro'
+            proguardFile 'proguard-glide.pro'
+
+            resValue "string", "app_version", "VERSION "+"${defaultConfig.versionName}"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+//        preDexLibraries = false
+        javaMaxHeapSize "2g"
+    }
+
+    defaultConfig{
+        //Add this ndk block of code to your build.gradle
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86', 'armeabi'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation "androidx.activity:activity-ktx:1.3.1"
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.android.material:material:1.5.0-alpha02'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
 
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // rxjava2
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+    // room
+    implementation 'androidx.room:room-runtime:2.3.0'
+    kapt 'androidx.room:room-compiler:2.3.0'
+    implementation 'androidx.room:room-rxjava2:2.3.0'
+
+    // firebase
+    implementation 'com.google.firebase:firebase-core:19.0.0'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.android.gms:play-services-ads:20.2.0'
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    // Declare the dependencies for the Remote Config and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    // https://square.github.io/okhttp/
+    implementation 'com.squareup.okhttp3:okhttp:3.14.7'
 
     // https://square.github.io/picasso/
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     // https://github.com/bumptech/glide
-    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // https://projectlombok.org/setup/gradle
+    compileOnly "org.projectlombok:lombok:1.18.20"
+    annotationProcessor "org.projectlombok:lombok:1.18.20"
+
+    // https://github.com/airbnb/lottie-android
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
+    implementation files('libs/json-simple-1.1.1.jar')
+    implementation 'com.cluver.mediaframework:videoEngine-v2r@aar'
+    implementation 'com.cluver.imageframework:imageFrameworkLibrary-v2r@aar'
+    implementation 'com.cluver.multimedia:multimediaFramework-v2r@aar'
+    implementation 'com.cluver.imageanalysis:imageAnalysisEngine-v2r@aar'
+    implementation 'com.cluver.scheduler:plusCameraMultimediaFramework-v2r@aar'
+    implementation 'com.lguplus.pluscamera:cozycamera-v2r@aar'
+
 }
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <!-- Kakao -->
+    <color name="color6">#FFFFFF</color>
+    <color name="com_kakao_brown">#472a2b</color>
+
+    <!-- Tab -->
+    <color name="vr_transparent">#D9000000</color>
+    <color name="vr_transparent_5">#0D000000</color>
+    <color name="vr_transparent_10">#1A000000</color>
+    <color name="vr_transparent_20">#33000000</color>
+    <color name="vr_transparent_30">#4D000000</color>
+    <color name="vr_transparent_40">#66000000</color>
+    <color name="vr_transparent_60">#99000000</color>
+    <color name="vr_transparent_80">#991b1b1b</color>
+    <color name="transparent">#99000000</color>
+
+
+    <!-- main (material color tool Blue 700)-->
+    <color name="main1">#3f74ff</color>
+    <color name="main2">#7584bf</color>
+    <color name="main3">#b0b5db</color>
+    <color name="main4">#fafdff</color>
+
+    <color name="main_10">#1A1976d2</color>
+    <color name="main_30">#4D1976d2</color>
+    <color name="main_60">#990d47a1</color>
+    <color name="main_70">#B30d47a1</color>
+    <color name="main_90">#E60d47a1</color>
+
+    <color name="font1">#1b1b1b</color>
+    <color name="font2">#757575</color>
+    <color name="font3">#424242</color>
+    <color name="icon1">#616161</color>
+
+    <color name="shimmer_placeholder">#dddddd</color>
+
+    <!-- common -->
+    <color name="white" type="color">#ffffffff</color>
+    <color name="black" type="color">#ff000000</color>
+    <color name="gray" type="color">#797979</color>
+    <color name="back" type="color">#f3f3f3</color>
+    <color name="hint" type="color">#BDBDBD</color>
+    <color name="gray500" type="color">#9E9E9E</color>
+    <color name="space" type="color">#EEEEEE</color>
+    <color name="blue" type="color">#1565C0</color>
+    <color name="barcode" type="color">#616161</color>
+    <color name="test" type="color">#3c3c3c</color>
+    <color name="white_30">#4DFFFFFF</color>
+
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_red_light">#C00000</color>
+
+    <!-- 맞춤법 color -->
+    <color name="temp1">#3982ff</color>
+    <color name="temp2">#009a9a</color>
+    <color name="temp3">#ff6f29</color>
+    <color name="temp4">#ee4b4b</color>
+    <color name="temp5">#8a2be2</color>
+
+    <color name="transparent_">#40FFFFFF</color>
+
+    <!--
+    Hex Opacity Values
+    100%—FF
+    95%—F2
+    90%—E6
+    85%—D9
+    80%—CC
+    75%—BF
+    70%—B3
+    65%—A6
+    60%—99
+    55%—8C
+    50%—80
+    45%—73
+    40%—66
+    35%—59
+    30%—4D
+    25%—40
+    20%—33
+    15%—26
+    10%—1A
+    5%—0D
+    0%—00
+    -->
+
 </resources>

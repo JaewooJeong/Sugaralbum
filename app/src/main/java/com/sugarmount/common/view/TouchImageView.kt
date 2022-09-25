@@ -97,6 +97,30 @@ class TouchImageView @JvmOverloads constructor(
         this.invalidate()
     }
 
+    fun rotateRight() {
+        this.scaleType = ScaleType.MATRIX
+        this.invalidate()
+
+        touchMode = TOUCH_MODE.MULTI
+        image.matrix = this.imageMatrix
+        image.savedMatrix!!.set(image.matrix)
+        image.matrix!!.postRotate(90F)
+        image.matrix!!.postTranslate(this.width * 1f, 0f)
+        this.imageMatrix = image.matrix
+    }
+
+    fun rotateLeft() {
+        this.scaleType = ScaleType.MATRIX
+        this.invalidate()
+
+        touchMode = TOUCH_MODE.MULTI
+        image.matrix = this.imageMatrix
+        image.savedMatrix!!.set(image.matrix)
+        image.matrix!!.postRotate(-90F)
+        image.matrix!!.postTranslate(0f, this.height * 1f)
+        this.imageMatrix = image.matrix
+    }
+
     private fun startRotate() {
         this.scaleType = ScaleType.MATRIX
         this.invalidate()

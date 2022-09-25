@@ -36,6 +36,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.activity_nav.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -90,14 +91,19 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         mLoadMediaDataThread = LoadMediaDataThread()
         mLoadMediaDataThread!!.start()
 
+        relativeLayout1.setOnClickListener(this)
         relativeLayout5.setOnClickListener(this)
         relativeLayout6.setOnClickListener(this)
         relativeLayout8.setOnClickListener(this)
         relativeLayout9.setOnClickListener(this)
         relativeLayout10.setOnClickListener(this)
+
+        imageView1.setOnClickListener(this)
         switch1.setOnClickListener(this)
         selectImage.setOnClickListener(this)
         selectImage.setOnTouchListener(selectImage.onTouch)
+        selectRotateLeft.setOnClickListener(this)
+        selectRotateRight.setOnClickListener(this)
         send.setOnClickListener(this)
         selectRestore.setOnClickListener(this)
     }
@@ -198,6 +204,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             isCancelled = true
         }
 
+        @SuppressLint("Range")
         private fun retrieveFiles(): MutableList<ImageResData> {
             val uri: Uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
             val projection = arrayOf(
@@ -301,6 +308,13 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 if (v != switch1)
                     switch1.isChecked = !switch1.isChecked
             }
+            relativeLayout1, imageView1 -> {
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START)
+                }
+            }
             relativeLayout8, relativeLayout9, relativeLayout10 -> {
                 intent = Intent(applicationContext, ActivityInformation::class.java)
                 var infoType: MvConfig.INFO_TYPE = MvConfig.INFO_TYPE.NOTICE
@@ -315,6 +329,12 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             }
             selectRestore -> {
                 selectImage.restore()
+            }
+            selectRotateLeft -> {
+                selectImage.rotateLeft()
+            }
+            selectRotateRight -> {
+                selectImage.rotateRight()
             }
             send -> {
                 val images =

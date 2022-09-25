@@ -67,7 +67,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-
                         <View
                             android:id="@+id/viewLine1"
                             style="@style/ViewStyle_Line2"

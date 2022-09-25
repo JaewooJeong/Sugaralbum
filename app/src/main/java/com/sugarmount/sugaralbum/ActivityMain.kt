@@ -90,11 +90,14 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         mLoadMediaDataThread = LoadMediaDataThread()
         mLoadMediaDataThread!!.start()
 
+        relativeLayout1.setOnClickListener(this)
         relativeLayout5.setOnClickListener(this)
         relativeLayout6.setOnClickListener(this)
         relativeLayout8.setOnClickListener(this)
         relativeLayout9.setOnClickListener(this)
         relativeLayout10.setOnClickListener(this)
+
+        imageView1.setOnClickListener(this)
         switch1.setOnClickListener(this)
         selectImage.setOnClickListener(this)
         selectImage.setOnTouchListener(selectImage.onTouch)
@@ -300,6 +303,13 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             relativeLayout6, switch1 -> {
                 if (v != switch1)
                     switch1.isChecked = !switch1.isChecked
+            }
+            relativeLayout1, imageView1 -> {
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START)
+                }
             }
             relativeLayout8, relativeLayout9, relativeLayout10 -> {
                 intent = Intent(applicationContext, ActivityInformation::class.java)

@@ -61,7 +61,7 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
         instance = this;
 
         // ADS SDK
-        MobileAds.initialize(this);
+//        MobileAds.initialize(this);
         googleAds.Companion.loadAds(this);
 
         mImm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);

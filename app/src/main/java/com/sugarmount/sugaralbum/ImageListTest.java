@@ -4,6 +4,7 @@ package com.sugarmount.sugaralbum;
  */
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
@@ -253,6 +254,7 @@ public class ImageListTest extends Activity implements ListView.OnScrollListener
                     null);
         }
 
+        @SuppressLint("Range")
         @Override
         public void run() {
             // TODO Auto-generated method stub

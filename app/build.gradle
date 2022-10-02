@@ -7,7 +7,7 @@ plugins {
 
 android {
     compileSdkVersion 33
-    buildToolsVersion "33.0.0"
+    buildToolsVersion '31.0.0'
     bundle {
         storeArchive {
             enable = true
@@ -55,15 +55,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    dexOptions {
-//        preDexLibraries = false
-        javaMaxHeapSize "2g"
-    }
-
     defaultConfig{
         //Add this ndk block of code to your build.gradle
         ndk {
-            abiFilters 'armeabi-v7a', 'x86', 'armeabi'
+            abiFilters 'armeabi-v7a', 'x86', 'armeabi', 'arm64-v8a', 'x86_64'
         }
     }
 
@@ -94,7 +89,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
 
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
@@ -136,14 +131,13 @@ dependencies {
     // https://github.com/airbnb/lottie-android
     implementation 'com.airbnb.android:lottie:3.4.0'
 
-    implementation files('libs/json-simple-1.1.1.jar')
-    implementation 'com.cluver.mediaframework:videoEngine-v2r@aar'
-    implementation 'com.cluver.imageframework:imageFrameworkLibrary-v2r@aar'
-    implementation 'com.cluver.multimedia:multimediaFramework-v2r@aar'
-    implementation 'com.cluver.imageanalysis:imageAnalysisEngine-v2r@aar'
-    implementation 'com.cluver.scheduler:plusCameraMultimediaFramework-v2r@aar'
-    implementation 'com.lguplus.pluscamera:cozycamera-v2r@aar'
-
+    //implementation files('libs/json-simple-1.1.1.jar')
+    implementation 'com.cluver.mediaframework:videoEngine-v2d@aar'
+    implementation 'com.cluver.imageframework:imageFrameworkLibrary-v2d@aar'
+    implementation 'com.cluver.multimedia:multimediaFramework-v2d@aar'
+    implementation 'com.cluver.imageanalysis:imageAnalysisEngine-v2d@aar'
+    implementation 'com.cluver.scheduler:plusCameraMultimediaFramework-v2d@aar'
+    implementation 'com.lguplus.pluscamera:cozycamera-v2d@aar'
 }
 
 apply plugin: 'com.google.gms.google-services'

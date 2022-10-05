@@ -19,11 +19,18 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.multidex.MultiDexApplication;
 
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
+import com.sugarmount.common.ads.AppOpenManager;
 import com.sugarmount.common.ads.googleAds;
 import com.sugarmount.common.model.MvConfig;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 
 /**
@@ -41,6 +48,7 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
     private static Point point;
     private static boolean refresh = false;
     private static Toast toast;
+    private static AppOpenManager appOpenManager;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -61,8 +69,18 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
         instance = this;
 
         // ADS SDK
-//        MobileAds.initialize(this);
-        googleAds.Companion.loadAds(this);
+        MobileAds.initialize(this);
+        googleAds.Companion.loadAd(this);
+
+        appOpenManager = new AppOpenManager();
+        appOpenManager.initialize(this);
+
+        if(MvConfig.debug) {
+            List<String> testDeviceIds = Collections.singletonList("1AAA21F530BFD426F7E5EB8B127D4796");
+            RequestConfiguration configuration =
+                    new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
+            MobileAds.setRequestConfiguration(configuration);
+        }
 
         mImm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
@@ -78,6 +96,27 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
 
     }
 
+    /**
+     * Interface definition for a callback to be invoked when an app open ad is complete
+     * (i.e. dismissed or fails to show).
+     */
+    public interface OnShowAdCompleteListener {
+        void onShowAdComplete();
+    }
+
+    /**
+     * Shows an app open ad.
+     *
+     * @param activity the activity that shows the app open ad
+     * @param onShowAdCompleteListener the listener to be notified when an app open ad is complete
+     */
+    public void showAdIfAvailable(
+            @NonNull Activity activity,
+            @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
+        // We wrap the showAdIfAvailable to enforce that other classes only interact with MyApplication
+        // class.
+        appOpenManager.showAdIfAvailable(activity, onShowAdCompleteListener);
+    }
 
     /**
      * singleton 애플리케이션 객체를 얻는다.

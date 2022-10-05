@@ -57,9 +57,23 @@ class ActivityIntro : CustomAppCompatActivity() {
     private fun checkPanelType(){
         Timer().schedule(INTRO_TIME) {
             runOnUiThread {
-                // 6. go to main
-                goIntent(ActivityMain::class.java)
-                cancel()
+                val application = application as? GlobalApplication
+
+                if(application == null) {
+                    // 6. go to main
+                    goIntent(ActivityMain::class.java)
+                    cancel()
+                    return@runOnUiThread
+                }
+
+                // Show the app open ad.
+                application.showAdIfAvailable(
+                    this@ActivityIntro,
+                    GlobalApplication.OnShowAdCompleteListener { // 6. go to main
+                        goIntent(ActivityMain::class.java)
+                        cancel()
+                    })
+
             }
         }
     }

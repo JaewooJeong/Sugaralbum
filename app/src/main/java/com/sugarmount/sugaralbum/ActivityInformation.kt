@@ -35,10 +35,10 @@ class ActivityInformation : CustomAppCompatActivity(), DataClickEventListener,
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information)
 
-        GlobalApplication.setStatusColor(
-            window,
-            ContextCompat.getColor(applicationContext, R.color.main2)
-        )
+//        GlobalApplication.setStatusColor(
+//            window,
+//            ContextCompat.getColor(applicationContext, R.color.main2)
+//        )
 
         getIntentData()
         initToolbar()

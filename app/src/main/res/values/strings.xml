@@ -98,14 +98,16 @@
     <string name="string_common_clipboard_copy">Copied to clipboard</string>
     <string name="string_common_error_retry">An error has occurred. Please try again.</string>
 
-    <string translatable="false" name="admob_app_id">ca-app-pub-8023868702717237~9453512132</string>
+    <string translatable="false" name="admob_app_id">ca-app-pub-8023868702717237~7674027884</string>
 
-    <string translatable="false" name="banner_ad_unit_id">ca-app-pub-8023868702717237/7509875075</string>
-    <string translatable="false" name="front_ad_unit_id">ca-app-pub-8023868702717237/4589850651</string>
-    <string translatable="false" name="native_ad_unit_id">ca-app-pub-8023868702717237/6937840060</string>
+    <string translatable="false" name="banner_ad_unit_id">ca-app-pub-8023868702717237/7218468988</string>
+    <string translatable="false" name="front_ad_unit_id">1</string>
+    <string translatable="false" name="native_ad_unit_id">2</string>
+    <string translatable="false" name="app_opening_ad_unit_id">3</string>
 
     <string translatable="false" name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
     <string translatable="false" name="front_ad_unit_id_test">ca-app-pub-3940256099942544/1033173712</string>
     <string translatable="false" name="native_ad_unit_id_test">ca-app-pub-3940256099942544/2247696110</string>
+    <string translatable="false" name="app_opening_ad_unit_id_test">ca-app-pub-3940256099942544/3419835294</string>
 </resources>
 

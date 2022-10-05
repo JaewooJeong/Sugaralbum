@@ -16,6 +16,9 @@ import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.SimpleItemAnimator
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
 import com.kiwiple.multimedia.canvas.Resolution
 import com.lguplus.pluscamera.api.MovieContentApi
 import com.lguplus.pluscamera.story.gallery.ConstantsGallery
@@ -46,6 +49,7 @@ import java.util.ArrayList
 import kotlin.math.roundToInt
 
 class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
+    private lateinit var adView: AdView
     var mLoadMediaDataThread: LoadMediaDataThread? = null
     var backKeyPressedTime: Long = 0
     lateinit var popupDialog: PopupDialog
@@ -53,14 +57,23 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private val circularDrawable by lazy { CircularProgressDrawable(this) }
     private val photos = mutableListOf<ImageResData>()
     private val iSize by lazy { getImageSize() }
+    private var initialLayoutComplete = false
 
     // init
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav)
         // 배너
-//        val adRequest = AdRequest.Builder().build()
-//        adView.loadAd(adRequest)
+        adView = AdView(this)
+        ad_view_container.addView(adView)
+        // Since we're loading the banner based on the adContainerView size, we need to wait until this
+        // view is laid out before we can get the width.
+        ad_view_container.viewTreeObserver.addOnGlobalLayoutListener {
+            if (!initialLayoutComplete) {
+                initialLayoutComplete = true
+                loadBanner()
+            }
+        }
 
         createView()
     }
@@ -194,6 +207,34 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         val width = displayMetrics.widthPixels
         val dividers = 5 * 0.02
         return (width / (4 + dividers)).roundToInt()
+    }
+    // Determine the screen width (less decorations) to use for the ad width.
+    // If the ad hasn't been laid out, default to the full screen width.
+    private val adSize: AdSize
+        get() {
+            val display = windowManager.defaultDisplay
+            val outMetrics = DisplayMetrics()
+            display.getMetrics(outMetrics)
+
+            val density = outMetrics.density
+
+            var adWidthPixels = ad_view_container.width.toFloat()
+            if (adWidthPixels == 0f) {
+                adWidthPixels = outMetrics.widthPixels.toFloat()
+            }
+
+            val adWidth = (adWidthPixels / density).toInt()
+            return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth)
+        }
+    private fun loadBanner() {
+        adView.adUnitId = application.getString(if (MvConfig.debug) R.string.banner_ad_unit_id_test else R.string.banner_ad_unit_id)
+        adView.setAdSize(adSize)
+
+        // Create an ad request.
+        val adRequest = AdRequest.Builder().build()
+
+        // Start loading the ad in the background.
+        adView.loadAd(adRequest)
     }
 
     // thread

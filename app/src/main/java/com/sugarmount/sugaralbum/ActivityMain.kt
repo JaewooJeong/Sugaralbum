@@ -20,11 +20,11 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.kiwiple.multimedia.canvas.Resolution
-import com.lguplus.pluscamera.api.MovieContentApi
-import com.lguplus.pluscamera.story.gallery.ConstantsGallery
-import com.lguplus.pluscamera.story.gallery.SelectManager
-import com.lguplus.pluscamera.story.movie.MovieEditMainActivity
-import com.lguplus.pluscamera.story.movie.MovieEditMainActivity.ERROR_HANDLER
+import com.sugarmount.sugarcamera.api.MovieContentApi
+import com.sugarmount.sugarcamera.story.gallery.ConstantsGallery
+import com.sugarmount.sugarcamera.story.gallery.SelectManager
+import com.sugarmount.sugarcamera.story.movie.MovieEditMainActivity
+import com.sugarmount.sugarcamera.story.movie.MovieEditMainActivity.ERROR_HANDLER
 import com.sugarmount.common.model.MvConfig
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.version.VersionT
@@ -379,10 +379,10 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             }
             send -> {
                 val images =
-                    ArrayList<com.lguplus.pluscamera.ImageResData>()
+                    ArrayList<com.sugarmount.sugarcamera.ImageResData>()
 
                 photos.filter { it.checked }.forEach { data ->
-                    val tmp = com.lguplus.pluscamera.ImageResData()
+                    val tmp = com.sugarmount.sugarcamera.ImageResData()
                     tmp._id = data._id
                     tmp.checked = data.checked
                     tmp.date = data.date

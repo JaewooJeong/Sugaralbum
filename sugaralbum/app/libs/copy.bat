@@ -1,5 +1,5 @@
 p:
-cd P:\Projects\Projects_SM\sugaralbum\app\libs
+cd P:\Projects\Projects_SM\sugaralbum\sugaralbum\app\libs
 del *.aar
 copy P:\Projects\Projects_SM\cozycamera\cozycamera\cozycamera\build\outputs\aar\*.aar .
 copy P:\Projects\Projects_SM\cozycamera\cozycamera\imageAnalysisEngine\build\outputs\aar\*.aar .

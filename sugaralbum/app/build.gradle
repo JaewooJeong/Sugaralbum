@@ -142,7 +142,7 @@ dependencies {
     implementation 'com.sugarmount.multimedia:multimediaFramework-v3d@aar'
     implementation 'com.sugarmount.imageanalysis:imageAnalysisEngine-v3d@aar'
     implementation 'com.sugarmount.scheduler:plusCameraMultimediaFramework-v3d@aar'
-    implementation 'com.sugarmount.sugarcamera:sugarcamera-v4d@aar'
+    implementation 'com.sugarmount.sugarcamera:sugarcamera-v5d@aar'
 }
 
 apply plugin: 'com.google.gms.google-services'

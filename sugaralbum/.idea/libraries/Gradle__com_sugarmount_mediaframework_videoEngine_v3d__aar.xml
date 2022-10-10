@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sugarmount.mediaframework:videoEngine-v3d:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7afbc01a7b699b35c66bfe3677a0a0c7/transformed/jetified-videoEngine-v3d/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/7afbc01a7b699b35c66bfe3677a0a0c7/transformed/jetified-videoEngine-v3d/jars/libs/kiwi-debug.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/7afbc01a7b699b35c66bfe3677a0a0c7/transformed/jetified-videoEngine-v3d/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -25,10 +25,9 @@ import androidx.multidex.MultiDexApplication;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.RequestConfiguration;
 import com.sugarmount.common.ads.AppOpenManager;
-import com.sugarmount.common.ads.googleAds;
+import com.sugarmount.common.ads.GoogleAds;
 import com.sugarmount.common.model.MvConfig;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -70,7 +69,7 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
 
         // ADS SDK
         MobileAds.initialize(this);
-        googleAds.Companion.loadAd(this);
+//        GoogleAds.Companion.loadInterstitialAd(this);
 
         appOpenManager = new AppOpenManager();
         appOpenManager.initialize(this);

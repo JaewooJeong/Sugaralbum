@@ -34,23 +34,14 @@ public class StoragePath {
     public String[] getDeviceStorages() {
         List<String> results = new ArrayList<>();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { //Method 1 for KitKat & above
-            File[] externalDirs = getExternalFilesDirs;
+        //Method 1 for KitKat & above
+        File[] externalDirs = getExternalFilesDirs;
 
-            for (File file : externalDirs) {
-                String path = file.getPath().split("/Android")[0];
+        for (File file : externalDirs) {
+            String path = file.getPath().split("/Android")[0];
 
-                boolean addPath = false;
-
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    addPath = Environment.isExternalStorageRemovable(file);
-                } else {
-                    addPath = Environment.MEDIA_MOUNTED.equals(EnvironmentCompat.getStorageState(file));
-                }
-
-                if (addPath) {
-                    results.add(path);
-                }
+            if (Environment.isExternalStorageRemovable(file)) {
+                results.add(path);
             }
         }
 
@@ -90,19 +81,10 @@ public class StoragePath {
         }
 
         //Below few lines is to remove paths which may not be external memory card, like OTG (feel free to comment them out)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            for (int i = 0; i < results.size(); i++) {
-                if (!results.get(i).toLowerCase().matches(".*[0-9a-f]{4}[-][0-9a-f]{4}")) {
-                    Log.d("Tag", results.get(i) + " might not be extSDcard");
-                    results.remove(i--);
-                }
-            }
-        } else {
-            for (int i = 0; i < results.size(); i++) {
-                if (!results.get(i).toLowerCase().contains("ext") && !results.get(i).toLowerCase().contains("sdcard")) {
-                    Log.d("Tag", results.get(i) + " might not be extSDcard");
-                    results.remove(i--);
-                }
+        for (int i = 0; i < results.size(); i++) {
+            if (!results.get(i).toLowerCase().matches(".*[0-9a-f]{4}[-][0-9a-f]{4}")) {
+                Log.d("Tag", results.get(i) + " might not be extSDcard");
+                results.remove(i--);
             }
         }
 

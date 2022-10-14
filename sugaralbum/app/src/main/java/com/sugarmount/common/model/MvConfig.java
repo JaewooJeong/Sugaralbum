@@ -29,7 +29,7 @@ public interface MvConfig {
     int CONNECT_TIMEOUT = 5;
     int MAX_ITEMS = 20;
     long SIMULATED_LOADING_TIME_IN_MS = 100;
-    long INTRO_TIME = 1000;
+    long INTRO_TIME = 2500;
     long PROGRESS_TIME = 1000;
     long SEARCH_OPEN_TIME = 300;
     int MAX_ITEMS_PER_REQUEST = 10;

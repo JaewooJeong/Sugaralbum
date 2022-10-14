@@ -143,12 +143,8 @@ public final class Utils {
         try {
             if(!s.equals("")) {
                 Locale locale = Locale.getDefault();
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    if(context.getResources().getConfiguration().getLocales().size() > 0){
-                        locale = context.getResources().getConfiguration().getLocales().get(0);
-                    }
-                }else{
-                    locale = context.getResources().getConfiguration().locale;
+                if(context.getResources().getConfiguration().getLocales().size() > 0){
+                    locale = context.getResources().getConfiguration().getLocales().get(0);
                 }
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", locale);
                 sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
@@ -300,14 +296,9 @@ public final class Utils {
     public static boolean isDownloadContentsSDCard(){
 
         StoragePath storagePath;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            storagePath = new StoragePath(GlobalApplication.getInstance().getExternalFilesDirs(null));
-        }else {
-            storagePath = new StoragePath();
-        }
+        storagePath = new StoragePath(GlobalApplication.getInstance().getExternalFilesDirs(null));
 
-        String[] storages;
-        storages = storagePath.getDeviceStorages();
+        String[] storages = storagePath.getDeviceStorages();
 
         File[] fs = GlobalApplication.getInstance().getExternalFilesDirs(null);
         return fs.length > 1;

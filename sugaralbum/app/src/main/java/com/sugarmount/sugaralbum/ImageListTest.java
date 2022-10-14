@@ -61,17 +61,15 @@ public class ImageListTest extends Activity implements ListView.OnScrollListener
 //        long wmh = res.getVideoMaxHeight();
 //        long vms = res.getVideoMaxSize();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                    != PackageManager.PERMISSION_GRANTED) {
-                // Should we show an explanation?
-                if (shouldShowRequestPermissionRationale(
-                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                    // Explain to the user why we need to read the contacts
-                }
-                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
-                return;
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Should we show an explanation?
+            if (shouldShowRequestPermissionRationale(
+                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                // Explain to the user why we need to read the contacts
             }
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+            return;
         }
 
         cancelLoadMediaDataThread();
@@ -230,7 +228,6 @@ public class ImageListTest extends Activity implements ListView.OnScrollListener
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private class LoadMediaDataThread extends Thread {
 
         private boolean isCancelled = false;

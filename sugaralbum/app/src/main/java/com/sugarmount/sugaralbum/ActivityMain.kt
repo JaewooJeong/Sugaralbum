@@ -238,7 +238,6 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     }
 
     // thread
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     inner class LoadMediaDataThread : Thread() {
         private var isCancelled = false
         fun cancel() {

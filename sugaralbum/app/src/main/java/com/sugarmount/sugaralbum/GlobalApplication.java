@@ -174,9 +174,7 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
 
     public static void setStatusColor(Window window, int color){
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.setStatusBarColor(color);
-        }
+        window.setStatusBarColor(color);
         default_Color = color;
         if(color != Color.WHITE)
             window.getDecorView().setSystemUiVisibility(0);
@@ -184,9 +182,7 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
 
     public static void setNavigationColor(Window window, int color){
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window.setNavigationBarColor(color);
-        }
+        window.setNavigationBarColor(color);
         default_Color = color;
     }
 

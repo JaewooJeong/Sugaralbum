@@ -24,19 +24,14 @@ public class CustomAppCompatActivity extends AppCompatActivity implements MvConf
     }
 
     public boolean grantPermission(String[] permission) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            int check = checkSelfPermission(permission[0]);
-            if (check == PackageManager.PERMISSION_GRANTED) {
-                log.d("Permission is granted");
-                return true;
-            } else {
-                log.d("Permission is revoked");
-                //ActivityCompat.requestPermissions(this, permission, 1);
-                return false;
-            }
-        }else{
-            log.d("Permission is Grant ");
+        int check = checkSelfPermission(permission[0]);
+        if (check == PackageManager.PERMISSION_GRANTED) {
+            log.d("Permission is granted");
             return true;
+        } else {
+            log.d("Permission is revoked");
+            //ActivityCompat.requestPermissions(this, permission, 1);
+            return false;
         }
     }
 

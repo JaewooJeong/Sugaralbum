@@ -205,10 +205,21 @@ class ActivityInformation : CustomAppCompatActivity(), DataClickEventListener,
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+
+        if (endlessRecyclerOnScrollListener != null)
+            endlessRecyclerOnScrollListener?.reset()
+
+        if (recyclerAdapterInformation != null)
+            recyclerAdapterInformation = null
+    }
+
     override fun onClickEvent(page_direction: PAGE_DIRECTION?, position: Int, select: Boolean) {}
 
     override fun onSupportNavigateUp(): Boolean {
         finish() // close this activity as oppose to navigating up
         return false
     }
+
 }

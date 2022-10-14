@@ -25,12 +25,12 @@ public class CustomLinearLayoutManager extends LinearLayoutManager {
         return false;
     }
 
-    @Override
-    public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
-        try {
-            super.onLayoutChildren(recycler, state);
-        } catch (IndexOutOfBoundsException e) {
-            Log.e("Error", "IndexOutOfBoundsException in RecyclerView happens");
-        }
-    }
+//    @Override
+//    public void onLayoutChildren(RecyclerView.Recycler recycler, RecyclerView.State state) {
+//        try {
+//            super.onLayoutChildren(recycler, state);
+//        } catch (IndexOutOfBoundsException e) {
+//            Log.e("Error", "IndexOutOfBoundsException in RecyclerView happens");
+//        }
+//    }
 }

@@ -93,6 +93,7 @@
     <string name="string_common_go_update">update</string>
     <string name="string_common_clipboard_copy">Copied to clipboard</string>
     <string name="string_common_error_retry">An error has occurred. Please try again.</string>
+    <string name="string_common_selected_count">You can select a minimum of 5 photos and a maximum of 40 photos.</string>
 
 </resources>
 

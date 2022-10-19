@@ -93,7 +93,8 @@ class TouchImageView @JvmOverloads constructor(
         image.midPoint = PointF()
         image.oldDistance = 0f
         image.oldDegree = 0.0
-        this.scaleType = ScaleType.FIT_CENTER
+//        this.scaleType = ScaleType.FIT_CENTER
+        this.scaleType = ScaleType.CENTER_CROP
         this.invalidate()
     }
 

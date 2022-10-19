@@ -60,7 +60,8 @@
 				android:layout_alignParentEnd="true"
 				android:clickable="true"
 				android:background="?attr/selectableItemBackgroundBorderless"
-				style="@style/ImageView_BackButton"/>
+				style="@style/ImageView_BackButton"
+				app:tint="@color/gray500" />
 
 		</RelativeLayout>
 	</com.google.android.material.appbar.AppBarLayout>
@@ -84,7 +85,7 @@
 				android:layout_height="match_parent"
 				android:layout_alignParentTop="true"
 				android:src="@drawable/ic_logo_w"
-				android:scaleType="fitCenter"/>
+				android:scaleType="centerCrop"/>
 
 			<View
 				android:layout_alignParentBottom="true"
@@ -93,6 +94,7 @@
 				android:background="@color/black"/>
 
 			<ImageView
+				android:visibility="gone"
 				android:id="@+id/selectRestore"
 				android:layout_width="@dimen/default_icon_size"
 				android:layout_height="@dimen/default_icon_size"
@@ -108,6 +110,7 @@
 				android:src="@drawable/ic_round_restore_24"/>
 
 			<ImageView
+				android:visibility="gone"
 				android:id="@+id/selectRotateLeft"
 				android:layout_width="@dimen/default_icon_size"
 				android:layout_height="@dimen/default_icon_size"
@@ -121,6 +124,7 @@
 				android:src="@drawable/ic_round_rotate_left"/>
 
 			<ImageView
+				android:visibility="gone"
 				android:id="@+id/selectRotateRight"
 				android:layout_width="@dimen/default_icon_size"
 				android:layout_height="@dimen/default_icon_size"
@@ -132,6 +136,21 @@
 				android:paddingTop="@dimen/margin_8"
 				android:background="@drawable/circle_restore"
 				android:src="@drawable/ic_round_rotate_right_24"/>
+
+			<ImageView
+				android:id="@+id/resetSelected"
+				android:layout_width="@dimen/default_icon_size"
+				android:layout_height="@dimen/default_icon_size"
+				android:scaleX="0.9"
+				android:scaleY="0.9"
+				android:paddingBottom="@dimen/margin_8"
+				android:paddingTop="@dimen/margin_8"
+				android:background="@drawable/circle_restore"
+				android:layout_alignParentEnd="true"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="@dimen/margin_8"
+				android:layout_marginEnd="@dimen/margin_8"
+				android:src="@drawable/ic_round_cancel"/>
 
 		</RelativeLayout>
 

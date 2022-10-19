@@ -17,6 +17,7 @@
 package com.sugarmount.sugaralbum.adapter
 
 import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.sugarmount.common.utils.log
 import com.sugarmount.sugaralbum.R
 import com.sugarmount.sugaralbum.model.ImageResData
 import java.io.File
@@ -136,6 +138,14 @@ class ImageAdapter(
     }
 
     override fun getItemCount(): Int = items.size
+
+    fun resetCount() {
+        items.forEach {
+            it.checked = false
+            it.selectOrder = null
+        }
+        itemCounter = 0
+    }
 
     fun getItemList(): List<ImageResData> = items
 }

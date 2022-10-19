@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+//    id 'kotlin-parcelize'
     id 'kotlin-kapt'
 }
 
@@ -17,9 +18,18 @@ android {
         applicationId "com.sugarmount.sugaralbum"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 1
-        versionName "1.0.001"
+        versionCode 2
+        versionName "1.0.002"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a","arm64-v8a"
+        }
+    }
+    splits {
+        abi {
+            reset()
+            include "armeabi-v7a", "arm64-v8a"
+        }
     }
     buildTypes {
         release {
@@ -53,13 +63,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    defaultConfig{
-        //Add this ndk block of code to your build.gradle
-        ndk {
-            abiFilters 'armeabi-v7a', 'x86', 'armeabi', 'arm64-v8a', 'x86_64'
-        }
     }
 
     kotlinOptions {
@@ -109,8 +112,8 @@ dependencies {
 
     // firebase
     implementation 'com.google.firebase:firebase-core:21.1.1'
-    implementation 'com.google.firebase:firebase-messaging:23.0.8'
-    implementation 'com.google.android.gms:play-services-ads:21.2.0'
+    implementation 'com.google.firebase:firebase-messaging:23.1.0'
+    implementation 'com.google.android.gms:play-services-ads:21.3.0'
 
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:26.1.0')
@@ -137,12 +140,12 @@ dependencies {
     // https://github.com/airbnb/lottie-android
     implementation 'com.airbnb.android:lottie:3.4.0'
 
-    implementation 'com.sugarmount.mediaframework:videoEngine-v3d@aar'
-    implementation 'com.sugarmount.imageframework:imageFrameworkLibrary-v3d@aar'
-    implementation 'com.sugarmount.multimedia:multimediaFramework-v3d@aar'
-    implementation 'com.sugarmount.imageanalysis:imageAnalysisEngine-v3d@aar'
-    implementation 'com.sugarmount.scheduler:plusCameraMultimediaFramework-v3d@aar'
-    implementation 'com.sugarmount.sugarcamera:sugarcamera-v6d@aar'
+    implementation 'com.sugarmount.mediaframework:videoEngine-v3r@aar'
+    implementation 'com.sugarmount.imageframework:imageFrameworkLibrary-v3r@aar'
+    implementation 'com.sugarmount.multimedia:multimediaFramework-v3r@aar'
+    implementation 'com.sugarmount.imageanalysis:imageAnalysisEngine-v3r@aar'
+    implementation 'com.sugarmount.scheduler:plusCameraMultimediaFramework-v3r@aar'
+    implementation 'com.sugarmount.sugarcamera:sugarcamera-v6r@aar'
 }
 
 apply plugin: 'com.google.gms.google-services'

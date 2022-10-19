@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/C:/Android/Sdk/icons/material/materialiconsround/rotate_right/round_rotate_right_24.xml" />
+                                      <entry key="url" value="file:/C:/Android/Sdk/icons/material/materialiconsround/cancel/round_cancel_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,7 +29,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_round_rotate_right_24" />
+                            <entry key="outputName" value="ic_round_cancel" />
                             <entry key="sourceFile" value="P:\Projects\Project_SM\2019\SugarAlbum" />
                           </map>
                         </option>

@@ -1,27 +1,28 @@
 ﻿‘간단한 설명 부분’
 
-This is a Korean 3500 character spelling and spacing checker.
+If you want to make a video that can be viewed at a glance, download it now!
+
+It's free, easy, and easy for anyone to get started right now!
 
 
-‘자세한 설명 부분’
+'자세한 설명 부분`
 
-Hangul Spelling Spacing Checker checks spelling and spacing up to 3500 Hangul characters at a time.
+[So easy video production]
+The desired video is created by simply selecting a photo.
 
-Unlike other apps that support up to 500 or 1000 characters, experience spelling spacing checks up to 3500 at once.
+[Video thumbnail through preview]
+The desired video has been created through the preview, and you can check it at a glance.
 
-We have prepared KakaoTalk Send to Me, Google Keep, and MS OneNote sharing through the sharing function.
+[Creating your own video content]
+You can create a variety of videos according to the purpose by selecting the video title and the desired resolution.
 
-Easily complete the spelling spacing check by simply sharing text or sentences.
+With Suga Album, you can record many photos into one video.
+Now our Suga album!
+
+In order for you to understand the functions accessed by the Sugar Album app, we will inform you of the necessary access rights and reasons for providing the service.
+The access rights below are essential for using this service.
+
+✔ Storage: For accessing stored photo content and storing video
 
 
-Three powerful features of Hangul spelling spacing.
-
-
-• Scanning is performed only by sharing, not copy + paste.
-• Up to 3500 characters are tested at a time.
-• Easily share through a complete sharing system.
-
-
-Experience fast spelling spacing service through Hangul Spelling Spacing Checker!
-
-SugarMount Contact: sugarmount21@gmail.com
+Contact SugarMount: sugarmount21@gmail.com

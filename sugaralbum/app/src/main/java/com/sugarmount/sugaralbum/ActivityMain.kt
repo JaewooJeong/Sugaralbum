@@ -3,6 +3,7 @@ package com.sugarmount.sugaralbum
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -10,7 +11,9 @@ import android.provider.MediaStore
 import android.util.DisplayMetrics
 import android.view.View
 import android.widget.*
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
+import androidx.core.view.isInvisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.SimpleItemAnimator
@@ -58,27 +61,20 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private val photos = mutableListOf<ImageResData>()
     private val iSize by lazy { getImageSize() }
     private var initialLayoutComplete = false
+    private var imageAdapter: ImageAdapter? = null
+    private var show: ColorStateList? = null
+    private var hide: ColorStateList? = null
 
     // init
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav)
-        // 배너
-        adView = AdView(this)
-        ad_view_container.addView(adView)
-        // Since we're loading the banner based on the adContainerView size, we need to wait until this
-        // view is laid out before we can get the width.
-        ad_view_container.viewTreeObserver.addOnGlobalLayoutListener {
-            if (!initialLayoutComplete) {
-                initialLayoutComplete = true
-                loadBanner()
-            }
-        }
 
         createView()
     }
     private fun createView() {
         log.e("#Activity_Main Call")
+        initAds()
         init()
         initDrawerLayout()
         initRecyclerView()
@@ -86,6 +82,9 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private fun init() {
         popupDialog = PopupDialog(this)
         popupDialog.setOnFinishClickEvent{}
+
+        show = ContextCompat.getColorStateList(applicationContext, R.color.white)
+        hide = ContextCompat.getColorStateList(applicationContext, R.color.hint)
 
         // room data access (version)
         val repo = AnyRepository(application)
@@ -113,10 +112,13 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
 
         imageView1.setOnClickListener(this)
         switch1.setOnClickListener(this)
-        selectImage.setOnClickListener(this)
-        selectImage.setOnTouchListener(selectImage.onTouch)
+
+        // 221015 차후에 자유변형 저장 추가
+//        selectImage.setOnClickListener(this)
+//        selectImage.setOnTouchListener(selectImage.onTouch)
         selectRotateLeft.setOnClickListener(this)
         selectRotateRight.setOnClickListener(this)
+        resetSelected.setOnClickListener(this)
         send.setOnClickListener(this)
         selectRestore.setOnClickListener(this)
     }
@@ -126,9 +128,16 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     }
     private fun setRecyclerView(data: List<ImageResData>) {
         ImageAdapter.itemCounter = 0
-        val imageAdapter = ImageAdapter(data, iSize, { adapterOnClick(it) }, { adapterOnCounterUpdate(it) } )
+        imageAdapter = ImageAdapter(data, iSize, { adapterOnClick(it) }, { adapterOnCounterUpdate(it) } )
         val concatAdapter = ConcatAdapter(imageAdapter)
         recycler_view.adapter = concatAdapter
+    }
+    @SuppressLint("NotifyDataSetChanged")
+    private fun resetSelectedImage() {
+        if(imageAdapter != null)
+            imageAdapter?.resetCount()
+
+        recycler_view.adapter?.notifyDataSetChanged()
     }
     private fun initDrawerLayout() {
         setDrawerLayoutParams(navigationView1)
@@ -153,7 +162,19 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             }
         })
     }
-
+    private fun initAds() {
+        // 배너
+        adView = AdView(this)
+        ad_view_container.addView(adView)
+        // Since we're loading the banner based on the adContainerView size, we need to wait until this
+        // view is laid out before we can get the width.
+        ad_view_container.viewTreeObserver.addOnGlobalLayoutListener {
+            if (!initialLayoutComplete) {
+                initialLayoutComplete = true
+                loadBanner()
+            }
+        }
+    }
     // listener
     @SuppressLint("NotifyDataSetChanged")
     private fun adapterOnClick(image: ImageResData) {
@@ -164,6 +185,12 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 showImage(data)
             }
             selectImage.restore()
+        }
+
+        if(ImageAdapter.itemCounter <= 4 || ImageAdapter.itemCounter > 40){
+            send.imageTintList = hide
+        }else{
+            send.imageTintList = show
         }
     }
     private fun adapterOnCounterUpdate(image: ImageResData) {
@@ -376,7 +403,11 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             selectRotateRight -> {
                 selectImage.rotateRight()
             }
+            resetSelected -> {
+                resetSelectedImage()
+            }
             send -> {
+                send.isClickable = false
                 val images =
                     ArrayList<com.sugarmount.sugarcamera.ImageResData>()
 
@@ -392,39 +423,64 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 }
                 images.sortBy { it.selectOrder }
 
-                when (MovieContentApi.checkDataValidate(applicationContext, images)) {
-                    ERROR_HANDLER.SUCCESS -> {
-                        log.e("SUCCESS")
-                        val intent =
-                            Intent(applicationContext, MovieEditMainActivity::class.java)
-                        intent.putExtra(SelectManager.SELECTED_VIDEOS, MovieContentApi.videoData)
-                        intent.putExtra(SelectManager.SELECTED_IMAGES, MovieContentApi.photoData)
-                        intent.putExtra(
-                            SelectManager.SELECTED_RESOLUTION,
-                            Resolution.NHD
-                        )
-                        intent.putExtra(
-                            SelectManager.OUTPUT_DIR,
-                            String.format(
-                                "%s/%s",
-                                applicationContext.externalMediaDirs[0].path,
-                                getString(R.string.app_name)
+                // 5장 이상 40장 이하.
+                if(images.count() in 5..40) {
+                    when (MovieContentApi.checkDataValidate(applicationContext, images)) {
+                        ERROR_HANDLER.SUCCESS -> {
+                            log.e("SUCCESS")
+                            val intent =
+                                Intent(applicationContext, MovieEditMainActivity::class.java)
+                            intent.putExtra(
+                                SelectManager.SELECTED_VIDEOS,
+                                MovieContentApi.videoData
                             )
-                        )
-                        startActivityForResult(intent, ConstantsGallery.REQ_CODE_CONTENT_DETAIL)
+                            intent.putExtra(
+                                SelectManager.SELECTED_IMAGES,
+                                MovieContentApi.photoData
+                            )
+                            intent.putExtra(
+                                SelectManager.SELECTED_RESOLUTION,
+                                Resolution.NHD
+                            )
+                            intent.putExtra(
+                                SelectManager.OUTPUT_DIR,
+                                String.format(
+                                    "%s/%s",
+                                    applicationContext.externalMediaDirs[0].path,
+                                    getString(R.string.app_name)
+                                )
+                            )
+                            startActivityForResult(intent, ConstantsGallery.REQ_CODE_CONTENT_DETAIL)
+                        }
+                        ERROR_HANDLER.UNKNOWN_ERROR -> log.e("UNKNOWN_ERROR")
+                        ERROR_HANDLER.ITEM_COUNT -> log.e("ITEM_COUNT")
+                        ERROR_HANDLER.VIDEO_COUNT -> log.e("VIDEO_COUNT")
+                        ERROR_HANDLER.IMAGE_COUNT -> log.e("IMAGE_COUNT")
+                        ERROR_HANDLER.VIDEO_MAX_DURATION -> log.e("VIDEO_MAX_DURATION")
+                        ERROR_HANDLER.VIDEO_MIN_DURATION -> log.e("VIDEO_MIN_DURATION")
+                        ERROR_HANDLER.NOT_FOUND -> log.e("NOT_FOUND")
+                        ERROR_HANDLER.CODEC_ERROR -> log.e("CODEC_ERROR")
+                        else -> {
+                        }
                     }
-                    ERROR_HANDLER.UNKNOWN_ERROR -> log.e("UNKNOWN_ERROR")
-                    ERROR_HANDLER.ITEM_COUNT -> log.e("ITEM_COUNT")
-                    ERROR_HANDLER.VIDEO_COUNT -> log.e("VIDEO_COUNT")
-                    ERROR_HANDLER.IMAGE_COUNT -> log.e("IMAGE_COUNT")
-                    ERROR_HANDLER.VIDEO_MAX_DURATION -> log.e("VIDEO_MAX_DURATION")
-                    ERROR_HANDLER.VIDEO_MIN_DURATION -> log.e("VIDEO_MIN_DURATION")
-                    ERROR_HANDLER.NOT_FOUND -> log.e("NOT_FOUND")
-                    ERROR_HANDLER.CODEC_ERROR -> log.e("CODEC_ERROR")
-                    else -> {
-                    }
+                }else{
+                    showToast(R.string.string_common_selected_count)
+                    send.isClickable = true
                 }
             }
         }
+    }
+    override fun onPause() {
+        super.onPause()
+//        if(mLoadMediaDataThread != null) {
+//            mLoadMediaDataThread = LoadMediaDataThread()
+//            mLoadMediaDataThread!!.start()
+//        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if(send != null)
+            send.isClickable = true
     }
 }

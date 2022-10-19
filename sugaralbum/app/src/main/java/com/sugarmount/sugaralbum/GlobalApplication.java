@@ -69,7 +69,7 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
 
         // ADS SDK
         MobileAds.initialize(this);
-//        GoogleAds.Companion.loadInterstitialAd(this);
+        GoogleAds.Companion.loadInterstitialAd(this);
 
         appOpenManager = new AppOpenManager();
         appOpenManager.initialize(this);

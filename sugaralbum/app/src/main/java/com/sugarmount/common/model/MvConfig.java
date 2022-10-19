@@ -10,7 +10,7 @@ import com.sugarmount.sugaralbum.R;
  * Created by Jaewoo on 2016-08-19.
  */
 public interface MvConfig {
-    boolean debug = true;
+    boolean debug = false;
 
     String TAG = "SugarAlbum";
     String RELEASE_HOST = "";
@@ -29,7 +29,7 @@ public interface MvConfig {
     int CONNECT_TIMEOUT = 5;
     int MAX_ITEMS = 20;
     long SIMULATED_LOADING_TIME_IN_MS = 100;
-    long INTRO_TIME = 2500;
+    long INTRO_TIME = 2000;
     long PROGRESS_TIME = 1000;
     long SEARCH_OPEN_TIME = 300;
     int MAX_ITEMS_PER_REQUEST = 10;

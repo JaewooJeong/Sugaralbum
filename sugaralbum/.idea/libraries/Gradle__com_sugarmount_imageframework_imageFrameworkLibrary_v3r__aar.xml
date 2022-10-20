@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sugarmount.imageframework:imageFrameworkLibrary-v3r:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/httpcore-4.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/jackson-mapper-asl-1.9.12.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/jackson-core-asl-1.9.12.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/httpmime-4.2.5.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/httpclient-4.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/sd-sdk-facial-processing.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/renderscript-v8.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d0a4542b56e70dfc004d37dbdbf9a35b/transformed/jetified-imageFrameworkLibrary-v3r/jars/libs/sd-sdk-device-info.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

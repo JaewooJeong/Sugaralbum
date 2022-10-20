@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sugarmount.sugarcamera:sugarcamera-v6r:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f2f14cb81722c30686cc03c8d6c53a6b/transformed/jetified-sugarcamera-v6r/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f2f14cb81722c30686cc03c8d6c53a6b/transformed/jetified-sugarcamera-v6r/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f2f14cb81722c30686cc03c8d6c53a6b/transformed/jetified-sugarcamera-v6r/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

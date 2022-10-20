@@ -10,81 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3b5ca5d-83f0-48ee-92ab-b5d3501be5cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_3_1_8_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_3_1_8_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_21_3_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_base_21_3_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_lite_21_3_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_20_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_18_1_7_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_17_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_23_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_imageanalysis_imageAnalysisEngine_v3r__aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_imageframework_imageFrameworkLibrary_v3r__aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_mediaframework_videoEngine_v3r__aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_multimedia_multimediaFramework_v3r__aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_scheduler_plusCameraMultimediaFramework_v3r__aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_sugarcamera_sugarcamera_v6r__aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/a6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/d1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/d2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/d3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/d4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/d5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/kr/d6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/us/d1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/us/d2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/us/d3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/us/d4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/us/d5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/us/d6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/디자인_kr.psd" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/디자인_kr.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/디자인_us.psd" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/대표이미지/디자인_us.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/링크이미지/main2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/링크이미지/phone.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/설명_kr.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/설명_kr.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reference/구글플레이/등록자료/설명_us.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../reference/구글플레이/등록자료/설명_us.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_backend_cct_3_1_7_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_datatransport_transport_runtime_3_1_7_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_21_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_base_21_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_lite_21_2_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_20_1_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_datatransport_18_1_6_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_17_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_17_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_23_0_8_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_imageanalysis_imageAnalysisEngine_v3d__aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_imageframework_imageFrameworkLibrary_v3d__aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_mediaframework_videoEngine_v3d__aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_multimedia_multimediaFramework_v3d__aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_scheduler_plusCameraMultimediaFramework_v3d__aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_sugarcamera_sugarcamera_v6d__aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_imageframework_imageFrameworkLibrary_v3r__aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_imageframework_imageFrameworkLibrary_v3r__aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_mediaframework_videoEngine_v3r__aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_mediaframework_videoEngine_v3r__aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_multimedia_multimediaFramework_v3r__aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_multimedia_multimediaFramework_v3r__aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/imageAnalysisEngine-v3d.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/imageFrameworkLibrary-v3d.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/multimediaFramework-v3d.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/plusCameraMultimediaFramework-v3d.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/sugarcamera-v6d.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/videoEngine-v3d.aar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/common/model/MvConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/common/model/MvConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/common/view/TouchImageView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/common/view/TouchImageView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/ActivityMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/ActivityMain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/imageAnalysisEngine-v3r.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/imageAnalysisEngine-v3r.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/imageFrameworkLibrary-v3r.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/imageFrameworkLibrary-v3r.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/multimediaFramework-v3r.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/multimediaFramework-v3r.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/plusCameraMultimediaFramework-v3r.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/plusCameraMultimediaFramework-v3r.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/sugarcamera-v6r.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/sugarcamera-v6r.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/videoEngine-v3r.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/videoEngine-v3r.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/app-release.aab" beforeDir="false" afterPath="$PROJECT_DIR$/app/release/app-release.aab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/GlobalApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/GlobalApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/adapter/ImageAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/adapter/ImageAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ko/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ko/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +98,7 @@
     <property name="android-custom-viewP:/Projects/Projects_SM/sugaralbum/app/src/main/java/com/sugarmount/common/view/TouchImageView.kt_SELECTED" value="TouchImageView" />
     <property name="android-custom-viewP:/Projects/Projects_SM/sugaralbum/sugaralbum/app/src/main/java/com/sugarmount/common/view/TouchImageView.kt_SELECTED" value="TouchImageView" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/signature/sugarspeller_release.jks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" />
     <property name="project.structure.last.edited" value="Suggestions" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -280,11 +218,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/sugarmount/common/utils/log.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

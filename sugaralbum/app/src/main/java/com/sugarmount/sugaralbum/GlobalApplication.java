@@ -27,6 +27,7 @@ import com.google.android.gms.ads.RequestConfiguration;
 import com.sugarmount.common.ads.AppOpenManager;
 import com.sugarmount.common.ads.GoogleAds;
 import com.sugarmount.common.model.MvConfig;
+import com.sugarmount.common.utils.log;
 
 import java.util.Collections;
 import java.util.List;
@@ -66,6 +67,10 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        //xx
+        log.e("support abis: %s", Build.SUPPORTED_ABIS);
+        log.e("os.arch: %s", System.getProperty("os.arch"));
 
         // ADS SDK
         MobileAds.initialize(this);

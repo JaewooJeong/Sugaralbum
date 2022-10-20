@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sugarmount.imageanalysis:imageAnalysisEngine-v3r:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/aacc1c1705becdb3095125da01aa4616/transformed/jetified-imageAnalysisEngine-v3r/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/aacc1c1705becdb3095125da01aa4616/transformed/jetified-imageAnalysisEngine-v3r/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/aacc1c1705becdb3095125da01aa4616/transformed/jetified-imageAnalysisEngine-v3r/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

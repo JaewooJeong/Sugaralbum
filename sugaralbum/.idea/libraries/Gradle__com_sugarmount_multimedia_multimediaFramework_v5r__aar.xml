@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sugarmount.multimedia:multimediaFramework-v5r:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f3f96d2a38b2dc98a4461aea7e820a3c/transformed/jetified-multimediaFramework-v5r/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f3f96d2a38b2dc98a4461aea7e820a3c/transformed/jetified-multimediaFramework-v5r/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f3f96d2a38b2dc98a4461aea7e820a3c/transformed/jetified-multimediaFramework-v5r/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

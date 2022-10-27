@@ -18,10 +18,10 @@ android {
         applicationId "com.sugarmount.sugaralbum"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 3
-        versionName "1.0.003"
+        versionCode 13
+        versionName "1.0.013"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        ndk.abiFilters 'armeabi-v7a','arm64-v8a'
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a'
     }
     buildTypes {
         release {
@@ -31,6 +31,9 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
             proguardFile 'proguard-common.pro'
+            proguardFile 'proguard-sugarcamera.pro'
+            proguardFile 'proguard-image.pro'
+            proguardFile 'proguard-multimedia.pro'
             proguardFile 'proguard-firebase.pro'
             proguardFile 'proguard-okhttp3.pro'
             proguardFile 'proguard-kakao.pro'
@@ -40,15 +43,22 @@ android {
         }
 
         debug {
-            minifyEnabled false
+            debuggable true
+            zipAlignEnabled true
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt')
             proguardFile 'proguard-common.pro'
+            proguardFile 'proguard-sugarcamera.pro'
+            proguardFile 'proguard-image.pro'
+            proguardFile 'proguard-multimedia.pro'
             proguardFile 'proguard-firebase.pro'
             proguardFile 'proguard-okhttp3.pro'
             proguardFile 'proguard-kakao.pro'
             proguardFile 'proguard-glide.pro'
 
             resValue "string", "app_version", "VERSION "+"${defaultConfig.versionName}"
+            signingConfig signingConfigs.debug
         }
     }
 
@@ -60,6 +70,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.sugarmount.sugaralbum'
 }
 
 repositories {
@@ -134,7 +145,7 @@ dependencies {
 
     implementation 'com.sugarmount.mediaframework:videoEngine-v3r@aar'
     implementation 'com.sugarmount.imageframework:imageFrameworkLibrary-v3r@aar'
-    implementation 'com.sugarmount.multimedia:multimediaFramework-v3r@aar'
+    implementation 'com.sugarmount.multimedia:multimediaFramework-v5r@aar'
     implementation 'com.sugarmount.imageanalysis:imageAnalysisEngine-v3r@aar'
     implementation 'com.sugarmount.scheduler:plusCameraMultimediaFramework-v3r@aar'
     implementation 'com.sugarmount.sugarcamera:sugarcamera-v6r@aar'

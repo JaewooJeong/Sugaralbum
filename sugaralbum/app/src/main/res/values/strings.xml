@@ -99,12 +99,12 @@
     <string name="string_common_error_retry">An error has occurred. Please try again.</string>
     <string name="string_common_selected_count">You can select a minimum of 5 photos and a maximum of 40 photos.</string>
 
-    <string translatable="false" name="admob_app_id">ca-app-pub-8023868702717237~7674027884</string>
+    <string translatable="false" name="admob_app_id">ca-app-pub-8023868702717237~6130354222</string>
 
-    <string translatable="false" name="banner_ad_unit_id">ca-app-pub-8023868702717237/7218468988</string>
-    <string translatable="false" name="front_ad_unit_id">ca-app-pub-8023868702717237/3184822808</string>
-    <string translatable="false" name="native_ad_unit_id">ca-app-pub-8023868702717237/7124067812</string>
-    <string translatable="false" name="app_opening_ad_unit_id">ca-app-pub-8023868702717237/7132888249</string>
+    <string translatable="false" name="banner_ad_unit_id">ca-app-pub-8023868702717237/6321887920</string>
+    <string translatable="false" name="front_ad_unit_id">ca-app-pub-8023868702717237/1246543264</string>
+    <string translatable="false" name="native_ad_unit_id">ca-app-pub-8023868702717237/8769810061</string>
+    <string translatable="false" name="app_opening_ad_unit_id">ca-app-pub-8023868702717237/2942768319</string>
 
     <string translatable="false" name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
     <string translatable="false" name="front_ad_unit_id_test">ca-app-pub-3940256099942544/1033173712</string>

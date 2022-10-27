@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.sugarmount.scheduler:plusCameraMultimediaFramework-v3r:@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f277dfce690d0773c5d09b1e36e91c8b/transformed/jetified-plusCameraMultimediaFramework-v3r/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f277dfce690d0773c5d09b1e36e91c8b/transformed/jetified-plusCameraMultimediaFramework-v3r/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f277dfce690d0773c5d09b1e36e91c8b/transformed/jetified-plusCameraMultimediaFramework-v3r/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8d5893f5f0a0ca0ae2dd60859bd76861/transformed/jetified-plusCameraMultimediaFramework-v3r/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8d5893f5f0a0ca0ae2dd60859bd76861/transformed/jetified-plusCameraMultimediaFramework-v3r/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8d5893f5f0a0ca0ae2dd60859bd76861/transformed/jetified-plusCameraMultimediaFramework-v3r/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

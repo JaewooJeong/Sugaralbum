@@ -18,8 +18,8 @@ android {
         applicationId "com.sugarmount.sugaralbum"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 13
-        versionName "1.0.013"
+        versionCode 14
+        versionName "1.0.014"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a'
     }
@@ -44,9 +44,6 @@ android {
 
         debug {
             debuggable true
-            zipAlignEnabled true
-            minifyEnabled true
-            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt')
             proguardFile 'proguard-common.pro'
             proguardFile 'proguard-sugarcamera.pro'
@@ -88,9 +85,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-    implementation "androidx.activity:activity-ktx:1.6.0"
+    implementation "androidx.activity:activity-ktx:1.6.1"
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.google.android.material:material:1.8.0-alpha01'
+    implementation 'com.google.android.material:material:1.8.0-alpha02'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
@@ -148,7 +145,7 @@ dependencies {
     implementation 'com.sugarmount.multimedia:multimediaFramework-v5r@aar'
     implementation 'com.sugarmount.imageanalysis:imageAnalysisEngine-v3r@aar'
     implementation 'com.sugarmount.scheduler:plusCameraMultimediaFramework-v3r@aar'
-    implementation 'com.sugarmount.sugarcamera:sugarcamera-v6r@aar'
+    implementation 'com.sugarmount.sugarcamera:sugarcamera-v7r@aar'
 }
 
 apply plugin: 'com.google.gms.google-services'

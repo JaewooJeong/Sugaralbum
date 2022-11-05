@@ -137,6 +137,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         if(imageAdapter != null)
             imageAdapter?.resetCount()
 
+        send.imageTintList = hide
         recycler_view.adapter?.notifyDataSetChanged()
     }
     private fun initDrawerLayout() {

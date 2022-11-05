@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/97e99522385215dd7d41ba632a291fcf/transformed/jetified-videoEngine-v3r/jars/classes.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/97e99522385215dd7d41ba632a291fcf/transformed/jetified-videoEngine-v3r/jars/libs/kiwi-debug.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/97e99522385215dd7d41ba632a291fcf/transformed/jetified-videoEngine-v3r/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/034289759b05d1bee96a7d824130b02a/transformed/jetified-videoEngine-v3r/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/034289759b05d1bee96a7d824130b02a/transformed/jetified-videoEngine-v3r/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/034289759b05d1bee96a7d824130b02a/transformed/jetified-videoEngine-v3r/jars/libs/kiwi-debug.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -4,6 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8ff897918d3ba7f8f9b90bbafefd8aab/transformed/jetified-imageAnalysisEngine-v3r/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8ff897918d3ba7f8f9b90bbafefd8aab/transformed/jetified-imageAnalysisEngine-v3r/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8ff897918d3ba7f8f9b90bbafefd8aab/transformed/jetified-imageAnalysisEngine-v3r/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4b970110dfca0a9ecabd40e8a19d9f91/transformed/jetified-imageAnalysisEngine-v3r/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4b970110dfca0a9ecabd40e8a19d9f91/transformed/jetified-imageAnalysisEngine-v3r/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4b970110dfca0a9ecabd40e8a19d9f91/transformed/jetified-imageAnalysisEngine-v3r/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

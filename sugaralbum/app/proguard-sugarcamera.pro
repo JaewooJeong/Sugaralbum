@@ -26,17 +26,16 @@
 
 -keepattributes *Annotation*, Exceptions,InnerClasses,Signature,SourceFile,LineNumberTable
 
--libraryjars /Users/jaewoo/cozycamera/cozycamera/cozycamera/libs/json-simple-1.1.1.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/cozycamera/libs/sun.misc.BASE64Decoder.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/cozycamera/libs/das-android-child-1.3.4.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/ImageFrameworkLibrary/libs/sd-sdk-device-info.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/ImageFrameworkLibrary/libs/sd-sdk-facial-processing.jar
-#-libraryjars /PlusCameraMultimediaFramework/MultimediaFramework/ImageAnalysisEngine/ImageFrameworkLibrary/libs/android-support-v13.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/ImageFrameworkLibrary/libs/jackson-core-asl-1.9.12.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/ImageFrameworkLibrary/libs/jackson-mapper-asl-1.9.12.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/ImageFrameworkLibrary/libs/httpmime-4.2.5.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/VideoEngine/libs/kiwi-debug.jar
--libraryjars /Users/jaewoo/Library/Android/sdk/build-tools/33.0.0/renderscript/lib/renderscript-v8.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/cozycamera/libs/json-simple-1.1.1.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/cozycamera/libs/sun.misc.BASE64Decoder.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/cozycamera/libs/das-android-child-1.3.4.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/ImageFrameworkLibrary/libs/sd-sdk-device-info.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/ImageFrameworkLibrary/libs/sd-sdk-facial-processing.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/ImageFrameworkLibrary/libs/jackson-core-asl-1.9.12.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/ImageFrameworkLibrary/libs/jackson-mapper-asl-1.9.12.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/ImageFrameworkLibrary/libs/httpmime-4.2.5.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/VideoEngine/libs/kiwi-debug.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/imageFrameworkLibrary/libs/renderscript-v8.jar
 
 -dontwarn com.kiwiple.imageframework.filter.IFilterService
 -dontwarn com.kiwiple.imageframework.filter.IFilterServiceVcreation

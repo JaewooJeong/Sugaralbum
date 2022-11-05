@@ -27,10 +27,10 @@
 -keepattributes *Annotation*, Exceptions,InnerClasses,Signature
 
 #-libraryjars /libs/android-support-v13.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/imageFrameworkLibrary/libs/jackson-core-asl-1.9.12.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/imageFrameworkLibrary/libs/jackson-mapper-asl-1.9.12.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/imageFrameworkLibrary/libs/httpmime-4.2.5.jar
--libraryjars /Users/jaewoo/cozycamera/cozycamera/imageFrameworkLibrary/libs/renderscript-v8.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/imageFrameworkLibrary/libs/jackson-core-asl-1.9.12.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/imageFrameworkLibrary/libs/jackson-mapper-asl-1.9.12.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/imageFrameworkLibrary/libs/httpmime-4.2.5.jar
+-libraryjars /Projects/Projects_SM/cozycamera/cozycamera/imageFrameworkLibrary/libs/renderscript-v8.jar
 
 -dontwarn com.kiwiple.imageframework.filter.IFilterService
 -dontwarn com.kiwiple.imageframework.filter.IFilterServiceVcreation

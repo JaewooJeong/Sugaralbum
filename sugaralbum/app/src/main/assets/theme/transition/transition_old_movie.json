@@ -1,0 +1,111 @@
+{
+  "transitions": [
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "up",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "down",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "down",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "up",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "up",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "up",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "down",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "up",
+      "use_overshoot": true
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "accelerate_decelerate",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "down",
+      "use_overshoot": true
+    }  ]
+}

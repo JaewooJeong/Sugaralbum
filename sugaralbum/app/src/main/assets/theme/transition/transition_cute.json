@@ -1,0 +1,92 @@
+{
+  "transitions": [
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "left"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "type": "extend_box_transition",
+      "use_fade_in": false,
+      "interval": 0.5,
+      "box_color": 4293702465,
+      "box_thickness": 8,
+      "style": "four_boxes",
+      "duration": 1500
+    },
+    {
+      "type": "extend_box_transition",
+      "use_fade_in": false,
+      "box_thickness": 8,
+      "interval": 0.5,
+      "box_color": 4293702465,
+      "style": "full_box",
+      "duration": 1500
+    },
+    {
+      "duration": 2000,
+      "type": "grand_union_transition"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "down"
+    },
+    {
+      "type": "extend_box_transition",
+      "use_fade_in": false,
+      "box_color": 4293702465,
+      "interval": 0.5,
+      "box_thickness": 8,
+      "style": "vertical_two_boxes",
+      "duration": 1500
+    },
+    {
+      "type": "extend_box_transition",
+      "use_fade_in": false,
+      "box_thickness": 8,
+      "interval": 0.5,
+      "box_color": 4293702465,
+      "style": "full_box",
+      "duration": 1500
+    },
+    {
+      "duration": 2000,
+      "type": "grand_union_transition"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "up"
+    }
+  ]
+}

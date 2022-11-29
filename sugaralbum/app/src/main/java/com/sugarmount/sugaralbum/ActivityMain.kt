@@ -408,7 +408,6 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 resetSelectedImage()
             }
             send -> {
-                send.isClickable = false
                 val images =
                     ArrayList<com.sugarmount.sugarcamera.ImageResData>()
 
@@ -429,6 +428,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                     when (MovieContentApi.checkDataValidate(applicationContext, images)) {
                         ERROR_HANDLER.SUCCESS -> {
                             log.e("SUCCESS")
+                            send.isClickable = false
                             val intent =
                                 Intent(applicationContext, MovieEditMainActivity::class.java)
                             intent.putExtra(
@@ -451,7 +451,8 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                                     getString(R.string.app_name)
                                 )
                             )
-                            startActivityForResult(intent, ConstantsGallery.REQ_CODE_CONTENT_DETAIL)
+//                            startActivityForResult(intent, ConstantsGallery.REQ_CODE_CONTENT_DETAIL)
+                            startActivity(intent)
                         }
                         ERROR_HANDLER.UNKNOWN_ERROR -> log.e("UNKNOWN_ERROR")
                         ERROR_HANDLER.ITEM_COUNT -> log.e("ITEM_COUNT")

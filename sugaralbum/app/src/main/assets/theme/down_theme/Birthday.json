@@ -1,0 +1,192 @@
+{
+  "Name": "Birthday",
+  "Type": "Frame",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "9925600 MDthemebirthday"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "Surfing On Gasoline",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic4"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_birthday",
+  "AudioFileName": "sunfling_on_gasoline.mp3",
+  "FileterJsonName": "defaultFilter",
+  "CollageJsonName": "defaultTemplates_birthday",
+  "CoverTransitionName": "cover_transition_birthday",
+  "CoverTransitionMaskName": "cover_transition_birthday_mask",
+  "VerticalImageName": "birthday_img_frame_virtical",
+  "MotionCount": 2,
+  "FilterId": -1,
+  "FileSize": 8104447,
+  "FileCount": 68,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5000,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_birthday.json",
+  "transitionJsonName": "theme/transition/transition_birthday.json",
+  "EndingLogo": "outro1_01_modi.jpg",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+    {
+      "Id": 100300,
+      "FrameImageName": "birthday_img_intro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Intro",
+      "FontName": "Droid sans",
+      "FontSize": 50,
+      "FontColor": "f190b4",
+      "FontAlign": "Right",
+      "FontCoordinateLeft": 732,
+      "FontCoordinateTop": 660,
+      "FontCoordinateRight": 1330,
+      "FontCoordinateBottom": 720,
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100301,
+      "FrameImageName": "birthday_img_frame1",
+      "FrameThumbImageName": "icon_theme_birthday_1_1",
+      "FrameThumbFocImageName": "icon_theme_birthday_1_1_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "birthday_img_obj_1_1",
+          "CoordinateLeft": 1208,
+          "CoordinateTop": 438,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "birthday_img_obj_1_2"
+        }
+      ]
+    },
+    {
+      "Id": 100302,
+      "FrameImageName": "birthday_img_frame2",
+      "FrameThumbImageName": "icon_theme_birthday_1_2",
+      "FrameThumbFocImageName": "icon_theme_birthday_1_2_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "birthday_img_obj_2_1",
+          "CoordinateLeft": 941,
+          "CoordinateTop": 0,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "birthday_img_obj_2_2"
+        }
+      ]
+    },
+    {
+      "Id": 100303,
+      "FrameImageName": "birthday_img_frame3",
+      "FrameThumbImageName": "icon_theme_birthday_1_3",
+      "FrameThumbFocImageName": "icon_theme_birthday_1_3_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "birthday_img_obj_3_1",
+          "CoordinateLeft": 809,
+          "CoordinateTop": 573,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "birthday_img_obj_3_2"
+        }
+      ]
+    },
+    {
+      "Id": 100304,
+      "FrameImageName": "birthday_img_frame4",
+      "FrameThumbImageName": "icon_theme_birthday_1_4",
+      "FrameThumbFocImageName": "icon_theme_birthday_1_4_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "birthday_img_obj_4_1",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 252,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "birthday_img_obj_4_2"
+        }
+      ]
+    },
+    {
+      "Id": 100305,
+      "FrameImageName": "birthday_img_frame7",
+      "FrameThumbImageName": "icon_theme_birthday_2_1",
+      "FrameThumbFocImageName": "icon_theme_birthday_2_1_foc",
+      "FrameCount": 2,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "birthday_img_obj_7_1",
+          "CoordinateLeft": 1083,
+          "CoordinateTop": 690,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "birthday_img_obj_7_2"
+        }
+      ]
+    },
+    {
+      "Id": 100306,
+      "FrameImageName": "birthday_img_frame5",
+      "FrameThumbImageName": "icon_theme_birthday_3_1",
+      "FrameThumbFocImageName": "icon_theme_birthday_3_1_foc",
+      "FrameCount": 3,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "birthday_img_obj_5_1",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 469,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "birthday_img_obj_5_2"
+        }
+      ]
+    },
+    {
+      "Id": 100307,
+      "FrameImageName": "birthday_img_frame6",
+      "FrameThumbImageName": "icon_theme_birthday_4_1",
+      "FrameThumbFocImageName": "icon_theme_birthday_4_1_foc",
+      "FrameCount": 4,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "birthday_img_obj_6_1",
+          "CoordinateLeft": 1376,
+          "CoordinateTop": 60,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "birthday_img_obj_6_2"
+        }
+      ]
+    },
+    {
+      "Id": 100399,
+      "FrameImageName": "birthday_img_outro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Outro",
+      "ObjectInfo": [
+      ]
+    }
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+       
+    <!-- center -->
+	<item 
+        android:state_selected="true"
+        android:color="#99ffffff"/> 
+        
+	<!-- normal -->
+	<item android:color="#7fffffff"/>
+	
+	<!--  
+    <item android:color="#ccffffff"/>
+    -->
+    
+</selector>

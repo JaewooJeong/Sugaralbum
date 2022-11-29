@@ -1,0 +1,71 @@
+{
+  "effects": [
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+        {
+          "type": "border_effect",
+          "line_color": 4278190080,
+          "line_width": 2
+        }
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+        {
+          "type": "border_effect",
+          "line_color": 4278190080,
+          "line_width": 2
+        }
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+        {
+          "type": "border_effect",
+          "line_color": 4278190080,
+          "line_width": 2
+        }
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+        {
+          "type": "border_effect",
+          "line_color": 4278190080,
+          "line_width": 2
+        }
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+        {
+          "type": "border_effect",
+          "line_color": 4278190080,
+          "line_width": 2
+        }
+      ]
+    }
+  ],
+  "extra_effects": {
+    "scale_effect": {
+      "type": "scale_effect",
+      "max_count": 1,
+      "apply_scene": "multi_layer_scene",
+      "apply_template": [
+        33003,
+        34002,
+        34001
+      ]
+    }
+  }
+}

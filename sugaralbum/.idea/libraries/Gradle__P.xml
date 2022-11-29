@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: P">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/das-android-child-1.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

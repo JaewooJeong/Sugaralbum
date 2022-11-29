@@ -81,4 +81,778 @@
     <dimen name="default_zone_padding">16dp</dimen>
     <dimen name="default_zone_corner_radius">8dp</dimen>
 
+
+    <!-- ========================================================== -->
+    <!-- KIWIPLE START -->
+    <!-- ========================================================== -->
+    <!-- camera -->
+    <dimen name="camera_setting_radio_margin">25dip</dimen>
+
+    <!-- main -->
+    <dimen name="main_filter_market_item_margin">1.5dip</dimen>
+    <dimen name="main_filter_market_item_inner_horizontal_margin">1dip</dimen>
+
+    <!-- filter market -->
+    <dimen name="filter_market_detail_image_frame_padding">5dip</dimen>
+    <dimen name="preview_image_padding">20dip</dimen>
+    <dimen name="detail_preview_image_padding">40dip</dimen>
+    <dimen name="image_preview_header_width">111dip</dimen>
+    <dimen name="image_preview_header_title">12.5dp</dimen>
+    <dimen name="image_preview_header_title_small">11.5dip</dimen>
+    <dimen name="bubble_popup_text_size">11dp</dimen>
+
+    <!-- top menu -->
+    <dimen name="edit_sticker_indicator_margin">7dip</dimen>
+    <dimen name="select_collage_indicator_margin_portrait">25dip</dimen>
+    <dimen name="select_collage_indicator_margin_landscape">13.5dip</dimen>
+
+    <!-- ========================================================== -->
+    <!-- KIWIPLE END -->
+    <!-- ========================================================== -->
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="camera_popup_width">311dp</dimen>
+    <!-- shadow 제외 영역 : 309.5dp, shadow 영역 1.5dp = 311dp -->
+    <dimen name="camera_popup_bot_line_width">307dp</dimen>
+    <dimen name="camera_popup_top_bg_height">51.5dp</dimen>
+    <dimen name="camera_popup_bot_bg_height">62dp</dimen>
+    <dimen name="camera_popup_bot_bg_padding">10dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- CAMERA START -->
+    <!-- ========================================================== -->
+    <dimen name="hint_y_offset">64dp</dimen>
+    <dimen name="pano_mosaic_surface_height">240dp</dimen>
+    <dimen name="setting_popup_right_margin">5dp</dimen>
+    <dimen name="setting_row_height">47.5dp</dimen>
+    <!-- csy -->
+    <dimen name="setting_item_text_size">18sp</dimen>
+    <!-- csy -->
+    <dimen name="setting_knob_width">20dp</dimen>
+    <dimen name="setting_knob_text_size">20dp</dimen>
+    <dimen name="setting_item_text_width">95dp</dimen>
+    <dimen name="setting_popup_window_width">312dp</dimen>
+    <!-- csy -->
+    <dimen name="setting_item_list_margin">14dp</dimen>
+    <dimen name="setting_item_list_margin_left">11dp</dimen>
+    <!-- csy -->
+    <dimen name="setting_item_list_margin_right">12dp</dimen>
+    <!-- csy -->
+    <dimen name="indicator_bar_width">48dp</dimen>
+    <dimen name="popup_title_text_size">19sp</dimen>
+    <!-- csy -->
+    <dimen name="popup_title_frame_min_height">51.5dp</dimen>
+    <!-- csy -->
+    <dimen name="big_setting_popup_window_width">320dp</dimen>
+    <dimen name="setting_item_icon_width">28dp</dimen>
+
+    <dimen name="onscreen_indicators_height">28dp</dimen>
+    <dimen name="onscreen_exposure_indicator_text_size">15dp</dimen>
+    <dimen name="switch_padding">16dp</dimen>
+    <dimen name="switch_min_width">96dp</dimen>
+    <dimen name="switch_text_max_width">44dp</dimen>
+    <dimen name="thumb_text_padding">12dp</dimen>
+    <dimen name="thumb_text_size">14sp</dimen>
+    <dimen name="setting_popup_right_margin_large">8dp</dimen>
+    <dimen name="setting_row_height_large">54dp</dimen>
+    <dimen name="setting_popup_window_width_large">260dp</dimen>
+    <dimen name="indicator_bar_width_large">72dp</dimen>
+    <dimen name="setting_item_icon_width_large">48dp</dimen>
+    <dimen name="onscreen_indicators_height_large">36dp</dimen>
+    <dimen name="pano_mosaic_surface_height_xlarge">480dp</dimen>
+    <dimen name="setting_row_height_xlarge">50dp</dimen>
+    <dimen name="setting_item_text_size_xlarge">21dp</dimen>
+    <dimen name="setting_knob_width_xlarge">50dp</dimen>
+    <dimen name="setting_item_text_width_xlarge">130dp</dimen>
+    <dimen name="setting_popup_window_width_xlarge">410dp</dimen>
+    <dimen name="setting_item_list_margin_xlarge">24dp</dimen>
+    <dimen name="indicator_bar_width_xlarge">13dp</dimen>
+    <dimen name="popup_title_text_size_xlarge">22dp</dimen>
+    <dimen name="popup_title_frame_min_height_xlarge">60dp</dimen>
+    <dimen name="big_setting_popup_window_width_xlarge">590dp</dimen>
+    <dimen name="setting_item_icon_width_xlarge">35dp</dimen>
+    <!--
+    <dimen name="effect_setting_item_icon_width_xlarge">54dp</dimen>
+    <dimen name="effect_setting_item_text_size_xlarge">21dp</dimen>
+    <dimen name="effect_setting_type_text_size_xlarge">21dp</dimen>
+    <dimen name="effect_setting_type_text_min_height_xlarge">34dp</dimen>
+    <dimen name="effect_setting_clear_text_size_xlarge">23dp</dimen>
+    <dimen name="effect_setting_clear_text_min_height_xlarge">44dp</dimen>
+    <dimen name="effect_setting_type_text_left_padding_xlarge">26dp</dimen>
+
+
+
+    -->
+    <dimen name="onscreen_indicators_height_xlarge">36dp</dimen>
+    <dimen name="onscreen_exposure_indicator_text_size_xlarge">18dp</dimen>
+    <dimen name="pie_radius_start">80dp</dimen>
+    <dimen name="pie_radius_increment">60dp</dimen>
+    <dimen name="pie_touch_slop">12dp</dimen>
+    <dimen name="pie_touch_offset">40dp</dimen>
+    <dimen name="pie_view_size">48dp</dimen>
+    <dimen name="focus_radius_offset">8dp</dimen>
+    <dimen name="focus_inner_offset">24dp</dimen>
+    <dimen name="focus_outer_stroke">3dp</dimen>
+    <dimen name="focus_inner_stroke">2dp</dimen>
+    <dimen name="zoom_ring_min">48dp</dimen>
+    <dimen name="switcher_size">94.5dp</dimen>
+    <dimen name="face_circle_stroke">2dip</dimen>
+    <dimen name="zoom_font_size">14pt</dimen>
+    <dimen name="shutter_offset">-22dp</dimen>
+    <!-- ========================================================== -->
+    <!-- CAMERA END -->
+    <!-- ========================================================== -->
+
+    <dimen name="list_divider_height">0.5dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- GALLERY START -->
+    <!-- ========================================================== -->
+    <dimen name="gallery_title_text_size">18dp</dimen>
+    <dimen name="gallery_bottom_menu_text_size">12.5dp</dimen>
+    <!-- ========================================================== -->
+    <!-- GALLERY END -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- TextSize Define Start -->
+    <!-- ========================================================== -->
+    <dimen name="text_size_20dp">20dp</dimen>
+    <dimen name="text_size_18dp">18dp</dimen>
+    <dimen name="text_size_17dp">17dp</dimen>
+    <dimen name="text_size_16dp">16dp</dimen>
+    <dimen name="text_size_15dp">15dp</dimen>
+    <dimen name="text_size_14dp">14dp</dimen>
+    <dimen name="text_size_13dp">13dp</dimen>
+    <dimen name="text_size_12point5dp">12.5dp</dimen>
+    <dimen name="text_size_12dp">12dp</dimen>
+    <!-- ========================================================== -->
+    <!-- TextSize Define END -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- Bubble Popup Start -->
+    <!-- ========================================================== -->
+    <dimen name="bubble_contents_popup_frame_margin_left">25dp</dimen>
+    <dimen name="bubble_contents_popup_frame_margin_right">25dp</dimen>
+    <!-- ========================================================== -->
+    <!-- Bubble Popup End -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- NEW GALLERY START -->
+    <!-- ========================================================== -->
+    <dimen name="gallery2_title_height">51.5dp</dimen>
+    <dimen name="gallery2_title_total_height">83.5dp</dimen>
+    <dimen name="gallery2_title_bottom_margin">0.5dp</dimen>
+    <dimen name="gallery2_menu_height">71dp</dimen>
+    <dimen name="gallery2_list_header_height">40.5dp</dimen>
+    <dimen name="gallery2_list_padding">3dp</dimen>
+    <dimen name="gallery2_list_item_padding">1.5dp</dimen>
+    <dimen name="gallery2_selected_list_item_width">75dp</dimen>
+    <dimen name="gallery2_landscape_selected_list_width">84dp</dimen>
+    <dimen name="gallery2_bottom_menu_text_size">11dp</dimen>
+    <dimen name="gallery2_select_title_size">18sp</dimen>
+    <dimen name="gallery2_select_title_size_land">16sp</dimen>
+    <dimen name="gallery2_landscape_select_info_size_big">17sp</dimen>
+    <dimen name="gallery2_landscape_select_info_size">14sp</dimen>
+    <!-- ========================================================== -->
+    <!-- NEW GALLERY END -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!--                   start index_layout.xml                   -->
+    <!-- ========================================================== -->
+    <dimen name="index_layout_setting_imagebutton_width">30.5dp</dimen>
+    <dimen name="index_layout_setting_imagebutton_height">30.5dp</dimen>
+    <dimen name="index_layout_setting_imagebutton_margintop">15.5dp</dimen>
+    <dimen name="index_layout_setting_imagebutton_marginright">10.5dp</dimen>
+
+    <dimen name="index_layout_logo_imageview_width">175dp</dimen>
+    <dimen name="index_layout_logo_imageview_height">70dp</dimen>
+    <dimen name="index_layout_logo_imageview_margintop">99.5dp</dimen>
+    <dimen name="splash_label_reddot_margin">6.5dp</dimen>
+    <dimen name="splash_label_reddot_width">105.5dp</dimen>
+    <dimen name="splash_label_reddot_height">75.5dp</dimen>
+    <dimen name="index_layout_button_layout_height">100dp</dimen>
+    <dimen name="index_layout_moviediarybutton_right_text_imageview_width">75dp</dimen>
+    <dimen name="index_layout_moviediarybutton_imageview_right_new_image_width">28.5dp</dimen>
+    <dimen name="index_layout_moviediarybutton_imageview_right_new_image_height">15.5dp</dimen>
+    <dimen name="index_layout_moviediarybutton_imageview_right_new_image_marginright">30dp</dimen>
+    <dimen name="index_layout_moviediarybutton_imageview_right_new_image_margintop">4dp</dimen>
+    <dimen name="index_layout_moviediarybutton_imageview_right_badge_layout_margintop">4dp</dimen>
+    <dimen name="index_layout_moviediarybutton_imageview_right_badge_layout_marginleft">46dp</dimen>
+    <dimen name="index_layout_moviediarybutton_imageview_right_badge_count_textsize">12dp</dimen>
+    <dimen name="index_layout_moviediarybutton_textview_righttext_textsize">16dp</dimen>
+
+    <dimen name="index_layout_camerabutton_layout_marginbottom">2.5dp</dimen>
+    <dimen name="index_layout_camerabutton_left_imageview_width">75dp</dimen>
+    <dimen name="index_layout_camerabutton_left_icon_imageview_width">33dp</dimen>
+    <dimen name="index_layout_camerabutton_left_icon_imageview_height">33dp</dimen>
+    <dimen name="index_layout_camerabutton_left_icon_imageview_marginleft">6dp</dimen>
+    <dimen name="index_layout_camerabutton_right_imageview_width">180dp</dimen>
+    <dimen name="index_layout_camerabutton_right_text_imageview_width">146dp</dimen>
+    <dimen name="index_layout_camerabutton_right_text_imageview_height">25dp</dimen>
+    <dimen name="index_layout_camerabutton_right_text_imageview_marginright">18dp</dimen>
+
+    <dimen name="index_layout_gallerybutton_layout_marginbottom">75dp</dimen>
+    <dimen name="index_layout_gallerybutton_left_imageview_width">89dp</dimen>
+    <dimen name="index_layout_gallerybutton_left_imageview_height">99dp</dimen>
+    <dimen name="index_layout_gallerybutton_left_icon_imageview_width">33dp</dimen>
+    <dimen name="index_layout_gallerybutton_left_icon_imageview_height">33dp</dimen>
+    <dimen name="index_layout_gallerybutton_left_icon_imageview_marginleft">6dp</dimen>
+    <dimen name="index_layout_gallerybutton_right_imageview_width">180dp</dimen>
+    <dimen name="index_layout_gallerybutton_right_text_imageview_width">146dp</dimen>
+    <dimen name="index_layout_gallerybutton_right_text_imageview_height">25dp</dimen>
+    <dimen name="index_layout_gallerybutton_right_text_imageview_marginright">18dp</dimen>
+    <dimen name="index_layout_button_text_imageview_height">5dp</dimen>
+    <dimen name="index_layout_copyright_textview_textsize">11dp</dimen>
+    <dimen name="index_layout_copyright_textview_marginbottom">26dp</dimen>
+    <!-- ========================================================== -->
+    <!--                    end index_layout.xml                    -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_title.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_title_layout_height">28dp</dimen>
+    <dimen name="setting_list_item_title_textview_textsize">15dp</dimen>
+    <dimen name="setting_list_item_title_textview_marginleft">14dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_title.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_login.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_login_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_login_button_width">82dp</dimen>
+    <dimen name="setting_list_item_login_button_height">35dp</dimen>
+    <dimen name="setting_list_item_login_button_marginright">11.5dp</dimen>
+    <dimen name="setting_list_item_login_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_login_textview_marginright">14dp</dimen>
+    <dimen name="setting_list_item_login_textview_textsize">20dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_login.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_login_config.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_login_config_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_login_config_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_login_config_textview_marginright">14dp</dimen>
+    <dimen name="setting_list_item_login_config_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_login_config_arrow_imageview_width">20dp</dimen>
+    <dimen name="setting_list_item_login_config_arrow_imageview_height">20dp</dimen>
+    <dimen name="setting_list_item_login_config_arrow_imageview_marginleft">5dp</dimen>
+    <dimen name="setting_list_item_login_config_arrow_imageview_marginright">24.5dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_login.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_mainpage.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_mainpage_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_mainpage_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_mainpage_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_mainpage_sub_textview_textsize">15dp</dimen>
+    <dimen name="setting_list_item_mainpage_arrow_imageview_width">20dp</dimen>
+    <dimen name="setting_list_item_mainpage_arrow_imageview_height">20dp</dimen>
+    <dimen name="setting_list_item_mainpage_arrow_imageview_marginleft">5dp</dimen>
+    <dimen name="setting_list_item_mainpage_arrow_imageview_marginright">24.5dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_mainpage.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_preview.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_preview_layout_height">98dp</dimen>
+    <dimen name="setting_list_item_preview_layout_paddingleft">14dp</dimen>
+    <dimen name="setting_list_item_preview_layout_paddingright">9.5dp</dimen>
+    <dimen name="setting_list_item_preview_layout_paddingtop">10dp</dimen>
+    <dimen name="setting_list_item_preview_toggle_layout_width">79dp</dimen>
+    <dimen name="setting_list_item_preview_togglebutton_height">32.5dp</dimen>
+    <dimen name="setting_list_item_preview_textview_height">32.5dp</dimen>
+    <dimen name="setting_list_item_preview_textview_marginbottom">4dp</dimen>
+    <dimen name="setting_list_item_preview_textview_marginright">14dp</dimen>
+    <dimen name="setting_list_item_preview_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_preview_sub_textview_marginright">14dp</dimen>
+    <dimen name="setting_list_item_preview_sub_textview_textsize">15dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_preview.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_auto_update.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_auto_update_layout_height">98dp</dimen>
+    <dimen name="setting_list_item_auto_update_layout_paddingleft">14dp</dimen>
+    <dimen name="setting_list_item_auto_update_layout_paddingright">9.5dp</dimen>
+    <dimen name="setting_list_item_auto_update_layout_paddingtop">10dp</dimen>
+    <dimen name="setting_list_item_auto_update_toggle_layout_width">79dp</dimen>
+    <dimen name="setting_list_item_auto_update_togglebutton_height">32.5dp</dimen>
+    <dimen name="setting_list_item_auto_update_textview_height">32.5dp</dimen>
+    <dimen name="setting_list_item_auto_update_textview_marginbottom">4dp</dimen>
+    <dimen name="setting_list_item_auto_update_textview_marginright">14dp</dimen>
+    <dimen name="setting_list_item_auto_update_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_auto_update_sub_textview_marginright">14dp</dimen>
+    <dimen name="setting_list_item_auto_update_sub_textview_textsize">15dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_auto_update.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_version.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_version_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_version_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_version_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_version_sub_textview_textsize">15dp</dimen>
+    <dimen name="setting_list_item_version_arrow_imageview_width">20dp</dimen>
+    <dimen name="setting_list_item_version_arrow_imageview_height">20dp</dimen>
+    <dimen name="setting_list_item_version_arrow_imageview_marginleft">5dp</dimen>
+    <dimen name="setting_list_item_version_arrow_imageview_marginright">24.5dp</dimen>
+    <dimen name="setting_list_item_version_icon_imageview_width">19.5dp</dimen>
+    <dimen name="setting_list_item_version_icon_imageview_height">19.5dp</dimen>
+    <dimen name="setting_list_item_version_icon_imageview_marginright">10dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_version.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_notification.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_notification_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_notification_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_notification_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_notification_arrow_imageview_width">20dp</dimen>
+    <dimen name="setting_list_item_notification_arrow_imageview_height">20dp</dimen>
+    <dimen name="setting_list_item_notification_arrow_imageview_marginleft">5dp</dimen>
+    <dimen name="setting_list_item_notification_arrow_imageview_marginright">14dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_notification.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_operation_guide.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_guide_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_guide_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_guide_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_guide_arrow_imageview_width">20dp</dimen>
+    <dimen name="setting_list_item_guide_arrow_imageview_height">20dp</dimen>
+    <dimen name="setting_list_item_guide_arrow_imageview_marginleft">5dp</dimen>
+    <dimen name="setting_list_item_guide_arrow_imageview_marginright">14dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_operation_guide.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_event.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_event_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_event_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_event_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_event_arrow_imageview_width">20dp</dimen>
+    <dimen name="setting_list_item_event_arrow_imageview_height">20dp</dimen>
+    <dimen name="setting_list_item_event_arrow_imageview_marginleft">5dp</dimen>
+    <dimen name="setting_list_item_event_arrow_imageview_marginright">14dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_event.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_list_item_faq.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_list_item_faq_layout_height">67.5dp</dimen>
+    <dimen name="setting_list_item_faq_textview_marginleft">14dp</dimen>
+    <dimen name="setting_list_item_faq_textview_textsize">20dp</dimen>
+    <dimen name="setting_list_item_faq_arrow_imageview_width">20dp</dimen>
+    <dimen name="setting_list_item_faq_arrow_imageview_height">20dp</dimen>
+    <dimen name="setting_list_item_faq_arrow_imageview_marginleft">5dp</dimen>
+    <dimen name="setting_list_item_faq_arrow_imageview_marginright">24.5dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end setting_list_item_faq.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start setting_main_page_popup.xml -->
+    <!-- ========================================================== -->
+    <dimen name="setting_main_page_popup_title_textview_height">51.5dp</dimen>
+    <dimen name="setting_main_page_popup_title_textview_textsize">19dp</dimen>
+    <dimen name="setting_main_page_popup_share_radiobutton_height">68dp</dimen>
+    <dimen name="setting_main_page_popup_donebutton_share_layout_height">63dp</dimen>
+    <dimen name="setting_main_page_popup_radiobutton_height">47.5dp</dimen>
+    <dimen name="setting_main_page_popup_radiobutton_paddingleft">14.5dp</dimen>
+    <dimen name="setting_main_page_popup_radiobutton_paddingright">12dp</dimen>
+    <dimen name="setting_main_page_popup_radiobutton_drawablepadding">11dp</dimen>
+    <dimen name="setting_main_page_popup_radiobutton_textsize">18dp</dimen>
+    <dimen name="setting_main_page_popup_donebutton_layout_height">62dp</dimen>
+    <dimen name="setting_main_page_popup_donebutton_margin">10dp</dimen>
+    <dimen name="setting_main_page_popup_donebutton_textsize">14dp</dimen>
+    <dimen name="setting_main_page_popup_content_textsize">15dp</dimen>
+    <dimen name="setting_main_page_popup_donebutton_share_padding_left_right">9.5dp</dimen>
+    <dimen name="setting_main_page_popup_donebutton_share_padding_up_down">10.5dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- end setting_main_page_popup.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start dialog_text_two_button.xml -->
+    <!-- ========================================================== -->
+    <dimen name="dialog_text_two_button_layout_marginleft">25dp</dimen>
+    <dimen name="dialog_text_two_button_layout_marginright">25dp</dimen>
+    <dimen name="dialog_text_two_button_message_layout_paddingtop">32dp</dimen>
+    <dimen name="dialog_text_two_button_message1_textview_textsize">15dp</dimen>
+    <dimen name="dialog_text_two_button_message1_textview_paddingbottom">15dp</dimen>
+    <dimen name="dialog_text_two_button_message_empty_view_height">12dp</dimen>
+    <dimen name="dialog_text_two_button_message2_textview_textsize">13dp</dimen>
+    <dimen name="dialog_text_two_button_message2_textview_paddingbottom">18dp</dimen>
+    <dimen name="dialog_text_two_button_line_view_marginleft">2dp</dimen>
+    <dimen name="dialog_text_two_button_line_view_marginright">2dp</dimen>
+    <dimen name="dialog_text_two_button_bottom_layout_height">62dp</dimen>
+    <dimen name="dialog_text_two_button_bottom_layout_margin">10dp</dimen>
+    <dimen name="dialog_text_two_button_cancel_button_textsize">14dp</dimen>
+    <dimen name="dialog_text_two_button_ok_button_marginleft">7dp</dimen>
+    <dimen name="dialog_text_two_button_ok_button_textsize">14dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end dialog_text_two_button.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start dialog_text_one_button.xml -->
+    <!-- ========================================================== -->
+    <dimen name="dialog_text_one_button_layout_marginleft">25dp</dimen>
+    <dimen name="dialog_text_one_button_layout_marginright">25dp</dimen>
+    <dimen name="dialog_text_one_button_message_layout_paddingtop">32dp</dimen>
+    <dimen name="dialog_text_one_button_message1_textview_textsize">15dp</dimen>
+    <dimen name="dialog_text_one_button_message1_textview_paddingbottom">15dp</dimen>
+    <dimen name="dialog_text_one_button_message_empty_view_height">12dp</dimen>
+    <dimen name="dialog_text_one_button_message2_textview_textsize">13dp</dimen>
+    <dimen name="dialog_text_one_button_message2_textview_paddingbottom">18dp</dimen>
+    <dimen name="dialog_text_one_button_line_view_marginleft">2dp</dimen>
+    <dimen name="dialog_text_one_button_line_view_marginright">2dp</dimen>
+    <dimen name="dialog_text_one_button_bottom_layout_height">62dp</dimen>
+    <dimen name="dialog_text_one_button_bottom_layout_margin">10dp</dimen>
+    <dimen name="dialog_text_one_button_ok_button_textsize">14dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end dialog_text_one_button.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start noticelist_row_view.xml -->
+    <!-- ========================================================== -->
+    <dimen name="noticelist_row_view_group_layout_height">77.5dp</dimen>
+    <dimen name="noticelist_row_view_group_arrow_imageview_width">20dp</dimen>
+    <dimen name="noticelist_row_view_group_arrow_imageview_height">20dp</dimen>
+    <dimen name="noticelist_row_view_group_arrow_imageview_marginleft">14dp</dimen>
+    <dimen name="noticelist_row_view_group_arrow_imageview_marginright">14dp</dimen>
+    <dimen name="noticelist_row_view_group_title_textview_marginbottom">8.5dp</dimen>
+    <dimen name="noticelist_row_view_group_title_textview_marginleft">14dp</dimen>
+    <dimen name="noticelist_row_view_group_title_textview_textsize">20dp</dimen>
+    <dimen name="noticelist_row_view_group_date_textview_marginleft">14dp</dimen>
+    <dimen name="noticelist_row_view_group_date_textview_textsize">15dp</dimen>
+    <dimen name="noticelist_row_view_child_notice_textview_textsize">12dp</dimen>
+    <dimen name="noticelist_row_view_child_notice_textview_padding">17dp</dimen>
+    <dimen name="noticelist_row_view_child_notice_textview_linespacingextra">3dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end noticelist_row_view.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start eventlist_row_view.xml -->
+    <!-- ========================================================== -->
+    <dimen name="eventlist_row_view_group_layout_height">77.5dp</dimen>
+    <dimen name="eventlist_row_view_group_arrow_imageview_width">20dp</dimen>
+    <dimen name="eventlist_row_view_group_arrow_imageview_height">20dp</dimen>
+    <dimen name="eventlist_row_view_group_arrow_imageview_marginleft">14dp</dimen>
+    <dimen name="eventlist_row_view_group_arrow_imageview_marginright">14dp</dimen>
+    <dimen name="eventlist_row_view_group_title_textview_marginbottom">8.5dp</dimen>
+    <dimen name="eventlist_row_view_group_title_textview_marginleft">14dp</dimen>
+    <dimen name="eventlist_row_view_group_title_textview_textsize">20dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end eventlist_row_view.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- start share_list_dialog.xml -->
+    <!-- ========================================================== -->
+    <dimen name="share_list_dialog_default_title_textview_layout_margintop">45dp</dimen>
+    <dimen name="share_list_dialog_default_title_textview_layout_landscape_margintop">5dp</dimen>
+    <dimen name="share_list_dialog_otherapp_scrollview_layout_marginbottom">45dp</dimen>
+    <dimen name="share_list_dialog_otherapp_scrollview_layout_landscape_marginbottom">5dp</dimen>
+    <!-- ========================================================== -->
+    <!-- end share_list_dialog.xml -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- KIWIPLE START -->
+    <!-- ========================================================== -->
+    <!-- edit sticker -->
+    <!-- 11/12 duplicate -->
+    <!-- <dimen name="edit_sticker_indicator_margin">7dip</dimen> -->
+
+
+    <!-- ========================================================== -->
+    <!-- GALLERY START -->
+    <!-- ========================================================== -->
+    <!-- activity_main.xml -->
+    <dimen name="gallery_header_gallery_story_width">89dp</dimen>
+    <dimen name="gallery_header_gallery_story_height">35.5dp</dimen>
+    <dimen name="gallery_header_icon_width">27dp</dimen>
+    <dimen name="gallery_header_icon_height">27dp</dimen>
+    <!-- gallery_fragment.xml -->
+    <dimen name="gallery_fragment_header_height">34dp</dimen>
+    <dimen name="gallery_fragment_header_btn_height">32dp</dimen>
+    <dimen name="gallery_fragment_intro_icon_widht">70.5dp</dimen>
+    <dimen name="gallery_fragment_intro_icon_height">70.5dp</dimen>
+    <dimen name="kiwiple_story_gallery_intro_bottom_height">64.5dp</dimen>
+    <dimen name="kiwiple_story_gallery_intor_bottom_margin">8.5dp</dimen>
+    <dimen name="kiwiple_story_gallery_intor_bottom_margin_top">10.5dp</dimen>
+    <dimen name="kiwiple_story_gallery_intor_text_title_height">22.5dp</dimen>
+    <dimen name="kiwiple_story_gallery_intor_text_content_height">18.75dp</dimen>
+
+    <!-- row_move.xml -->
+    <dimen name="gallery_list_header_height">46.5dp</dimen>
+    <dimen name="gallery_list_header_checkbox_width">25dp</dimen>
+    <dimen name="gallery_list_header_checkbox_height">25dp</dimen>
+    <dimen name="gallery_list_left_padding">7dp</dimen>
+    <dimen name="gallery_list_right_padding">7dp</dimen>
+    <dimen name="gallery_list_top_padding">7dp</dimen>
+    <dimen name="gallery_list_padding">7dp</dimen>
+    <dimen name="gallery_list_bottom_padding">8dp</dimen>
+    <dimen name="gallery_list_item_width">85.5dp</dimen>
+    <dimen name="gallery_list_item_height">85.5dp</dimen>
+    <dimen name="gallery_list_item_padding">1.5dp</dimen>
+    <dimen name="gallery_list_item_text_width">75.5dp</dimen>
+    <!-- row_item_view -->
+    <dimen name="gallery_list_item_text_height">20dp</dimen>
+    <dimen name="gallery_list_item_text_padding_right">8dp</dimen>
+    <dimen name="gallery_list_item_checkbox_width">25dp</dimen>
+    <dimen name="gallery_list_item_checkbox_height">25dp</dimen>
+    <dimen name="gallery_list_item_checkbox_margine">3.5dp</dimen>
+    <!-- footer_view -->
+    <dimen name="gallery_list_footer_emtpy_height">71dp</dimen>
+    <dimen name="gallery_list_footer_horizontalListView_bottom_margin">69dp</dimen>
+    <dimen name="gallery_list_footer_list_height">85.5dp</dimen>
+    <dimen name="gallery_list_footer_summery_height">71dp</dimen>
+    <dimen name="gallery_list_footer_summery_button_width">80dp</dimen>
+    <dimen name="gallery_list_footer_summery_button_height">52dp</dimen>
+    <dimen name="gallery_list_footer_summery_icon_width">30dp</dimen>
+    <dimen name="gallery_list_footer_summery_icon_height">30dp</dimen>
+    <!-- row_selected_item_view -->
+    <dimen name="gallery_selected_list_item_width">75dp</dimen>
+    <dimen name="gallery_selected_item_thumbnail_width">65dp</dimen>
+    <dimen name="gallery_selected_item_thumbnail_height">65dp</dimen>
+    <dimen name="gallery_selected_item_view_width">67dp</dimen>
+    <dimen name="gallery_selected_item_view_height">67dp</dimen>
+    <dimen name="gallery_selected_item_play_image_width">38dp</dimen>
+    <dimen name="gallery_selected_item_play_image_height">38dp</dimen>
+    <dimen name="gallery_selected_item_cancel_image_width">21dp</dimen>
+    <dimen name="gallery_selected_item_cancel_image_height">21dp</dimen>
+    <!-- etc -->
+    <dimen name="gallery_landscape_selected_list_width">84dp</dimen>
+    <dimen name="gallery_title_height">51.5dp</dimen>
+    <dimen name="gallery_title_bottom_margin">0.5dp</dimen>
+    <dimen name="gallery_subtitle_height">34dp</dimen>
+    <dimen name="gallery_bottom_height">50.5dp</dimen>
+    <dimen name="gallery_menu_button_height">52dp</dimen>
+    <!-- 11/12 duplicate -->
+    <!-- <dimen name="gallery_bottom_menu_text_size">11dp</dimen> -->
+    <dimen name="gallery_select_title_size">18sp</dimen>
+    <dimen name="gallery_select_title_size_land">16sp</dimen>
+    <dimen name="gallery_landscape_select_info_size_big">17sp</dimen>
+    <dimen name="gallery_landscape_select_info_size">14sp</dimen>
+    <dimen name="gallery_bottom_selected_text_size">15sp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- GALLERY END -->
+    <!-- ========================================================== -->
+
+
+    <!-- ========================================================== -->
+    <!-- COMMON START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_common_preview_height">202.7dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- HEADER BOTTOM START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_header_height">48dp</dimen>
+    <dimen name="kiwiple_story_header_back_width">17.5dp</dimen>
+    <dimen name="kiwiple_story_header_back_height">17.5dp</dimen>
+    <dimen name="kiwiple_story_header_delete_width">27dp</dimen>
+    <dimen name="kiwiple_story_header_delete_height">27dp</dimen>
+    <dimen name="kiwiple_story_header_download_width">27dp</dimen>
+    <dimen name="kiwiple_story_header_download_height">27dp</dimen>
+    <dimen name="kiwiple_story_bottom_two_button_height">52dp</dimen>
+    <dimen name="kiwiple_story_header_subject_min_width">519px</dimen>
+    <dimen name="kiwiple_story_header_front_left_margin">14dp</dimen>
+    <dimen name="kiwiple_story_header_end_right_margin">12.5dp</dimen>
+    <dimen name="kiwiple_story_header_icon_width">27dp</dimen>
+    <dimen name="kiwiple_story_header_icon_height">27dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- SCENARIO START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_scenario_title_text_height">28dp</dimen>
+    <dimen name="kiwiple_story_scenario_header_height">94dp</dimen>
+    <dimen name="kiwiple_story_scenario_first_header_height">47.5dp</dimen>
+    <dimen name="kiwiple_story_scenario_header_image_width">50dp</dimen>
+    <dimen name="kiwiple_story_scenario_category_text_image_width">35dp</dimen>
+    <dimen name="kiwiple_story_scenario_category_add_image_width">16dp</dimen>
+    <dimen name="kiwiple_story_scenario_add_dialog_middle_height">142.5dp</dimen>
+    <dimen name="kiwiple_story_scenario_category_text_height">202.5dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- STORY START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_story_height">195dp</dimen>
+    <dimen name="kiwiple_story_story_type_width">102dp</dimen>
+    <dimen name="kiwiple_story_story_type_height">21.5dp</dimen>
+    <dimen name="kiwiple_story_story_label_height">38.5dp</dimen>
+    <dimen name="kiwiple_story_story_duration_width">12.5dp</dimen>
+    <dimen name="kiwiple_story_story_duration_height">12dp</dimen>
+    <dimen name="kiwiple_story_story_detail_upper_text_height">142.5dp</dimen>
+    <dimen name="kiwiple_story_story_detail_thumb_height">202.5dp</dimen>
+    <dimen name="kiwiple_story_story_detail_bottom_text_height">125.5dp</dimen>
+    <dimen name="kiwiple_story_story_detail_bottom_tab_height">71dp</dimen>
+    <dimen name="kiwiple_story_story_detail_thumb_play_width">66dp</dimen>
+    <dimen name="kiwiple_story_story_detail_thumb_play_height">66dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- STORY EDIT MAIN START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_edit_main_main_fragment_subject_text_size">16dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_subject_width">111dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_subject_height">18dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_subject_margin_top">15dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_content_text_size">15dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_content_top_margin">10dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_front_margin">15dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_front_top_margin">15dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_end_margin">13.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_title_area_height">100.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_title_EditText_background_height">34.5dp
+    </dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_title_EditText_height">16.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_title_EditText_margin_left">11.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_title_EditText_margin_right">25dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_speed_area_height">86dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_speed_content_button_width">111dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_speed_content_button_height">36dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_top_margin">2dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_area_height">174.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_area_height">150dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_area_margin_top">9.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_area_margin_side">13.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_image_area_width">85.5dp
+    </dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_image_area_height">85.5dp
+    </dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_image_area_margin_bottom">
+        8.5dp
+    </dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_subject_height">18dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_subject_text_size">16dp</dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_subject_margin_bottom">2dp
+    </dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_discription_height">16dp
+    </dimen>
+    <dimen name="kiwiple_story_edit_main_main_fragment_style_content_discription_text_size">13dp
+    </dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_height">67.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_front_margin">14dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_end_margin">11.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_text_size">18dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_title_text_height">22.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_artist_text_height">17dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_artist_text_margin_top">10.5dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_item_artist_text_size">13dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_divier_height">28dp</dimen>
+    <dimen name="kiwiple_story_edit_main_music_fragment_divider_text_size">15dp</dimen>
+    <dimen name="kiwiple_story_edit_theme_item_width">85.5dp</dimen>
+    <dimen name="kiwiple_story_edit_theme_item_height">126.5dp</dimen>
+    <dimen name="kiwiple_story_edit_theme_item_category_name_height">28dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- STORY EDIT VIDEO START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_edit_video_grid_margin_top">13.5dp</dimen>
+    <dimen name="kiwiple_story_edit_video_grid_margin_side">6.5dp</dimen>
+    <dimen name="kiwiple_story_edit_video_grid_item_height">68.5dp</dimen>
+    <dimen name="kiwiple_story_edit_video_grid_item_text_area_height">22dp</dimen>
+    <dimen name="kiwiple_story_edit_video_grid_item_text_margin_end">5dp</dimen>
+    <dimen name="kiwiple_story_edit_video_grid_item_text_size">12dp</dimen>
+    <dimen name="kiwiple_story_edit_video_grid_item_text_icon_margin_right">6.5dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- COLLAGE START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_select_collage_indicator_margin_portrait">25dip</dimen>
+    <dimen name="kiwiple_story_select_collage_indicator_margin_landscape">13.5dip</dimen>
+
+    <!-- ========================================================== -->
+    <!-- SCENARIO START -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_scenario_thumbnail_margine">2dp</dimen>
+    <dimen name="kiwiple_story_scenario_overlap_if_switch_straight_line">16dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- SMART CARD -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_story_smart_card_item_total_height">277dp</dimen>
+    <dimen name="kiwiple_story_smart_card_thumbnail_height">103.7dp</dimen>
+    <dimen name="kiwiple_story_smart_card_thumbnail_side_margin">31.5dp</dimen>
+    <dimen name="kiwiple_story_smart_card_thumbnail_between_margin">8.75dp</dimen>
+    <dimen name="kiwiple_story_smart_card_thumbnail_bottom_margin">11.5dp</dimen>
+    <dimen name="kiwiple_story_smart_card_video_icon_width">20.7dp</dimen>
+    <dimen name="kiwiple_story_smart_card_thumbnail_bottom_area_height">19.5dp</dimen>
+    <dimen name="kiwiple_story_smart_card_margin_side">8dp</dimen>
+    <dimen name="kiwiple_story_smart_card_title_height">16.2dp</dimen>
+    <dimen name="kiwiple_story_smart_card_title_size">14dp</dimen>
+    <dimen name="kiwiple_story_smart_card_empty_icon_width">196dp</dimen>
+    <dimen name="kiwiple_story_smart_card_empty_icon_height">110.7dp</dimen>
+    <dimen name="kiwiple_story_smart_card_empty_icon_margin_top">21.7dp</dimen>
+    <dimen name="kiwiple_story_smart_card_title_margin_top">11dp</dimen>
+    <dimen name="kiwiple_story_smart_state_card_title_margin_bottom">17dp</dimen>
+    <dimen name="kiwiple_story_smart_card_duration_text_size">12dp</dimen>
+    <dimen name="kiwiple_story_smart_card_video_icon_left_margin">2.5dp</dimen>
+    <dimen name="kiwiple_story_smart_card_title_text_size">14dp</dimen>
+
+    <!-- ========================================================== -->
+    <!-- row header text size -->
+    <!-- ========================================================== -->
+    <dimen name="kiwiple_row_header_text_icon_title_width">27dp</dimen>
+    <dimen name="kiwiple_row_header_text_icon_count_width">24.5dp</dimen>
+
 </resources>

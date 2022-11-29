@@ -1,0 +1,221 @@
+{
+  "effects": [
+    {
+      "multi_effects_array": [
+      ],
+      "effects_array": [
+        {
+          "type": "light_effect_array",
+          "light_effect_array": [
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_a",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 51,
+              "lighting_move_from_y": 0,
+              "lighting_move_to_x": 294,
+              "lighting_move_to_y": 0
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_b",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 430,
+              "lighting_move_from_y": 113,
+              "lighting_move_to_x": 100,
+              "lighting_move_to_y": 113
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_c",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 259,
+              "lighting_move_from_y": 256,
+              "lighting_move_to_x": 450,
+              "lighting_move_to_y": 256
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "multi_effects_array": [
+      ],
+      "effects_array": [
+        {
+          "type": "light_effect_array",
+          "light_effect_array": [
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_a",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 51,
+              "lighting_move_from_y": 0,
+              "lighting_move_to_x": 294,
+              "lighting_move_to_y": 0
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_b",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 430,
+              "lighting_move_from_y": 113,
+              "lighting_move_to_x": 100,
+              "lighting_move_to_y": 113
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_c",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 259,
+              "lighting_move_from_y": 256,
+              "lighting_move_to_x": 450,
+              "lighting_move_to_y": 256
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "multi_effects_array": [
+      ],
+      "effects_array": [
+        {
+          "type": "light_effect_array",
+          "light_effect_array": [
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_a",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 51,
+              "lighting_move_from_y": 0,
+              "lighting_move_to_x": 294,
+              "lighting_move_to_y": 0
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_b",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 430,
+              "lighting_move_from_y": 113,
+              "lighting_move_to_x": 100,
+              "lighting_move_to_y": 113
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_c",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 259,
+              "lighting_move_from_y": 256,
+              "lighting_move_to_x": 450,
+              "lighting_move_to_y": 256
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "multi_effects_array": [
+      ],
+      "effects_array": [
+        {
+          "type": "light_effect_array",
+          "light_effect_array": [
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_a",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 51,
+              "lighting_move_from_y": 0,
+              "lighting_move_to_x": 294,
+              "lighting_move_to_y": 0
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_b",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 430,
+              "lighting_move_from_y": 113,
+              "lighting_move_to_x": 100,
+              "lighting_move_to_y": 113
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_c",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 259,
+              "lighting_move_from_y": 256,
+              "lighting_move_to_x": 450,
+              "lighting_move_to_y": 256
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "multi_effects_array": [
+      ],
+      "effects_array": [
+        {
+          "type": "light_effect_array",
+          "light_effect_array": [
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_a",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 51,
+              "lighting_move_from_y": 0,
+              "lighting_move_to_x": 294,
+              "lighting_move_to_y": 0
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_b",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 430,
+              "lighting_move_from_y": 113,
+              "lighting_move_to_x": 100,
+              "lighting_move_to_y": 113
+            },
+            {
+              "type": "light_effect",
+              "lighting_type": "type_circle_c",
+              "lighting_color": "color_yellow",
+              "lighting_scale": 300,
+              "lighting_move_from_x": 259,
+              "lighting_move_from_y": 256,
+              "lighting_move_to_x": 450,
+              "lighting_move_to_y": 256
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extra_effects": {
+    "scale_effect": {
+      "type": "scale_effect",
+      "max_count": 1,
+      "apply_scene": "multi_layer_scene",
+      "apply_template": [
+        33003,
+        34002,
+        34001
+      ]
+    }
+  }
+}

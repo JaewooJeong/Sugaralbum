@@ -1,0 +1,216 @@
+{
+  "Name": "Love",
+  "Type": "Frame",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "9925500 MDthemelove"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "Love Will Come Back Again",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic3"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_love",
+  "AudioFileName": "love_will_come_back_again.mp3",
+  "FileterJsonName": "defaultFilter",
+  "CollageJsonName": "defaultTemplates_love",
+  "CoverTransitionName": "cover_transition_love",
+  "CoverTransitionMaskName": "cover_transition_love_mask",
+  "VerticalImageName": "love_img_frame_virtical",
+  "MotionCount": 2,
+  "FilterId": -1,
+  "FileSize": 10695372,
+  "FileCount": 73,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5000,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_love.json",
+  "transitionJsonName": "theme/transition/transition_love.json",
+  "EndingLogo": "outro3.JPG",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+    {
+      "Id": 100400,
+      "FrameImageName": "love_img_intro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Intro",
+      "FontName": "Droid sans",
+      "FontSize": 50,
+      "FontColor": "721c1c",
+      "FontAlign": "Right",
+      "FontCoordinateLeft": 578,
+      "FontCoordinateTop": 716,
+      "FontCoordinateRight": 1464,
+      "FontCoordinateBottom": 776,
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100401,
+      "FrameImageName": "love_image_frame1",
+      "FrameThumbImageName": "icon_theme_love_1_1",
+      "FrameThumbFocImageName": "icon_theme_love_1_1_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "love_image_obj_1_1_1",
+          "CoordinateLeft": 1617,
+          "CoordinateTop": 0,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "love_image_obj_1_1_2"
+        },
+        {
+          "ImageName": "love_image_obj_1_2",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 624,
+          "MotionType": null,
+          "MotionFloatValue": 0,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100402,
+      "FrameImageName": "love_image_frame3",
+      "FrameThumbImageName": "icon_theme_love_1_2",
+      "FrameThumbFocImageName": "icon_theme_love_1_2_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "love_image_obj_3_1_1",
+          "CoordinateLeft": 938,
+          "CoordinateTop": 578,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "love_image_obj_3_1_2"
+        }
+      ]
+    },
+    {
+      "Id": 100403,
+      "FrameImageName": "love_image_frame5",
+      "FrameThumbImageName": "icon_theme_love_1_3",
+      "FrameThumbFocImageName": "icon_theme_love_1_3_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "love_image_obj_5_1_1",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 548,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "love_image_obj_5_1_2"
+        }
+      ]
+    },
+    {
+      "Id": 100404,
+      "FrameImageName": "love_image_frame7",
+      "FrameThumbImageName": "icon_theme_love_1_4",
+      "FrameThumbFocImageName": "icon_theme_love_1_4_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "love_image_obj_7_1_1",
+          "CoordinateLeft": 784,
+          "CoordinateTop": 728,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "love_image_obj_7_1_2"
+        }
+      ]
+    },
+    {
+      "Id": 100405,
+      "FrameImageName": "love_image_frame2",
+      "FrameThumbImageName": "icon_theme_love_2_1",
+      "FrameThumbFocImageName": "icon_theme_love_2_1_foc",
+      "FrameCount": 2,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "love_image_obj_2_2_1",
+          "CoordinateLeft": 1575,
+          "CoordinateTop": 0,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "love_image_obj_2_2_2"
+        },
+        {
+          "ImageName": "love_image_obj_2_1",
+          "CoordinateLeft": 28,
+          "CoordinateTop": 688,
+          "MotionType": null,
+          "MotionFloatValue": 0,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100406,
+      "FrameImageName": "love_image_frame4",
+      "FrameThumbImageName": "icon_theme_love_3_1",
+      "FrameThumbFocImageName": "icon_theme_love_3_1_foc",
+      "FrameCount": 3,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "love_image_obj_4_1",
+          "CoordinateLeft": 31,
+          "CoordinateTop": 65,
+          "MotionType": null,
+          "MotionFloatValue": 0,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "love_image_obj_4_2_1",
+          "CoordinateLeft": 1362,
+          "CoordinateTop": 626,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "love_image_obj_4_2_2"
+        }
+      ]
+    },
+    {
+      "Id": 100407,
+      "FrameImageName": "love_image_frame6",
+      "FrameThumbImageName": "icon_theme_love_4_1",
+      "FrameThumbFocImageName": "icon_theme_love_4_1_foc",
+      "FrameCount": 4,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "love_image_obj_6_1_1",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 0,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "love_image_obj_6_1_2"
+        }
+      ]
+    },
+    {
+      "Id": 100499,
+      "FrameImageName": "love_img_outro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Outro",
+      "ObjectInfo": [
+      ]
+    }
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

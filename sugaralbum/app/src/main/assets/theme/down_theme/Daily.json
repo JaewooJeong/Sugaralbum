@@ -1,0 +1,145 @@
+{
+  "Name": "Daily",
+  "Type": "Multi",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "99255400 MDthemedaily"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "GEAR -Doll-",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic2"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_daily",
+  "AudioFileName": "gear_doll.mp3",
+  "FileterJsonName": "defaultFilter",
+  "CollageJsonName": "defaultTemplates_daily",
+  "CoverTransitionName": "cover_transition_daily",
+  "CoverTransitionMaskName": "cover_transition_daily_mask",
+  "MotionCount": 1,
+  "FilterId": -1,
+  "FileSize": 10408054,
+  "FileCount": 50,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5000,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_daily.json",
+  "transitionJsonName": "theme/transition/transition_daily.json",
+  "EndingLogo": "outro1_02_modi.jpg",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+    {
+      "Id": 100200,
+      "FrameImageName": "daily_img_frame_intro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Intro",
+      "FontName": "Droid sans",
+      "FontSize": 50,
+      "FontColor": "ffffff",
+      "FontAlign": "Left",
+      "FontCoordinateLeft": 402,
+      "FontCoordinateTop": 489,
+      "FontCoordinateRight": 940,
+      "FontCoordinateBottom": 550,
+      "useUserImageBackground": true,
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100201,
+      "FrameImageName": "daily_img_frame_a",
+      "FrameThumbImageName": "icon_theme_daily_1_1",
+      "FrameThumbFocImageName": "icon_theme_daily_1_1_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100202,
+      "FrameImageName": "daily_img_frame_c",
+      "FrameThumbImageName": "icon_theme_daily_1_2",
+      "FrameThumbFocImageName": "icon_theme_daily_1_2_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100203,
+      "FrameImageName": "daily_img_frame_e",
+      "FrameThumbImageName": "icon_theme_daily_1_3",
+      "FrameThumbFocImageName": "icon_theme_daily_1_3_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100204,
+      "FrameImageName": "daily_img_frame_g",
+      "FrameThumbImageName": "icon_theme_daily_1_4",
+      "FrameThumbFocImageName": "icon_theme_daily_1_4_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100205,
+      "FrameImageName": "daily_img_frame_f",
+      "FrameThumbImageName": "icon_theme_daily_2_1",
+      "FrameThumbFocImageName": "icon_theme_daily_2_1_foc",
+      "FrameCount": 2,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100206,
+      "FrameImageName": "daily_img_frame_b",
+      "FrameThumbImageName": "icon_theme_daily_3_1",
+      "FrameThumbFocImageName": "icon_theme_daily_3_1_foc",
+      "FrameCount": 3,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100207,
+      "FrameImageName": "daily_img_frame_d",
+      "FrameThumbImageName": "icon_theme_daily_4_1",
+      "FrameThumbFocImageName": "icon_theme_daily_4_1_foc",
+      "FrameCount": 4,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100208,
+      "FrameImageName": "daily_img_frame_intro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Outro",
+      "FontName": "Droid sans",
+      "FontSize": 50,
+      "FontColor": "ffffff",
+      "FontAlign": "Left",
+      "FontCoordinateLeft": 402,
+      "FontCoordinateTop": 489,
+      "FontCoordinateRight": 743,
+      "FontCoordinateBottom": 538,
+      "useUserImageBackground": true,
+      "ObjectInfo": [
+      ]
+    }
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

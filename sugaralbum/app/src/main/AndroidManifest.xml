@@ -78,6 +78,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ActivityFinish"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity" />
 
         <activity
             android:name="com.sugarmount.sugarcamera.story.movie.MovieEditMainActivity"

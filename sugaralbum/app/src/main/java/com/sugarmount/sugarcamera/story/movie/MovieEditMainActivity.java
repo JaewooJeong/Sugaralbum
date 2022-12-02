@@ -14,7 +14,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -47,6 +49,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.google.android.gms.ads.AdListener;
@@ -1010,7 +1013,8 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
     private void stopSaveVideoUI() {
         mPreviewLayout.setVisibility(View.VISIBLE);
         appBarLayout.setVisibility(View.VISIBLE);
-        mSaveLayout.setVisibility(View.INVISIBLE);
+        mSaveLayout.setVisibility(View.GONE);
+        appBarLayout.setBackgroundTintList(ContextCompat.getColorStateList(mContext, R.color.black));
 
         if (mSaveLayout.getVisibility() == View.INVISIBLE) {
             mHeaderLayout.setVisibility(View.VISIBLE);
@@ -1028,8 +1032,9 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
     private void hideTitleButtons() {
         mHeaderLayout.setVisibility(View.INVISIBLE);
         mPreviewLayout.setVisibility(View.INVISIBLE);
-        appBarLayout.setVisibility(View.INVISIBLE);
+        appBarLayout.setVisibility(View.GONE);
         mSaveLayout.setVisibility(View.VISIBLE);
+        appBarLayout.setBackgroundTintList(ContextCompat.getColorStateList(mContext, R.color.transparent));
     }
 
     private void stopPreview() {

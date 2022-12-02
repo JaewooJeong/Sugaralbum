@@ -1,0 +1,35 @@
+{
+  "Name": "Documentary",
+  "Type": "Multi",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "9 MdthemeDocumentary"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "Sun Rays",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic9_SR"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_documentary",
+  "AudioFileName": "SaReGaMa_-_Sun_Rays.mp3",
+  "FileterJsonName": null,
+  "CollageJsonName": null,
+  "MotionCount": 1,
+  "FilterId": -1,
+  "FileSize": 8121039,
+  "FileCount": 3,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5000,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_documentary.json",
+  "transitionJsonName": "theme/transition/transition_documentary.json",
+  "EndingLogo": "Outro_Documentary.jpg",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

@@ -1,0 +1,248 @@
+{
+  "Name": "Baby",
+  "Type": "Frame",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "99255300 MDthemebaby"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "GEAR -Doll-",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic2"
+  },
+  "MainColor": "ffffe3ea",
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_baby",
+  "AudioFileName": "gear_doll.mp3",
+  "FileterJsonName": "defaultFilter",
+  "CollageJsonName": "defaultTemplates_baby",
+  "CoverTransitionName": "cover_transition_baby",
+  "CoverTransitionMaskName": "cover_transition_baby_mask",
+  "VerticalImageName": "baby_img_frame_virtical",
+  "MotionCount": 2,
+  "FilterId": -1,
+  "FileSize": 16101880,
+  "FileCount": 81,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5000,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_baby.json",
+  "transitionJsonName": "theme/transition/transition_baby.json",
+  "EndingLogo": "outro2.JPG",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+    {
+      "Id": 100000,
+      "FrameImageName": "baby_img_intro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Intro",
+      "FontName": "Droid sans",
+      "FontSize": 50,
+      "FontColor": "f190b4",
+      "FontAlign": "Center",
+      "FontCoordinateLeft": 506,
+      "FontCoordinateTop": 616,
+      "FontCoordinateRight": 1414,
+      "FontCoordinateBottom": 676,
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_j_bal_01",
+          "CoordinateLeft": 81,
+          "CoordinateTop": 126,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_j_bal_01_motion"
+        },
+        {
+          "ImageName": "baby_img_obj_j_bal_02",
+          "CoordinateLeft": 1409,
+          "CoordinateTop": 545,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_j_bal_02_motion"
+        }
+      ]
+    },
+    {
+      "Id": 100001,
+      "FrameImageName": "baby_img_frame_a",
+      "FrameThumbImageName": "icon_theme_baby_1_1",
+      "FrameThumbFocImageName": "icon_theme_baby_1_1_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_a_horse",
+          "CoordinateLeft": 405,
+          "CoordinateTop": 634,
+          "MotionType": "Rotate",
+          "MotionFloatValue": 10,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100002,
+      "FrameImageName": "baby_img_frame_c",
+      "FrameThumbImageName": "icon_theme_baby_1_2",
+      "FrameThumbFocImageName": "icon_theme_baby_1_2_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_c_cloud",
+          "CoordinateLeft": 1305,
+          "CoordinateTop": 323,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_c_cloud_motion"
+        }
+      ]
+    },
+    {
+      "Id": 100003,
+      "FrameImageName": "baby_img_frame_f",
+      "FrameThumbImageName": "icon_theme_baby_1_3",
+      "FrameThumbFocImageName": "icon_theme_baby_1_3_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_f_cloud",
+          "CoordinateLeft": 96,
+          "CoordinateTop": 290,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_f_cloud_motion"
+        },
+        {
+          "ImageName": "baby_img_obj_f_moon",
+          "CoordinateLeft": 1349,
+          "CoordinateTop": 500,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_f_moon_motion"
+        }
+      ]
+    },
+    {
+      "Id": 100004,
+      "FrameImageName": "baby_img_frame_g",
+      "FrameThumbImageName": "icon_theme_baby_1_4",
+      "FrameThumbFocImageName": "icon_theme_baby_1_4_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_g_bird",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 687,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_g_bird_motion"
+        }
+      ]
+    },
+    {
+      "Id": 100005,
+      "FrameImageName": "baby_img_frame_d",
+      "FrameThumbImageName": "icon_theme_baby_2_1",
+      "FrameThumbFocImageName": "icon_theme_baby_2_1_foc",
+      "FrameCount": 2,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_d_star_02",
+          "CoordinateLeft": 1433,
+          "CoordinateTop": 76,
+          "MotionType": "Scale",
+          "MotionFloatValue": 1.1,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "baby_img_obj_d_star_01",
+          "CoordinateLeft": 1282,
+          "CoordinateTop": 309,
+          "MotionType": "Scale",
+          "MotionFloatValue": 1.1,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100006,
+      "FrameImageName": "baby_img_frame_b",
+      "FrameThumbImageName": "icon_theme_baby_3_1",
+      "FrameThumbFocImageName": "icon_theme_baby_3_1_foc",
+      "FrameCount": 3,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_b_star",
+          "CoordinateLeft": 1675,
+          "CoordinateTop": 411,
+          "MotionType": "Scale",
+          "MotionFloatValue": 0.9,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "baby_img_obj_b_moon",
+          "CoordinateLeft": 601,
+          "CoordinateTop": 498,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_b_moon_motion"
+        }
+      ]
+    },
+    {
+      "Id": 100007,
+      "FrameImageName": "baby_img_frame_e",
+      "FrameThumbImageName": "icon_theme_baby_4_1",
+      "FrameThumbFocImageName": "icon_theme_baby_4_1_foc",
+      "FrameCount": 4,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_e_whale_01",
+          "CoordinateLeft": 439,
+          "CoordinateTop": 507,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_e_whale_01_motion"
+        },
+        {
+          "ImageName": "baby_img_obj_e_whale_02",
+          "CoordinateLeft": 951,
+          "CoordinateTop": 781,
+          "MotionType": "Replace",
+          "MotionFloatValue": 0,
+          "MotionStringValue": "baby_img_obj_e_whale_02_motion"
+        }
+      ]
+    },
+    {
+      "Id": 100099,
+      "FrameImageName": "baby_img_outro",
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Outro",
+      "ObjectInfo": [
+        {
+          "ImageName": "baby_img_obj_a_horse",
+          "CoordinateLeft": 700,
+          "CoordinateTop": 306,
+          "MotionType": "Rotate",
+          "MotionFloatValue": 10,
+          "MotionStringValue": null
+        }
+      ]
+    }
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

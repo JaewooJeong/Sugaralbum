@@ -1,0 +1,215 @@
+{
+  "Name": "Travel2",
+  "Type": "Multi",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "9928100 MDthemetravel2"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "Free And Lucky",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic1"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_travel2",
+  "AudioFileName": "Free_And_Lucky.mp3",
+  "FileterJsonName": "defaultFilter",
+  "CollageJsonName": "defaultTemplates_travel",
+  "CoverTransitionName": "cover_transition_travel",
+  "CoverTransitionMaskName": "cover_transition_travel_mask",
+  "MotionCount": 1,
+  "FilterId": -1,
+  "FileSize": 5642915,
+  "FileCount": 70,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5500,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_travel2.json",
+  "transitionJsonName": "theme/transition/transition_travel2.json",
+  "EndingLogo": "outro4.JPG",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+    {
+      "Id": 100100,
+      "FrameImageName": null,
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Intro",
+      "FontName": "Droid sans",
+      "FontSize": 50,
+      "FontColor": "ffffff",
+      "FontAlign": "Center",
+      "FontCoordinateLeft": 786,
+      "FontCoordinateTop": 625,
+      "FontCoordinateRight": 1134,
+      "FontCoordinateBottom": 683,
+      "useUserImageBackground": true,
+      "ObjectInfo": [
+        {
+          "ImageName": "travel_img_frame_intro_01",
+          "CoordinateLeft": 596,
+          "CoordinateTop": 264,
+          "MotionType": null,
+          "MotionFloatValue": 0,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100101,
+      "FrameImageName": null,
+      "FrameThumbImageName": "icon_theme_travel_1_1",
+      "FrameThumbFocImageName": "icon_theme_travel_1_1_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "travel_img_frame_a_01",
+          "CoordinateLeft": 596,
+          "CoordinateTop": 0,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "travel_img_frame_a_02",
+          "CoordinateLeft": 735,
+          "CoordinateTop": 975,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100102,
+      "FrameImageName": "travel_img_frame_c_01",
+      "FrameThumbImageName": "icon_theme_travel_1_2",
+      "FrameThumbFocImageName": "icon_theme_travel_1_2_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100104,
+      "FrameImageName": "travel_img_frame_g_01",
+      "FrameThumbImageName": "icon_theme_travel_1_4",
+      "FrameThumbFocImageName": "icon_theme_travel_1_4_foc",
+      "FrameCount": 1,
+      "FrameType": "Content",
+      "ObjectInfo": [
+      ]
+    },
+    {
+      "Id": 100105,
+      "FrameImageName": null,
+      "FrameThumbImageName": "icon_theme_travel_2_1",
+      "FrameThumbFocImageName": "icon_theme_travel_2_1_foc",
+      "FrameCount": 2,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "travel_img_frame_b_01",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 0,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "travel_img_frame_b_02",
+          "CoordinateLeft": 1490,
+          "CoordinateTop": 0,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "travel_img_frame_b_03",
+          "CoordinateLeft": 886,
+          "CoordinateTop": 822,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100106,
+      "FrameImageName": null,
+      "FrameThumbImageName": "icon_theme_travel_3_1",
+      "FrameThumbFocImageName": "icon_theme_travel_3_1_foc",
+      "FrameCount": 3,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "travel_img_frame_f_01",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 572,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100107,
+      "FrameImageName": null,
+      "FrameThumbImageName": "icon_theme_travel_4_1",
+      "FrameThumbFocImageName": "icon_theme_travel_4_1_foc",
+      "FrameCount": 4,
+      "FrameType": "Content",
+      "ObjectInfo": [
+        {
+          "ImageName": "travel_img_frame_d_01",
+          "CoordinateLeft": 0,
+          "CoordinateTop": 745,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "travel_img_frame_d_02",
+          "CoordinateLeft": 1239,
+          "CoordinateTop": 0,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        },
+        {
+          "ImageName": "travel_img_frame_d_03",
+          "CoordinateLeft": 1561,
+          "CoordinateTop": 827,
+          "MotionType": null,
+          "MotionFloatValue": null,
+          "MotionStringValue": null
+        }
+      ]
+    },
+    {
+      "Id": 100199,
+      "FrameImageName": null,
+      "FrameThumbImageName": null,
+      "FrameThumbFocImageName": null,
+      "FrameCount": 0,
+      "FrameType": "Outro",
+      "useUserImageBackground": true,
+      "ObjectInfo": [
+        {
+          "ImageName": "travel_img_frame_outro_01",
+          "CoordinateLeft": 555,
+          "CoordinateTop": 455,
+          "MotionType": null,
+          "MotionFloatValue": 0,
+          "MotionStringValue": null
+        }
+      ]
+    }
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

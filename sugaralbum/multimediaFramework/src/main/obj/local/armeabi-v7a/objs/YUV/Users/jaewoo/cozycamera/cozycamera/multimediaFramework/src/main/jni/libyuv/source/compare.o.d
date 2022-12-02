@@ -1,0 +1,32 @@
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/obj/local/armeabi-v7a/objs/YUV//Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/source/compare.o: \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/source/compare.cc \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/compare.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/basic_types.h \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stddef.h \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/__config \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/float.h \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/math.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/cpu_id.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/row.h \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stdlib.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/video_common.h
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/compare.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/basic_types.h:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stddef.h:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/__config:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/float.h:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/math.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/cpu_id.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/row.h:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stdlib.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/video_common.h:

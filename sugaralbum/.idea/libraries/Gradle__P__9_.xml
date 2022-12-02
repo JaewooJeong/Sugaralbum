@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: P (9)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/imageFrameworkLibrary/libs/sd-sdk-device-info.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

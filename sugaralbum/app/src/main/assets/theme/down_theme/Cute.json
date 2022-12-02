@@ -1,0 +1,35 @@
+{
+  "Name": "Cute",
+  "Type": "Multi",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "9 Mdthemecute"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "Popsicle Summer",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic8_PS"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_cute",
+  "AudioFileName": "Viola_-_Popsicle_Summer.mp3",
+  "FileterJsonName": null,
+  "CollageJsonName": null,
+  "MotionCount": 1,
+  "FilterId": -1,
+  "FileSize": 6063502,
+  "FileCount": 3,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5000,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_cute.json",
+  "transitionJsonName": "theme/transition/transition_cute.json",
+  "EndingLogo": "Outro_Cute.jpg",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

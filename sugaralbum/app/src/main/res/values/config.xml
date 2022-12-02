@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Camera app resources that may need to be customized
+     for different hardware or product builds. -->
+<resources>
+    <!-- Maximum recording length in milliseconds. 0 means unlimited. -->
+    <integer name="max_video_recording_length">0</integer>
+    <integer name="dropshadow_radius">5</integer>
+</resources>

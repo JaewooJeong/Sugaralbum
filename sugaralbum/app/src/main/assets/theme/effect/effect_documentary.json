@@ -1,0 +1,47 @@
+{
+  "effects": [
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+      ],
+      "multi_effects_array": [
+      ]
+    }
+  ],
+  "extra_effects": {
+    "step_appear_effect": {
+      "appear_default_ratio": 0.2,
+      "appear_step_ratio": 0.1,
+      "appear_order_1": 1,
+      "appear_order_2": 2,
+      "appear_order_3": 3,
+      "appear_order_4": 4,
+      "type": "step_appear_effect",
+      "max_count": 2,
+      "apply_scene": "multi_layer_scene"
+    }
+  }
+}

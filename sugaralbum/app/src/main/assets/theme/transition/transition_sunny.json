@@ -1,0 +1,88 @@
+{
+  "transitions": [
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": true,
+      "interpolator_type": "cubic_in_out",
+      "use_overshoot": true,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "up"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "duration": 3000,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 3000,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": true,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "duration": 3000,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": true,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": true,
+      "interpolator_type": "cubic_in_out",
+      "use_overshoot": true,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "up"
+    }
+  ]
+}

@@ -17,8 +17,11 @@ public interface MvConfig {
 
     String EXTRA_PERMISSION         = "SugarAlbum.permmission";
     String EXTRA_INFO_TYPE          = "SugarAlbum.info_type";
+    String EXTRA_URI_INFO           = "SugarAlbum.uri_info";
 
     int MY_PERMISSION_REQUEST = 10010;
+    int MY_VIDEO_REQUEST = 10011;
+    int MY_FINISH_REQUEST = 10012;
 
     String[] PERMISSIONS = {
             Manifest.permission.READ_EXTERNAL_STORAGE,

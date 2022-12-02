@@ -1,0 +1,44 @@
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/obj/local/arm64-v8a/objs/YUV//Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/source/scale.o: \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/source/scale.cc \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/scale.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/basic_types.h \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stddef.h \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/__config \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/string.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/cpu_id.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/planar_functions.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/convert.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/convert_from.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/rotate.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/convert_argb.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/row.h \
+  /Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stdlib.h \
+  /Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/scale_row.h
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/scale.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/basic_types.h:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stddef.h:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/__config:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/string.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/cpu_id.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/planar_functions.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/convert.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/convert_from.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/rotate.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/convert_argb.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/row.h:
+
+/Users/jaewoo/Library/Android/sdk/ndk/25.1.8937393/sources/cxx-stl/llvm-libc++/include/stdlib.h:
+
+/Users/jaewoo/cozycamera/cozycamera/multimediaFramework/src/main/jni/libyuv/include/libyuv/scale_row.h:

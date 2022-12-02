@@ -94,6 +94,33 @@
     <string name="string_common_clipboard_copy">Copied to clipboard</string>
     <string name="string_common_error_retry">An error has occurred. Please try again.</string>
     <string name="string_common_selected_count">You can select a minimum of 5 photos and a maximum of 40 photos.</string>
+    <string name="string_common_direct_uri">Go to Video</string>
+    <string name="string_common_video_description">Saved in &quot;Photo Album &lt; SugarAlbum&quot;</string>
 
+    <!-- 미리보기 -->
+    <string name="string_menu_preview">Preview</string>
+    <string name="string_section_setting">Setting</string>
+    <string name="string_section_setting_title">Title (Today)</string>
+    <string name="string_section_setting_commit">Apply</string>
+    <string name="string_ok">Yes</string>
+    <string name="string_cancel">Cancel</string>
+    <string name="dialog_ok">OK</string>
+
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="title_activity_movie_edit_main">MovieEditMainActivity</string>
+    <string name="image_file_name_format" translatable="false">"'IMG'_yyyyMMdd_HHmmss"</string>
+    <string name="story_file_name_format" translatable="false">"'MOV'_yyyyMMdd_HHmmss"</string>
+
+    <!-- file manager -->
+    <string name="out_of_memory">Out of memory.</string>
+    <string name="file_not_found">File not found.</string>
+    <string name="kiwiple_story_story_save_progressbar_text2">SugarAlbum video is being created..</string>
+    <string name="kiwiple_story_video_saving_error">Check the number of videos and photos.</string>
+    <string name="kiwiple_story_noti_manually_creation_ticker">SugarAlbum video creation complete. Check out the photo album.</string>
+    <string name="kiwiple_story_noti_manually_creation_summary">Check out the photo album.</string>
+    <string name="kiwiple_story_noti_manually_creation_title">SugarAlbum video creation complete.</string>
+    <string name="kiwiple_story_story_movie_diary">SugarAlbum</string>
+    <string name="kiwiple_story_story_saving_progressbar_text">SugarAlbum video is being created..</string>
+    <string name="kiwiple_story_gallery_data_validate_fail">The detailed content has been moved and deleted and cannot be executed.\nAre you sure you want to delete the selected content?</string>
 </resources>
 

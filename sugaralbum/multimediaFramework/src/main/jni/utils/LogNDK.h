@@ -1,0 +1,13 @@
+#ifndef MULTIMEDIA_FRAMEWORK_LOGNDK
+#define MULTIMEDIA_FRAMEWORK_LOGNDK
+
+#include <android/log.h>
+
+#define MULTIMEDIA_FRAMEWORK_LOG_TAG "kiwi_ndk"
+#define LOGV(...)  __android_log_print(ANDROID_LOG_VERBOSE, MULTIMEDIA_FRAMEWORK_LOG_TAG, __VA_ARGS__)
+#define LOGD(...)  __android_log_print(ANDROID_LOG_DEBUG, MULTIMEDIA_FRAMEWORK_LOG_TAG, __VA_ARGS__)
+#define LOGI(...)  __android_log_print(ANDROID_LOG_INFO, MULTIMEDIA_FRAMEWORK_LOG_TAG, __VA_ARGS__)
+#define LOGW(...)  __android_log_print(ANDROID_LOG_WARN, MULTIMEDIA_FRAMEWORK_LOG_TAG, __VA_ARGS__)
+#define LOGE(...)  __android_log_print(ANDROID_LOG_ERROR, MULTIMEDIA_FRAMEWORK_LOG_TAG, __VA_ARGS__)
+
+#endif /* MULTIMEDIA_FRAMEWORK_LOGNDK */

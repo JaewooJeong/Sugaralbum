@@ -1,0 +1,35 @@
+{
+  "Name": "Pet",
+  "Type": "Multi",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "9 MdthemePet"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "Feel Good (Acoustic, Ukulele)",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic10_FG"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_pet",
+  "AudioFileName": "Akashic_Records_-_Feel_Good_Acoustic_Ukulele.mp3",
+  "FileterJsonName": null,
+  "CollageJsonName": null,
+  "MotionCount": 1,
+  "FilterId": -1,
+  "FileSize": 7031412,
+  "FileCount": 3,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5000,
+  "FrontBackDuration": 5000,
+  "effectJsonName": "theme/effect/effect_pet.json",
+  "transitionJsonName": "theme/transition/transition_pet.json",
+  "EndingLogo": "Outro_Pet.jpg",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+  ],
+  "version_major": 1,
+  "version_minor": 0,
+  "version_patch": 1
+}

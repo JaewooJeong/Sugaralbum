@@ -1,2 +1,7 @@
+include ':imageFrameworkLibrary'
+include ':imageAnalysisEngine'
+include ':videoEngine'
+include ':multimediaFramework'
+include ':plusCameraMultimediaFramework'
 include ':app'
 rootProject.name='SugarAlbum'

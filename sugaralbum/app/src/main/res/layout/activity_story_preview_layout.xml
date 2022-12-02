@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="0dp" >
+
+    <com.kiwiple.multimedia.preview.PreviewSurfaceView
+        android:id="@+id/kiwiple_story_preview_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/kiwiple_story_preview_bg_img"
+        android:layout_width="match_parent"
+        android:layout_height="38.7dp"
+        android:layout_gravity="bottom|center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/md_bg_gallery_label" />
+
+    <com.sugarmount.sugarcamera.story.views.PreviewSeekBar
+        android:id="@+id/kiwiple_story_preview_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="36.3dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="50.5dp"
+        android:layout_marginRight="50.5dp"
+        android:layout_marginBottom="4dp"
+        android:progressDrawable="@drawable/kiwiple_story_preview_seek_bar"
+        android:thumb="@drawable/kiwiple_story_preview_button_seek_bar_thumb"
+        android:thumbOffset="12.25dp" />
+
+    <ImageButton
+        android:id="@+id/kiwiple_story_preview_button"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kiwiple_story_preview_button_play" />
+
+    <TextView
+        android:id="@+id/kiwiple_story_preview_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="9.5dp"
+        android:drawablePadding="3dp"
+        android:gravity="center_horizontal"
+        android:text=" 00:00"
+        android:textColor="#ffffffff"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/kiwiple_story_preview_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="9.5dp"
+        android:text="00:00"
+        android:textColor="#ffffffff"
+        android:textSize="12dp" />
+
+</merge>

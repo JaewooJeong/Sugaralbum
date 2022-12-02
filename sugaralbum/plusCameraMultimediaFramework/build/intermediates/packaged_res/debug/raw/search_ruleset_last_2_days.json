@@ -1,0 +1,52 @@
+{
+  "condition": [
+    {
+      "isAutoSelectMainDate": false,
+      "isAutoSelectMainLocation": false,
+      "isAutoSelectMainCharacter": false,
+      "isAutoSelectColorful": false,
+      "startDateAmount": 1,
+      "endDateAmount": 1,
+      "addressNames": [
+      ],
+      "latitude": -10000.1,
+      "longitude": -10000.1,
+      "distance": -1.1,
+      "isSelectFace": false,
+      "faceMinSmileValue": -1,
+      "faceMaxLeftBlinkValue": -1,
+      "faceMaxRightBlinkValue": -1,
+      "minFocusValue": 20,
+      "minBrightnessValue": 20,
+      "maxBrightnessValue": 80,
+      "minQualityValue": 20,
+      "minTotalScoreValue": 20,
+      "colorNames": [
+      ]
+    },
+    {
+      "isAutoSelectMainDate": false,
+      "isAutoSelectMainLocation": false,
+      "isAutoSelectMainCharacter": false,
+      "isAutoSelectColorful": false,
+      "startDateAmount": 2,
+      "endDateAmount": 2,
+      "addressNames": [
+      ],
+      "latitude": -10000.1,
+      "longitude": -10000.1,
+      "distance": -1.1,
+      "isSelectFace": false,
+      "faceMinSmileValue": -1,
+      "faceMaxLeftBlinkValue": -1,
+      "faceMaxRightBlinkValue": -1,
+      "minFocusValue": 20,
+      "minBrightnessValue": 20,
+      "maxBrightnessValue": 80,
+      "minQualityValue": 20,
+      "minTotalScoreValue": 20,
+      "colorNames": [
+      ]
+    }
+  ]
+}

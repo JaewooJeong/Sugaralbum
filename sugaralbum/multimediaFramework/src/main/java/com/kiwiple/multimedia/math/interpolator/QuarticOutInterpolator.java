@@ -1,0 +1,15 @@
+package com.kiwiple.multimedia.math.interpolator;
+
+import android.animation.TimeInterpolator;
+
+/**
+ * 빠르게 시작하여 점점 느려지는 보간법을 제공하는 {@link TimeInterpolator}. {@link CubicOutInterpolator}보다 변량의 편차가 큽니다.
+ */
+public class QuarticOutInterpolator implements TimeInterpolator {
+
+	@Override
+	public float getInterpolation(float input) {
+		input -= 1.0f;
+		return -(input * input * input * input - 1.0f);
+	}
+}

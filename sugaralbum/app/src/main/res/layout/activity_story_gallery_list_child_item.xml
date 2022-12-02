@@ -1,0 +1,54 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sugarmount.sugarcamera.story.gallery.ThumbnailView
+        android:id="@+id/kiwiple_story_list_child_item_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:background="#77000000" />
+
+    <ImageView
+        android:id="@+id/kiwiple_story_list_child_item_type_img"
+        android:layout_width="66.7dp"
+        android:layout_height="66.7dp"
+        android:layout_gravity="center"
+        android:src="@drawable/btn_paly_n" />
+
+    <TextView
+        android:id="@+id/kiwiple_story_list_child_item_videoDuration_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gallery_list_item_text_height"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/md_bg_gallery_label"
+        android:gravity="right|center_vertical"
+        android:paddingRight="@dimen/gallery_list_item_text_padding_right"
+        android:shadowColor="#4C000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="@integer/dropshadow_radius"
+        android:textColor="#FFFFFF"
+        android:textSize="12dp"/> 
+
+    <View
+        android:id="@+id/kiwiple_story_list_child_item_videoClick_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gallery_image_bg_selector" />
+
+    <CheckBox
+        android:id="@+id/kiwiple_story_list_child_item_checkBox"
+        android:layout_width="@dimen/gallery_list_item_checkbox_width"
+        android:layout_height="@dimen/gallery_list_item_checkbox_height"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="@dimen/gallery_list_item_checkbox_margine"
+        android:layout_marginTop="@dimen/gallery_list_item_checkbox_margine"
+        android:button="@drawable/gallery_image_checkbox_selector"
+        android:clickable="false"
+        android:visibility="visible" />
+
+</merge>

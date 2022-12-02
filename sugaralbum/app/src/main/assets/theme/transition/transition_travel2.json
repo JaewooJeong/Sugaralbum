@@ -1,0 +1,100 @@
+{
+  "transitions": [
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "left",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    },
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "up",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    },
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "right",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    },
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "down",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    },
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "left",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    },
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "up",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    },
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "right",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    },
+    {
+      "type": "metro_transition",
+      "duration": 1500,
+      "direction": "down",
+      "slice_order": "non_sequential_randomized",
+      "slice_count": 5,
+      "line_color": -545231,
+      "multi_scene": {
+        "type": "fade",
+        "duration": 1500
+      }
+    }
+  ]
+}

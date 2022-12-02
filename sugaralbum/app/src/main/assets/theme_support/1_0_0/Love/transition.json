@@ -1,0 +1,112 @@
+{
+  "transitions": [
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    },
+    {
+      "duration": 1500,
+      "type": "fade_transition"
+    }
+  ]
+}

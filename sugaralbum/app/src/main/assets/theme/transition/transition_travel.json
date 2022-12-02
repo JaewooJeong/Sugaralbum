@@ -1,0 +1,116 @@
+{
+  "transitions": [
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "left"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "up"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "right"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "down"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "left"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "up"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "right"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former",
+        "former",
+        "former",
+        "latter"
+      ],
+      "direction": "down"
+    }
+  ]
+}

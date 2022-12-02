@@ -1,0 +1,64 @@
+{
+  "transitions": [
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_overshoot": false,
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "up"
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "duration": 2000,
+      "type": "spin_transition",
+      "use_overshoot": false,
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "spin_order": [
+        "former",
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    }
+  ]
+}

@@ -13,7 +13,7 @@
     <color name="vr_transparent_40">#66000000</color>
     <color name="vr_transparent_60">#99000000</color>
     <color name="vr_transparent_80">#991b1b1b</color>
-    <color name="transparent">#99000000</color>
+    <color name="transparent">#fff</color>
 
 
     <!-- main (material color tool Blue 700)-->
@@ -86,5 +86,8 @@
     5%—0D
     0%—00
     -->
+
+    <color name="bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="bright_foreground_holo_dark">#fff3f3f3</color>
 
 </resources>

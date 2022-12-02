@@ -1,0 +1,779 @@
+{
+  "effects": [
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+      {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+       {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+          "lighting_type": "type_circle_a",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    },
+    {
+      "light_effect": [
+        {
+         "lighting_type": "type_circle_a", 
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 51,
+          "lighting_move_from_y": 0,
+          "lighting_move_to_x": 294,
+          "lighting_move_to_y": 0
+        },
+        {
+          "lighting_type": "type_circle_b",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 430,
+          "lighting_move_from_y": 113,
+          "lighting_move_to_x": 100,
+          "lighting_move_to_y": 113
+        },
+        {
+          "lighting_type": "type_circle_c",
+          "lighting_color": "color_yellow",
+          "lighting_scale": 300,
+          "lighting_move_from_x": 259,
+          "lighting_move_from_y": 256,
+          "lighting_move_to_x": 450,
+          "lighting_move_to_y": 256
+        }
+      ]
+    }
+  ]
+}

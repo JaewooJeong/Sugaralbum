@@ -1,0 +1,3079 @@
+{
+  "effects": [
+    {
+      "effects_array": [
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1320,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.7,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.6,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 920,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.25,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        }
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1320,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.7,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.6,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 920,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.25,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        }
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1320,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.7,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.6,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 920,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.25,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        }
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1320,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.7,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.6,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 920,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.25,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        }
+      ],
+      "multi_effects_array": [
+      ]
+    },
+    {
+      "effects_array": [
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1320,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1190,
+              "motion_y": 263,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_red",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 800,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1286,
+              "motion_y": 517,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_init",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.7,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1280,
+              "motion_y": 250,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1389,
+              "motion_y": 133,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1517,
+              "motion_y": 105,
+              "move_type": "motion_linear",
+              "motion_duration": 1000,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_white",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 1280,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1695,
+              "motion_y": 49,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.4,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 750,
+              "motion_y": 409,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.6,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 813,
+              "motion_y": 309,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 917,
+              "motion_y": 497,
+              "move_type": "motion_linear",
+              "motion_duration": 400,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 1.1,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 920,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 995,
+              "motion_y": 345,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1313,
+              "motion_y": 557,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.25,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1417,
+              "motion_y": 407,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.3,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1499,
+              "motion_y": 513,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.8,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 1200,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1571,
+              "motion_y": 477,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        },
+        {
+          "type": "dynamic_texture_effect",
+          "motion_reverse": "motion_reverse_back",
+          "resolution": "FHD",
+          "texture": [
+            {
+              "texture_path": "heart_pink",
+              "texture_scale": 0.5,
+              "texture_rotate": 0
+            }
+          ],
+          "motion": [
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 1340,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 2000,
+              "motion_alpha": 1
+            },
+            {
+              "motion_x": 1679,
+              "motion_y": 487,
+              "move_type": "motion_linear",
+              "motion_duration": 660,
+              "motion_alpha": 0
+            }
+          ]
+        }
+      ],
+      "multi_effects_array": [
+      ]
+    }
+  ]
+}

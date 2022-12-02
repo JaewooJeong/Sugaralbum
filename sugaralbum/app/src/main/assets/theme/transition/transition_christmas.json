@@ -1,0 +1,55 @@
+{
+  "transitions": [
+    {
+      "type": "cover_transition",
+      "direction": "right",
+      "duration": 1500
+    },
+    {
+      "duration": 1000,
+      "type": "circle_transition",
+      "zoom_in": "true"
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "duration": 2000,
+      "type": "grand_union_transition",
+      "line_color": 4294901760
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "duration": 2000,
+      "type": "grand_union_transition",
+      "line_color": 4294901760
+    },
+    {
+      "type": "cover_transition",
+      "direction": "up",
+      "duration": 1500
+    },
+    {
+      "duration": 1000,
+      "type": "circle_transition",
+      "zoom_in": "true"
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    },
+    {
+      "duration": 2000,
+      "type": "grand_union_transition",
+      "line_color": 4294901760
+    },
+    {
+      "type": "fade_transition",
+      "duration": 1500
+    }
+  ]
+}

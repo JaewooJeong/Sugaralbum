@@ -7,6 +7,26 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SugarAlbum.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.iml" filepath="$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.main.iml" filepath="$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/imageAnalysisEngine/SugarAlbum.imageAnalysisEngine.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/imageFrameworkLibrary/SugarAlbum.imageFrameworkLibrary.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.iml" filepath="$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.main.iml" filepath="$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/multimediaFramework/SugarAlbum.multimediaFramework.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.iml" filepath="$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.main.iml" filepath="$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/plusCameraMultimediaFramework/SugarAlbum.plusCameraMultimediaFramework.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.iml" filepath="$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.main.iml" filepath="$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/videoEngine/SugarAlbum.videoEngine.unitTest.iml" />
     </modules>
   </component>
 </project>

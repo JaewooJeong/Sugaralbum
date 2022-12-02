@@ -1,0 +1,33 @@
+{
+  "transitions": [
+    {
+      "duration": 1500,
+      "type": "split_transition",
+      "direction": "horizontal",
+      "line_color": 1
+    },
+    {
+      "duration": 1500,
+      "type": "split_transition",
+      "direction": "vertical",
+      "line_color": 1
+    },
+    {
+      "duration": 1500,
+      "type": "split_transition",
+      "direction": "horizontal",
+      "line_color": 1
+    },
+    {
+      "duration": 1500,
+      "type": "split_transition",
+      "direction": "vertical",
+      "line_color": 1
+    },
+    {
+      "duration": 1500,
+      "type": "split_transition",
+      "direction": "horizontal",
+      "line_color": 1
+    }  ]
+}

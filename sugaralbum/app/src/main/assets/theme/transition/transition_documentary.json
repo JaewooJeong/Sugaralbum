@@ -1,0 +1,90 @@
+{
+  "transitions": [
+    {
+      "type": "split_transition",
+      "line_color": 4294967295,
+      "white_line_split": true,
+      "direction": "horizontal",
+      "duration": 2000
+    },
+    {
+      "type": "split_transition",
+      "line_color": 4294967295,
+      "white_line_split": true,
+      "direction": "vertical",
+      "duration": 2000
+    },
+    {
+      "type": "split_transition",
+      "line_color": 4294967295,
+      "white_line_split": true,
+      "direction": "diagonal_left_top",
+      "duration": 2000
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "down"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "down"
+    },
+    {
+      "type": "split_transition",
+      "line_color": 4294967295,
+      "white_line_split": true,
+      "direction": "horizontal",
+      "duration": 2000
+    },
+    {
+      "type": "split_transition",
+      "line_color": 4294967295,
+      "white_line_split": true,
+      "direction": "diagonal_left_bottom",
+      "duration": 2000
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "duration": 3000,
+      "type": "spin_transition",
+      "use_blurred_border": false,
+      "interpolator_type": "exponential_in_out",
+      "use_overshoot": false,
+      "spin_order": [
+        "former"
+      ],
+      "direction": "right"
+    },
+    {
+      "type": "split_transition",
+      "line_color": 4294967295,
+      "white_line_split": true,
+      "direction": "vertical",
+      "duration": 2000
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "Name": "Christmas",
+  "Type": "Multi",
+  "GoogleThemeAnalytics": {
+    "Category": "1300 MDTheme",
+    "Action": "9 Mdthemechristmas"
+  },
+  "GoogleMusicAnalytics": {
+    "title": "Majestic Christmas",
+    "Category": "9 MDBGM",
+    "Action": "9 MDBGMBasic7_MC"
+  },
+  "MainColor": null,
+  "ResourceType": "Download",
+  "BtnImageName": "img_theme_christmas",
+  "AudioFileName": "Music_For_Your_Media_-_5_Majestic_ChristmasAC2_Nov_12.mp3",
+  "FilterId": -1,
+  "FileSize": 5917097,
+  "FileCount": 94,
+  "IsUseAutoMovieDiary": false,
+  "ContentDuration": 5500,
+  "FrontBackDuration": 5000,
+  "CoverTransitionName": "cover_transition_christmas",
+  "CoverTransitionMaskName": "cover_transition_christmas_mask",
+  "DownloadCoverResourceList": [
+    {
+      "CoverResource": "cover_transition_christmas.png",
+      "MaskResource": "cover_transition_christmas_mask.png"
+    }
+  ],
+  "effectJsonName": "theme/effect/effect_christmas.json",
+  "transitionJsonName": "theme/transition/transition_christmas.json",
+  "EndingLogo": "outro5.JPG",
+  "IsUseCollectionScene": false,
+  "FrameList": [
+  ],
+  "dynamic_intro_object": {
+    "use_title": true,
+    "use_default_image": false,
+    "title_text": {
+      "type": "text_effect",
+      "active_start_ratio": 0.2,
+      "active_end_ratio": 1,
+      "draw_only_active_ratio": true,
+      "text": "자연",
+      "size": "25",
+      "color": "4290373059",
+      "typeface_filepath": "DroidSansFallback",
+      "coodinate_left_top_x": "878",
+      "coodinate_left_top_y": "612",
+      "coodinate_right_bottom_x": "1042",
+      "coodinate_right_bottom_y": "638",
+      "resolution": "FHD",
+      "align": "center"
+    },
+    "dynamic_array": [
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_a_6-1",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": -960,
+            "motion_y": 535,
+            "motion_duration": 700,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          },
+          {
+            "motion_x": 0,
+            "motion_y": 535,
+            "motion_duration": 1000,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          }
+        ]
+      },
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_a_6-2",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": 1920,
+            "motion_y": 535,
+            "motion_duration": 700,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          },
+          {
+            "motion_x": 960,
+            "motion_y": 535,
+            "motion_duration": 1000,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          }
+        ]
+      },
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_a_5",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": 750,
+            "motion_y": 330,
+            "motion_duration": 700,
+            "move_type": "motion_linear",
+            "motion_alpha": 0
+          },
+          {
+            "motion_x": 750,
+            "motion_y": 330,
+            "motion_duration": 1000,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          }
+        ]
+      },
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_a_1",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": 0,
+            "motion_y": -230,
+            "motion_duration": 700,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          },
+          {
+            "motion_x": 0,
+            "motion_y": 0,
+            "motion_duration": 1000,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          }
+        ]
+      },
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_a_2",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": 1434,
+            "motion_y": -230,
+            "motion_duration": 700,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          },
+          {
+            "motion_x": 1434,
+            "motion_y": 0,
+            "motion_duration": 1000,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          }
+        ]
+      },
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_a_3",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": 0,
+            "motion_y": 1080,
+            "motion_duration": 700,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          },
+          {
+            "motion_x": 0,
+            "motion_y": 776,
+            "motion_duration": 1000,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          }
+        ]
+      },
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_a_4",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": 1570,
+            "motion_y": 1080,
+            "motion_duration": 700,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          },
+          {
+            "motion_x": 1570,
+            "motion_y": 776,
+            "motion_duration": 1000,
+            "move_type": "motion_linear",
+            "motion_alpha": 1
+          }
+        ]
+      }
+    ]
+  },
+  "dynamic_outro_object": {
+    "use_title": false,
+    "use_default_image": true,
+    "default_image": "christmas_img_frame_j.jpg",
+    "dynamic_array": [
+      {
+        "type": "dynamic_texture_effect",
+        "motion_reverse": "motion_reverse_stop",
+        "resolution": "FHD",
+        "texture": [
+          {
+            "texture_path": "christmas_img_frame_j_00000",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00001",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00002",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00003",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00004",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00005",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00006",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00007",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00008",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          },
+          {
+            "texture_path": "christmas_img_frame_j_00009",
+            "texture_scale": 1,
+            "texture_rotate": 0
+          }
+        ],
+        "motion": [
+          {
+            "motion_x": 628,
+            "motion_y": 261,
+            "move_type": "motion_linear",
+            "motion_duration": 2000,
+            "motion_alpha": 1,
+            "motion_animated": true
+          }
+        ]
+      }
+    ]
+  },
+  "version_minor": 0,
+  "version_patch": 1,
+  "version_major": 1
+}

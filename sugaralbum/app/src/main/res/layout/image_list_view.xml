@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical"
+	android:fillViewport="true"
+	android:background="#FFFFFF">
+	<RelativeLayout
+		android:id="@+id/llTitle"
+		android:layout_width="fill_parent"
+		android:layout_height="50dp"
+		android:background="#FEF2EE"
+		android:layout_alignParentTop="true">
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:textSize="24sp"
+			android:textColor="#000000"
+			android:text="Gallery"
+			android:textStyle="bold"
+			android:layout_centerVertical="true"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:id="@+id/textView" />
+		<Button
+			android:id="@+id/gogo"
+			android:layout_width="200px"
+			android:layout_height="fill_parent"
+			android:text="Go"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentTop="true" />
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/llImageList"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/llTitle">
+		<GridView
+			android:id="@+id/ImgGridView"
+			android:layoutAnimation="@anim/layout_wave_scale"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:numColumns="auto_fit"
+			android:verticalSpacing="5dp"
+			android:horizontalSpacing="5dp"
+			android:columnWidth="400px"
+			android:stretchMode="columnWidth"
+			android:gravity="center"/>
+	</LinearLayout>
+
+</RelativeLayout>
+
+

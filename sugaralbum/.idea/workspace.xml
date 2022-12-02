@@ -14,14 +14,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3b5ca5d-83f0-48ee-92ab-b5d3501be5cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_sugarcamera_sugarcamera_v8r__aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_sugarmount_sugarcamera_sugarcamera_v7r__aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_concurrent_concurrent_futures_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_annotation_1_0_1_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_5_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_5_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_5_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_4_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_6_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_5_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_services_storage_1_4_2_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_tracing_tracing_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/sugarcamera-v7r.aar" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/sugarcamera-v8r.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-image.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-image.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-multimedia.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-multimedia.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-sugarcamera.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-sugarcamera.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/imageAnalysisEngine-v3r.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/imageFrameworkLibrary-v3r.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/multimediaFramework-v5r.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/plusCameraMultimediaFramework-v3r.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/videoEngine-v3r.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/common/model/MvConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/common/model/MvConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/ActivityMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugaralbum/ActivityMain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugarcamera/story/movie/MovieEditMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugarcamera/story/movie/MovieEditMainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en-rUS/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ko/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ko/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoEngine/build/.transforms/60e9fd5a7658577b9030bb0ef708f08b/transformed/debug/com/kiwiple/mediaframework/ffmpeg/FFmpegService.dex" beforeDir="false" afterPath="$PROJECT_DIR$/videoEngine/build/.transforms/60e9fd5a7658577b9030bb0ef708f08b/transformed/debug/com/kiwiple/mediaframework/ffmpeg/FFmpegService.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoEngine/build/intermediates/compile_library_classes_jar/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/videoEngine/build/intermediates/compile_library_classes_jar/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoEngine/build/intermediates/javac/debug/classes/com/kiwiple/mediaframework/ffmpeg/FFmpegService.class" beforeDir="false" afterPath="$PROJECT_DIR$/videoEngine/build/intermediates/javac/debug/classes/com/kiwiple/mediaframework/ffmpeg/FFmpegService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoEngine/build/intermediates/runtime_library_classes_dir/debug/com/kiwiple/mediaframework/ffmpeg/FFmpegService.class" beforeDir="false" afterPath="$PROJECT_DIR$/videoEngine/build/intermediates/runtime_library_classes_dir/debug/com/kiwiple/mediaframework/ffmpeg/FFmpegService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoEngine/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/videoEngine/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videoEngine/src/main/java/com/kiwiple/mediaframework/ffmpeg/FFmpegService.java" beforeDir="false" afterPath="$PROJECT_DIR$/videoEngine/src/main/java/com/kiwiple/mediaframework/ffmpeg/FFmpegService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +118,15 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android-custom-viewC:/Android/Sdk/sources/android-33/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewC:/Android/Sdk/sources/android-33/android/view/ViewGroup.java_SELECTED" value="ViewGroup" />
     <property name="android-custom-viewC:/Android/Sdk/sources/android-33/android/widget/ImageView.java_SELECTED" value="ImageView" />
     <property name="android-custom-viewC:/Users/mvgood/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.2.1/f0f93e67af3f7417bdd560d5142f6dec4fe629c3/recyclerview-1.2.1-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-viewP:/Projects/Projects_SM/sugaralbum/app/src/main/java/com/sugarmount/common/utils/HorizontalProgressView.java_SELECTED" value="HorizontalProgressView" />
     <property name="android-custom-viewP:/Projects/Projects_SM/sugaralbum/app/src/main/java/com/sugarmount/common/view/TouchImageView.kt_SELECTED" value="TouchImageView" />
     <property name="android-custom-viewP:/Projects/Projects_SM/sugaralbum/sugaralbum/app/src/main/java/com/sugarmount/common/view/TouchImageView.kt_SELECTED" value="TouchImageView" />
+    <property name="android-custom-viewP:/Projects/Projects_SM/sugaralbum/sugaralbum/imageFrameworkLibrary/src/main/java/com/kiwiple/imageframework/view/StickerTextEditView.java_SELECTED" value="StickerTextEditView" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
     <property name="memory.settings.postsync.last.time.stamp" value="1666664733178" />
     <property name="project.structure.last.edited" value="Build Variants" />
     <property name="project.structure.proportion" value="0.17" />
@@ -110,10 +139,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="P:\Projects\Projects_SM\sugaralbum\app\src\main\res\layout" />
+      <recent name="P:\Projects\Projects_SM\sugaralbum\sugaralbum\app\src\main\res\layout" />
+      <recent name="P:\Projects\Projects_SM\sugaralbum\sugaralbum\app\src\main\res\values" />
+      <recent name="P:\Projects\Projects_SM\sugaralbum\sugaralbum\app\src\main\res\values-ko" />
+      <recent name="P:\Projects\Projects_SM\sugaralbum\sugaralbum\app\src\main\res\color" />
+      <recent name="P:\Projects\Projects_SM\sugaralbum\sugaralbum\app\src\main\res\anim" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.sugarmount.sugaralbum" />
       <recent name="com.sugarmount.common.ads" />
     </key>
   </component>
@@ -221,6 +254,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sugarmount/sugarcamera/story/movie/MovieEditMainActivity.java</url>
+          <line>720</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

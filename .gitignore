@@ -1,5 +1,6 @@
 # Built application files
 /*/build/
+build/
 
 # Crashlytics configuations
 com_crashlytics_export_strings.xml
@@ -26,7 +27,11 @@ local.properties
 .idea/scopes/scope_settings.xml
 .idea/vcs.xml
 *.iml
-
+.idea/
+.idea/workspace.xml ? remove # and delete .idea if it better suit your needs.
+.gradle/
+build/
+*.aar
 # OS-specific files
 .DS_Store
 .DS_Store?

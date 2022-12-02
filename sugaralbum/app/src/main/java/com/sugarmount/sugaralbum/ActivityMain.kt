@@ -1,11 +1,9 @@
 package com.sugarmount.sugaralbum
 
 import android.annotation.SuppressLint
-import android.annotation.TargetApi
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.DisplayMetrics
@@ -13,7 +11,6 @@ import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
-import androidx.core.view.isInvisible
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.SimpleItemAnimator
@@ -42,7 +39,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.activity_nav.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -327,8 +323,11 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             if (data != null) {
                 when (data.getSerializableExtra(SelectManager.ERROR_CODE) as ERROR_HANDLER?) {
                     ERROR_HANDLER.SUCCESS -> {
-                        val file_uri = data.getSerializableExtra(SelectManager.FILE_URI) as String?
-                        log.e("SUCCESS: $file_uri")
+                        val fileUri = data.getSerializableExtra(SelectManager.FILE_URI) as String?
+                        log.e("SUCCESS: $fileUri")
+                        intent = Intent(applicationContext, ActivityFinish::class.java)
+                        intent.putExtra(EXTRA_URI_INFO, fileUri)
+                        startActivityForResult(intent, MY_FINISH_REQUEST)
                     }
                     ERROR_HANDLER.UNKNOWN_ERROR -> log.e("UNKNOWN_ERROR")
                     ERROR_HANDLER.ITEM_COUNT -> log.e("ITEM_COUNT")
@@ -340,7 +339,13 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                     ERROR_HANDLER.CODEC_ERROR -> log.e("CODEC_ERROR")
                     else -> log.e("??")
                 }
-                //                new test_v2().execute();
+            }else{
+                when(requestCode) {
+                    MY_FINISH_REQUEST -> {
+                        // 선택 초기화
+                        resetSelectedImage();
+                    }
+                }
             }
         } catch (e: Exception) {
             log.e("############### ex:$e")
@@ -451,8 +456,8 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                                     getString(R.string.app_name)
                                 )
                             )
-//                            startActivityForResult(intent, ConstantsGallery.REQ_CODE_CONTENT_DETAIL)
-                            startActivity(intent)
+                            startActivityForResult(intent, ConstantsGallery.REQ_CODE_CONTENT_DETAIL)
+//                            startActivity(intent)
                         }
                         ERROR_HANDLER.UNKNOWN_ERROR -> log.e("UNKNOWN_ERROR")
                         ERROR_HANDLER.ITEM_COUNT -> log.e("ITEM_COUNT")

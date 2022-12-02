@@ -51,7 +51,7 @@ public class FFmpegService extends Service {
 			NotificationChannel serviceChannel = new NotificationChannel(
 					CHANNEL_ID,
 					"SugarAlbum foreground service 2",
-					NotificationManager.IMPORTANCE_HIGH
+					NotificationManager.IMPORTANCE_MIN
 			);
 			manager.createNotificationChannel(serviceChannel);
 		}

@@ -98,6 +98,8 @@
     <string name="string_common_clipboard_copy">Copied to clipboard</string>
     <string name="string_common_error_retry">An error has occurred. Please try again.</string>
     <string name="string_common_selected_count">You can select a minimum of 5 photos and a maximum of 40 photos.</string>
+    <string name="string_common_direct_uri">Go to Video</string>
+    <string name="string_common_video_description">Saved in &quot;Photo Album &lt; SugarAlbum&quot;</string>
 
 
     <!-- Sugarcamera -->

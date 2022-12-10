@@ -24,5 +24,4 @@ public class ImageResData {
     public PointF midPoint;
     public Float oldDistance;
     public Double oldDegree;
-
 }

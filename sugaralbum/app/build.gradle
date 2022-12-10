@@ -19,7 +19,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 33
         versionCode 16
-        versionName "1.0.016"
+        versionName "1.0.017"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a'
     }
@@ -94,7 +94,7 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation "androidx.activity:activity-ktx:1.6.1"
     implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.google.android.material:material:1.8.0-alpha03'
+    implementation 'com.google.android.material:material:1.8.0-beta01'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
@@ -119,7 +119,7 @@ dependencies {
 
     // firebase
     implementation 'com.google.firebase:firebase-core:21.1.1'
-    implementation 'com.google.firebase:firebase-messaging:23.1.0'
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
     implementation 'com.google.android.gms:play-services-ads:21.3.0'
 
     // Import the BoM for the Firebase platform

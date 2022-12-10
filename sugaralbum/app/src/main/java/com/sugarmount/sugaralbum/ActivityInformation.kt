@@ -155,10 +155,10 @@ class ActivityInformation : CustomAppCompatActivity(), DataClickEventListener,
 
             val list: List<InfoT> = repo.getInfo(locale, infoType.toString())
             recyclerAdapterInformation!!.mItemList.clear()
+            recyclerAdapterInformation!!.mItemList = ArrayList()
+            recyclerAdapterInformation!!.mItemList.addAll(list)
+
             recyclerView.visibility = View.VISIBLE
-            list.forEach {
-                recyclerAdapterInformation!!.mItemList.add(it)
-            }
 
             runOnUiThread {
                 recyclerAdapterInformation?.notifyDataSetChanged()

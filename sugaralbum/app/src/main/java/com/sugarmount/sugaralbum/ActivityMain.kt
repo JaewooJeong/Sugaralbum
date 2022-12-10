@@ -274,26 +274,28 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
             val projection = arrayOf(
                 MediaStore.Files.FileColumns._ID,
                 MediaStore.Images.Media.DISPLAY_NAME,
-                MediaStore.Images.Media.BUCKET_DISPLAY_NAME)
-            val cursor = applicationContext.contentResolver.query(uri, projection, null, null, null) ?: return mutableListOf()
-            val listOfAllImages = ArrayList<ImageResData>()
+                MediaStore.Images.Media.BUCKET_DISPLAY_NAME,
+                MediaStore.Images.Media.SIZE)
 
-            cursor.moveToLast()
-            while (cursor.moveToPrevious()) {
-                if (isCancelled) {
-                    break
+            // Display videos in alphabetical order based on their display name.
+            val sortOrder = "${MediaStore.Files.FileColumns._ID} DESC"
+            val query = applicationContext.contentResolver.query(uri, projection, null, null, sortOrder) ?: return mutableListOf()
+
+            val listOfAllImages = mutableListOf<ImageResData>()
+
+            query.use { cursor ->
+                while (query.moveToNext()) {
+                    if (isCancelled)
+                        break
+                    val mediaData = ImageResData()
+                    mediaData._id = cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns._ID))
+                    mediaData.contentUri = Uri.withAppendedPath(
+                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                        mediaData._id.toString()
+                    )
+                    listOfAllImages += mediaData
                 }
-                val mediaData = ImageResData()
-                mediaData._id = cursor.getLong(cursor.getColumnIndex(MediaStore.Files.FileColumns._ID))
-                mediaData.contentUri = Uri.withAppendedPath(
-                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                    mediaData._id.toString()
-                )
-
-                listOfAllImages.add(mediaData)
-
             }
-            cursor.close()
             return listOfAllImages
         }
 

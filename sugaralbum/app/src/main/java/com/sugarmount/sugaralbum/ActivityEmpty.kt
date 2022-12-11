@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Point
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.util.TypedValue
@@ -58,7 +59,8 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
     }
 
     private fun checkMyPermission() {
-        when (grantPermission(PERMISSIONS)) {
+        val readImagePermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) PERMISSIONS33 else PERMISSIONS
+        when (grantPermission(readImagePermission)) {
             true -> {
                 goIntent(false)
             }
@@ -87,7 +89,7 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
             }
             POPUP_TYPE.VERSION -> {
                 when (b) {
-                    true -> goIntent(true)
+                    true -> finish()
                     false -> {
                         val i = Intent(Intent.ACTION_VIEW)
                         val u =
@@ -144,7 +146,6 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                 val appVer: String
                 var updateVer: String
                 val infoVer: String
-                val clipVer: String
                 var force:Boolean
 
                 try {
@@ -158,7 +159,8 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                         force = json.getBoolean("force")
 
                         //xx debug
-//                        updateVer = "1.1.001"
+//                        updateVer = "1.0.019"
+//                        force = true
 
                         // 1. 앱 버전 확인
                         if (appVer == updateVer) {

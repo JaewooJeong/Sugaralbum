@@ -30,13 +30,16 @@ public class CustomAppCompatActivity extends AppCompatActivity implements MvConf
             return true;
         } else {
             log.d("Permission is revoked");
-            //ActivityCompat.requestPermissions(this, permission, 1);
             return false;
         }
     }
 
     public void requestPermissions(){
-        ActivityCompat.requestPermissions(this, PERMISSIONS, MY_PERMISSION_REQUEST);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            ActivityCompat.requestPermissions(this, PERMISSIONS33, MY_PERMISSION_REQUEST);
+        }else{
+            ActivityCompat.requestPermissions(this, PERMISSIONS, MY_PERMISSION_REQUEST);
+        }
     }
 
 }

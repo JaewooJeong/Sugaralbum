@@ -18,8 +18,8 @@ android {
         applicationId "com.sugarmount.sugaralbum"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 18
-        versionName "1.0.018"
+        versionCode 19
+        versionName "1.0.019"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a'
     }

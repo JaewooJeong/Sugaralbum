@@ -6,9 +6,6 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import com.sugarmount.sugaralbum.GlobalApplication;
-import com.sugarmount.sugaralbum.R;
-
 /**
  * Created by Jaewoo on 2016-08-19.
  */
@@ -27,11 +24,13 @@ public interface MvConfig {
     int MY_FINISH_REQUEST = 10012;
 
     String[] PERMISSIONS = {
-            Manifest.permission.READ_EXTERNAL_STORAGE };
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE };
 
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     String[] PERMISSIONS33 = {
-            Manifest.permission.READ_MEDIA_IMAGES };
+            Manifest.permission.READ_MEDIA_IMAGES,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE };
 
     int READ_TIMEOUT = 60;
     int WRITE_TIMEOUT = 5;

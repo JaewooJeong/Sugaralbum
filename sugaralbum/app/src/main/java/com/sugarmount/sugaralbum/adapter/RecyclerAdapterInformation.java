@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sugarmount.common.listener.DataClickEventListener;
-import com.sugarmount.common.model.MvConfig;
+import com.sugarmount.common.env.MvConfig;
 import com.sugarmount.common.room.info.InfoT;
 import com.sugarmount.common.utils.Utils;
 import com.sugarmount.sugaralbum.R;

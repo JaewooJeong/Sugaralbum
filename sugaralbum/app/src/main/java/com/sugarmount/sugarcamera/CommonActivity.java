@@ -14,7 +14,7 @@ import com.kiwiple.debug.L;
 import com.kiwiple.multimedia.canvas.ICanvasUser;
 import com.kiwiple.multimedia.preview.PreviewManager;
 import com.sugarmount.common.ads.GoogleAds;
-import com.sugarmount.common.model.MvConfig;
+import com.sugarmount.common.env.MvConfig;
 import com.sugarmount.sugarcamera.utils.PermissionUtil;
 import com.sugarmount.sugarcamera.utils.ViewCompat;
 

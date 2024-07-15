@@ -7,22 +7,24 @@ plugins {
 }
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion '31.0.0'
+    compileSdk 34
     bundle {
         storeArchive {
             enable = true
         }
     }
+
     defaultConfig {
         applicationId "com.sugarmount.sugaralbum"
+        targetSdkVersion 34
         minSdkVersion 24
-        targetSdkVersion 33
-        versionCode 19
-        versionName "1.0.019"
+
+        versionCode 21
+        versionName "1.0.101"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a'
     }
+
     buildTypes {
         release {
             debuggable false

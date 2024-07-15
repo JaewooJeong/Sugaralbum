@@ -25,7 +25,7 @@ import com.sugarmount.sugarcamera.story.gallery.ConstantsGallery
 import com.sugarmount.sugarcamera.story.gallery.SelectManager
 import com.sugarmount.sugarcamera.story.movie.MovieEditMainActivity
 import com.sugarmount.sugarcamera.story.movie.MovieEditMainActivity.ERROR_HANDLER
-import com.sugarmount.common.model.MvConfig
+import com.sugarmount.common.env.MvConfig
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.version.VersionT
 import com.sugarmount.common.utils.CustomAppCompatActivity

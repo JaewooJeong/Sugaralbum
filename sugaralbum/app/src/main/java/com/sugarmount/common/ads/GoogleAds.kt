@@ -7,7 +7,7 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
-import com.sugarmount.common.model.MvConfig
+import com.sugarmount.common.env.MvConfig
 import com.sugarmount.common.utils.log
 import com.sugarmount.sugaralbum.R
 

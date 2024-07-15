@@ -6,8 +6,8 @@ import com.google.gson.GsonBuilder
 import com.google.gson.JsonElement
 import com.google.gson.JsonParser
 import com.sugarmount.common.model.HttpKeyValue
-import com.sugarmount.common.model.MvConfig.REQUEST_CALLBACK
-import com.sugarmount.common.model.MvConfig.REQUEST_TYPE
+import com.sugarmount.common.env.MvConfig.REQUEST_CALLBACK
+import com.sugarmount.common.env.MvConfig.REQUEST_TYPE
 import com.sugarmount.common.model.RequestData
 import com.sugarmount.common.model.ResponseData
 import com.sugarmount.common.utils.JsonUtil

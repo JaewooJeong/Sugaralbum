@@ -1,7 +1,7 @@
 package com.sugarmount.common.model
 
-import com.sugarmount.common.model.MvConfig.MAX_ITEMS_PER_REQUEST
-import com.sugarmount.common.model.MvConfig.REQUEST_TYPE
+import com.sugarmount.common.env.MvConfig.MAX_ITEMS_PER_REQUEST
+import com.sugarmount.common.env.MvConfig.REQUEST_TYPE
 import lombok.Data
 import okhttp3.Callback
 import java.util.HashMap

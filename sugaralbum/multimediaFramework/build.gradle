@@ -3,13 +3,12 @@ import com.android.builder.core.BuilderConstants
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 33
-    buildToolsVersion '31.0.0'
+    compileSdk 34
 
     defaultConfig {
         version 5
         minSdkVersion 24
-        targetSdkVersion 33
+        targetSdkVersion 34
 
         ndk {
             moduleName "libYUV"
@@ -26,13 +25,16 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
         }
-
-        debug {
-            debuggable true
-        }
-
     }
     ndkVersion '25.1.8937393'
+    namespace 'com.kiwiple.multimedia'
+
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/NOTICE'
+    }
 
     allprojects {
         sourceCompatibility = 1.8

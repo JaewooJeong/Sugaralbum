@@ -1,5 +1,6 @@
 package com.sugarmount.common.model
 
+import com.sugarmount.common.env.MvConfig
 import lombok.Data
 import java.io.Serializable
 

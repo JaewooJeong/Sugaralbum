@@ -3,7 +3,7 @@ package com.sugarmount.sugaralbum
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import com.sugarmount.common.model.MvConfig
+import com.sugarmount.common.env.MvConfig
 import com.sugarmount.common.utils.CustomAppCompatActivity
 import com.sugarmount.common.utils.log
 import java.util.*

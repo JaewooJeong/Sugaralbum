@@ -13,7 +13,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.appopen.AppOpenAd
-import com.sugarmount.common.model.MvConfig
+import com.sugarmount.common.env.MvConfig
 import com.sugarmount.common.utils.log
 import com.sugarmount.sugaralbum.GlobalApplication
 import com.sugarmount.sugaralbum.R

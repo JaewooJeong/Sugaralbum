@@ -8,8 +8,8 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.sugarmount.common.listener.DataClickEventListener
-import com.sugarmount.common.model.MvConfig.INFO_TYPE
-import com.sugarmount.common.model.MvConfig.PAGE_DIRECTION
+import com.sugarmount.common.env.MvConfig.INFO_TYPE
+import com.sugarmount.common.env.MvConfig.PAGE_DIRECTION
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.info.InfoT
 import com.sugarmount.common.utils.CustomAppCompatActivity

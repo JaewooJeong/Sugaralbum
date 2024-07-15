@@ -1,8 +1,7 @@
 package com.sugarmount.common.http
 
-import android.util.Log
-import com.sugarmount.common.model.MvConfig
-import com.sugarmount.common.model.MvConfig.REQUEST_TYPE
+import com.sugarmount.common.env.MvConfig
+import com.sugarmount.common.env.MvConfig.REQUEST_TYPE
 import com.sugarmount.common.utils.log
 import okhttp3.*
 import org.json.JSONObject

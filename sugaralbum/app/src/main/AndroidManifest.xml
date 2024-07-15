@@ -1,6 +1,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Devices running Android 12L (API level 32) or lower  -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- Required only if your app needs to access images or photos that other apps created. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <!-- <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" /> -->
+    <!-- To handle the reselection within the app on Android 14 (API level 34) -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"
+        tools:ignore="ProtectedPermissions" />
+
     <uses-feature
         android:name="android.hardware.location.gps"
         android:required="false" />
@@ -20,23 +41,7 @@
         android:name="android.hardware.camera.flash"
         android:required="false" />
 
-    <!-- Required only if your app needs to access images or photos
-     that other apps created. -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- If your app doesn't need to access media files that other apps created,
-     set the "maxSdkVersion" attribute to "28" instead. -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="29" />
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"
-        tools:ignore="ProtectedPermissions" />
+
 
     <application
         android:name="com.sugarmount.sugaralbum.GlobalApplication"
@@ -111,23 +116,27 @@
         <service
             android:name="com.kiwiple.mediaframework.ffmpeg.FFmpegService"
             android:process="com.kiwiple.mediaframework.ffmpeg"
-            android:exported="false" >
+            android:exported="false"
+            android:foregroundServiceType="specialUse" >
             <intent-filter>
                 <action android:name="com.kiwiple.mediaframework.ffmpeg.IFFmpegService" />
             </intent-filter>
+
         </service>
         <service
             android:name="com.sugarmount.sugarcamera.story.service.VideoCreationService"
-            android:exported="false" />
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
         <service
-            android:name="com.sugarmount.sugarcamera.story.service.StoryAnalysisMusicForegroundService" />
+            android:name="com.sugarmount.sugarcamera.story.service.StoryAnalysisMusicForegroundService"
+            android:foregroundServiceType="specialUse" />
         <service
-            android:name="com.sugarmount.sugarcamera.story.service.UplusStorySavingService" />
+            android:name="com.sugarmount.sugarcamera.story.service.UplusStorySavingService"
+            android:foregroundServiceType="specialUse" />
         <service
             android:name="com.kiwiple.mediaframework.ffmpeg.TestService"
-            android:exported="false" >
-        </service>
-
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
 
         <!-- provider -->
         <provider

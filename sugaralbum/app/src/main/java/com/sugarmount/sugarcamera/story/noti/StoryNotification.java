@@ -9,6 +9,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ServiceInfo;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -75,7 +76,7 @@ public class StoryNotification {
 
 
         Intent dummyIntent = new Intent();
-        PendingIntent pIntent = PendingIntent.getBroadcast(context, 0, dummyIntent, PendingIntent.FLAG_MUTABLE);
+        PendingIntent pIntent = PendingIntent.getBroadcast(context, 0, dummyIntent, PendingIntent.FLAG_IMMUTABLE);
 
         mBuilder = new NotificationCompat.Builder(context, CHANNEL_ID);
         setSmallIcon(mBuilder);
@@ -92,7 +93,13 @@ public class StoryNotification {
         mBuilder.setContentIntent(pIntent);
         mBuilder.setPriority(PRIORITY_MIN);
 
-        ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build());
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
+        }else {
+            ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build());
+        }
+
+
 
     
     }
@@ -142,7 +149,7 @@ public class StoryNotification {
              * PendingIntent.FLAG_ONE_SHOT 속성 사용후 이벤트 처리 없이 중복 생성되면 이전 extra value가 남는다.
              */
             PendingIntent pIntent = PendingIntent.getActivity(context, 0, intent,
-                    PendingIntent.FLAG_MUTABLE);
+                    PendingIntent.FLAG_IMMUTABLE);
             mBuilder.setContentIntent(pIntent);
             mBuilder.setAutoCancel(true);
 

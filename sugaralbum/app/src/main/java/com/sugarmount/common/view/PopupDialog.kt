@@ -2,7 +2,6 @@ package com.sugarmount.common.view
 
 import android.annotation.SuppressLint
 import android.app.Dialog
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -14,24 +13,15 @@ import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 //import com.google.android.ads.nativetemplates.TemplateView
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdLoader
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.formats.NativeAdOptions
-import com.google.android.gms.ads.formats.UnifiedNativeAd
 import com.sugarmount.common.listener.FinishClickEventListener
-import com.sugarmount.common.model.MvConfig
-import com.sugarmount.common.model.MvConfig.POPUP_TYPE
-import com.sugarmount.common.room.AnyRepository
-import com.sugarmount.common.utils.shareSocial
+import com.sugarmount.common.env.MvConfig
+import com.sugarmount.common.env.MvConfig.POPUP_TYPE
 import com.sugarmount.sugaralbum.GlobalApplication
 import com.sugarmount.sugaralbum.R
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.util.*
 
-class PopupDialog(context: Context?) : View(context), MvConfig, View.OnClickListener {
+class PopupDialog(context: Context?) : View(context),
+    MvConfig, View.OnClickListener {
 
     private lateinit var dialog: Dialog
     lateinit var popupType: POPUP_TYPE

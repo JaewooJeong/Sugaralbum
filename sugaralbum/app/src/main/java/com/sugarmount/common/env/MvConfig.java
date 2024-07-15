@@ -1,4 +1,4 @@
-package com.sugarmount.common.model;
+package com.sugarmount.common.env;
 
 
 import android.Manifest;
@@ -31,6 +31,12 @@ public interface MvConfig {
     String[] PERMISSIONS33 = {
             Manifest.permission.READ_MEDIA_IMAGES,
             Manifest.permission.WRITE_EXTERNAL_STORAGE };
+
+    @RequiresApi(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+    String[] PERMISSIONS34 = {
+            Manifest.permission.READ_MEDIA_IMAGES,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED };
 
     int READ_TIMEOUT = 60;
     int WRITE_TIMEOUT = 5;

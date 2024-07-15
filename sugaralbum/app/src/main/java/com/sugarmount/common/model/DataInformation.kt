@@ -1,6 +1,6 @@
 package com.sugarmount.common.model
 
-import com.sugarmount.common.model.MvConfig.INFO_TYPE
+import com.sugarmount.common.env.MvConfig.INFO_TYPE
 
 class DataInformation {
     var id: Int? = null

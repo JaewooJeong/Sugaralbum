@@ -19,7 +19,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 //import com.sugarmount.common.model.DataTextSize;
-import com.sugarmount.common.model.MvConfig;
+import com.sugarmount.common.env.MvConfig;
 import com.sugarmount.sugaralbum.GlobalApplication;
 import com.sugarmount.sugaralbum.R;
 
@@ -39,8 +39,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.TimeZone;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Jaewoo on 2018-11-29.

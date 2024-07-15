@@ -2,7 +2,7 @@ package com.sugarmount.common.utils;
 
 import android.util.Log;
 
-import com.sugarmount.common.model.MvConfig;
+import com.sugarmount.common.env.MvConfig;
 import com.sugarmount.sugaralbum.BuildConfig;
 
 

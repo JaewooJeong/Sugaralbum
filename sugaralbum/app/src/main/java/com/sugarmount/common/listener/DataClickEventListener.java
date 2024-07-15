@@ -1,7 +1,7 @@
 package com.sugarmount.common.listener;
 
 
-import com.sugarmount.common.model.MvConfig;
+import com.sugarmount.common.env.MvConfig;
 
 /**
  * Created by Jaewoo on 2017-08-29.

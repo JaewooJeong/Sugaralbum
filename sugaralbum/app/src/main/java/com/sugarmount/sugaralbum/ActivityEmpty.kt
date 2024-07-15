@@ -17,8 +17,8 @@ import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.sugarmount.common.listener.FinishClickEventListener
 import com.sugarmount.common.model.HttpKeyValue.*
-import com.sugarmount.common.model.MvConfig
-import com.sugarmount.common.model.MvConfig.POPUP_TYPE
+import com.sugarmount.common.env.MvConfig
+import com.sugarmount.common.env.MvConfig.POPUP_TYPE
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.info.InfoT
 import com.sugarmount.common.room.version.VersionT

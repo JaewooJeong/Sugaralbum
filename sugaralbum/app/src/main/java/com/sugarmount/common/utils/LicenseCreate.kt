@@ -1,6 +1,6 @@
 package com.sugarmount.common.utils
 
-import com.sugarmount.common.model.MvConfig
+import com.sugarmount.common.env.MvConfig
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.info.InfoT
 import com.sugarmount.sugaralbum.GlobalApplication

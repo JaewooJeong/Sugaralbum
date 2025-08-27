@@ -226,6 +226,8 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         lock.disableKeyguard();
 
         setContentView(R.layout.activity_movie_edit_main);
+        setInsetView(findViewById(R.id.kiwipleStoryEditMainLayout));
+
         activity = this;
 
         initComboBox();
@@ -398,6 +400,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         super.onDestroy();
     }
 
+    @SuppressLint("GestureBackNavigation")
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {

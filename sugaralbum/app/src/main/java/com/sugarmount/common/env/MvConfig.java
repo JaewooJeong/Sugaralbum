@@ -10,7 +10,7 @@ import androidx.annotation.RequiresApi;
  * Created by Jaewoo on 2016-08-19.
  */
 public interface MvConfig {
-    boolean debug = false;
+    boolean debug = true;
 
     String TAG = "SugarAlbum";
     String RELEASE_HOST = "";

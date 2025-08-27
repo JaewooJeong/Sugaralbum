@@ -3,9 +3,17 @@ package com.sugarmount.sugarcamera;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowInsets;
 import android.widget.ImageView;
 
+import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.OnApplyWindowInsetsListener;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.ads.MobileAds;
@@ -15,6 +23,8 @@ import com.kiwiple.multimedia.canvas.ICanvasUser;
 import com.kiwiple.multimedia.preview.PreviewManager;
 import com.sugarmount.common.ads.GoogleAds;
 import com.sugarmount.common.env.MvConfig;
+import com.sugarmount.common.utils.Utils;
+import com.sugarmount.sugaralbum.R;
 import com.sugarmount.sugarcamera.utils.PermissionUtil;
 import com.sugarmount.sugarcamera.utils.ViewCompat;
 
@@ -98,7 +108,38 @@ public class CommonActivity extends FragmentActivity {
 		}
 
 		super.onCreate(bundle);
+
+
+		EdgeToEdge.enable(this);
+
+		// 시스템 다크 모드 설정에 따라 상태바 스타일 자동 설정
+		WindowInsetsControllerCompat insetsController =
+				new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+
+		boolean isDarkMode = Utils.isDarkModeEnabled(this);
+		insetsController.setAppearanceLightStatusBars(!isDarkMode);
+		insetsController.setAppearanceLightNavigationBars(!isDarkMode);
 	}
+
+	public void setInsetView(final View view) {
+		view.setOnApplyWindowInsetsListener((v, insets) -> {
+            // 상태바 높이 가져오기
+            int statusBarHeight = insets.getSystemWindowInsetTop();
+
+            v.setPadding(0, statusBarHeight, 0, 0);
+
+            if (Utils.isDarkModeEnabled(v.getContext())) {
+                v.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.main1));
+            } else {
+                v.setBackgroundColor(ContextCompat.getColor(v.getContext(), R.color.main4));
+            }
+
+            return insets;
+        });
+	}
+
+
+
 
 	@Override
 	protected void onDestroy() {

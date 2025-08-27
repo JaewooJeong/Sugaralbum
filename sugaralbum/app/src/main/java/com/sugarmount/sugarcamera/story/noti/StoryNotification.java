@@ -94,7 +94,7 @@ public class StoryNotification {
         mBuilder.setPriority(PRIORITY_MIN);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK);
+            ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC);
         }else {
             ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build());
         }

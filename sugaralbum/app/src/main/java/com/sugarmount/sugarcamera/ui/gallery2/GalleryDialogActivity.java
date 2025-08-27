@@ -3,6 +3,7 @@ package com.sugarmount.sugarcamera.ui.gallery2;
 import android.app.Dialog;
 import android.os.Debug;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 import com.sugarmount.sugarcamera.BaseActivity;
 
@@ -26,6 +27,17 @@ public abstract class GalleryDialogActivity extends BaseActivity {
 				dialog.dismiss();
 			}
 		}
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+
+		getWindow().getDecorView().setSystemUiVisibility(
+				View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+						| View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+		);
+
 	}
 
 

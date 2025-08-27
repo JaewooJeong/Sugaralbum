@@ -11,7 +11,6 @@ import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.SimpleItemAnimator
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
@@ -38,8 +37,15 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_nav.*
+import android.widget.FrameLayout
+import androidx.appcompat.widget.SwitchCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.navigation.NavigationView
+import com.sugarmount.common.view.TouchImageView
+import com.sugarmount.common.env.MvConfig.EXTRA_INFO_TYPE
+import com.sugarmount.common.env.MvConfig.EXTRA_URI_INFO
+import com.sugarmount.common.env.MvConfig.MY_FINISH_REQUEST
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -60,14 +66,66 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private var imageAdapter: ImageAdapter? = null
     private var show: ColorStateList? = null
     private var hide: ColorStateList? = null
+    
+    // Views from activity_nav.xml
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navigationView1: NavigationView
+    private lateinit var relativeLayout1: RelativeLayout
+    private lateinit var relativeLayout5: RelativeLayout
+    private lateinit var relativeLayout6: RelativeLayout
+    private lateinit var relativeLayout8: RelativeLayout
+    private lateinit var relativeLayout9: RelativeLayout
+    private lateinit var relativeLayout10: RelativeLayout
+    private lateinit var imageView1: ImageView
+    private lateinit var switch1: SwitchCompat
+    private lateinit var temp12: TextView
+    
+    // Views from activity_main.xml
+    private lateinit var selectImage: TouchImageView
+    private lateinit var selectRotateLeft: ImageView
+    private lateinit var selectRotateRight: ImageView
+    private lateinit var resetSelected: ImageView
+    private lateinit var send: ImageView
+    private lateinit var selectRestore: ImageView
+    private lateinit var recycler_view: RecyclerView
+    private lateinit var ad_view_container: FrameLayout
 
     // init
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav)
-
+        setInsetView(this.findViewById(R.id.appBarLayout))
+        setInsetView(this.findViewById(R.id.navigationView1))
+        
+        initViews()
         createView()
     }
+    
+    private fun initViews() {
+        // Views from activity_nav.xml
+        drawerLayout = findViewById(R.id.drawerLayout)
+        navigationView1 = findViewById(R.id.navigationView1)
+        relativeLayout1 = findViewById(R.id.relativeLayout1)
+        relativeLayout5 = findViewById(R.id.relativeLayout5)
+        relativeLayout6 = findViewById(R.id.relativeLayout6)
+        relativeLayout8 = findViewById(R.id.relativeLayout8)
+        relativeLayout9 = findViewById(R.id.relativeLayout9)
+        relativeLayout10 = findViewById(R.id.relativeLayout10)
+        imageView1 = findViewById(R.id.imageView1)
+        switch1 = findViewById(R.id.switch1)
+        temp12 = findViewById(R.id.temp12)
+        
+        // Views from activity_main.xml
+        selectImage = findViewById(R.id.selectImage)
+        selectRotateLeft = findViewById(R.id.selectRotateLeft)
+        selectRotateRight = findViewById(R.id.selectRotateRight)
+        resetSelected = findViewById(R.id.resetSelected)
+        send = findViewById(R.id.send)
+        selectRestore = findViewById(R.id.selectRestore)
+        recycler_view = findViewById(R.id.recycler_view)
+        ad_view_container = findViewById(R.id.ad_view_container)
+    }
+    
     private fun createView() {
         log.e("#Activity_Main Call")
         initAds()

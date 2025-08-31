@@ -38,13 +38,9 @@
 
                 <ImageView
                     android:id="@+id/imageView1"
-                    android:layout_width="@dimen/default_icon_size"
-                    android:layout_height="@dimen/default_icon_size"
                     android:layout_alignParentEnd="true"
-                    android:scaleX="0.6"
-                    android:scaleY="0.6"
-                    android:src="@drawable/ic_btn_close"
-                    app:tint="@color/main1" />
+                    style="@style/ImageView_CloseButton"/>
+
             </RelativeLayout>
 
             <!-- 설정 -->
@@ -199,15 +195,9 @@
 
                             <RelativeLayout style="@style/RelativeLayout_Ripple2">
 
-                                <ImageView
-                                    android:id="@+id/imageView8"
-                                    style="@style/ImageView_Style1"
-                                    android:src="@drawable/ic_assignment" />
-
                                 <TextView
                                     android:id="@+id/temp8"
                                     style="@style/TextView_Style1"
-                                    android:layout_toEndOf="@+id/imageView8"
                                     android:text="@string/string_menu_notice" />
 
                             </RelativeLayout>
@@ -222,15 +212,9 @@
 
                             <RelativeLayout style="@style/RelativeLayout_Ripple2">
 
-                                <ImageView
-                                    android:id="@+id/imageView9"
-                                    style="@style/ImageView_Style1"
-                                    android:src="@drawable/ic_library_books" />
-
                                 <TextView
                                     android:id="@+id/temp9"
                                     style="@style/TextView_Style1"
-                                    android:layout_toEndOf="@+id/imageView9"
                                     android:text="@string/string_menu_faq" />
 
                             </RelativeLayout>
@@ -245,15 +229,9 @@
 
                             <RelativeLayout style="@style/RelativeLayout_Ripple2">
 
-                                <ImageView
-                                    android:id="@+id/imageView10"
-                                    style="@style/ImageView_Style1"
-                                    android:src="@drawable/ic_library_add" />
-
                                 <TextView
                                     android:id="@+id/temp10"
                                     style="@style/TextView_Style1"
-                                    android:layout_toEndOf="@+id/imageView10"
                                     android:text="@string/string_menu_open_source_license" />
 
                             </RelativeLayout>

@@ -132,11 +132,24 @@ public class VideoEncoderBin {
 	 *            전달된 데이터에 해당하는 정보
 	 */
 	public void sampleEncoding(ByteBuffer buffer, BufferInfo info) {
-		if (mEncoder.get(0) != null) {
+		if (mEncoder == null || mEncoder.isEmpty() || mEncoder.get(0) == null) {
+			L.e("VideoEncoderBin: Encoder not initialized or null");
+			throw new RuntimeException("Encoder not initialized");
+		}
+		
+		if (buffer == null || info == null) {
+			L.e("VideoEncoderBin: Buffer or BufferInfo is null");
+			throw new IllegalArgumentException("Buffer and BufferInfo cannot be null");
+		}
+		
+		try {
 			if (info.size > 0) {
 				buffer.position(info.offset);
 			}
 			mEncoder.get(0).sampleEncoding(buffer, info);
+		} catch (Exception e) {
+			L.e("VideoEncoderBin: Error during sample encoding", e);
+			throw new RuntimeException("Sample encoding failed", e);
 		}
 	}
 

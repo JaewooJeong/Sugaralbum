@@ -32,9 +32,9 @@
     <string name="string_menu_collection">Collections</string>
     <string name="string_menu_export_settings">Export social settings</string>
     <string name="string_menu_backup_restore">Backup/Restore</string>
-    <string name="string_menu_notice">Notice</string>
-    <string name="string_menu_faq">FAQ</string>
-    <string name="string_menu_open_source_license">Open source license</string>
+    <string name="string_menu_notice">📋 Notice</string>
+    <string name="string_menu_faq">📣 FAQ</string>
+    <string name="string_menu_open_source_license">🔓 Open source</string>
 
     <!-- Popup go update -->
     <string name="string_gp_update">Update</string>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.StrictMode
 import android.os.StrictMode.VmPolicy
 import android.util.DisplayMetrics
+import android.view.View
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import com.google.android.gms.ads.*
 import com.sugarmount.common.utils.CustomAppCompatActivity
@@ -124,5 +125,13 @@ class ActivityFinish : CustomAppCompatActivity() {
         adView!!.setAdSize(adSize)
         val adRequest = AdRequest.Builder().build()
         adView!!.loadAd(adRequest)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+
     }
 }

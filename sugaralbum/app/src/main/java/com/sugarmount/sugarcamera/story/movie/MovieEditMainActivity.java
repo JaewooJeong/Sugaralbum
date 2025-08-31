@@ -17,6 +17,7 @@ import android.database.Cursor;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -47,6 +48,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 
@@ -141,6 +143,8 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
     private boolean mIsShowingProgress = false;
     private boolean isChangedEndingLogo = false;
     private boolean mIsOverOffSet = false;
+    private boolean mSaveRequested = false;
+    private Bundle mSaveMessageData = null;
 
     private int mIsInternal;
 
@@ -165,7 +169,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 
     private Context mContext;
     private ImageView mSendLayout;
-    private RelativeLayout mHeaderLayout;
+    private ConstraintLayout mHeaderLayout;
     private ViewGroup mFrame;
     private View mPreviewLayout;
     private View appBarLayout;
@@ -232,7 +236,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 
         initComboBox();
 
-        initAds();
+//        initAds();
 
         mImm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
@@ -312,7 +316,16 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         if (!mIsServiceBound) {
             Intent serviceIntent = new Intent(this, VideoCreationService.class);
             serviceIntent.putExtra(VideoCreationService.EXTRAS_KEY_MESSENGER, mMessenger);
-            bindService(serviceIntent, mServiceConnection, Activity.BIND_AUTO_CREATE);
+            
+            // Start as foreground service first, then bind
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(serviceIntent);
+            } else {
+                startService(serviceIntent);
+            }
+            
+            // Then bind to get the messenger interface
+            bindService(serviceIntent, mServiceConnection, Context.BIND_AUTO_CREATE);
             mIsServiceBound = true;
         }
 
@@ -334,16 +347,8 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 //        SmartLog.d("MovieEditMainActivity", "#onPause");
 
         if (mIsServiceBound) {
-            if(isMyServiceRunning()) {
-                if (!VideoCreationService.getIsSavingMovieDiary()) {
-//                    SmartLog.d("MovieEditMainActivity", "onPause #unbindService #1");
-                    unbindService(mServiceConnection);
-                    Intent serviceIntent = new Intent(mContext, VideoCreationService.class);
-                    stopService(serviceIntent);
-                    mIsServiceBound = false;
-//                    SmartLog.d("MovieEditMainActivity", "onPause #unbindService #2");
-                }
-            }
+            unbindService(mServiceConnection);
+            mIsServiceBound = false;
         }
 
         mStoryPreviewLayout.pausePreview();
@@ -367,18 +372,10 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         NotificationManager mNotificationManager = (NotificationManager)this.getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.cancelAll();
 
-        if (VideoCreationService.getIsSavingMovieDiary()) {
-            cancelSaveVideo();
-        }
-
-        if(isMyServiceRunning()) {
-            if (mService1 != null) {
-//                SmartLog.d("MovieEditMainActivity", "onDestroy #unbindService");
-                unbindService(mServiceConnection);
-                Intent serviceIntent = new Intent(mContext, VideoCreationService.class);
-                stopService(serviceIntent);
-                mIsServiceBound = false;
-            }
+        // If the service is still bound when the activity is destroyed, unbind it.
+        if (mIsServiceBound) {
+            unbindService(mServiceConnection);
+            mIsServiceBound = false;
         }
 
         if(mLatestDataManager != null) {
@@ -756,8 +753,10 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
             int nPos = 0;
             Uri fileUri = null;
 
-            File fromFile = new File(Storage.getDirectory(), currentSaveFileName + ".tmp");
-            File toFile = new File(Storage.getDirectory(), currentSaveFileName + ".mp4");
+            // Use app-specific directory for Android 15 compatibility
+            String appDir = Storage.getAppSpecificDirectory(MovieEditMainActivity.this);
+            File fromFile = new File(appDir, currentSaveFileName + ".tmp");
+            File toFile = new File(appDir, currentSaveFileName + ".mp4");
 
             while(!fromFile.exists()) {
                 if(nPos++ <= 30){
@@ -846,6 +845,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 
     }
 
+    @SuppressLint("HandlerLeak")
     private final Handler mIncomingHandler = new Handler() {
         private void dummy() {
         }
@@ -860,24 +860,36 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
                 case VideoCreationService.MESSAGE_ON_COMPLETE:
                     SmartLog.d("MovieEditMainActivity", "Finish Movie Diary");
                     SmartLog.d("MovieEditMainActivity", "######## VideoCreationService.MESSAGE_ON_COMPLETE ########");
-                    File fromFile = new File(Storage.getDirectory(), currentSaveFileName + ".tmp");
-                    currentSaveFileName = currentSaveFileName.replace("MOV_", "SugarAlbum_");
-                    File toFile = new File(Storage.getDirectory(), currentSaveFileName + ".mp4");
 
-                    fromFile.renameTo(toFile);
-                    Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+                    // The Activity will finalize the file.
+                    String appDir = Storage.getAppSpecificDirectory(MovieEditMainActivity.this);
+                    File fromFile = new File(appDir, currentSaveFileName + ".tmp");
+                    String finalFileName = currentSaveFileName.replace("MOV_", "SugarAlbum_");
+                    File toFile = new File(appDir, finalFileName + ".mp4");
+                    Uri finalUri = null;
 
-                    Uri fileUri = Uri.fromFile(toFile);
-                    intent.setData(fileUri);
-                    getApplicationContext().sendBroadcast(intent);
+                    if (fromFile.exists()) {
+                        if (fromFile.renameTo(toFile)) {
+                            // Now that we have the final file, add it to the MediaStore.
+                            finalUri = com.sugarmount.sugarcamera.MediaStoreHelper.addVideoToMediaStore(
+                                MovieEditMainActivity.this, toFile.getAbsolutePath(), toFile.getName());
+                        } else {
+                            SmartLog.e("MovieEditMainActivity", "Failed to rename temp file.");
+                        }
+                    } else {
+                        SmartLog.e("MovieEditMainActivity", "Temp file not found: " + fromFile.getAbsolutePath());
+                    }
 
                     handleMakeSuccess();
                     Intent goodIntent = new Intent();
-                    goodIntent.putExtra(SelectManager.ERROR_CODE, ERROR_HANDLER.SUCCESS);
-                    goodIntent.putExtra(SelectManager.FILE_URI, fileUri.toString());
+                    if (finalUri != null) {
+                        goodIntent.putExtra(SelectManager.ERROR_CODE, ERROR_HANDLER.SUCCESS);
+                        goodIntent.putExtra(SelectManager.FILE_URI, finalUri.toString());
+                    } else {
+                        goodIntent.putExtra(SelectManager.ERROR_CODE, ERROR_HANDLER.NOT_FOUND);
+                    }
                     setResult(ConstantsGallery.REQ_CODE_CONTENT_DETAIL, goodIntent);
                     finish();
-//                    new completeMsgThread().execute();
                     break;
                 case VideoCreationService.MESSAGE_ON_ERROR_UNKNOWN:
                     handleMakeFail();
@@ -934,28 +946,42 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         handler.sendMessageDelayed(handler.obtainMessage(REQUEST_HIDE_PROGRESS), 1000L);
     }
 
-    private boolean isMyServiceRunning(){
-        ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-        for(ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)){
-            if(VideoCreationService.class.getName().equals(service.service.getClassName())){
-                return true;
-            }
+    private void sendMessageToService() {
+        if (!mSaveRequested || mService1 == null || mSaveMessageData == null) {
+            return;
         }
-        return false;
+        Message saveMessage = new Message();
+        saveMessage.what = VideoCreationService.MESSAGE_START_CREATION;
+        saveMessage.setData(mSaveMessageData);
+
+        try {
+            mService1.send(saveMessage);
+            SmartLog.d("MovieEditMainActivity", "Start Movie Diary message sent to service.");
+        } catch (RemoteException exception) {
+            exception.printStackTrace();
+        }
+
+        // Reset the request flag
+        mSaveRequested = false;
+        mSaveMessageData = null;
     }
 
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            // Do nothing.
-//            SmartLog.d("MovieEditMain", "onServiceDisconnected." + name);
+            SmartLog.d("MovieEditMain", "onServiceDisconnected." + name);
             mService1 = null;
+            mIsServiceBound = false;
         }
 
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-//            SmartLog.d("MovieEditMain", "onServiceConnected." + name);
+            SmartLog.d("MovieEditMain", "onServiceConnected." + name);
             mService1 = new Messenger(service);
+            mIsServiceBound = true;
+
+            // Now that we are connected, send the message if one is pending.
+            sendMessageToService();
         }
     };
 
@@ -971,23 +997,6 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
                 }
             }
             return false;
-        }
-    }
-
-
-
-    private void cancelSaveVideo() {
-
-        if(isMyServiceRunning()) {
-            Message saveMessage = new Message();
-            saveMessage.what = VideoCreationService.MESSAGE_CANCEL_CREATION;
-
-            try {
-                mService1.send(saveMessage);
-            } catch (RemoteException exception) {
-                SmartLog.e("##### Main", "cancelSaveVideo ex:" + exception);
-                exception.printStackTrace(); // TODO: something.
-            }
         }
     }
 
@@ -1438,7 +1447,8 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 //            SmartLog.d("MovieEditMainActivity", "##### finish....." );
 
             SmartLog.i("MovieEditMainActivity", "intent title:" + mTitle);
-            SmartLog.i("MovieEditMainActivity", "intent SelectManager.OUTPUT_DIR:" + Storage.getDirectory());
+            String outputDir = Storage.getAppSpecificDirectory(MovieEditMainActivity.this);
+            SmartLog.i("MovieEditMainActivity", "intent SelectManager.OUTPUT_DIR:" + outputDir);
             SmartLog.i("MovieEditMainActivity", "intent photoData size:" + photoData.size());
             SmartLog.i("MovieEditMainActivity", "intent videoData size:" + videoData.size());
 
@@ -1523,6 +1533,17 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
             }
             return result;
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        );
+
     }
 
     private void changeEndingLogo() {
@@ -1611,6 +1632,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
      */
     private void saveVideo(Resolution resolution, boolean bShareNext) {
         StoryNotification.setCurrentJsonDataUri(mJsonDataUri);
+        // This ensures the service is started and can outlive the activity.
         StoryCommonIntent.getInstance(getApplicationContext()).startSavingMDService();
 
         stopPreview();
@@ -1618,30 +1640,41 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         StringBuilder sb = new StringBuilder(storyFileName.generateName(System.currentTimeMillis()));
         sb.append("_");
         sb.append(new Random().nextInt(999999));
-
         currentSaveFileName = sb.toString();
 
         startSaveVideoUI();
 
-        if (isMyServiceRunning()) {
-            Message saveMessage = new Message();
-            saveMessage.what = VideoCreationService.MESSAGE_START_CREATION;
+        // Prepare the message data, but don't send it yet.
+        // onServiceConnected will send it once the connection is established.
+        Bundle data = new Bundle();
+        data.putString(VideoCreationService.EXTRAS_KEY_VIDEO_FILE_NAME, currentSaveFileName);
+        data.putSerializable(VideoCreationService.EXTRAS_KEY_RESOLUTION, resolution);
+        data.putString(VideoCreationService.EXTRAS_KEY_JSONDATA_URI, mJsonDataUri.toString());
+        String outputDir = Storage.getAppSpecificDirectory(MovieEditMainActivity.this);
+        data.putString(VideoCreationService.EXTRAS_KEY_DIRECTORY, outputDir);
+        data.putBoolean(VideoCreationService.EXTRAS_KEY_VIDEO_SHARE_RESERVE, false);
+        
+        mSaveMessageData = data;
+        mSaveRequested = true;
 
-            Bundle data = new Bundle();
-            data.putString(VideoCreationService.EXTRAS_KEY_VIDEO_FILE_NAME, currentSaveFileName);
-            data.putSerializable(VideoCreationService.EXTRAS_KEY_RESOLUTION, resolution);
-            data.putString(VideoCreationService.EXTRAS_KEY_JSONDATA_URI, mJsonDataUri.toString());
-            data.putString(VideoCreationService.EXTRAS_KEY_DIRECTORY, Storage.getDirectory());
-            // EXTRAS_KEY_VIDEO_SHARE_RESERVE
-            data.putBoolean(VideoCreationService.EXTRAS_KEY_VIDEO_SHARE_RESERVE, false);
-            saveMessage.setData(data);
-
-            SmartLog.d("MovieEditMainActivity", "Start Movie Diary");
-            try {
-                mService1.send(saveMessage);
-            } catch (RemoteException exception) {
-                exception.printStackTrace(); // TODO: something.
+        // Start and bind to the service. If already bound, the message will be sent.
+        // If not, onServiceConnected will send it.
+        if (!mIsServiceBound) {
+            Intent serviceIntent = new Intent(this, VideoCreationService.class);
+            serviceIntent.putExtra(VideoCreationService.EXTRAS_KEY_MESSENGER, mMessenger);
+            
+            // Start as foreground service first
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(serviceIntent);
+            } else {
+                startService(serviceIntent);
             }
+            
+            // Then bind to get the messenger interface
+            bindService(serviceIntent, mServiceConnection, Context.BIND_AUTO_CREATE);
+        } else if (mService1 != null) {
+            // If already bound and connected, send the message immediately.
+            sendMessageToService();
         }
     }
 

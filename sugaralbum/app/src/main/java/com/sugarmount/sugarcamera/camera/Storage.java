@@ -11,6 +11,7 @@ import android.os.StatFs;
 import android.provider.MediaStore.Images;
 import android.provider.MediaStore.Images.ImageColumns;
 import android.provider.MediaStore.MediaColumns;
+import android.content.Context;
 
 import com.sugarmount.sugarcamera.camera.Utils.ApiHelper;
 import com.sugarmount.sugarcamera.utils.Logger;
@@ -21,9 +22,11 @@ import java.io.FileOutputStream;
 public class Storage {
     private static final String TAG = "CameraStorage";
 
+    @Deprecated
     public static final String DCIM =
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).toString();
 
+    @Deprecated
     public static String DIRECTORY = DCIM + "/SugarCamera";
 
     // Match the code in MediaProvider.computeBucketValues().
@@ -37,6 +40,7 @@ public class Storage {
     public static final long MOVIE_DIARY_STORAGE_THRESHOLD = 524288000; // 500 * 1024 * 1024 = 500MB
 //    public static final long MOVIE_DIARY_STORAGE_THRESHOLD = 1048576000; // 1000 * 1024 * 1024 = 1000MB
 
+    @Deprecated
     public static void setDirectory(String directory){
         if(directory != null)
             DIRECTORY = directory;
@@ -44,8 +48,28 @@ public class Storage {
             DIRECTORY = DCIM + "/SugarCamera";
     }
 
+    @Deprecated
     public static String getDirectory(){
         return DIRECTORY;
+    }
+
+    /**
+     * Get app-specific directory for Android 15 compatibility
+     * @param context Application context
+     * @return App-specific external directory path
+     */
+    public static String getAppSpecificDirectory(Context context) {
+        File moviesDir = context.getExternalFilesDir(Environment.DIRECTORY_MOVIES);
+        if (moviesDir == null) {
+            moviesDir = new File(context.getFilesDir(), "movies");
+        }
+        
+        File sugarCameraDir = new File(moviesDir, "SugarCamera");
+        if (!sugarCameraDir.exists()) {
+            sugarCameraDir.mkdirs();
+        }
+        
+        return sugarCameraDir.getAbsolutePath();
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)

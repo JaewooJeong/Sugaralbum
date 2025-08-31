@@ -16,6 +16,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import com.kiwiple.debug.L;
@@ -35,6 +36,9 @@ public class StoryNotification {
 
     //음악 분석용 
     public static final int NOTIFICATION_ID_ON_GOING_MUSIC_ANALYSIS = 1;
+    
+    //동영상 생성용  
+    public static final int NOTIFICATION_ID_CREATE_STORY = 1001;
 
     private static final int THUMBNAIL_SIZE = 300;
 
@@ -48,6 +52,10 @@ public class StoryNotification {
 
     public static void removeAnalysisMusicNotification(Context context) {
         createNotificationChannel(context).cancel(NOTIFICATION_ID_ON_GOING_MUSIC_ANALYSIS);
+    }
+
+    public static void removeVideoCreationNotification(Context context) {
+        createNotificationChannel(context).cancel(NOTIFICATION_ID_CREATE_STORY);
     }
 
     private static void setSmallIcon(NotificationCompat.Builder builder){
@@ -71,6 +79,7 @@ public class StoryNotification {
     }
 
     // 수동 생성 시작
+    @RequiresApi(api = Build.VERSION_CODES.VANILLA_ICE_CREAM)
     public static void getCreateStoryNotification(Context context) {
         removeManualStoryNotification(context);
 
@@ -93,15 +102,29 @@ public class StoryNotification {
         mBuilder.setContentIntent(pIntent);
         mBuilder.setPriority(PRIORITY_MIN);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build(), ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROCESSING);
         }else {
             ((UplusStorySavingService)context).startForeground(NOTIFICATION_ID_MANUAL_CREATE_STORY, mBuilder.build());
         }
+    }
 
+    // 동영상 생성 서비스용 알림 생성
+    public static Notification createVideoCreationNotification(Context context, int progress) {
+        Intent dummyIntent = new Intent();
+        PendingIntent pIntent = PendingIntent.getBroadcast(context, 0, dummyIntent, PendingIntent.FLAG_IMMUTABLE);
 
-
-    
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
+        setSmallIcon(builder);
+        builder.setTicker(context.getString(R.string.kiwiple_story_story_saving_progressbar_text));
+        builder.setContentTitle(context.getString(R.string.kiwiple_story_story_movie_diary));
+        builder.setContentText(context.getString(R.string.kiwiple_story_story_saving_progressbar_text));
+        builder.setProgress(100, progress, false);
+        builder.setOngoing(true);
+        builder.setContentIntent(pIntent);
+        builder.setPriority(PRIORITY_MIN);
+        
+        return builder.build();
     }
 
     static int tmpProgress = -1;

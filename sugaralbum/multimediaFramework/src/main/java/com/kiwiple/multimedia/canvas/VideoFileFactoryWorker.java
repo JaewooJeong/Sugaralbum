@@ -101,9 +101,13 @@ final class VideoFileFactoryWorker extends AsyncTask<Void, Void, Void> {
 		mHeight = form.resolution.height;
 
 		mTempVideoFile = File.createTempFile(TEMP_FILE_PREFIX, null, mContext.getCacheDir());
+		L.d("Created temp video file: " + mTempVideoFile.getAbsolutePath());
 
 		mEncoder = new VideoEncoderBin();
+		L.d("Created VideoEncoderBin, initializing...");
+		L.d("Resolution: " + tempResolution.width + "x" + tempResolution.height + ", offset: " + offset);
 		mEncoder.initialize(mTempVideoFile.getAbsolutePath(), tempResolution.width, tempResolution.height, offset);
+		L.d("VideoEncoderBin initialized successfully");
 	}
 
 	// // // // // Method.
@@ -141,39 +145,95 @@ final class VideoFileFactoryWorker extends AsyncTask<Void, Void, Void> {
 
 	@Override
 	protected Void doInBackground(Void... params) {
+		L.d("=== VideoFileFactoryWorker.doInBackground() STARTED ===");
+		L.d("Thread: " + Thread.currentThread().getName() + " (ID: " + Thread.currentThread().getId() + ")");
+		L.d("Output path: " + mRequestForm.outputFilePath);
 
 		if (Looper.myLooper() == null) {
 			Looper.prepare();
 		}
 
 		try {
+			L.d("=== PHASE 1: Audio Initialization ===");
 			initializeAudio();
+			L.d("Audio initialization completed");
+			
+			L.d("=== PHASE 2: Visualizer Initialization ===");
 			initializeVisualizer();
+			L.d("Visualizer initialization completed - Total frames: " + mTotalFrameCount);
+			
+			if (isCancelled()) {
+				L.w("Task was cancelled during initialization");
+				return null;
+			}
 
+			L.d("=== PHASE 3: Buffer Allocation ===");
 			int position = 0;
 
 			int yuvBufferSize = Math.round(mWidth * mHeight * 1.5f);
+			L.d("Allocating YUV buffer size: " + yuvBufferSize + " bytes");
 			ByteBuffer rendererBuffer = ByteBuffer.allocate(yuvBufferSize);
 			byte[] arrayWithinRendererBuffer = rendererBuffer.array();
 
+			L.d("Creating PixelCanvas: " + mWidth + "x" + mHeight);
 			PixelCanvas frameBuffer = new PixelCanvas(new Size(mWidth, mHeight), true);
+			L.d("PixelCanvas created successfully");
+			
+			L.d("=== PHASE 4: Main Encoding Loop ===");
+			L.d("Starting main encoding loop with " + mTotalFrameCount + " total frames");
 
+			long frameStartTime = System.currentTimeMillis();
 			while (!isCancelled() && mVisualizer.hasNextFrame()) {
+				L.d("Processing frame at position: " + position + ", frame " + (mRenderedFrameCount + 1) + "/" + mTotalFrameCount);
 
-				mVisualizer.setPosition(position);
-				mVisualizer.draw(frameBuffer);
+				try {
+					// Check for overall timeout (30 seconds per frame max)
+					if (System.currentTimeMillis() - frameStartTime > 30000) {
+						L.e("Frame processing timeout exceeded (30 seconds)");
+						throw new RuntimeException("Frame processing timeout - possible JNI hang");
+					}
 
-				PixelUtils.convertArgbToYuv420sp(frameBuffer, arrayWithinRendererBuffer, mWidth, mHeight);
-				mBufferInfo.set(0, arrayWithinRendererBuffer.length, position * 1000L, 0);
-				mEncoder.sampleEncoding(rendererBuffer, mBufferInfo);
+					// Visualizer operations
+					mVisualizer.setPosition(position);
+					mVisualizer.draw(frameBuffer);
 
-				position += INTERVAL;
-				publishProgress();
+					// JNI call
+					PixelUtils.convertArgbToYuv420sp(frameBuffer, arrayWithinRendererBuffer, mWidth, mHeight);
+					
+					mBufferInfo.set(0, arrayWithinRendererBuffer.length, position * 1000L, 0);
+					
+					// Encoder call
+					if (mEncoder != null) {
+						mEncoder.sampleEncoding(rendererBuffer, mBufferInfo);
+					} else {
+						L.e("Encoder is null, aborting");
+						throw new RuntimeException("Encoder became null during processing");
+					}
 
-				if (!mTempVideoFile.isFile()) {
-					throw new FileNotFoundException();
+					position += INTERVAL;
+					publishProgress();
+
+					// File integrity check
+					if (!mTempVideoFile.isFile()) {
+						L.e("Temp video file was deleted, aborting");
+						throw new FileNotFoundException();
+					}
+					
+					
+					long frameEndTime = System.currentTimeMillis();
+					L.d("Frame " + mRenderedFrameCount + " completed in " + (frameEndTime - frameStartTime) + "ms");
+					frameStartTime = frameEndTime; // Reset for next frame
+					
+				} catch (RuntimeException e) {
+					L.e("Runtime error during frame processing: " + e.getMessage(), e);
+					throw e;  // Re-throw to abort processing
+				} catch (Exception e) {
+					L.e("Unexpected error during frame processing: " + e.getMessage(), e);
+					throw new RuntimeException("Frame processing failed", e);
 				}
 			}
+			
+			L.d("Main encoding loop finished. Cancelled: " + isCancelled() + ", hasNextFrame: " + mVisualizer.hasNextFrame());
 
 			mEncoder.finish();
 			mEncoder.destory();
@@ -182,13 +242,9 @@ final class VideoFileFactoryWorker extends AsyncTask<Void, Void, Void> {
 				if(rendererBuffer != null)
 					rendererBuffer.clear();
 
-				Timer t = new Timer();
-				t.schedule(new TimerTask() {
-					@Override
-					public void run() {
-						System.exit(0);
-					}
-				}, 3000);
+				L.w("VideoFileFactoryWorker was cancelled, cleaning up resources");
+				// System.exit(0) removed - this was causing app crashes
+				// Let the normal cleanup process handle resource deallocation
 			}
 
 			if(!isCancelled()) {
@@ -214,6 +270,7 @@ final class VideoFileFactoryWorker extends AsyncTask<Void, Void, Void> {
 //				muxer.execute(this.mFFmpegListener);
 			}
 		} catch (Exception exception) {
+			L.e("VideoFileFactoryWorker error: " + exception.getMessage(), exception);
 			exception.printStackTrace();
 			mVideoFileFactoryListener.onError(exception);
 			cancel(true);
@@ -224,8 +281,10 @@ final class VideoFileFactoryWorker extends AsyncTask<Void, Void, Void> {
 
 	@Override
 	protected void onPostExecute(Void result) {
+		L.d("VideoFileFactoryWorker.onPostExecute() - task completed successfully");
 		release();
 		mVideoFileFactoryListener.onComplete();
+		L.d("VideoFileFactoryListener.onComplete() called");
 	}
 
 	@Override

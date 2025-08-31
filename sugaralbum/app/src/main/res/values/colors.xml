@@ -12,14 +12,21 @@
     <color name="vr_transparent_30">#4D000000</color>
     <color name="vr_transparent_40">#66000000</color>
     <color name="vr_transparent_60">#99000000</color>
-    <color name="vr_transparent_80">#991b1b1b</color>
-    <color name="transparent">#fff</color>
+    <color name="vr_transparent_70">#B3000000</color>
+    <color name="transparent">#99000000</color>
 
+    <!-- white ARGB -->
+    <color name="vr_white_60">#99FFFFFF</color>
+    <color name="vr_white_80">#CCFFFFFF</color>
+    <color name="vr_white_90">#E6FFFFFF</color>
+    <color name="vr_white_95">#F2FFFFFF</color>
+
+    <!-- blue ARGB -->
+    <color name="vr_blue_50">#800080FF</color>
 
     <!-- main (material color tool Blue 700)-->
-    <color name="main1">#3f74ff</color>
-    <color name="main2">#7584bf</color>
-    <color name="main3">#b0b5db</color>
+    <color name="main1">#000000</color>
+    <color name="main2">#0080FF</color>
     <color name="main4">#fafdff</color>
 
     <color name="main_10">#1A1976d2</color>
@@ -31,22 +38,27 @@
     <color name="font1">#1b1b1b</color>
     <color name="font2">#757575</color>
     <color name="font3">#424242</color>
+    <color name="font4">#333333</color>
+    <color name="font5">#fafdff</color>
     <color name="icon1">#616161</color>
+
+    <color name="subs1">#191A1C</color>
+    <color name="subs2">#84868D</color>
 
     <color name="shimmer_placeholder">#dddddd</color>
 
     <!-- common -->
     <color name="white" type="color">#ffffffff</color>
-    <color name="black" type="color">#ff000000</color>
+    <color name="black" type="color">#ff1C1C1C</color>
     <color name="gray" type="color">#797979</color>
     <color name="back" type="color">#f3f3f3</color>
     <color name="hint" type="color">#BDBDBD</color>
     <color name="gray500" type="color">#9E9E9E</color>
     <color name="space" type="color">#EEEEEE</color>
+    <color name="space2" type="color">#EBE9ED</color>
     <color name="blue" type="color">#1565C0</color>
     <color name="barcode" type="color">#616161</color>
     <color name="test" type="color">#3c3c3c</color>
-    <color name="white_30">#4DFFFFFF</color>
 
     <color name="holo_blue_bright">#ff00ddff</color>
     <color name="holo_green_light">#ff99cc00</color>
@@ -60,34 +72,55 @@
     <color name="temp4">#ee4b4b</color>
     <color name="temp5">#8a2be2</color>
 
-    <color name="transparent_">#40FFFFFF</color>
+    <!-- 카드 color -->
+    <color name="card1">#525257</color>
 
+    <!-- 인사카드 배경 colors -->
+    <color name="card_bg_default">#E3F2FD</color>
+    <color name="card_bg_newyear">#FFD700</color>      <!-- 골드 -->
+    <color name="card_bg_yearend">#228B22</color>      <!-- 포레스트그린 -->
+    <color name="card_bg_lunar">#FF4500</color>        <!-- 오렌지레드 -->
+    <color name="card_bg_chuseok">#8B4513</color>      <!-- 새들브라운 -->
+    <color name="card_bg_birthday">#FF69B4</color>     <!-- 핫핑크 -->
+    <color name="card_bg_special">#4169E1</color>      <!-- 로얄블루 -->
+    <color name="card_bg_thanks">#32CD32</color>       <!-- 라임그린 -->
+    <color name="card_bg_comfort">#87CEEB</color>      <!-- 스카이블루 -->
+
+    <!-- ChatGPT 스타일 라이트 테마 colors (default) -->
+    <color name="chat_bg_dark">#fafdff</color>
+    <color name="chat_bg_darker">#F5F5F5</color>
+    <color name="chat_user_bubble">#E3F2FD</color>
+    <color name="chat_ai_bubble">#F5F5F5</color>
+    <color name="chat_text_primary">#1b1b1b</color>
+    <color name="chat_text_secondary">#757575</color>
+    <color name="chat_input_bg">#F5F5F5</color>
+    <color name="chat_border">#E0E0E0</color>
+    <color name="chat_send_button">#1976d2</color>
+
+    <color name="spinner_bg">#FFFFFF</color> <!-- light -->
     <!--
     Hex Opacity Values
-    100%—FF
-    95%—F2
-    90%—E6
-    85%—D9
-    80%—CC
-    75%—BF
-    70%—B3
-    65%—A6
-    60%—99
-    55%—8C
-    50%—80
-    45%—73
-    40%—66
-    35%—59
-    30%—4D
-    25%—40
-    20%—33
-    15%—26
-    10%—1A
-    5%—0D
-    0%—00
+    100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5% — 0D
+    0% — 00
     -->
-
-    <color name="bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
-    <color name="bright_foreground_holo_dark">#fff3f3f3</color>
 
 </resources>

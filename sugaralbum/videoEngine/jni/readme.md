@@ -5,3 +5,4 @@
 * 완료된 android/arm*/lib 안의 so 파일들을 prebuilt-lib/arm*/lib 안에 복사
 ### Android NDK는 윈도우에서 빌드
 * ndk-build.cmd 빌드
+* ndk-build 실행

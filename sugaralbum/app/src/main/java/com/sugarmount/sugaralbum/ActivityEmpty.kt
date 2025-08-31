@@ -21,6 +21,8 @@ import com.sugarmount.common.env.MvConfig
 import com.sugarmount.common.env.MvConfig.EXTRA_PERMISSION
 import com.sugarmount.common.env.MvConfig.PERMISSIONS
 import com.sugarmount.common.env.MvConfig.PERMISSIONS33
+import com.sugarmount.common.env.MvConfig.PERMISSIONS34
+import com.sugarmount.common.env.MvConfig.PERMISSIONS35
 import com.sugarmount.common.env.MvConfig.POPUP_TYPE
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.info.InfoT
@@ -65,7 +67,13 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
     }
 
     private fun checkMyPermission() {
-        val readImagePermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) PERMISSIONS33 else PERMISSIONS
+        val readImagePermission = when {
+            Build.VERSION.SDK_INT >= 35 -> PERMISSIONS35  // Android 15+
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE -> PERMISSIONS34  // Android 14
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> PERMISSIONS33  // Android 13
+            else -> PERMISSIONS  // Android 12 and below
+        }
+        log.d("Requesting permissions for API ${Build.VERSION.SDK_INT}: ${readImagePermission.joinToString()}")
         when (grantPermission(readImagePermission)) {
             true -> {
                 goIntent(false)

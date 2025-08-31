@@ -19,11 +19,25 @@ public class Utils {
 	private static final String DEFAULT_CACHE_DIRECTORY = "/pluscamera/.cache";
 	private static final String CACHE_EXTENSION = ".cache";
 	
+	@Deprecated
 	public static String getExternalStorageDirectory() {
 		if (isExternalStorageMounted()) {
 			return Environment.getExternalStorageDirectory().getAbsolutePath();
 		}
 		return null;
+	}
+	
+	/**
+	 * Get app-specific external storage directory for Android 15 compatibility
+	 * @param context Application context
+	 * @return App-specific external directory path
+	 */
+	public static String getAppSpecificDirectory(Context context) {
+		File externalDir = context.getExternalFilesDir(null);
+		if (externalDir != null) {
+			return externalDir.getAbsolutePath();
+		}
+		return context.getFilesDir().getAbsolutePath();
 	}
 	
 	public static String getExternalStoragePublicDirectoryDCIM() {
@@ -33,10 +47,22 @@ public class Utils {
 		return null;
 	}
 	
+	@Deprecated
 	public static boolean isExternalStorageMounted() {
 		return Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()); 
 	}
 	
+	/**
+	 * Check if app-specific external storage is available
+	 * @param context Application context
+	 * @return true if available
+	 */
+	public static boolean isAppStorageAvailable(Context context) {
+		File externalDir = context.getExternalFilesDir(null);
+		return externalDir != null && externalDir.canWrite();
+	}
+	
+	@Deprecated
 	public static long getAvailableSDcardSize() {
         if(isExternalStorageMounted()) {
         	File path = Environment.getExternalStorageDirectory();
@@ -48,12 +74,53 @@ public class Utils {
         return 0;
 	}
 	
+	/**
+	 * Get available storage size in app-specific directory
+	 * @param context Application context
+	 * @return Available bytes
+	 */
+	public static long getAvailableAppStorageSize(Context context) {
+		File externalDir = context.getExternalFilesDir(null);
+		if (externalDir == null) {
+			externalDir = context.getFilesDir();
+		}
+		
+		try {
+			StatFs stat = new StatFs(externalDir.getPath());
+			long blockSize = stat.getBlockSize();
+			long availableBlocks = stat.getAvailableBlocks();
+			return availableBlocks * blockSize;
+		} catch (Exception e) {
+			return 0;
+		}
+	}
+	
 	public static String getCacheDirectory() {
 		return getExternalStorageDirectory(DEFAULT_CACHE_DIRECTORY);
 	}
 	
+	@Deprecated
 	public static String getExternalStorageDirectory(String subDirectory) {
 		String dir = Environment.getExternalStorageDirectory().getAbsolutePath() + subDirectory + "/";
+		try {
+			return getDirectory(dir);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
+	/**
+	 * Get app-specific directory with subdirectory for Android 15 compatibility
+	 * @param context Application context
+	 * @param subDirectory Subdirectory name
+	 * @return App-specific directory path
+	 */
+	public static String getAppSpecificDirectory(Context context, String subDirectory) {
+		File externalDir = context.getExternalFilesDir(null);
+		if (externalDir == null) {
+			externalDir = context.getFilesDir();
+		}
+		String dir = externalDir.getAbsolutePath() + subDirectory + "/";
 		try {
 			return getDirectory(dir);
 		} catch (Exception e) {

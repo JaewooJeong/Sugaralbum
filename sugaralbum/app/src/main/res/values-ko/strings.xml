@@ -32,9 +32,9 @@
     <string name="string_menu_collection">컬렉션</string>
     <string name="string_menu_export_settings">소셜 보내기 설정</string>
     <string name="string_menu_backup_restore">백업/복구</string>
-    <string name="string_menu_notice">공지사항</string>
-    <string name="string_menu_faq">FAQ</string>
-    <string name="string_menu_open_source_license">오픈 소스 라이선스</string>
+    <string name="string_menu_notice">📋 공지사항</string>
+    <string name="string_menu_faq">📣 FAQ</string>
+    <string name="string_menu_open_source_license">🔓 오픈 소스 라이선스</string>
 
     <!-- Popup go update -->
     <string name="string_gp_update">업데이트 하러 가기</string>

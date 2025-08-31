@@ -41,14 +41,28 @@ class ActivityIntro : CustomAppCompatActivity() {
         when (requestCode) {
             MvConfig.MY_PERMISSION_REQUEST -> {
                 // If request is cancelled, the result arrays are empty.
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // permission was granted
-                    log.d("permission was granted")
-                    // create a daemon thread
+                var allPermissionsGranted = true
+                if (grantResults.isNotEmpty()) {
+                    // Check all permissions
+                    for (i in grantResults.indices) {
+                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+                            allPermissionsGranted = false
+                            log.d("permission denied: ${permissions[i]}")
+                        } else {
+                            log.d("permission granted: ${permissions[i]}")
+                        }
+                    }
+                } else {
+                    allPermissionsGranted = false
+                }
+                
+                if (allPermissionsGranted) {
+                    // all permissions were granted
+                    log.d("all permissions were granted")
                     checkPanelType()
                 } else {
-                    // permission denied
-                    log.d("permission denied")
+                    // some permissions denied
+                    log.d("some permissions denied")
                     goIntent(ActivityEmpty::class.java)
                 }
             }

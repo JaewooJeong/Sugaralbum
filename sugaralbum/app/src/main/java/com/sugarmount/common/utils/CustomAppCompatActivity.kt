@@ -45,29 +45,41 @@ open class CustomAppCompatActivity : AppCompatActivity(), MvConfig {
     }
 
     fun grantPermission(permission: Array<String?>): Boolean {
-        if (permission.size >= 1) {
-            val check = checkSelfPermission(permission[0]!!)
-            if (check == PackageManager.PERMISSION_GRANTED) {
-                log.d("Permission is granted")
-                return true
-            } else {
-                log.d("Permission is revoked")
-                //ActivityCompat.requestPermissions(this, permission, 1);
-                return false
+        if (permission.isNotEmpty()) {
+            // Check all permissions, not just the first one
+            for (i in permission.indices) {
+                val perm = permission[i]
+                if (perm != null) {
+                    val check = checkSelfPermission(perm)
+                    if (check != PackageManager.PERMISSION_GRANTED) {
+                        log.d("Permission revoked: $perm")
+                        return false
+                    } else {
+                        log.d("Permission granted: $perm")
+                    }
+                }
             }
+            log.d("All permissions granted")
+            return true
         }
-
         return true
     }
 
     fun requestPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+        if (Build.VERSION.SDK_INT >= 35) {
+            // Android 15+ - Use scoped storage compatible permissions
+            ActivityCompat.requestPermissions(
+                this,
+                MvConfig.PERMISSIONS35,
+                MvConfig.MY_PERMISSION_REQUEST
+            )
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             ActivityCompat.requestPermissions(
                 this,
                 MvConfig.PERMISSIONS34,
                 MvConfig.MY_PERMISSION_REQUEST
             )
-        } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.TIRAMISU) {
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             ActivityCompat.requestPermissions(
                 this,
                 MvConfig.PERMISSIONS33,

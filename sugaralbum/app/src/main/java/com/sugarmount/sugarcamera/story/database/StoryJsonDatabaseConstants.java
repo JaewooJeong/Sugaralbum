@@ -3,9 +3,31 @@ package com.sugarmount.sugarcamera.story.database;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.BaseColumns;
+import android.content.Context;
+import java.io.File;
 
 public class StoryJsonDatabaseConstants {
+	@Deprecated
 	public static final String UPLUS_STORY_PATH = Environment.getExternalStorageDirectory() + "/story/thumb";
+	
+	/**
+	 * Get app-specific story path for Android 15 compatibility
+	 * @param context Application context
+	 * @return App-specific story directory path
+	 */
+	public static String getAppStoryPath(Context context) {
+		File externalDir = context.getExternalFilesDir(null);
+		if (externalDir == null) {
+			externalDir = context.getFilesDir();
+		}
+		
+		File storyDir = new File(externalDir, "story/thumb");
+		if (!storyDir.exists()) {
+			storyDir.mkdirs();
+		}
+		
+		return storyDir.getAbsolutePath();
+	}
 
 	public static final int BG_MUSIC_IS_EXTERNAL = 0;
 	public static final int BG_MUSIC_IS_INTERNAL = 1;

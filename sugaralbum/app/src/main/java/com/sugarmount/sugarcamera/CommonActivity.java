@@ -46,7 +46,7 @@ public class CommonActivity extends FragmentActivity {
 			ICanvasUser.environment.initialize(getApplicationContext());
 
 		// 광고 init
-//		GoogleAds.Companion.createAds(getApplicationContext());
+		GoogleAds.Companion.createAds(getApplicationContext());
 
 		// Initialize the Mobile Ads SDK.
 		MobileAds.initialize(

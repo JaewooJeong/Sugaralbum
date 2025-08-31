@@ -77,6 +77,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private lateinit var relativeLayout9: RelativeLayout
     private lateinit var relativeLayout10: RelativeLayout
     private lateinit var imageView1: ImageView
+    private lateinit var imageView2: ImageView
     private lateinit var switch1: SwitchCompat
     private lateinit var temp12: TextView
     
@@ -136,6 +137,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         relativeLayout9 = findViewById(R.id.relativeLayout9)
         relativeLayout10 = findViewById(R.id.relativeLayout10)
         imageView1 = findViewById(R.id.imageView1)
+        imageView2 = findViewById(R.id.imageView2)
         switch1 = findViewById(R.id.switch1)
         temp12 = findViewById(R.id.temp12)
         
@@ -185,6 +187,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         relativeLayout10.setOnClickListener(this)
 
         imageView1.setOnClickListener(this)
+        imageView2.setOnClickListener(this)
         switch1.setOnClickListener(this)
 
         // 221015 차후에 자유변형 저장 추가
@@ -454,7 +457,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 if (v != switch1)
                     switch1.isChecked = !switch1.isChecked
             }
-            imageView1 -> {
+            imageView2, imageView1 -> {
                 if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                     drawerLayout.closeDrawer(GravityCompat.START)
                 } else {

@@ -197,9 +197,13 @@
         <item name="android:textColor">@color/font5</item>
     </style>
 
-    <style name="MySpinnerStyle" parent="Theme.AppCompat.Light">
+    <style name="MySpinnerStyle" parent="Widget.AppCompat.Spinner">
         <item name="android:background">@color/spinner_bg</item>
-        <item name="android:textColor">@color/font5</item>
+        <item name="android:textColor">@color/font1</item>
+        <item name="android:popupBackground">@android:color/black</item>
+        <item name="android:dropDownSelector">?attr/selectableItemBackground</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:popupElevation">8dp</item>
     </style>
 
     <style name="TextView_Style1" parent="Theme.AppCompat.Light">

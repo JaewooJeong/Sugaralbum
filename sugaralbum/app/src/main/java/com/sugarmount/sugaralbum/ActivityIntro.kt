@@ -14,6 +14,7 @@ class ActivityIntro : CustomAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
+        setInsetView(findViewById(R.id.relativeLayout))
 
         if(GlobalApplication.isRefresh()) {
             Timer().schedule(INTRO_TIME) {

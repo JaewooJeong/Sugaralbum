@@ -100,11 +100,13 @@
     <!-- 미리보기 -->
     <string name="string_menu_preview">미리보기</string>
     <string name="string_section_setting">설정</string>
-    <string name="string_section_setting_title">제목 (오늘날짜)</string>
+    <string name="string_section_setting_title">📑 제목 (오늘날짜)</string>
     <string name="string_section_setting_commit">적용</string>
     <string name="string_ok">예</string>
     <string name="string_cancel">아니오</string>
     <string name="dialog_ok">OK</string>
+    <string name="string_section_setting_resolution">🎥 화질</string>
+    <string name="string_section_setting_theme">🎮 테마</string>
 
     <string name="permission_not_granted">권한이 부여되지 않았기 때문에 선택한 작업을 수행할 수 없습니다.</string>
     <string name="title_activity_movie_edit_main">MovieEditMainActivity</string>

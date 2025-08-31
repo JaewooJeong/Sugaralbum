@@ -105,6 +105,8 @@
     <string name="string_ok">Yes</string>
     <string name="string_cancel">Cancel</string>
     <string name="dialog_ok">OK</string>
+    <string name="string_section_setting_resolution">🎥 Resolution</string>
+    <string name="string_section_setting_theme">🎮 Theme</string>
 
     <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
     <string name="title_activity_movie_edit_main">MovieEditMainActivity</string>

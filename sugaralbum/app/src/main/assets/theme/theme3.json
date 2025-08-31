@@ -1,0 +1,220 @@
+{
+  "ThemeList": [
+    {
+      "Name": "Morning Kiss",
+      "Type": "Multi",
+      "GoogleThemeAnalytics": {
+        "Category": "1300 MDTheme",
+        "Action": "99255100 MDthemeclean"
+      },
+      "GoogleMusicAnalytics": {
+        "title": "Morning Kiss",
+        "Category": "9 MDBGM",
+        "Action": "9 MDBGMBasic_ITW"
+      },
+      "MainColor": null,
+      "ResourceType": "Asset",
+      "BtnImageName": "img_theme_clean",
+      "AudioFileName": "audio/Morning Kiss.mp3",
+      "FileterJsonName": "defaultFilter",
+      "CollageJsonName": "defaultTemplatesForStory",
+      "MotionCount": 1,
+      "FilterId": -1,
+      "FileSize": 0,
+      "FileCount": 0,
+      "IsUseAutoMovieDiary": true,
+      "ContentDuration": 5000,
+      "FrontBackDuration": 5000,
+      "effectJsonName": "theme/effect/effect_daily.json",
+      "transitionJsonName": "theme/transition/transition_clean.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": false,
+      "IsUseStepAppearEffect": true,
+      "FrameList": [
+      ],
+      "version_major": 1,
+      "version_minor": 0,
+      "version_patch": 1
+    },
+    {
+      "Name": "Gloomy",
+      "Type": "Multi",
+      "GoogleThemeAnalytics": {
+        "Category": "1300 MDTheme",
+        "Action": "99255100 MDthemeclean"
+      },
+      "GoogleMusicAnalytics": {
+        "title": "Gloomy",
+        "Category": "9 MDBGM",
+        "Action": "9 MDBGMBasic_ITW"
+      },
+      "MainColor": null,
+      "ResourceType": "Asset",
+      "BtnImageName": "img_theme_clean",
+      "AudioFileName": "audio/Gloomy.mp3",
+      "FileterJsonName": "defaultFilter",
+      "CollageJsonName": "defaultTemplatesForStory",
+      "MotionCount": 1,
+      "FilterId": -1,
+      "FileSize": 0,
+      "FileCount": 0,
+      "IsUseAutoMovieDiary": true,
+      "ContentDuration": 5000,
+      "FrontBackDuration": 5000,
+      "effectJsonName": "theme/effect/effect_fadedmemory.json",
+      "transitionJsonName": "theme/transition/transition_clean.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": false,
+      "IsUseStepAppearEffect": true,
+      "FrameList": [
+      ],
+      "version_major": 1,
+      "version_minor": 0,
+      "version_patch": 1
+    },
+    {
+      "Name": "Hide and Seek",
+      "Type": "Multi",
+      "GoogleThemeAnalytics": {
+        "Category": "1300 MDTheme",
+        "Action": "99255100 MDthemeclean"
+      },
+      "GoogleMusicAnalytics": {
+        "title": "Hide and Seek",
+        "Category": "9 MDBGM",
+        "Action": "9 MDBGMBasic_ITW"
+      },
+      "MainColor": null,
+      "ResourceType": "Asset",
+      "BtnImageName": "img_theme_clean",
+      "AudioFileName": "audio/Hide and Seek.mp3",
+      "FileterJsonName": "defaultFilter",
+      "CollageJsonName": "defaultTemplatesForStory",
+      "MotionCount": 1,
+      "FilterId": -1,
+      "FileSize": 0,
+      "FileCount": 0,
+      "IsUseAutoMovieDiary": true,
+      "ContentDuration": 5000,
+      "FrontBackDuration": 5000,
+      "effectJsonName": "theme/effect/effect_pet.json",
+      "transitionJsonName": "theme/transition/transition_clean.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": false,
+      "IsUseStepAppearEffect": true,
+      "FrameList": [
+      ],
+      "version_major": 1,
+      "version_minor": 0,
+      "version_patch": 1
+    },
+    {
+      "Name": "We Wish You a Merry Christmas",
+      "Type": "Multi",
+      "GoogleThemeAnalytics": {
+        "Category": "1300 MDTheme",
+        "Action": "99255100 MDthemeclean"
+      },
+      "GoogleMusicAnalytics": {
+        "title": "We Wish You a Merry Christmas",
+        "Category": "9 MDBGM",
+        "Action": "9 MDBGMBasic_ITW"
+      },
+      "MainColor": null,
+      "ResourceType": "Asset",
+      "BtnImageName": "img_theme_clean",
+      "AudioFileName": "audio/We Wish You a Merry Christmas.mp3",
+      "FileterJsonName": "defaultFilter",
+      "CollageJsonName": "defaultTemplatesForStory",
+      "MotionCount": 1,
+      "FilterId": -1,
+      "FileSize": 0,
+      "FileCount": 0,
+      "IsUseAutoMovieDiary": true,
+      "ContentDuration": 5000,
+      "FrontBackDuration": 5000,
+      "effectJsonName": "theme/effect/effect_underthecafe.json",
+      "transitionJsonName": "theme/transition/transition_clean.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": false,
+      "IsUseStepAppearEffect": true,
+      "FrameList": [
+      ],
+      "version_major": 1,
+      "version_minor": 0,
+      "version_patch": 1
+    },
+    {
+      "Name": "Chuncheon and Autumn",
+      "Type": "Multi",
+      "GoogleThemeAnalytics": {
+        "Category": "1300 MDTheme",
+        "Action": "99255100 MDthemeclean"
+      },
+      "GoogleMusicAnalytics": {
+        "title": "Chuncheon and Autumn",
+        "Category": "9 MDBGM",
+        "Action": "9 MDBGMBasic_ITW"
+      },
+      "MainColor": null,
+      "ResourceType": "Asset",
+      "BtnImageName": "img_theme_clean",
+      "AudioFileName": "audio/Chuncheon and Autumn.mp3",
+      "FileterJsonName": "defaultFilter",
+      "CollageJsonName": "defaultTemplatesForStory",
+      "MotionCount": 1,
+      "FilterId": -1,
+      "FileSize": 0,
+      "FileCount": 0,
+      "IsUseAutoMovieDiary": true,
+      "ContentDuration": 5000,
+      "FrontBackDuration": 5000,
+      "effectJsonName": "theme/effect/effect_liteblue.json",
+      "transitionJsonName": "theme/transition/transition_clean.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": false,
+      "IsUseStepAppearEffect": true,
+      "FrameList": [
+      ],
+      "version_major": 1,
+      "version_minor": 0,
+      "version_patch": 1
+    },
+    {
+      "Name": "Colors Of Life",
+      "Type": "Multi",
+      "GoogleThemeAnalytics": {
+        "Category": "1300 MDTheme",
+        "Action": "99255100 MDthemeclean"
+      },
+      "GoogleMusicAnalytics": {
+        "title": "Colors Of Life",
+        "Category": "9 MDBGM",
+        "Action": "9 MDBGMBasic_ITW"
+      },
+      "MainColor": null,
+      "ResourceType": "Asset",
+      "BtnImageName": "img_theme_clean",
+      "AudioFileName": "audio/Colors Of Life.mp3",
+      "FileterJsonName": "defaultFilter",
+      "CollageJsonName": "defaultTemplatesForStory",
+      "MotionCount": 1,
+      "FilterId": -1,
+      "FileSize": 0,
+      "FileCount": 0,
+      "IsUseAutoMovieDiary": true,
+      "ContentDuration": 5000,
+      "FrontBackDuration": 5000,
+      "effectJsonName": "theme/effect/effect_clean.json",
+      "transitionJsonName": "theme/transition/transition_clean.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": false,
+      "IsUseStepAppearEffect": true,
+      "FrameList": [
+      ],
+      "version_major": 1,
+      "version_minor": 0,
+      "version_patch": 1
+    }
+  ]
+}

@@ -146,3 +146,26 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 - **Device**: Android 15 (API 35) ✅ 테스트 완료
 - **Target SDK**: 35 ✅ 적용 완료
 - **Build Tools**: Gradle 8.x ✅ 호환 확인
+
+## Language Instructions
+**IMPORTANT**: 모든 대화와 대답은 한글로 작성하십시오. Claude는 사용자와 소통할 때 반드시 한국어를 사용해야 합니다.
+
+## Development Process Guidelines
+**CRITICAL**: 개발 작업 시 반드시 다음 순서를 따라야 합니다:
+
+1. **소스코드 파악** (Source Code Analysis)
+   - 관련 파일들의 구조와 로직을 완전히 이해
+   - 기존 코드의 흐름과 패턴 파악
+   - 의존성과 상호작용 분석
+
+2. **설계** (Design & Architecture)
+   - 요구사항 분석 및 해결 방안 설계
+   - 기존 아키텍처에 맞는 구현 방식 계획
+   - 변경 영향도 분석 및 리스크 평가
+
+3. **코딩** (Implementation)
+   - 설계에 따른 코드 구현
+   - 기존 패턴과 컨벤션 준수
+   - 단계별 검증 및 테스트
+
+**WARNING**: 코딩부터 시작하고 설계를 나중에 하면 진척이 없습니다. 반드시 시니어 개발자처럼 생각하고 명령을 받으면 충분히 고민하고 설계한 뒤 코드를 변경하십시오.

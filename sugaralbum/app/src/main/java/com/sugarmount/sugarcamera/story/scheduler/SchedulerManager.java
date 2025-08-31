@@ -53,6 +53,25 @@ public class SchedulerManager {
 		mContext = context;
 		mTheme = null;
 	}
+	
+	/**
+	 * Set specific theme for preview generation
+	 * @param themeName Theme name to use
+	 */
+	public void setTheme(String themeName) {
+		if (themeName != null && !themeName.isEmpty()) {
+			Theme theme = ThemeManager.getInstance(mContext).getThemeByName(themeName);
+			if (theme != null) {
+				mTheme = theme;
+				L.d("SchedulerManager theme set to: " + theme.name);
+			} else {
+				L.w("SchedulerManager: Theme not found: " + themeName + ", using random theme");
+				mTheme = null;
+			}
+		} else {
+			mTheme = null;
+		}
+	}
 
 	public Uri makeJsonString(ArrayList<ImageData> mImageDataList, ArrayList<ImageData> mVideoDataList, String title, boolean isFromUplusBox) {
 		

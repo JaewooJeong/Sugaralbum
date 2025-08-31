@@ -135,6 +135,13 @@
             android:name="com.kiwiple.mediaframework.ffmpeg.TestService"
             android:exported="false"
             android:foregroundServiceType="mediaProcessing|dataSync" />
+        <service
+            android:name="com.kiwiple.imageframework.filter.FilterServiceLgu"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.kiwiple.imageframework.filter.IFilterServiceLgu" />
+            </intent-filter>
+        </service>
 
         <!-- provider -->
         <provider

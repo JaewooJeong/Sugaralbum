@@ -236,7 +236,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 
         initComboBox();
 
-//        initAds();
+        initAds();
 
         mImm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
@@ -595,6 +595,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 
 
     public void initComboBox(){
+        // Resolution spinner
         final AppCompatSpinner resolution = findViewById(R.id.appCompatSpinner);
         resolution.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
@@ -609,7 +610,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
                  }else {
                      mResolution = Resolution.FHD;
                  }
-                 SmartLog.i("", "onItemSelected");
+                 SmartLog.i("MovieEditMainActivity", "onItemSelected resolution: " + mResolution);
              }
 
              @Override
@@ -618,14 +619,136 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
              }
          });
 
-        ArrayAdapter<CharSequence> adapter =
+        ArrayAdapter<CharSequence> resolutionAdapter =
                 ArrayAdapter.createFromResource(
                         this,
                         R.array.resolutionSpinner,
                         R.layout.res_spinner);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        resolution.setAdapter(adapter);
+        resolutionAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        resolution.setAdapter(resolutionAdapter);
+
+        // Theme spinner
+        final AppCompatSpinner themeSpinner = findViewById(R.id.themeSpinner);
+        SmartLog.i("MovieEditMainActivity", "=== Theme Spinner Setup ===");
+        SmartLog.i("MovieEditMainActivity", "themeSpinner found: " + (themeSpinner != null));
+        
+        if (themeSpinner != null) {
+            themeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+            {
+                 @Override
+                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                     String[] themeNames = ThemeManager.getInstance(mContext).mTotalthemeNameList;
+                     
+                     if(position >= 0 && position < themeNames.length) {
+                         String selectedTheme = themeNames[position];
+                         
+                         // Prevent redundant theme changes
+                         if (selectedTheme.equals(sTheme)) {
+                             return;
+                         }
+                         
+                         // Prevent theme changes during initialization or if another change is in progress
+                         if (!isInitializationComplete || isThemeChanging) {
+                             L.w("Theme change blocked - initialization: " + isInitializationComplete + ", changing: " + isThemeChanging);
+                             return;
+                         }
+                         
+                         L.d("Theme selected: " + selectedTheme);
+                         applyThemeToPreview(selectedTheme);
+                     }
+                 }
+
+             @Override
+             public void onNothingSelected(AdapterView<?> parent) {
+                 SmartLog.i("MovieEditMainActivity", "Theme spinner - nothing selected");
+             }
+         });
+
+            ArrayAdapter<CharSequence> themeAdapter =
+                    ArrayAdapter.createFromResource(
+                            this,
+                            R.array.themeSpinner,
+                            R.layout.res_spinner);
+
+            themeAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+            themeSpinner.setAdapter(themeAdapter);
+            SmartLog.i("MovieEditMainActivity", "Theme spinner adapter set, item count: " + themeAdapter.getCount());
+            
+            // Set default theme if none is selected
+            if (sTheme == null || sTheme.isEmpty()) {
+                String[] themeNames = ThemeManager.getInstance(this).mTotalthemeNameList;
+                if (themeNames.length > 0) {
+                    sTheme = themeNames[0]; // Use first theme from actual theme list
+                    SmartLog.i("MovieEditMainActivity", "Setting default theme: " + sTheme);
+                }
+            }
+            
+            // Set initial selection but don't trigger theme application yet
+            // Theme will be applied in initData() when JSON data is ready
+            themeSpinner.post(new Runnable() {
+                @Override
+                public void run() {
+                    themeSpinner.setSelection(0, false); // false = don't trigger listener
+                    SmartLog.i("MovieEditMainActivity", "Initial theme spinner selection set (no callback)");
+                }
+            });
+        } else {
+            SmartLog.e("", "themeSpinner not found in layout!");
+        }
+    }
+
+    private int themeRetryCount = 0;
+    private static final int MAX_THEME_RETRY = 3;
+    
+    // Store original Intent data for theme changes
+    private ArrayList<ImageData> mOriginalPhotoData;
+    private ArrayList<ImageData> mOriginalVideoData;
+    private volatile boolean isThemeChanging = false;
+    private volatile boolean isInitializationComplete = false;
+    
+    private void applyThemeToPreview(String themeName) {
+        if (isThemeChanging) {
+            L.w("Theme change already in progress, ignoring");
+            return;
+        }
+        
+        try {
+            // Set flag to prevent concurrent changes
+            isThemeChanging = true;
+            
+            // Update the selected theme
+            sTheme = themeName;
+            
+            // Check if we can recreate JSON with new theme
+            boolean dataExists = mOriginalPhotoData != null && mOriginalVideoData != null;
+            boolean persisterExists = mStoryJsonPersister != null;
+            boolean jsonNotInProgress = !isMakeJson;
+            
+            if (dataExists && persisterExists && jsonNotInProgress) {
+                themeRetryCount = 0; // Reset retry counter on success
+                recreatePreviewWithNewThemeSimple();
+            } else {
+                // Try again after a short delay (with retry limit)
+                if (themeRetryCount < MAX_THEME_RETRY) {
+                    themeRetryCount++;
+                    new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            applyThemeToPreview(themeName);
+                        }
+                    }, 1000);
+                } else {
+                    L.e("Max theme retry attempts reached");
+                    themeRetryCount = 0;
+                }
+            }
+        } catch (Exception e) {
+            L.e("Error applying theme: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            isThemeChanging = false;
+        }
     }
 
     public void onBackPressed() {
@@ -636,6 +759,7 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         if (mSaveLayout.getVisibility() == View.INVISIBLE) {
             super.onBackPressed();
         }
+
     }
 
     private void onTitleChange(String title) {
@@ -649,7 +773,6 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         mScenes = visualizer.getRegion().getScenes();
 
         // 20150303 olive : #10804 모든 ImageTextScene과 TextEffect가 있는 DummyScene의 텍스트를 변경한다.
-        // TODO: ImageTextScene 또는 DummyScene을 Intro나 Outro로 사용하지 않을 경우에 대한 분기처리.
 
         Scene introScene = mScenes.get(0);
         if (introScene.getClass().equals(ImageFileScene.class)) {
@@ -1344,6 +1467,85 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
         if(themeName.equals("Travel")){
             themeName = "Travel1";
         }
+        
+        // Mark initialization as complete
+        isInitializationComplete = true;
+    }
+    
+    /**
+     * Get actual theme name from display name
+     * Theme names in theme.json already include full display names
+     */
+    private String extractActualThemeName(String displayName) {
+        if (displayName == null || displayName.isEmpty()) {
+            return ThemeManager.DEFAULT_THEME_NAME;
+        }
+        
+        // The display name in theme.json is already the actual theme name
+        return displayName;
+    }
+    
+    /**
+     * Create JSON with current theme - extracted from makeJsonData()
+     * This is the core initialization logic that can be reused
+     */
+    private void createJsonWithCurrentTheme(ArrayList<ImageData> photoData, ArrayList<ImageData> videoData, String title) {
+        try {
+            mJsonDataUri = null;
+            mSchedulerManager = new SchedulerManager(mContext);
+            
+            // Set theme in SchedulerManager before creating JSON
+            if (sTheme != null && !sTheme.isEmpty()) {
+                String actualThemeName = extractActualThemeName(sTheme);
+                mSchedulerManager.setTheme(actualThemeName);
+            }
+            
+            mJsonDataUri = mSchedulerManager.makeJsonString(photoData, videoData, title, false);
+
+            if (mJsonDataUri != null) {
+                PreviewManager previewManager = PreviewManager.getInstance(getApplicationContext());
+                Visualizer.Editor vEditor = previewManager.getVisualizer().getEditor();
+                if (!previewManager.getVisualizer().isOnEditMode())
+                    vEditor.start();
+
+                if (vEditor != null)
+                    vEditor.setPreviewMode(true).finish();
+            }
+        } catch (Exception e) {
+            L.e("Error in createJsonWithCurrentTheme: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Simple recreation of preview with new theme
+     * Uses the same initialization flow as main -> editmain
+     */
+    private void recreatePreviewWithNewThemeSimple() {
+        try {
+            // Use stored original data instead of Intent
+            ArrayList<ImageData> photoData = mOriginalPhotoData;
+            ArrayList<ImageData> videoData = mOriginalVideoData;
+            
+            if (photoData == null || videoData == null) {
+                L.e("Cannot get original photo/video data");
+                return;
+            }
+            
+            // Stop current preview
+            if (mStoryPreviewLayout != null) {
+                mStoryPreviewLayout.pausePreview();
+            }
+            
+            // Use the same core initialization logic as initial load
+            createJsonWithCurrentTheme(photoData, videoData, mTitle);
+            
+            // Reinitialize with new JSON (same as initial flow)
+            initData();
+        } catch (Exception e) {
+            L.e("Error in recreatePreviewWithNewThemeSimple: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 
     private class MakeJsonTask extends PriorityAsyncTask<Object, Object, Uri> {
@@ -1448,22 +1650,31 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 
             SmartLog.i("MovieEditMainActivity", "intent title:" + mTitle);
             String outputDir = Storage.getAppSpecificDirectory(MovieEditMainActivity.this);
+            
+            // Store original data for theme changes
+            mOriginalPhotoData = photoData;
+            mOriginalVideoData = videoData;
+            SmartLog.i("MovieEditMainActivity", "Stored original data for theme changes");
+            
             SmartLog.i("MovieEditMainActivity", "intent SelectManager.OUTPUT_DIR:" + outputDir);
             SmartLog.i("MovieEditMainActivity", "intent photoData size:" + photoData.size());
             SmartLog.i("MovieEditMainActivity", "intent videoData size:" + videoData.size());
 
-            mJsonDataUri = null;
-            mSchedulerManager = new SchedulerManager(mContext);
-            mJsonDataUri = mSchedulerManager.makeJsonString(photoData, videoData, mTitle, false);
+            // Ensure default theme is set if none is selected
+            if (sTheme == null || sTheme.isEmpty()) {
+                String[] themeNames = ThemeManager.getInstance(this).mTotalthemeNameList;
+                if (themeNames.length > 0) {
+                    sTheme = themeNames[0]; // Use first theme from actual theme list
+                    SmartLog.i("MovieEditMainActivity", "Setting default theme for initial load: " + sTheme);
+                } else {
+                    sTheme = ThemeManager.DEFAULT_THEME_NAME;
+                    SmartLog.w("MovieEditMainActivity", "No themes available, using default: " + sTheme);
+                }
+            }
+            SmartLog.i("MovieEditMainActivity", "Current theme before JSON creation: " + sTheme);
 
-            PreviewManager previewManager = PreviewManager.getInstance(getApplicationContext());
-
-            Visualizer.Editor vEditor = previewManager.getVisualizer().getEditor();
-            if (!previewManager.getVisualizer().isOnEditMode())
-                vEditor.start();
-
-            if (vEditor != null)
-                vEditor.setPreviewMode(true).finish();
+            // Use the extracted method for JSON creation
+            createJsonWithCurrentTheme(photoData, videoData, mTitle);
 
         }catch(Exception e){
             e.printStackTrace();

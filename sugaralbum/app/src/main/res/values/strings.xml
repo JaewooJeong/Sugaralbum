@@ -106,7 +106,7 @@
     <!-- 미리보기 -->
     <string name="string_menu_preview">Preview</string>
     <string name="string_section_setting">Setting</string>
-    <string name="string_section_setting_title">Title (Today)</string>
+    <string name="string_section_setting_title">📑 Title</string>
     <string name="string_section_setting_commit">Apply</string>
     <string name="string_ok">Yes</string>
     <string name="string_cancel">Cancel</string>

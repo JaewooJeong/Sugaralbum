@@ -100,7 +100,7 @@
     <!-- 미리보기 -->
     <string name="string_menu_preview">미리보기</string>
     <string name="string_section_setting">설정</string>
-    <string name="string_section_setting_title">📑 제목 (오늘날짜)</string>
+    <string name="string_section_setting_title">📑 제목</string>
     <string name="string_section_setting_commit">적용</string>
     <string name="string_ok">예</string>
     <string name="string_cancel">아니오</string>

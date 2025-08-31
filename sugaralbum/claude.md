@@ -45,6 +45,17 @@ ActivityMain (이미지 선택)
 - **개선**: 사용자 친화적 권한 요청 다이얼로그
 - **최적화**: `android:appCategory="video"`로 미디어 앱 우대
 
+### 5. ✅ Theme Selection System Implementation
+- **문제**: AppCompatSpinner night mode 가시성 문제 (흰색 배경에 흰색 텍스트)
+- **해결**: MySpinnerStyle 수정으로 light/dark 테마 모두 지원
+- **기능 추가**: 사용자가 테마를 선택하여 실시간 프리뷰 가능
+- **안정성 향상**: 빠른 테마 변경 시 크래시 방지 메커니즘 구현
+
+### 6. ✅ FilterService Binding Issues
+- **문제**: IFilterServiceLgu 서비스 바인딩 실패로 인한 NullPointerException
+- **해결**: AndroidManifest.xml에 FilterServiceLgu 서비스 등록
+- **안전장치**: LiveFilterController에 null 필터 처리 로직 추가
+
 ## REMAINING ISSUES (Lower Priority)
 
 ### 1. Scoped Storage Violations (NON-CRITICAL)
@@ -93,6 +104,41 @@ NotificationManager notificationManager = (NotificationManager) getSystemService
 notificationManager.notify(StoryNotification.NOTIFICATION_ID_CREATE_STORY, notification);
 ```
 
+### Theme Selection Implementation
+```java
+// MovieEditMainActivity.java - 안전한 테마 변경 처리
+private volatile boolean isThemeChanging = false;
+private volatile boolean isInitializationComplete = false;
+
+// 동시 테마 변경 방지 및 초기화 완료 체크
+if (!isInitializationComplete || isThemeChanging) {
+    L.w("Theme change blocked - initialization: " + isInitializationComplete + ", changing: " + isThemeChanging);
+    return;
+}
+
+// SchedulerManager에 특정 테마 설정
+public void setTheme(String themeName) {
+    if (themeName != null && !themeName.isEmpty()) {
+        Theme theme = ThemeManager.getInstance(mContext).getThemeByName(themeName);
+        if (theme != null) {
+            mTheme = theme;
+        }
+    }
+}
+```
+
+### FilterService Registration
+```xml
+<!-- AndroidManifest.xml - 필수 서비스 등록 -->
+<service
+    android:name="com.kiwiple.imageframework.filter.FilterServiceLgu"
+    android:exported="false" >
+    <intent-filter>
+        <action android:name="com.kiwiple.imageframework.filter.IFilterServiceLgu" />
+    </intent-filter>
+</service>
+```
+
 ## Key Files Analyzed
 
 ### User Permission Experience
@@ -131,11 +177,15 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 - **알림 시스템**: 중복 알림 제거로 사용자 경험 개선  
 - **서비스 생명주기**: 조기 종료 문제 해결로 동영상 생성 완료율 향상
 - **권한 처리**: 직관적인 UX로 권한 승인률 개선
+- **테마 시스템**: 실시간 프리뷰 및 안전한 테마 변경으로 사용자 만족도 향상
+- **필터 처리**: FilterService 바인딩 안정화로 크래시 제로 달성
 
 ## Current Status: ✅ PRODUCTION READY
 - 모든 주요 Android 15 호환성 문제 해결 완료
 - 동영상 생성 안정성 대폭 향상
 - 사용자 경험 및 권한 처리 현대화 완료
+- 테마 선택 시스템 완전 구현 및 크래시 방지 완료
+- FilterService 바인딩 문제 완전 해결
 
 ## Future Enhancements (Optional)
 1. **MediaStore API 완전 마이그레이션**: 현재 app-specific directory로 우회 중

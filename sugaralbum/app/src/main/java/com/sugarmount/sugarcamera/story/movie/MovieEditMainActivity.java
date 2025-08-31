@@ -174,7 +174,6 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
     private View mPreviewLayout;
     private View appBarLayout;
     private View mSaveLayout;
-    private Button mTitleChangeButton;
     private TextView mProgressPercent;
     private WaveProgress mWaveProgress;
     private StoryEditText mSubjectEText;
@@ -261,9 +260,6 @@ public class MovieEditMainActivity extends GalleryDialogActivity {
 
         mSendLayout = findViewById(R.id.send);
         mSendLayout.setOnClickListener(mBtnClickListener);
-
-        mTitleChangeButton = findViewById(R.id.button2);
-        mTitleChangeButton.setOnClickListener(mBtnClickListener);
 
         appBarLayout = findViewById(R.id.appBarLayout);
         mPreviewLayout = findViewById(R.id.kiwiple_story_movie_edit_layout);

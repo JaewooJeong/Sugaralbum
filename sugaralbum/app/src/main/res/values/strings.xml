@@ -138,13 +138,14 @@
         <item>NHD (640x360)</item>
     </string-array>
 
+    <!-- spinner -->
     <string-array translatable="false" name="themeSpinner">
-        <item>Mix up (Morning Kiss)</item>
-        <item>Clean (Gloomy)</item>
-        <item>Sunny (Hide and Seek)</item>
-        <item>Old Movie (We Wish You a Merry Christmas)</item>
-        <item>Faded Memory (Chuncheon and Autumn)</item>
-        <item>Under the Cafe (Colors Of Life)</item>
+        <item>Bloom 🌸</item>
+        <item>Pure ❄️</item>
+        <item>Glare ☀️</item>
+        <item>Retro 📽️</item>
+        <item>Nostalgia 🍂</item>
+        <item>Brew ☕</item>
     </string-array>
 
     <string translatable="false" name="admob_app_id">ca-app-pub-8023868702717237~6130354222</string>

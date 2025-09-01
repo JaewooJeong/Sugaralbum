@@ -78,7 +78,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <!-- Preview -->
@@ -227,10 +227,11 @@
 
         <!-- 네이티브 배너 광고 -->
         <FrameLayout
-            android:layout_below="@+id/kiwiple_story_movie_edit_layout"
             android:id="@+id/fl_adplaceholder"
+            android:layout_above="@+id/ad_view_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
 
         <!-- 적응형 배너 광고 -->
         <FrameLayout

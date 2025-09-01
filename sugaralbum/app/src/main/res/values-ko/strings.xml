@@ -124,5 +124,22 @@
     <string name="kiwiple_story_story_movie_diary">슈가앨범</string>
     <string name="kiwiple_story_story_saving_progressbar_text">슈가앨범 영상 생성중..</string>
     <string name="kiwiple_story_gallery_data_validate_fail">상세 콘텐츠가 이동 및 삭제되어 실행 할 수 없습니다.\n선택한 콘텐츠를 삭제 하시겠습니까?</string>
+
+    <!-- spinner -->
+    <string-array translatable="false" name="resolutionSpinner">
+        <item>고화질 (1920x1080)</item>
+        <item>중화질 (1280x720)</item>
+        <item>저화질 (640x360)</item>
+    </string-array>
+
+    <!-- spinner -->
+    <string-array translatable="false" name="themeSpinner">
+        <item>상쾌한 🌸</item>
+        <item>깨끗한 ❄️</item>
+        <item>눈부신 ☀️</item>
+        <item>빈티지 📽️</item>
+        <item>그리움 🍂</item>
+        <item>카페 ☕</item>
+    </string-array>
 </resources>
 

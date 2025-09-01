@@ -55,8 +55,9 @@ public class ThemeManager {
 			"Snap Shot SX-70","Emo","Cozy room","Slide film","Vintage", "Old book", "T-Max Film", "Faded Memory",
 			"Under the Cafe", "Mint sugar", "cherry blossom", "Cute", "Documentary", "Pet", "Christmas"};
     */
-    //private static final String[] mTotalthemeNameList = new String[] {"Morning Kiss", "Gloomy", "Hide and Seek", "We Wish You a Merry Christmas", "Chuncheon and Autumn"};
-    private static final String[] mTotalthemeNameList = new String[] {"Morning Kiss"};
+    public static final String[] mTotalthemeNameList = new String[] {"Mix up (Morning Kiss)", "Clean (Gloomy)", "Sunny (Hide and Seek)", "Old Movie (We Wish You a Merry Christmas)", "Faded Memory (Chuncheon and Autumn)", "Under the Cafe (Colors Of Life)"};
+//    private static final String[] mTotalthemeNameList = new String[] {"Morning Kiss", "Gloomy", "Colors Of Life", "Hide and Seek", "We Wish You a Merry Christmas", "Chuncheon and Autumn"};
+//    private static final String[] mTotalthemeNameList = new String[] {"Morning Kiss"};
 
     public static ThemeManager getInstance(Context applicationContext) {
         if(sInstance == null) {

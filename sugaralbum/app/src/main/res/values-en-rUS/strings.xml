@@ -32,9 +32,9 @@
     <string name="string_menu_collection">Collections</string>
     <string name="string_menu_export_settings">Export social settings</string>
     <string name="string_menu_backup_restore">Backup/Restore</string>
-    <string name="string_menu_notice">Notice</string>
-    <string name="string_menu_faq">FAQ</string>
-    <string name="string_menu_open_source_license">Open source license</string>
+    <string name="string_menu_notice">📋 Notice</string>
+    <string name="string_menu_faq">📣 FAQ</string>
+    <string name="string_menu_open_source_license">🔓 Open source</string>
 
     <!-- Popup go update -->
     <string name="string_gp_update">Update</string>
@@ -100,11 +100,13 @@
     <!-- 미리보기 -->
     <string name="string_menu_preview">Preview</string>
     <string name="string_section_setting">Setting</string>
-    <string name="string_section_setting_title">Title (Today)</string>
+    <string name="string_section_setting_title">📑 Title</string>
     <string name="string_section_setting_commit">Apply</string>
     <string name="string_ok">Yes</string>
     <string name="string_cancel">Cancel</string>
     <string name="dialog_ok">OK</string>
+    <string name="string_section_setting_resolution">🎥 Resolution</string>
+    <string name="string_section_setting_theme">🎮 Theme</string>
 
     <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
     <string name="title_activity_movie_edit_main">MovieEditMainActivity</string>

@@ -6,7 +6,6 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.sugarmount.common.listener.DataClickEventListener
 import com.sugarmount.common.env.MvConfig.INFO_TYPE
 import com.sugarmount.common.env.MvConfig.PAGE_DIRECTION
@@ -17,7 +16,14 @@ import com.sugarmount.common.utils.CustomLinearLayoutManager
 import com.sugarmount.common.utils.EndlessRecyclerOnScrollListener
 import com.sugarmount.common.utils.log
 import com.sugarmount.sugaralbum.adapter.RecyclerAdapterInformation
-import kotlinx.android.synthetic.main.activity_information.*
+import android.widget.ImageView
+import android.widget.ProgressBar
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.sugarmount.common.env.MvConfig.CONNECT_TIMEOUT
+import com.sugarmount.common.env.MvConfig.EXTRA_INFO_TYPE
+import com.sugarmount.common.env.MvConfig.SIMULATED_LOADING_TIME_IN_MS
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -30,21 +36,37 @@ class ActivityInformation : CustomAppCompatActivity(), DataClickEventListener,
     private var endlessRecyclerOnScrollListener: EndlessRecyclerOnScrollListener? = null
     private var bRefresh = false
     private var isRunning = false
+    
+    private lateinit var imageView1: ImageView
+    private lateinit var toolbarTitle: TextView
+    private lateinit var swipe_container: SwipeRefreshLayout
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var progress_bar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information)
+        setInsetView(this.findViewById(R.id.coordinatorLayout))
 
 //        GlobalApplication.setStatusColor(
 //            window,
 //            ContextCompat.getColor(applicationContext, R.color.main2)
 //        )
 
+        initViews()
         getIntentData()
         initToolbar()
         initView()
 
         getRequestData(1)
+    }
+    
+    private fun initViews() {
+        imageView1 = findViewById(R.id.imageView1)
+        toolbarTitle = findViewById(R.id.toolbarTitle)
+        swipe_container = findViewById(R.id.swipe_container)
+        recyclerView = findViewById(R.id.recyclerView)
+        progress_bar = findViewById(R.id.progress_bar)
     }
 
     private fun initToolbar() {

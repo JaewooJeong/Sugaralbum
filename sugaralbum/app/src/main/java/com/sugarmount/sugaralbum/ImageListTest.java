@@ -46,6 +46,7 @@ public class ImageListTest extends Activity implements ListView.OnScrollListener
     private Context mContext = null;
     private LoadMediaDataThread mLoadMediaDataThread;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,11 +77,11 @@ public class ImageListTest extends Activity implements ListView.OnScrollListener
         mLoadMediaDataThread = new LoadMediaDataThread();
         mLoadMediaDataThread.start();
 
-        mGvImageList = (GridView)findViewById(R.id.ImgGridView);
+        mGvImageList = findViewById(R.id.ImgGridView);
         mGvImageList.setOnScrollListener(this);
         mGvImageList.setOnItemClickListener(this);
 
-        mMovDiaryCreate = (Button)findViewById(R.id.gogo);
+        mMovDiaryCreate = findViewById(R.id.gogo);
         mMovDiaryCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

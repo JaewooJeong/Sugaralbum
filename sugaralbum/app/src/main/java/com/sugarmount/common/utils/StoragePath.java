@@ -1,5 +1,6 @@
 package com.sugarmount.common.utils;
 
+import android.content.Context;
 import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
@@ -15,11 +16,23 @@ import java.util.Locale;
 public class StoragePath {
     File[] getExternalFilesDirs;
 
+    private Context context;
+
     /**
      * Constructor for KitKat & above
      * @param getExternalFilesDirs
      */
     public StoragePath(File[] getExternalFilesDirs) {
+        this.getExternalFilesDirs = getExternalFilesDirs;
+    }
+
+    /**
+     * Constructor for Android 15 compatibility
+     * @param context Application context for app-specific directories
+     * @param getExternalFilesDirs
+     */
+    public StoragePath(Context context, File[] getExternalFilesDirs) {
+        this.context = context;
         this.getExternalFilesDirs = getExternalFilesDirs;
     }
 
@@ -88,8 +101,20 @@ public class StoragePath {
             }
         }
 
-        //Get path to the Internal Storage aka ExternalStorageDirectory
-        final String internalStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        //Get path to the Internal Storage - use app-specific directory for Android 15 compatibility
+        String internalStoragePath;
+        if (Build.VERSION.SDK_INT >= 35 && context != null) {
+            // Android 15 - use app-specific external storage
+            File externalDir = context.getExternalFilesDir(null);
+            if (externalDir != null) {
+                internalStoragePath = externalDir.getAbsolutePath();
+            } else {
+                internalStoragePath = context.getFilesDir().getAbsolutePath();
+            }
+        } else {
+            // Legacy behavior for older Android versions
+            internalStoragePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        }
         results.add(0, internalStoragePath);
 
         String[] storageDirectories = new String[results.size()];

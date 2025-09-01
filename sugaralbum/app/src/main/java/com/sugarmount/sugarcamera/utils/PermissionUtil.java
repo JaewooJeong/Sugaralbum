@@ -22,16 +22,27 @@ public abstract class PermissionUtil {
 	public static final String INTENT_KEY_PERMISSION = "intent_key_permission";
 	public static final String INTENT_KEY_CLASS_NAME = "intent_key_class_name";
 	
+    @Deprecated
     public static final String [] CameraPermissions = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE, 
 		Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.READ_PHONE_STATE, Manifest.permission.RECORD_AUDIO };
+    @Deprecated
     public static final String [] StoragePermissions = { Manifest.permission.READ_EXTERNAL_STORAGE };
 
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
+    @Deprecated
     public static final String [] CameraPermissions33 = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_PHONE_STATE, Manifest.permission.RECORD_AUDIO,
             Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.READ_MEDIA_VIDEO };
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
+    @Deprecated
     public static final String [] StoragePermissions33 = { Manifest.permission.READ_MEDIA_IMAGES };
+    
+    // Android 15 (API 35) compatible permissions - no external storage permissions needed
+    // Note: Using API 35 directly since VANILLA_ICE_CREAM constant may not exist
+    public static final String [] CameraPermissions35 = {Manifest.permission.CAMERA, 
+            Manifest.permission.READ_PHONE_STATE, Manifest.permission.RECORD_AUDIO,
+            Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_AUDIO, Manifest.permission.READ_MEDIA_VIDEO };
+    public static final String [] StoragePermissions35 = { Manifest.permission.READ_MEDIA_IMAGES, Manifest.permission.READ_MEDIA_VIDEO };
 
 /**
      * Check that all given permissions have been granted by verifying that each entry in the
@@ -54,8 +65,18 @@ public abstract class PermissionUtil {
         if (!overMNC()) {
             return true;
         }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            // Verify that all required permissions have been granted
+        if (Build.VERSION.SDK_INT >= 35) {
+            // Android 15 (API 35) - Use scoped storage compatible permissions
+            for (String permission : CameraPermissions35) {
+                if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+                    L.d("not granted permission : " + permission);
+                    return false;
+                } else {
+                    L.d("granted permission : " + permission);
+                }
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // Android 13 (API 33)
             for (String permission : CameraPermissions33) {
                 if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
                     L.d("not granted permission : " + permission);
@@ -64,7 +85,7 @@ public abstract class PermissionUtil {
                     L.d("granted permission : " + permission);
                 }
             }
-        }else{
+        } else {
             // Verify that all required permissions have been granted
             for (String permission : CameraPermissions) {
                 if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
@@ -81,13 +102,19 @@ public abstract class PermissionUtil {
     public static String[] getCameraPermissionArray(Context context){
     	ArrayList<String> permissionList = new ArrayList<String>();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        if (Build.VERSION.SDK_INT >= 35) {
+            for (String permission : CameraPermissions35) {
+                if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+                    permissionList.add(permission);
+                }
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             for (String permission : CameraPermissions33) {
                 if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
                     permissionList.add(permission);
                 }
             }
-        }else{
+        } else {
             for (String permission : CameraPermissions) {
                 if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
                     permissionList.add(permission);
@@ -108,16 +135,25 @@ public abstract class PermissionUtil {
         }
 
         // Verify that all required permissions have been granted
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        if (Build.VERSION.SDK_INT >= 35) {
+            for (String permission : StoragePermissions35) {
+                if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
+                    L.d("not granted permission : " + permission);
+                    return false;
+                } else {
+                    L.d("granted permission : " + permission);
+                }
+            }
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             for (String permission : StoragePermissions33) {
                 if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
                     L.d("not granted permission : " + permission);
                     return false;
-                }else{
+                } else {
                     L.d("granted permission : " + permission);
                 }
             }
-        }else{
+        } else {
             for (String permission : StoragePermissions) {
                 if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
                     L.d("not granted permission : " + permission);

@@ -237,9 +237,16 @@ public class PreviewManager {
 			mAudioPlayer.setLooping(true);
 			mAudioPlayer.prepare();
 			mAudioDuration = mAudioPlayer.getDuration();
+			
+			// Ensure mAudioDuration is valid
+			if (mAudioDuration <= 0) {
+				mAudioDuration = 1; // Set minimum duration to prevent divide by zero
+			}
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
+			// Set default duration if audio loading fails
+			mAudioDuration = 1000; // 1 second default
 		}
 	}
 
@@ -511,7 +518,7 @@ public class PreviewManager {
 		 */
 		public void startPreview() {
 			if (isEnabled()) {
-				if (mAudioPlayer != null) {
+				if (mAudioPlayer != null && mAudioDuration > 0) {
 					mAudioPlayer.seekTo(mVisualizer.getPosition() % mAudioDuration);
 					mAudioPlayer.start();
 				}

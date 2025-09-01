@@ -19,7 +19,7 @@ import com.kiwiple.debug.L;
 
 public class AVCEncoder extends HWBaseEncoder {
 
-	private static final int IFRAME_INTERVAL = 1;
+	private static final int IFRAME_INTERVAL = Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM ? 3 : 1; // Android 15+ compatibility
 	private VideoInfo mInfo;
 	private final	int	FRAME_RATE = 30;
 	
@@ -141,9 +141,20 @@ public class AVCEncoder extends HWBaseEncoder {
 		try {
 			mFormat.setInteger(MediaFormat.KEY_COLOR_FORMAT, selectedColorFormat);
 			mFormat.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, IFRAME_INTERVAL);
+			
+			// Android 15+ compatibility improvements
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+				// Reduce buffer pressure for Android 15
+				mFormat.setInteger(MediaFormat.KEY_BITRATE_MODE, MediaCodecInfo.EncoderCapabilities.BITRATE_MODE_VBR);
+				// Set lower complexity for Android 15 stability
+				mFormat.setInteger("complexity", 0); // Minimum complexity
+				L.i("AVCEncoder: Applied Android 15 compatibility settings");
+			}
+			
 			mCodec = MediaCodec.createEncoderByType(mMimeType);
 			mCodec.configure(mFormat, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
 		} catch (Exception exception) {
+			L.e("AVCEncoder: MediaCodec configuration failed", exception);
 			throw new VideoEngineException(exception.getMessage());
 		}
 

@@ -9,18 +9,28 @@
     <!-- Devices running Android 12L (API level 32) or lower  -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-    <!-- Required only if your app needs to access images or photos that other apps created. -->
+    <!-- Required for accessing images and videos -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <!-- <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" /> -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <!-- To handle the reselection within the app on Android 14 (API level 34) -->
     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
 
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SHORT_SERVICE" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Request notifications to be enabled by default for media apps -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" 
+        android:required="false" />
+
+
+
 
     <uses-feature
         android:name="android.hardware.location.gps"
@@ -49,19 +59,18 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:requestLegacyExternalStorage="true"
-        android:resizeableActivity="false"
+        android:requestLegacyExternalStorage="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         android:allowBackup="true"
+        android:appCategory="video"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
             android:name=".ActivityEmpty"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="LockedOrientationActivity"
             android:exported="true">
@@ -74,50 +83,39 @@
         <activity
             android:name=".ActivityMain"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity">
-        </activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ActivityIntro"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ActivityInformation"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ActivityFinish"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name="com.sugarmount.sugarcamera.story.movie.MovieEditMainActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"
-            tools:ignore="LockedOrientationActivity" />
+            android:theme="@style/AppTheme" />
 
         <activity android:name="com.sugarmount.sugarcamera.PermissionGrantActivity"
             android:theme="@android:style/Theme.NoTitleBar" />
+
         <activity
             android:name="com.lg.das.HybridWebView"
             android:configChanges="orientation|screenSize"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
-
 
         <!-- Service -->
         <service
             android:name="com.kiwiple.mediaframework.ffmpeg.FFmpegService"
             android:process="com.kiwiple.mediaframework.ffmpeg"
             android:exported="false"
-            android:foregroundServiceType="specialUse" >
+            android:foregroundServiceType="mediaProcessing|dataSync" >
             <intent-filter>
                 <action android:name="com.kiwiple.mediaframework.ffmpeg.IFFmpegService" />
             </intent-filter>
@@ -126,17 +124,24 @@
         <service
             android:name="com.sugarmount.sugarcamera.story.service.VideoCreationService"
             android:exported="false"
-            android:foregroundServiceType="specialUse" />
+            android:foregroundServiceType="shortService" />
         <service
             android:name="com.sugarmount.sugarcamera.story.service.StoryAnalysisMusicForegroundService"
-            android:foregroundServiceType="specialUse" />
+            android:foregroundServiceType="mediaProcessing|dataSync" />
         <service
             android:name="com.sugarmount.sugarcamera.story.service.UplusStorySavingService"
-            android:foregroundServiceType="specialUse" />
+            android:foregroundServiceType="mediaProcessing|dataSync" />
         <service
             android:name="com.kiwiple.mediaframework.ffmpeg.TestService"
             android:exported="false"
-            android:foregroundServiceType="specialUse" />
+            android:foregroundServiceType="mediaProcessing|dataSync" />
+        <service
+            android:name="com.kiwiple.imageframework.filter.FilterServiceLgu"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.kiwiple.imageframework.filter.IFilterServiceLgu" />
+            </intent-filter>
+        </service>
 
         <!-- provider -->
         <provider

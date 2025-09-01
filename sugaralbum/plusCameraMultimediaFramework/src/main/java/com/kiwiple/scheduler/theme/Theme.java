@@ -23,7 +23,7 @@ import com.kiwiple.scheduler.util.ImmutablePoint;
 public class Theme implements Serializable {
 	private static final long serialVersionUID = -6757740682317372587L;
 	private static final String TAG = Theme.class.getSimpleName();
-	public static final String OUTRO_ASSET_FILE_NAME = "outro1_2_modi.jpg";
+	public static final String OUTRO_ASSET_FILE_NAME = "w1.png";
 	public static final String DOWN_THEME_ASSET_MAIN_JSON = "theme/down_theme";
 
 	public static final String THEME_NAME_DAILY = "Daily";

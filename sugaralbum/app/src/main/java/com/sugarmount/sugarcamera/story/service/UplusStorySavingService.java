@@ -30,7 +30,7 @@ public class UplusStorySavingService extends Service {
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		if (intent == null) {
-			return START_NOT_STICKY;
+			return START_REDELIVER_INTENT;
 		}
 		
 		String action = intent.getAction();
@@ -41,7 +41,7 @@ public class UplusStorySavingService extends Service {
 			
 			if(action.equalsIgnoreCase(ACTION_START_SAVING_MD)){
 				StoryAlarmWakeLock.acquireWakeLock(getApplicationContext());
-				StoryNotification.getCreateStoryNotification(UplusStorySavingService.this);
+				// Remove duplicate notification - VideoCreationService handles notifications
 				
 			}else if(action.equalsIgnoreCase(ACTION_FINISH_SAVING_MD)){
 				String path = intent.getStringExtra("path");
@@ -53,7 +53,7 @@ public class UplusStorySavingService extends Service {
 				if(!TextUtils.isEmpty(path) && uri != null){
 					stopForeground(true);
 					stopSelf();
-					StoryNotification.completeCreateStoryNotification(getApplicationContext(), path, uri, orientation);
+					// Remove duplicate notification - VideoCreationService handles all notifications
 				}else{
 					stopForeground(true);
 					stopSelf();
@@ -61,12 +61,12 @@ public class UplusStorySavingService extends Service {
 				
 			}else if(action.equalsIgnoreCase(ACTION_CANCEL_SAVING_MD)){
 				StoryAlarmWakeLock.releaseWakeLock(getApplicationContext());
-				StoryNotification.removeManualStoryNotification(getApplicationContext());
+				// Remove duplicate notification - VideoCreationService handles all notifications
 				stopForeground(true);
 				stopSelf();
 				
 			}
 		}
-		return START_NOT_STICKY;
+		return START_REDELIVER_INTENT;
 	}
 }

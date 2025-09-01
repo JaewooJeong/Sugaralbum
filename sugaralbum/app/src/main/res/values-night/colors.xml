@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night mode colors -->
+    <!-- main colors for dark theme -->
+    <color name="main1">#000000</color>
+    <color name="main2">#0080FF</color>
+    <color name="main4">#000000</color>
+
+    <!-- font colors for dark theme -->
+    <color name="font1">#fafdff</color>
+    <color name="font2">#CCCCCC</color>
+    <color name="font3">#DDDDDD</color>
+    <color name="font4">#FFFFFF</color>
+    <color name="font5">#fafdff</color>
+    <color name="icon1">#CCCCCC</color>
+
+    <!-- ChatGPT 스타일 다크 테마 colors -->
+    <color name="chat_bg_dark">#212121</color>
+    <color name="chat_bg_darker">#1a1a1a</color>
+    <color name="chat_user_bubble">#2f2f2f</color>
+    <color name="chat_ai_bubble">#343541</color>
+    <color name="chat_text_primary">#ececf1</color>
+    <color name="chat_text_secondary">#c5c5d2</color>
+    <color name="chat_input_bg">#40414f</color>
+    <color name="chat_border">#4a4a4a</color>
+    <color name="chat_send_button">#1976d2</color>
+
+    <color name="vr_white_60">#99FFFFFF</color>
+    <color name="vr_white_80">#CCFFFFFF</color>
+    <color name="vr_white_90">#E6FFFFFF</color>
+    <color name="vr_white_95">#F2FFFFFF</color>
+
+    <!-- 인사카드 배경 colors (Dark Theme) -->
+    <color name="card_bg_default">#2D2D30</color>      <!-- Dark gray -->
+    <color name="card_bg_newyear">#B8860B</color>      <!-- DarkGoldenRod -->
+    <color name="card_bg_yearend">#006400</color>      <!-- DarkGreen -->
+    <color name="card_bg_lunar">#CC4125</color>        <!-- DarkOrangeRed -->
+    <color name="card_bg_chuseok">#654321</color>      <!-- DarkBrown -->
+    <color name="card_bg_birthday">#C71585</color>     <!-- MediumVioletRed -->
+    <color name="card_bg_special">#191970</color>      <!-- MidnightBlue -->
+    <color name="card_bg_thanks">#228B22</color>       <!-- ForestGreen -->
+    <color name="card_bg_comfort">#4682B4</color>      <!-- SteelBlue -->
+
+    <color name="spinner_bg">#222222</color> <!-- dark -->
+</resources>

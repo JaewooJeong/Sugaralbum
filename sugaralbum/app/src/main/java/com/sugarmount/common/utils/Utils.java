@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Point;
 import android.net.ConnectivityManager;
@@ -544,6 +545,16 @@ public final class Utils {
 
             return Arrays.copyOf(list.toArray(), list.size(), String[].class);
         }
+    }
+
+    /**
+     * 시스템 다크 모드 설정 여부를 확인합니다.
+     * @param context Context 객체
+     * @return true if dark mode is enabled, false otherwise
+     */
+    public static boolean isDarkModeEnabled(Context context) {
+        int nightModeFlags = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
     }
 
 }

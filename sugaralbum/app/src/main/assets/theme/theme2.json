@@ -27,7 +27,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_mixup.json",
       "transitionJsonName": "theme/transition/transition_mixup.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": true,
       "FrameList": [
       ],
@@ -62,7 +62,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_clean.json",
       "transitionJsonName": "theme/transition/transition_clean.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "IsUseStepAppearEffect": true,
       "FrameList": [
@@ -100,7 +100,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_sunny.json",
       "transitionJsonName": "theme/transition/transition_sunny.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -137,7 +137,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_old_movie.json",
       "transitionJsonName": "theme/transition/transition_old_movie.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -175,7 +175,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_dynamic.json",
       "transitionJsonName": "theme/transition/transition_dynamic.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -210,7 +210,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_beingalone.json",
       "transitionJsonName": "theme/transition/transition_beingalone.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -245,7 +245,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_weeklomo.json",
       "transitionJsonName": "theme/transition/transition_weeklomo.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -280,7 +280,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_rosebed.json",
       "transitionJsonName": "theme/transition/transition_rosebed.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "IsUseStepAppearEffect": true,
       "FrameList": [
@@ -316,7 +316,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_vividtoon.json",
       "transitionJsonName": "theme/transition/transition_vividtoon.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -351,7 +351,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_littlebaby.json",
       "transitionJsonName": "theme/transition/transition_littlebaby.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -386,7 +386,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_snapshot.json",
       "transitionJsonName": "theme/transition/transition_snapshot.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -421,7 +421,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_liteblue.json",
       "transitionJsonName": "theme/transition/transition_liteblue.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "IsUseStepAppearEffect": true,
       "FrameList": [
@@ -457,7 +457,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_fadedmemory.json",
       "transitionJsonName": "theme/transition/transition_fadedmemory.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -492,7 +492,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_slidefilm.json",
       "transitionJsonName": "theme/transition/transition_slidefilm.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -527,7 +527,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_cozyroom.json",
       "transitionJsonName": "theme/transition/transition_cozyroom.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -562,7 +562,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_vintage.json",
       "transitionJsonName": "theme/transition/transition_vintage.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -597,7 +597,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_tmaxfilm.json",
       "transitionJsonName": "theme/transition/transition_tmaxfilm.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -632,7 +632,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_emo.json",
       "transitionJsonName": "theme/transition/transition_emo.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -667,7 +667,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_oldbook.json",
       "transitionJsonName": "theme/transition/transition_oldbook.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -702,7 +702,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_joyfulday.json",
       "transitionJsonName": "theme/transition/transition_joyfulday.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -737,7 +737,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_cherryblossom.json",
       "transitionJsonName": "theme/transition/transition_cherryblossom.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -772,7 +772,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_mintsugar.json",
       "transitionJsonName": "theme/transition/transition_mintsugar.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],
@@ -807,7 +807,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_underthecafe.json",
       "transitionJsonName": "theme/transition/transition_underthecafe.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
       ],

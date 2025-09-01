@@ -221,6 +221,12 @@ public class LiveFilterController {
 
         SmartLog.e("liveController", "filterData : " + filter);
 
+        // Add null safety check for filter data
+        if (filter == null) {
+            SmartLog.w("liveController", "Filter is null, creating default filter");
+            filter = new Filter();
+        }
+        
         mFilterYuv.setFilterData(filter);
 
         mFilterYuv.execute(source, dest);
@@ -230,6 +236,12 @@ public class LiveFilterController {
         if((mFilterYuv.getWidth() != source.getWidth())
                 || (mFilterYuv.getHeight() != source.getHeight())) {
             mFilterYuv.reset(source.getWidth(), source.getHeight());
+        }
+
+        // Add null safety check for filter data
+        if (filter == null) {
+            SmartLog.w("liveController", "Filter parameter is null, creating default filter");
+            filter = new Filter();
         }
 
         mFilterYuv.setFilterData(filter);

@@ -32,9 +32,9 @@
     <string name="string_menu_collection">컬렉션</string>
     <string name="string_menu_export_settings">소셜 보내기 설정</string>
     <string name="string_menu_backup_restore">백업/복구</string>
-    <string name="string_menu_notice">공지사항</string>
-    <string name="string_menu_faq">FAQ</string>
-    <string name="string_menu_open_source_license">오픈 소스 라이선스</string>
+    <string name="string_menu_notice">📋 공지사항</string>
+    <string name="string_menu_faq">📣 FAQ</string>
+    <string name="string_menu_open_source_license">🔓 오픈 소스 라이선스</string>
 
     <!-- Popup go update -->
     <string name="string_gp_update">업데이트 하러 가기</string>
@@ -100,11 +100,13 @@
     <!-- 미리보기 -->
     <string name="string_menu_preview">미리보기</string>
     <string name="string_section_setting">설정</string>
-    <string name="string_section_setting_title">제목 (오늘날짜)</string>
+    <string name="string_section_setting_title">📑 제목</string>
     <string name="string_section_setting_commit">적용</string>
     <string name="string_ok">예</string>
     <string name="string_cancel">아니오</string>
     <string name="dialog_ok">OK</string>
+    <string name="string_section_setting_resolution">🎥 화질</string>
+    <string name="string_section_setting_theme">🎮 테마</string>
 
     <string name="permission_not_granted">권한이 부여되지 않았기 때문에 선택한 작업을 수행할 수 없습니다.</string>
     <string name="title_activity_movie_edit_main">MovieEditMainActivity</string>
@@ -122,5 +124,22 @@
     <string name="kiwiple_story_story_movie_diary">슈가앨범</string>
     <string name="kiwiple_story_story_saving_progressbar_text">슈가앨범 영상 생성중..</string>
     <string name="kiwiple_story_gallery_data_validate_fail">상세 콘텐츠가 이동 및 삭제되어 실행 할 수 없습니다.\n선택한 콘텐츠를 삭제 하시겠습니까?</string>
+
+    <!-- spinner -->
+    <string-array translatable="false" name="resolutionSpinner">
+        <item>고화질 (1920x1080)</item>
+        <item>중화질 (1280x720)</item>
+        <item>저화질 (640x360)</item>
+    </string-array>
+
+    <!-- spinner -->
+    <string-array translatable="false" name="themeSpinner">
+        <item>상쾌한 🌸</item>
+        <item>깨끗한 ❄️</item>
+        <item>눈부신 ☀️</item>
+        <item>빈티지 📽️</item>
+        <item>그리움 🍂</item>
+        <item>카페 ☕</item>
+    </string-array>
 </resources>
 

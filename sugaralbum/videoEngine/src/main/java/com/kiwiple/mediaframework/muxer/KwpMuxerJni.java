@@ -60,8 +60,19 @@ public class KwpMuxerJni {
 	public boolean init(String path)
 	{
 		L.d("init key:" + mKey);
+		L.d("init path:" + path);
 		mTrackInfo.clear();
-		return NativeMuxerInit(mKey, path);
+		try {
+			boolean result = NativeMuxerInit(mKey, path);
+			L.d("NativeMuxerInit result:" + result);
+			if (!result) {
+				L.e("NativeMuxerInit failed for path: " + path);
+			}
+			return result;
+		} catch (Exception e) {
+			L.e("NativeMuxerInit exception: " + e.getMessage(), e);
+			return false;
+		}
 	}
 	
 	/**
@@ -111,8 +122,22 @@ public class KwpMuxerJni {
 
 			L.w("Old ExtraData :" + strb.toString());
 
-			trackNum = NativeAddTrack(mKey, formatjni, mData, size);
-			mTrackInfo.put(trackNum, id);
+			try {
+				L.d("Calling NativeAddTrack with key:" + mKey + ", size:" + size);
+				trackNum = NativeAddTrack(mKey, formatjni, mData, size);
+				L.d("NativeAddTrack returned trackNum:" + trackNum);
+				if (trackNum == -1) {
+					L.e("NativeAddTrack failed, returned -1");
+				} else {
+					mTrackInfo.put(trackNum, id);
+					L.d("Added track " + trackNum + " with codec id " + id);
+				}
+			} catch (Exception e) {
+				L.e("NativeAddTrack exception: " + e.getMessage(), e);
+				trackNum = -1;
+			}
+		} else {
+			L.e("Invalid codec id: " + id);
 		}
 		
 		return trackNum;
@@ -123,7 +148,13 @@ public class KwpMuxerJni {
 	 */
 	public void Start()
 	{
-		NativeMuxerStart(mKey);
+		try {
+			L.d("Starting muxer with key:" + mKey);
+			NativeMuxerStart(mKey);
+			L.d("NativeMuxerStart completed");
+		} catch (Exception e) {
+			L.e("NativeMuxerStart exception: " + e.getMessage(), e);
+		}
 	}
 
 	/**
@@ -131,7 +162,13 @@ public class KwpMuxerJni {
 	 */
 	public void End()
 	{
-		NativeMuxerEnd(mKey);
+		try {
+			L.d("Ending muxer with key:" + mKey);
+			NativeMuxerEnd(mKey);
+			L.d("NativeMuxerEnd completed");
+		} catch (Exception e) {
+			L.e("NativeMuxerEnd exception: " + e.getMessage(), e);
+		}
 	}
 	
 
@@ -146,24 +183,40 @@ public class KwpMuxerJni {
 	 */	
 	public void Muxing(int trackNum, ByteBuffer data, BufferInfo info)
 	{
-		mData = new byte[info.size];
-		
-		data.get(mData);
-		int id = mTrackInfo.get(trackNum);
-		//H264일 경우에만 처리 
-		if(id == 1){
-			int datasize = info.size -4;
-			mData[0] = (byte)((datasize&0xFF000000)>>24);   
-			mData[1] = (byte)((datasize&0xFF0000)>>16);   
-			mData[2] = (byte)((datasize&0xFF00)>>8);   
-			mData[3] = (byte)(datasize&0xFF);   
-			if( (info.flags & MediaCodec.BUFFER_FLAG_SYNC_FRAME) != 0){   // KEY_Frame
-				NativeMuxing(mKey, trackNum, mData, info, KEY_FRAME_FLAG);
-			}else{ //NON_KEY
+		try {
+			L.d("Muxing trackNum:" + trackNum + ", size:" + info.size + ", flags:" + info.flags);
+			mData = new byte[info.size];
+			
+			data.get(mData);
+			Integer codecIdObj = mTrackInfo.get(trackNum);
+			if (codecIdObj == null) {
+				L.e("No codec info for track " + trackNum);
+				return;
+			}
+			int id = codecIdObj.intValue();
+			L.d("Track " + trackNum + " codec id: " + id);
+			
+			//H264일 경우에만 처리 
+			if(id == 1){
+				int datasize = info.size -4;
+				mData[0] = (byte)((datasize&0xFF000000)>>24);   
+				mData[1] = (byte)((datasize&0xFF0000)>>16);   
+				mData[2] = (byte)((datasize&0xFF00)>>8);   
+				mData[3] = (byte)(datasize&0xFF);   
+				if( (info.flags & MediaCodec.BUFFER_FLAG_SYNC_FRAME) != 0){   // KEY_Frame
+					L.d("Muxing KEY_FRAME for track " + trackNum);
+					NativeMuxing(mKey, trackNum, mData, info, KEY_FRAME_FLAG);
+				}else{ //NON_KEY
+					L.d("Muxing NON_KEY_FRAME for track " + trackNum);
+					NativeMuxing(mKey, trackNum, mData, info, NON_KEY_FRAME_FLAG);
+				}
+			}else{   //audio
+				L.d("Muxing audio for track " + trackNum);
 				NativeMuxing(mKey, trackNum, mData, info, NON_KEY_FRAME_FLAG);
 			}
-		}else{   //audio
-			NativeMuxing(mKey, trackNum, mData, info, NON_KEY_FRAME_FLAG);
+			L.d("Muxing completed for track " + trackNum);
+		} catch (Exception e) {
+			L.e("Muxing exception for track " + trackNum + ": " + e.getMessage(), e);
 		}
 	}
 	

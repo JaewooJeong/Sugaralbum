@@ -3,12 +3,12 @@ import com.android.builder.core.BuilderConstants
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         version 5
         minSdkVersion 24
-        targetSdkVersion 34
+        targetSdkVersion 35
 
         ndk {
             moduleName "libYUV"

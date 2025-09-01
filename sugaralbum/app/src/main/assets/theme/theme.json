@@ -1,11 +1,11 @@
 {
   "ThemeList": [
     {
-      "Name": "Morning Kiss",
+      "Name": "Mix up (Morning Kiss)",
       "Type": "Multi",
       "GoogleThemeAnalytics": {
         "Category": "1300 MDTheme",
-        "Action": "99255100 MDthemeclean"
+        "Action": "9928200 MDthememixup"
       },
       "GoogleMusicAnalytics": {
         "title": "Morning Kiss",
@@ -14,7 +14,7 @@
       },
       "MainColor": null,
       "ResourceType": "Asset",
-      "BtnImageName": "img_theme_clean",
+      "BtnImageName": "img_theme_mixup",
       "AudioFileName": "audio/Morning Kiss.mp3",
       "FileterJsonName": "defaultFilter",
       "CollageJsonName": "defaultTemplatesForStory",
@@ -25,11 +25,10 @@
       "IsUseAutoMovieDiary": true,
       "ContentDuration": 5000,
       "FrontBackDuration": 5000,
-      "effectJsonName": "theme/effect/effect_clean.json",
-      "transitionJsonName": "theme/transition/transition_clean.json",
-      "EndingLogo": "outro1_2_modi.jpg",
-      "IsUseCollectionScene": false,
-      "IsUseStepAppearEffect": true,
+      "effectJsonName": "theme/effect/effect_mixup.json",
+      "transitionJsonName": "theme/transition/transition_mixup.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": true,
       "FrameList": [
       ],
       "version_major": 1,
@@ -37,7 +36,7 @@
       "version_patch": 1
     },
     {
-      "Name": "Gloomy",
+      "Name": "Clean (Gloomy)",
       "Type": "Multi",
       "GoogleThemeAnalytics": {
         "Category": "1300 MDTheme",
@@ -63,7 +62,7 @@
       "FrontBackDuration": 5000,
       "effectJsonName": "theme/effect/effect_clean.json",
       "transitionJsonName": "theme/transition/transition_clean.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "IsUseStepAppearEffect": true,
       "FrameList": [
@@ -73,11 +72,11 @@
       "version_patch": 1
     },
     {
-      "Name": "Hide and Seek",
+      "Name": "Sunny (Hide and Seek)",
       "Type": "Multi",
       "GoogleThemeAnalytics": {
         "Category": "1300 MDTheme",
-        "Action": "99255100 MDthemeclean"
+        "Action": "9927900 MDthemesunny"
       },
       "GoogleMusicAnalytics": {
         "title": "Hide and Seek",
@@ -86,22 +85,23 @@
       },
       "MainColor": null,
       "ResourceType": "Asset",
-      "BtnImageName": "img_theme_clean",
+      "BtnImageName": "img_theme_sunny",
       "AudioFileName": "audio/Hide and Seek.mp3",
-      "FileterJsonName": "defaultFilter",
-      "CollageJsonName": "defaultTemplatesForStory",
+      "FileterJsonName": null,
+      "CollageJsonName": null,
+      "CoverTransitionName": null,
+      "CoverTransitionMaskName": null,
       "MotionCount": 1,
       "FilterId": -1,
       "FileSize": 0,
       "FileCount": 0,
       "IsUseAutoMovieDiary": true,
-      "ContentDuration": 5000,
+      "ContentDuration": 6500,
       "FrontBackDuration": 5000,
-      "effectJsonName": "theme/effect/effect_clean.json",
-      "transitionJsonName": "theme/transition/transition_clean.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "effectJsonName": "theme/effect/effect_sunny.json",
+      "transitionJsonName": "theme/transition/transition_sunny.json",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
-      "IsUseStepAppearEffect": true,
       "FrameList": [
       ],
       "version_major": 1,
@@ -109,11 +109,11 @@
       "version_patch": 1
     },
     {
-      "Name": "We Wish You a Merry Christmas",
+      "Name": "Old Movie (We Wish You a Merry Christmas)",
       "Type": "Multi",
       "GoogleThemeAnalytics": {
         "Category": "1300 MDTheme",
-        "Action": "99255100 MDthemeclean"
+        "Action": "9927800 MDthemeoldmovie"
       },
       "GoogleMusicAnalytics": {
         "title": "We Wish You a Merry Christmas",
@@ -122,22 +122,23 @@
       },
       "MainColor": null,
       "ResourceType": "Asset",
-      "BtnImageName": "img_theme_clean",
+      "BtnImageName": "img_theme_oldmovie",
       "AudioFileName": "audio/We Wish You a Merry Christmas.mp3",
-      "FileterJsonName": "defaultFilter",
-      "CollageJsonName": "defaultTemplatesForStory",
+      "FileterJsonName": null,
+      "CollageJsonName": null,
+      "CoverTransitionName": null,
+      "CoverTransitionMaskName": null,
       "MotionCount": 1,
       "FilterId": -1,
       "FileSize": 0,
       "FileCount": 0,
-      "IsUseAutoMovieDiary": true,
-      "ContentDuration": 5000,
+      "IsUseAutoMovieDiary": false,
+      "ContentDuration": 5500,
       "FrontBackDuration": 5000,
-      "effectJsonName": "theme/effect/effect_clean.json",
-      "transitionJsonName": "theme/transition/transition_clean.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "effectJsonName": "theme/effect/effect_old_movie.json",
+      "transitionJsonName": "theme/transition/transition_old_movie.json",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
-      "IsUseStepAppearEffect": true,
       "FrameList": [
       ],
       "version_major": 1,
@@ -145,11 +146,11 @@
       "version_patch": 1
     },
     {
-      "Name": "Chuncheon and Autumn",
-      "Type": "Multi",
+      "Name": "Faded Memory (Chuncheon and Autumn)",
+      "Type": "Filter",
       "GoogleThemeAnalytics": {
         "Category": "1300 MDTheme",
-        "Action": "99255100 MDthemeclean"
+        "Action": "9925700 MDthemebeingalone"
       },
       "GoogleMusicAnalytics": {
         "title": "Chuncheon and Autumn",
@@ -158,20 +159,55 @@
       },
       "MainColor": null,
       "ResourceType": "Asset",
-      "BtnImageName": "img_theme_clean",
+      "BtnImageName": "img_theme_being_alone",
       "AudioFileName": "audio/Chuncheon and Autumn.mp3",
       "FileterJsonName": "defaultFilter",
       "CollageJsonName": "defaultTemplatesForStory",
       "MotionCount": 1,
-      "FilterId": -1,
+      "FilterId": 130,
       "FileSize": 0,
       "FileCount": 0,
-      "IsUseAutoMovieDiary": true,
+      "IsUseAutoMovieDiary": false,
       "ContentDuration": 5000,
       "FrontBackDuration": 5000,
-      "effectJsonName": "theme/effect/effect_clean.json",
-      "transitionJsonName": "theme/transition/transition_clean.json",
-      "EndingLogo": "outro1_2_modi.jpg",
+      "effectJsonName": "theme/effect/effect_beingalone.json",
+      "transitionJsonName": "theme/transition/transition_beingalone.json",
+      "EndingLogo": "w1.png",
+      "IsUseCollectionScene": false,
+      "FrameList": [
+      ],
+      "version_major": 1,
+      "version_minor": 0,
+      "version_patch": 1
+    },
+    {
+      "Name": "Under the Cafe (Colors Of Life)",
+      "Type": "Filter",
+      "GoogleThemeAnalytics": {
+        "Category": "1300 MDTheme",
+        "Action": "9925900 MDthemerosebed"
+      },
+      "GoogleMusicAnalytics": {
+        "title": "Colors Of Life",
+        "Category": "9 MDBGM",
+        "Action": "9 MDBGMBasic_ITW"
+      },
+      "MainColor": null,
+      "ResourceType": "Asset",
+      "BtnImageName": "img_theme_rose_beds",
+      "AudioFileName": "audio/Colors Of Life.mp3",
+      "FileterJsonName": "defaultFilter",
+      "CollageJsonName": "defaultTemplatesForStory",
+      "MotionCount": 1,
+      "FilterId": 103,
+      "FileSize": 0,
+      "FileCount": 0,
+      "IsUseAutoMovieDiary": false,
+      "ContentDuration": 5000,
+      "FrontBackDuration": 5000,
+      "effectJsonName": "theme/effect/effect_rosebed.json",
+      "transitionJsonName": "theme/transition/transition_rosebed.json",
+      "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "IsUseStepAppearEffect": true,
       "FrameList": [

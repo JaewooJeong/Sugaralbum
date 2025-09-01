@@ -1,13 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
-//    id 'kotlin-parcelize'
+//    id 'kotlin-android-extensions'
+    id 'kotlin-parcelize'
     id 'kotlin-kapt'
 }
 
 android {
-    compileSdk 34
+    compileSdkVersion 36
     bundle {
         storeArchive {
             enable = true
@@ -16,19 +16,18 @@ android {
 
     defaultConfig {
         applicationId "com.sugarmount.sugaralbum"
-        targetSdkVersion 34
-        minSdkVersion 24
+        targetSdkVersion 36
+        minSdk 24
 
-        versionCode 21
-        versionName "1.0.101"
+        versionCode 23
+        versionName "1.1.001"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a'
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
     }
 
     buildTypes {
         release {
             debuggable false
-            zipAlignEnabled true
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
@@ -62,13 +61,13 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
     }
 
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
     namespace 'com.sugarmount.sugaralbum'
 
     packagingOptions {
@@ -87,9 +86,9 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.10"
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.2.0"
+    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'

@@ -18,6 +18,11 @@ import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.sugarmount.common.listener.FinishClickEventListener
 import com.sugarmount.common.model.HttpKeyValue.*
 import com.sugarmount.common.env.MvConfig
+import com.sugarmount.common.env.MvConfig.EXTRA_PERMISSION
+import com.sugarmount.common.env.MvConfig.PERMISSIONS
+import com.sugarmount.common.env.MvConfig.PERMISSIONS33
+import com.sugarmount.common.env.MvConfig.PERMISSIONS34
+import com.sugarmount.common.env.MvConfig.PERMISSIONS35
 import com.sugarmount.common.env.MvConfig.POPUP_TYPE
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.info.InfoT
@@ -29,6 +34,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONException
 import org.json.JSONObject
+import java.math.BigInteger
 
 class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
     private var context: Context? = null
@@ -38,6 +44,8 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_empty)
+        setInsetView(findViewById(R.id.relativeLayout))
+
         context = this
 
         GlobalApplication.setNavigationColor(
@@ -59,7 +67,13 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
     }
 
     private fun checkMyPermission() {
-        val readImagePermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) PERMISSIONS33 else PERMISSIONS
+        val readImagePermission = when {
+            Build.VERSION.SDK_INT >= 35 -> PERMISSIONS35  // Android 15+
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE -> PERMISSIONS34  // Android 14
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> PERMISSIONS33  // Android 13
+            else -> PERMISSIONS  // Android 12 and below
+        }
+        log.d("Requesting permissions for API ${Build.VERSION.SDK_INT}: ${readImagePermission.joinToString()}")
         when (grantPermission(readImagePermission)) {
             true -> {
                 goIntent(false)
@@ -153,7 +167,7 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                     var json = JsonUtil.getJSONObjectFrom(versionObject)
                     if(versionObject.isNotEmpty()) {
                         val pInfo = packageManager.getPackageInfo(packageName, 0)
-                        appVer = pInfo.versionName
+                        appVer = pInfo.versionName.toString()
                         updateVer = json.getString("app_version")
                         infoVer = json.getString("info_version")
                         force = json.getBoolean("force")
@@ -167,6 +181,28 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                             goMarket = false
                             force = false
                         } else {
+                            val partRegex = Regex("""^(\d+)""")
+
+                            fun parseParts(v: String): List<BigInteger> =
+                                v.split(".")
+                                    .map { partRegex.find(it)?.groupValues?.get(1) ?: "0" } // 숫자만 취득
+                                    .map { it.trimStart('0').ifEmpty { "0" } }              // 001 -> 1
+                                    .map { BigInteger(it) }
+
+                            fun compareVersions(a: String, b: String): Int {
+                                val aa = parseParts(a)
+                                val bb = parseParts(b)
+                                val len = maxOf(aa.size, bb.size)
+                                for (i in 0 until len) {
+                                    val va = aa.getOrNull(i) ?: BigInteger.ZERO
+                                    val vb = bb.getOrNull(i) ?: BigInteger.ZERO
+                                    val cmp = va.compareTo(vb)
+                                    if (cmp != 0) return cmp   // a<b -> -1, a>b -> 1
+                                }
+                                return 0                       // 완전히 동일
+                            }
+
+
                             val arrayAppVer =
                                 appVer.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
                                     .toTypedArray()
@@ -174,13 +210,7 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                                 updateVer.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
                                     .toTypedArray()
 
-                            if (arrayAppVer.size == 3 && arrayUpdateVer.size == 3) {
-                                if (arrayAppVer[0] != arrayUpdateVer[0] || arrayAppVer[1] != arrayUpdateVer[1]) {
-                                    // If app, major version different must be go to google market.
-                                    // App, Major version
-                                    goMarket = true
-                                }
-                            }
+                            goMarket = compareVersions(appVer, updateVer) < 0
                         }
 
                         if (force) {

@@ -152,7 +152,9 @@ public abstract class HWBaseEncoder implements EncoderApi{
 			return ;
 		}
 
-		int inIndex = mCodec.dequeueInputBuffer(-1);
+		// Android 15+ compatibility: Use timeout for dequeueInputBuffer
+		int timeout = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.VANILLA_ICE_CREAM ? 10000 : -1;
+		int inIndex = mCodec.dequeueInputBuffer(timeout);
 
 		if (inIndex >= 0) {
 			if (info.size > 0) {
@@ -171,6 +173,17 @@ public abstract class HWBaseEncoder implements EncoderApi{
 		else
 		{
 			L.d("get not InputBuffer idx:" + inIndex);
+			
+			// Android 15+ recovery mechanism
+			if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.VANILLA_ICE_CREAM && inIndex == MediaCodec.INFO_TRY_AGAIN_LATER) {
+				L.w("Android 15: MediaCodec buffer queue full, attempting recovery");
+				try {
+					Thread.sleep(5); // Brief pause to allow buffer processing
+					outputData(); // Force output processing to clear buffers
+				} catch (InterruptedException e) {
+					Thread.currentThread().interrupt();
+				}
+			}
 		}
 		outputData();
 	}

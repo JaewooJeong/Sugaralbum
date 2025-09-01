@@ -44,25 +44,63 @@ public final class VideoFileFactory {
 	// // // // // Method.
 	// // // // //
 	public synchronized boolean create(PreviewManager previewManager, Resolution resolution, String outputFilePath) {
-
+		com.kiwiple.debug.L.d("=== VideoFileFactory.create() ENTRY ===");
+		com.kiwiple.debug.L.d("Resolution: " + resolution);
+		com.kiwiple.debug.L.d("Output file path: " + outputFilePath);
+		com.kiwiple.debug.L.d("PreviewManager: " + (previewManager != null ? "OK" : "NULL"));
+		com.kiwiple.debug.L.d("Thread: " + Thread.currentThread().getName());
+		
 		if (isRunning()) {
+			com.kiwiple.debug.L.e("VideoFileFactory is already running - returning false");
 			return false;
 		}
+		
+		com.kiwiple.debug.L.d("VideoFileFactory not running, proceeding...");
 		RequestForm form = null;
 		try {
+			com.kiwiple.debug.L.d("Creating RequestForm...");
 			form = new RequestForm();
 			form.resolution = resolution;
+			form.factory = this;
+			
+			com.kiwiple.debug.L.d("Getting visualizer from PreviewManager...");
 			form.jsonObject = previewManager.getVisualizer().toJsonObject();
+			com.kiwiple.debug.L.d("JsonObject obtained: " + (form.jsonObject != null ? "OK" : "NULL"));
+			
 			form.outputFilePath = outputFilePath;
 			form.audioSourceFilePath = previewManager.getAudioFilePath();
 			form.isAssetAudioSource = previewManager.isAssetAudioFile();
-
-			mVideoFileFactoryWorker = new VideoFileFactoryWorker(mContext, form);
-			mVideoFileFactoryWorker.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
+			form.listener = mVideoFileFactoryListener;
+			
+			com.kiwiple.debug.L.d("RequestForm populated:");
+			com.kiwiple.debug.L.d("  - Audio source: " + form.audioSourceFilePath + ", isAsset: " + form.isAssetAudioSource);
+			com.kiwiple.debug.L.d("  - Listener: " + (form.listener != null ? "OK" : "NULL"));
+			
+			com.kiwiple.debug.L.d("Creating VideoFileFactoryWorker...");
+			try {
+				mVideoFileFactoryWorker = new VideoFileFactoryWorker(mContext, form);
+				com.kiwiple.debug.L.d("VideoFileFactoryWorker constructor completed successfully");
+			} catch (Exception e) {
+				com.kiwiple.debug.L.e("CRITICAL: VideoFileFactoryWorker constructor failed: " + e.getMessage(), e);
+				throw e;
+			}
+			
+			com.kiwiple.debug.L.d("Executing VideoFileFactoryWorker on thread pool...");
+			try {
+				mVideoFileFactoryWorker.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+				com.kiwiple.debug.L.d("AsyncTask.executeOnExecutor() called successfully");
+			} catch (Exception e) {
+				com.kiwiple.debug.L.e("CRITICAL: AsyncTask execution failed: " + e.getMessage(), e);
+				throw e;
+			}
+			
+			com.kiwiple.debug.L.d("=== VideoFileFactoryWorker started successfully ===");
 			return true;
 		} catch (Exception exception) {
-			form.listener.onError(exception);
+			com.kiwiple.debug.L.e("VideoFileFactory.create() error: " + exception.getMessage(), exception);
+			if (form != null && form.listener != null) {
+				form.listener.onError(exception);
+			}
 			return false;
 		}
 	}

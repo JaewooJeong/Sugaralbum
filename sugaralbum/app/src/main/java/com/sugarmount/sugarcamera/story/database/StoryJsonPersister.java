@@ -77,8 +77,28 @@ public class StoryJsonPersister {
     private static StoryJsonPersister sPersister;
 
     private static final long AUDIO_MINIMUM_DURATION = 1000 * 60;
+    @Deprecated
     private static final String CAMERA_DIR = Environment.getExternalStorageDirectory()
             + "/DCIM/Camera/";
+            
+    /**
+     * Get app-specific camera directory for Android 15 compatibility
+     * @param context Application context
+     * @return App-specific camera directory path
+     */
+    public static String getAppCameraDir(Context context) {
+        File picturesDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        if (picturesDir == null) {
+            picturesDir = new File(context.getFilesDir(), "pictures");
+        }
+        
+        File cameraDir = new File(picturesDir, "Camera");
+        if (!cameraDir.exists()) {
+            cameraDir.mkdirs();
+        }
+        
+        return cameraDir.getAbsolutePath() + "/";
+    }
 
     private Context mContext;
     private ContentResolver mContentResolver;

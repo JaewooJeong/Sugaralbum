@@ -1,2 +1,2 @@
 rm -rf ../obj
-C:\android-ndk-r10e\ndk-build.cmd
+/mnt/c/android-ndk-r20b/ndk-build.cmd

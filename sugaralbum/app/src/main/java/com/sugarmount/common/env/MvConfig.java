@@ -10,7 +10,7 @@ import androidx.annotation.RequiresApi;
  * Created by Jaewoo on 2016-08-19.
  */
 public interface MvConfig {
-    boolean debug = false;
+    boolean debug = true;
 
     String TAG = "SugarAlbum";
     String RELEASE_HOST = "";
@@ -23,11 +23,13 @@ public interface MvConfig {
     int MY_VIDEO_REQUEST = 10011;
     int MY_FINISH_REQUEST = 10012;
 
+    @Deprecated
     String[] PERMISSIONS = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE };
 
     @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
+    @Deprecated
     String[] PERMISSIONS33 = {
             Manifest.permission.READ_MEDIA_IMAGES,
             Manifest.permission.WRITE_EXTERNAL_STORAGE };
@@ -36,6 +38,13 @@ public interface MvConfig {
     String[] PERMISSIONS34 = {
             Manifest.permission.READ_MEDIA_IMAGES,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED };
+            
+    // Android 15 (API 35) compatible permissions - only media permissions needed
+    // Note: VANILLA_ICE_CREAM constant may not exist, using UPSIDE_DOWN_CAKE + 1
+    String[] PERMISSIONS35 = {
+            Manifest.permission.READ_MEDIA_IMAGES,
+            Manifest.permission.READ_MEDIA_VIDEO,
             Manifest.permission.READ_MEDIA_VISUAL_USER_SELECTED };
 
     int READ_TIMEOUT = 60;

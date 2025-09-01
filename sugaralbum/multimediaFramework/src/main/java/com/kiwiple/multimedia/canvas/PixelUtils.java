@@ -8,8 +8,23 @@ import java.nio.ByteBuffer;
  */
 final class PixelUtils {
 
+	private static boolean sLibraryLoaded = false;
+	
 	static {
-		System.loadLibrary("PixelUtils");
+		try {
+			System.loadLibrary("PixelUtils");
+			sLibraryLoaded = true;
+			com.kiwiple.debug.L.i("PixelUtils native library loaded successfully");
+		} catch (UnsatisfiedLinkError e) {
+			com.kiwiple.debug.L.e("Failed to load PixelUtils native library", e);
+			sLibraryLoaded = false;
+		}
+	}
+	
+	private static void checkLibraryLoaded() {
+		if (!sLibraryLoaded) {
+			throw new RuntimeException("PixelUtils native library not loaded");
+		}
 	}
 
 	private static native void nativeResizeBilinear(long srcId, long dstId, int drawWidth, int drawHeight, float translateX, float translateY, float scale);
@@ -69,7 +84,24 @@ final class PixelUtils {
 	private static native void nativeConvertArgbToYuv420sp(int[] pixelsARGB, byte[] pixelsYUV, int width, int height);
 
 	static void convertArgbToYuv420sp(PixelCanvas pixelsARGB, byte[] pixelsYUV, int width, int height) {
-		nativeConvertArgbToYuv420sp(pixelsARGB.intArray, pixelsYUV, width, height);
+		checkLibraryLoaded();
+		
+		if (pixelsARGB == null || pixelsARGB.intArray == null) {
+			throw new IllegalArgumentException("pixelsARGB cannot be null");
+		}
+		if (pixelsYUV == null) {
+			throw new IllegalArgumentException("pixelsYUV cannot be null");
+		}
+		if (width <= 0 || height <= 0) {
+			throw new IllegalArgumentException("width and height must be positive");
+		}
+		
+		try {
+			nativeConvertArgbToYuv420sp(pixelsARGB.intArray, pixelsYUV, width, height);
+		} catch (Exception e) {
+			com.kiwiple.debug.L.e("Error in native convertArgbToYuv420sp", e);
+			throw new RuntimeException("Native conversion failed", e);
+		}
 	}
 
 	private static native void nativeRotate(int[] srcPixels, int[] dstPixels, int width, int height, int rotation);

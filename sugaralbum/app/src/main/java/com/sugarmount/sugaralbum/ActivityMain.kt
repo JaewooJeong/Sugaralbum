@@ -10,8 +10,12 @@ import android.util.DisplayMetrics
 import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
+import androidx.core.app.ActivityCompat
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.SimpleItemAnimator
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
@@ -38,8 +42,15 @@ import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_nav.*
+import android.widget.FrameLayout
+import androidx.appcompat.widget.SwitchCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.navigation.NavigationView
+import com.sugarmount.common.view.TouchImageView
+import com.sugarmount.common.env.MvConfig.EXTRA_INFO_TYPE
+import com.sugarmount.common.env.MvConfig.EXTRA_URI_INFO
+import com.sugarmount.common.env.MvConfig.MY_FINISH_REQUEST
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -58,16 +69,89 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private val iSize by lazy { getImageSize() }
     private var initialLayoutComplete = false
     private var imageAdapter: ImageAdapter? = null
-    private var show: ColorStateList? = null
-    private var hide: ColorStateList? = null
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navigationView1: NavigationView
+    private lateinit var relativeLayout5: RelativeLayout
+    private lateinit var relativeLayout6: RelativeLayout
+    private lateinit var relativeLayout8: RelativeLayout
+    private lateinit var relativeLayout9: RelativeLayout
+    private lateinit var relativeLayout10: RelativeLayout
+    private lateinit var imageView1: ImageView
+    private lateinit var imageView2: ImageView
+    private lateinit var switch1: SwitchCompat
+    private lateinit var temp12: TextView
+    
+    // Views from activity_main.xml
+    private lateinit var selectImage: TouchImageView
+    private lateinit var selectRotateLeft: ImageView
+    private lateinit var selectRotateRight: ImageView
+    private lateinit var resetSelected: ImageView
+    private lateinit var send: ImageView
+    private lateinit var selectRestore: ImageView
+    private lateinit var recycler_view: RecyclerView
+    private lateinit var ad_view_container: FrameLayout
 
     // init
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav)
-
+        setInsetView(this.findViewById(R.id.appBarLayout))
+        setInsetView(this.findViewById(R.id.navigationView1))
+        
+        initViews()
         createView()
+        
+        // Request notification permission for Android 13+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(
+                    this, 
+                    Manifest.permission.POST_NOTIFICATIONS
+                ) != PackageManager.PERMISSION_GRANTED) {
+                // Show explanation dialog first
+                AlertDialog.Builder(this)
+                    .setTitle("알림 권한 필요")
+                    .setMessage("동영상 생성 진행 상황을 알려드리기 위해 알림 권한이 필요합니다. 설정에서 알림을 허용해주세요.")
+                    .setPositiveButton("설정으로 이동") { _, _ ->
+                        // Open app notification settings
+                        val intent = Intent().apply {
+                            action = "android.settings.APP_NOTIFICATION_SETTINGS"
+                            putExtra("android.provider.extra.APP_PACKAGE", packageName)
+                        }
+                        startActivity(intent)
+                    }
+                    .setNegativeButton("나중에") { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .show()
+            }
+        }
     }
+    
+    private fun initViews() {
+        // Views from activity_nav.xml
+        drawerLayout = findViewById(R.id.drawerLayout)
+        navigationView1 = findViewById(R.id.navigationView1)
+        relativeLayout5 = findViewById(R.id.relativeLayout5)
+        relativeLayout6 = findViewById(R.id.relativeLayout6)
+        relativeLayout8 = findViewById(R.id.relativeLayout8)
+        relativeLayout9 = findViewById(R.id.relativeLayout9)
+        relativeLayout10 = findViewById(R.id.relativeLayout10)
+        imageView1 = findViewById(R.id.imageView1)
+        imageView2 = findViewById(R.id.imageView2)
+        switch1 = findViewById(R.id.switch1)
+        temp12 = findViewById(R.id.temp12)
+        
+        // Views from activity_main.xml
+        selectImage = findViewById(R.id.selectImage)
+        selectRotateLeft = findViewById(R.id.selectRotateLeft)
+        selectRotateRight = findViewById(R.id.selectRotateRight)
+        resetSelected = findViewById(R.id.resetSelected)
+        send = findViewById(R.id.send)
+        selectRestore = findViewById(R.id.selectRestore)
+        recycler_view = findViewById(R.id.recycler_view)
+        ad_view_container = findViewById(R.id.ad_view_container)
+    }
+    
     private fun createView() {
         log.e("#Activity_Main Call")
         initAds()
@@ -78,9 +162,6 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
     private fun init() {
         popupDialog = PopupDialog(this)
         popupDialog.setOnFinishClickEvent{}
-
-        show = ContextCompat.getColorStateList(applicationContext, R.color.white)
-        hide = ContextCompat.getColorStateList(applicationContext, R.color.hint)
 
         // room data access (version)
         val repo = AnyRepository(application)
@@ -99,7 +180,6 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         mLoadMediaDataThread = LoadMediaDataThread()
         mLoadMediaDataThread!!.start()
 
-        relativeLayout1.setOnClickListener(this)
         relativeLayout5.setOnClickListener(this)
         relativeLayout6.setOnClickListener(this)
         relativeLayout8.setOnClickListener(this)
@@ -107,6 +187,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         relativeLayout10.setOnClickListener(this)
 
         imageView1.setOnClickListener(this)
+        imageView2.setOnClickListener(this)
         switch1.setOnClickListener(this)
 
         // 221015 차후에 자유변형 저장 추가
@@ -133,7 +214,6 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
         if(imageAdapter != null)
             imageAdapter?.resetCount()
 
-        send.imageTintList = hide
         recycler_view.adapter?.notifyDataSetChanged()
     }
     private fun initDrawerLayout() {
@@ -182,12 +262,6 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 showImage(data)
             }
             selectImage.restore()
-        }
-
-        if(ImageAdapter.itemCounter <= 4 || ImageAdapter.itemCounter > 40){
-            send.imageTintList = hide
-        }else{
-            send.imageTintList = show
         }
     }
     private fun adapterOnCounterUpdate(image: ImageResData) {
@@ -383,7 +457,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                 if (v != switch1)
                     switch1.isChecked = !switch1.isChecked
             }
-            relativeLayout1, imageView1 -> {
+            imageView2, imageView1 -> {
                 if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                     drawerLayout.closeDrawer(GravityCompat.START)
                 } else {
@@ -454,7 +528,7 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
                                 SelectManager.OUTPUT_DIR,
                                 String.format(
                                     "%s/%s",
-                                    applicationContext.externalMediaDirs[0].path,
+                                    applicationContext.getExternalFilesDir(android.os.Environment.DIRECTORY_MOVIES)?.path ?: applicationContext.externalMediaDirs[0].path,
                                     getString(R.string.app_name)
                                 )
                             )
@@ -489,6 +563,10 @@ class ActivityMain : CustomAppCompatActivity(), View.OnClickListener {
 
     override fun onStart() {
         super.onStart()
+
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+
         if(send != null)
             send.isClickable = true
     }

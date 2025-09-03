@@ -111,20 +111,34 @@ public class StoryNotification {
 
     // 동영상 생성 서비스용 알림 생성
     public static Notification createVideoCreationNotification(Context context, int progress) {
-        Intent dummyIntent = new Intent();
-        PendingIntent pIntent = PendingIntent.getBroadcast(context, 0, dummyIntent, PendingIntent.FLAG_IMMUTABLE);
+        try {
+            Intent dummyIntent = new Intent();
+            PendingIntent pIntent = PendingIntent.getBroadcast(context, 0, dummyIntent, PendingIntent.FLAG_IMMUTABLE);
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
-        setSmallIcon(builder);
-        builder.setTicker(context.getString(R.string.kiwiple_story_story_saving_progressbar_text));
-        builder.setContentTitle(context.getString(R.string.kiwiple_story_story_movie_diary));
-        builder.setContentText(context.getString(R.string.kiwiple_story_story_saving_progressbar_text));
-        builder.setProgress(100, progress, false);
-        builder.setOngoing(true);
-        builder.setContentIntent(pIntent);
-        builder.setPriority(PRIORITY_MIN);
-        
-        return builder.build();
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID);
+            if (builder == null) {
+                SmartLog.e("StoryNotification", "Failed to create NotificationCompat.Builder");
+                return null;
+            }
+            
+            setSmallIcon(builder);
+            builder.setTicker(context.getString(R.string.kiwiple_story_story_saving_progressbar_text));
+            builder.setContentTitle(context.getString(R.string.kiwiple_story_story_movie_diary));
+            builder.setContentText(context.getString(R.string.kiwiple_story_story_saving_progressbar_text));
+            builder.setProgress(100, progress, false);
+            builder.setOngoing(true);
+            builder.setContentIntent(pIntent);
+            builder.setPriority(PRIORITY_MIN);
+            
+            Notification notification = builder.build();
+            if (notification == null) {
+                SmartLog.e("StoryNotification", "Failed to build notification");
+            }
+            return notification;
+        } catch (Exception e) {
+            SmartLog.e("StoryNotification", "Exception in createVideoCreationNotification", e);
+            return null;
+        }
     }
 
     static int tmpProgress = -1;
@@ -150,7 +164,7 @@ public class StoryNotification {
         */
         intent.setDataAndType(Uri.fromFile(file), "video/mp4");
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context);
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, CHANNEL_ID);
 
         mBuilder.setContentTitle(context.getString(R.string.kiwiple_story_noti_manually_creation_title));
         mBuilder.setContentText(context.getString(R.string.kiwiple_story_noti_manually_creation_summary)); // fake
@@ -282,12 +296,24 @@ public class StoryNotification {
         NotificationManager manager = (NotificationManager)context.getSystemService(Context.NOTIFICATION_SERVICE);
 //        NotificationManager manager = context.getSystemService(NotificationManager.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel serviceChannel = new NotificationChannel(
-                    CHANNEL_ID,
-                    "SugarAlbum foreground service",
-                    NotificationManager.IMPORTANCE_MIN
-            );
-            manager.createNotificationChannel(serviceChannel);
+            try {
+                // Check if channel already exists to avoid duplicate creation
+                NotificationChannel existingChannel = manager.getNotificationChannel(CHANNEL_ID);
+                if (existingChannel == null) {
+                    NotificationChannel serviceChannel = new NotificationChannel(
+                            CHANNEL_ID,
+                            "SugarAlbum foreground service",
+                            NotificationManager.IMPORTANCE_MIN
+                    );
+                    serviceChannel.setDescription("동영상 생성 및 저장 알림");
+                    manager.createNotificationChannel(serviceChannel);
+                    SmartLog.i("StoryNotification", "Notification channel created: " + CHANNEL_ID);
+                } else {
+                    SmartLog.i("StoryNotification", "Notification channel already exists: " + CHANNEL_ID);
+                }
+            } catch (Exception e) {
+                SmartLog.e("StoryNotification", "Failed to create notification channel", e);
+            }
         }
         return manager;
     }

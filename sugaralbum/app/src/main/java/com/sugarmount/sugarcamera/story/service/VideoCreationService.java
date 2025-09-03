@@ -118,7 +118,15 @@ public class VideoCreationService extends Service {
         // Start foreground service using centralized notification management
         try {
             SmartLog.i("VideoCreationService", "Starting foreground service in onStartCommand");
+            // Ensure notification channel is created before creating notification
+            StoryNotification.createNotificationChannel(this);
             Notification notification = StoryNotification.createVideoCreationNotification(this, 0);
+            
+            if (notification == null) {
+                SmartLog.e("VideoCreationService", "Failed to create notification - stopping service");
+                stopSelf();
+                return START_NOT_STICKY;
+            }
             
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
                 startForeground(StoryNotification.NOTIFICATION_ID_CREATE_STORY, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_SHORT_SERVICE);

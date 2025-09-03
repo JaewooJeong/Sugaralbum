@@ -202,14 +202,6 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                                 return 0                       // 완전히 동일
                             }
 
-
-                            val arrayAppVer =
-                                appVer.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
-                                    .toTypedArray()
-                            val arrayUpdateVer =
-                                updateVer.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
-                                    .toTypedArray()
-
                             goMarket = compareVersions(appVer, updateVer) < 0
                         }
 

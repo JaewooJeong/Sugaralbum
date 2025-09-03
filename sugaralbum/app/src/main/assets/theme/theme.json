@@ -150,7 +150,7 @@
       "Type": "Filter",
       "GoogleThemeAnalytics": {
         "Category": "1300 MDTheme",
-        "Action": "9925700 MDthemebeingalone"
+        "Action": "9926800 MDthemefadedmemory"
       },
       "GoogleMusicAnalytics": {
         "title": "Chuncheon and Autumn",
@@ -159,19 +159,19 @@
       },
       "MainColor": null,
       "ResourceType": "Asset",
-      "BtnImageName": "img_theme_being_alone",
+      "BtnImageName": "img_theme_fadedmemory",
       "AudioFileName": "audio/Chuncheon and Autumn.mp3",
       "FileterJsonName": "defaultFilter",
       "CollageJsonName": "defaultTemplatesForStory",
       "MotionCount": 1,
-      "FilterId": 130,
+      "FilterId": 156,
       "FileSize": 0,
       "FileCount": 0,
       "IsUseAutoMovieDiary": false,
       "ContentDuration": 5000,
       "FrontBackDuration": 5000,
-      "effectJsonName": "theme/effect/effect_beingalone.json",
-      "transitionJsonName": "theme/transition/transition_beingalone.json",
+      "effectJsonName": "theme/effect/effect_fadedmemory.json",
+      "transitionJsonName": "theme/transition/transition_fadedmemory.json",
       "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
       "FrameList": [
@@ -185,7 +185,7 @@
       "Type": "Filter",
       "GoogleThemeAnalytics": {
         "Category": "1300 MDTheme",
-        "Action": "9925900 MDthemerosebed"
+        "Action": "9926600 MDthemeunderthecafe"
       },
       "GoogleMusicAnalytics": {
         "title": "Colors Of Life",
@@ -194,22 +194,21 @@
       },
       "MainColor": null,
       "ResourceType": "Asset",
-      "BtnImageName": "img_theme_rose_beds",
+      "BtnImageName": "img_theme_underthecafe",
       "AudioFileName": "audio/Colors Of Life.mp3",
       "FileterJsonName": "defaultFilter",
       "CollageJsonName": "defaultTemplatesForStory",
       "MotionCount": 1,
-      "FilterId": 103,
+      "FilterId": 105,
       "FileSize": 0,
       "FileCount": 0,
       "IsUseAutoMovieDiary": false,
       "ContentDuration": 5000,
       "FrontBackDuration": 5000,
-      "effectJsonName": "theme/effect/effect_rosebed.json",
-      "transitionJsonName": "theme/transition/transition_rosebed.json",
+      "effectJsonName": "theme/effect/effect_underthecafe.json",
+      "transitionJsonName": "theme/transition/transition_underthecafe.json",
       "EndingLogo": "w1.png",
       "IsUseCollectionScene": false,
-      "IsUseStepAppearEffect": true,
       "FrameList": [
       ],
       "version_major": 1,

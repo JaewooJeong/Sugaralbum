@@ -19,8 +19,8 @@ android {
         targetSdkVersion 36
         minSdk 24
 
-        versionCode 23
-        versionName "1.1.001"
+        versionCode 26
+        versionName "1.1.004"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
     }

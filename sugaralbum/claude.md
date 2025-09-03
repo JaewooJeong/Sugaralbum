@@ -56,6 +56,17 @@ ActivityMain (이미지 선택)
 - **해결**: AndroidManifest.xml에 FilterServiceLgu 서비스 등록
 - **안전장치**: LiveFilterController에 null 필터 처리 로직 추가
 
+### 7. ✅ Foreground Service Notification Issues (v1.1.004)
+- **문제**: `android.app.RemoteServiceException$CannotPostForegroundServiceNotificationException: Bad notification for startForeground`
+- **원인**: StoryNotification.java:153줄에서 채널 ID 없이 NotificationCompat.Builder 생성
+- **해결**: 
+  - 채널 ID 추가: `new NotificationCompat.Builder(context, CHANNEL_ID)`
+  - VideoCreationService에서 알림 생성 전 채널 강제 생성
+  - StoryNotification.createNotificationChannel()에 중복 생성 방지 및 예외 처리 추가
+  - null 알림 처리 안전장치 구현
+- **발생 조건**: FilterService 바인딩 실패 → MovieEditMainActivity 진입 → VideoCreationService 시작 → 잘못된 알림 생성
+- **상태**: 릴리스 빌드에서 발생했던 크래시 완전 해결 ✅
+
 ## REMAINING ISSUES (Lower Priority)
 
 ### 1. Scoped Storage Violations (NON-CRITICAL)
@@ -174,11 +185,12 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 
 ## Performance Improvements
 - **MediaCodec 안정성**: 버퍼 데드락 해결로 99% 안정성 달성
-- **알림 시스템**: 중복 알림 제거로 사용자 경험 개선  
+- **알림 시스템**: 중복 알림 제거 및 채널 ID 오류 해결로 사용자 경험 개선
 - **서비스 생명주기**: 조기 종료 문제 해결로 동영상 생성 완료율 향상
 - **권한 처리**: 직관적인 UX로 권한 승인률 개선
 - **테마 시스템**: 실시간 프리뷰 및 안전한 테마 변경으로 사용자 만족도 향상
 - **필터 처리**: FilterService 바인딩 안정화로 크래시 제로 달성
+- **포그라운드 서비스**: 알림 채널 관리 안정화로 릴리스 빌드 크래시 완전 해결
 
 ## Current Status: ✅ PRODUCTION READY
 - 모든 주요 Android 15 호환성 문제 해결 완료
@@ -186,6 +198,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 - 사용자 경험 및 권한 처리 현대화 완료
 - 테마 선택 시스템 완전 구현 및 크래시 방지 완료
 - FilterService 바인딩 문제 완전 해결
+- 포그라운드 서비스 알림 오류 완전 해결 (v1.1.004)
 
 ## Future Enhancements (Optional)
 1. **MediaStore API 완전 마이그레이션**: 현재 app-specific directory로 우회 중

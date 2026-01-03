@@ -20,65 +20,22 @@ import com.sugarmount.sugaralbum.R
 import java.util.*
 import javax.inject.Inject
 
-class AppOpenManager @Inject constructor(): LifecycleObserver {
+class AppOpenManager {
     private var appOpenAd: AppOpenAd? = null
-    private var currentActivity: Activity? = null
-    private val adRequest: AdRequest by lazy { AdRequest.Builder().build() }
-    private lateinit var application: Application
-    private var isShowingAd = false
+    lateinit var application: Application
+
+    private var isLoadingAd = false
+    var isShowingAd = false
     private val isAdAvailable: Boolean
         get() = appOpenAd != null && wasLoadTimeLessThanNHoursAgo()
     private var loadTime: Long = 0
 
-    /** LifecycleObserver method that shows the app open ad when the app moves to foreground. */
-    @OnLifecycleEvent(Lifecycle.Event.ON_START)
-    fun onMoveToForeground() {
-        // Show the ad (if available) when the app moves to foreground.
-        currentActivity?.let {
-            showAdIfAvailable(it)
-        }
-    }
-
-    fun initialize(application: Application){
-        this.application = application
-
-        application.registerActivityLifecycleCallbacks(object:
-            Application.ActivityLifecycleCallbacks {
-            override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
-            override fun onActivityStarted(activity: Activity) {
-                // An ad activity is started when an ad is showing, which could be AdActivity class from Google
-                // SDK or another activity class implemented by a third party mediation partner. Updating the
-                // currentActivity only when an ad is not showing will ensure it is not an ad activity, but the
-                // one that shows the ad.
-
-                // An ad activity is started when an ad is showing, which could be AdActivity class from Google
-                // SDK or another activity class implemented by a third party mediation partner. Updating the
-                // currentActivity only when an ad is not showing will ensure it is not an ad activity, but the
-                // one that shows the ad.
-                if (!isShowingAd) {
-                    currentActivity = activity
-                }
-//                currentActivity = activity
-//                showAdIfAvailable()
-                log.e("## onStart")
-            }
-            override fun onActivityResumed(activity: Activity) {
-//                currentActivity = activity
-                log.e("## onResume")
-            }
-            override fun onActivityStopped(activity: Activity) {}
-            override fun onActivityPaused(activity: Activity) {}
-            override fun onActivitySaveInstanceState(activity: Activity, bundle: Bundle) {}
-            override fun onActivityDestroyed(activity: Activity) {}
-        })
-        ProcessLifecycleOwner.get().lifecycle.addObserver(this)
-    }
     /**
      * Request an ad
      * Have unused ad, no need to fetch another.
      */
     fun loadAd(context: Context) {
-        if (isAdAvailable) {
+        if (isLoadingAd || isAdAvailable) {
             log.e("### isAdAvailable true.")
             return
         }
@@ -99,7 +56,10 @@ class AppOpenManager @Inject constructor(): LifecycleObserver {
             override fun onAdLoaded(ad: AppOpenAd) {
                 log.e("### onAdLoaded")
                 appOpenAd = ad
+                isLoadingAd = false
                 loadTime = Date().time
+
+//                Toast.makeText(context, "onAdLoaded", Toast.LENGTH_SHORT).show()
             }
             /**
              * Called when an app open ad has failed to load.
@@ -107,14 +67,17 @@ class AppOpenManager @Inject constructor(): LifecycleObserver {
              * Handle the error.
              */
             override fun onAdFailedToLoad(loadAdError: LoadAdError) {
+                isLoadingAd = false
                 log.e("### onAdFailedToLoad fail")
             }
         }
+
+        isLoadingAd = true
+        val request = AdRequest.Builder().build()
         AppOpenAd.load(
             context,
             application.getString(if (MvConfig.debug) R.string.app_opening_ad_unit_id_test else R.string.app_opening_ad_unit_id),
-            adRequest,
-            AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
+            request,
             loadCallback
         )
     }
@@ -126,36 +89,50 @@ class AppOpenManager @Inject constructor(): LifecycleObserver {
         activity: Activity,
         onShowAdCompleteListener: GlobalApplication.OnShowAdCompleteListener
     ) {
-        if (!isShowingAd && isAdAvailable) {
-            log.e("Will show ad.")
-            appOpenAd!!.apply {
-                fullScreenContentCallback = object : FullScreenContentCallback() {
-                    /**
-                     * Set the reference to null so isAdAvailable() returns false.
-                     */
-                    override fun onAdDismissedFullScreenContent() {
-                        log.e("onAdDismissedFullScreenContent")
-                        appOpenAd = null
-                        isShowingAd = false
-                        onShowAdCompleteListener.onShowAdComplete()
-                        loadAd(activity)
-                    }
-                    override fun onAdFailedToShowFullScreenContent(adError: AdError) {
-                        log.e("onAdFailedToShowFullScreenContent")
-                        isShowingAd = false
-                        onShowAdCompleteListener.onShowAdComplete()
-                    }
-                    override fun onAdShowedFullScreenContent() {
-                        log.e("onAdShowedFullScreenContent")
-                    }
-                }
-                isShowingAd = true
-                show(activity)
-            }
-        } else {
-            log.e("Can not show ad.")
+
+        // If the app open ad is already showing, do not show the ad again.
+        if (isShowingAd) {
+            log.d("The app open ad is already showing.")
+            onShowAdCompleteListener.onShowAdComplete()
+            return
+        }
+
+        // If the app open ad is not available yet, invoke the callback then load the ad.
+        if (!isAdAvailable) {
+            log.d("The app open ad is not ready yet.")
             onShowAdCompleteListener.onShowAdComplete()
             loadAd(activity)
+            return
+        }
+
+        log.e("Will show ad.")
+        appOpenAd!!.apply {
+            fullScreenContentCallback = object : FullScreenContentCallback() {
+                /**
+                 * Set the reference to null so isAdAvailable() returns false.
+                 */
+                override fun onAdDismissedFullScreenContent() {
+                    log.e("onAdDismissedFullScreenContent")
+                    appOpenAd = null
+                    isShowingAd = false
+                    onShowAdCompleteListener.onShowAdComplete()
+                    loadAd(activity)
+                }
+
+                override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                    log.e("onAdFailedToShowFullScreenContent: %s", adError.message)
+                    appOpenAd = null
+                    isShowingAd = false
+                    onShowAdCompleteListener.onShowAdComplete()
+                    loadAd(activity)
+                }
+
+                override fun onAdShowedFullScreenContent() {
+                    log.e("onAdShowedFullScreenContent")
+                }
+            }
+            isShowingAd = true
+            appOpenAd!!.show(activity)
         }
     }
 
@@ -166,10 +143,13 @@ class AppOpenManager @Inject constructor(): LifecycleObserver {
      */
     fun showAdIfAvailable(activity: Activity) {
         showAdIfAvailable(
-            activity
-        ) {
-            // Empty because the user will go back to the activity that shows the ad.
-        }
+            activity,
+            object : GlobalApplication.OnShowAdCompleteListener {
+                override fun onShowAdComplete() {
+                    // Empty because the user will go back to the activity that shows the ad.
+                }
+            }
+        )
     }
 
     private fun wasLoadTimeLessThanNHoursAgo(numHours: Long = 4): Boolean {

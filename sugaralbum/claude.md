@@ -59,13 +59,31 @@ ActivityMain (이미지 선택)
 ### 7. ✅ Foreground Service Notification Issues (v1.1.004)
 - **문제**: `android.app.RemoteServiceException$CannotPostForegroundServiceNotificationException: Bad notification for startForeground`
 - **원인**: StoryNotification.java:153줄에서 채널 ID 없이 NotificationCompat.Builder 생성
-- **해결**: 
+- **해결**:
   - 채널 ID 추가: `new NotificationCompat.Builder(context, CHANNEL_ID)`
   - VideoCreationService에서 알림 생성 전 채널 강제 생성
   - StoryNotification.createNotificationChannel()에 중복 생성 방지 및 예외 처리 추가
   - null 알림 처리 안전장치 구현
 - **발생 조건**: FilterService 바인딩 실패 → MovieEditMainActivity 진입 → VideoCreationService 시작 → 잘못된 알림 생성
 - **상태**: 릴리스 빌드에서 발생했던 크래시 완전 해결 ✅
+
+### 8. ✅ 16KB Page Size Support (Google Play 요구사항)
+- **문제**: Google Play Console 위반 경고 - 2025년 5월까지 16KB 페이지 사이즈 지원 필요
+- **해결**:
+  - NDK 26.3.11579264 사용 (27/29 버전은 -O3 최적화 버그로 사용 불가)
+  - 모든 네이티브 라이브러리에 16KB 플래그 적용
+  - gradle.properties: `android.ndk.maxPageSize=16384`
+  - Application.mk: `APP_SUPPORT_FLEXIBLE_PAGE_SIZES := true`
+  - Android.mk: `LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384`
+- **적용된 라이브러리**:
+  - libnative_filter.so (imageFrameworkLibrary)
+  - libPixelCanvas.so, libPixelUtils.so, libBeatTracker.so (multimediaFramework)
+  - libFFmpegProcessor.so, libKwpFFmpegMuxer.so (videoEngine)
+- **NDK 버전 호환성 문제 발견**:
+  - NDK 27/29에서 -O3 최적화 시 파란색 색조 버그 발생
+  - 원인: Clang 컴파일러의 색상 처리 코드 최적화 오류
+  - 해결: NDK 26.3 사용 (16KB 지원 + -O3 정상 동작)
+- **상태**: 16KB 페이지 사이즈 지원 완료 ✅
 
 ## REMAINING ISSUES (Lower Priority)
 
@@ -199,16 +217,45 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 - 테마 선택 시스템 완전 구현 및 크래시 방지 완료
 - FilterService 바인딩 문제 완전 해결
 - 포그라운드 서비스 알림 오류 완전 해결 (v1.1.004)
+- **16KB 페이지 사이즈 지원 완료** (Google Play 요구사항 충족)
 
 ## Future Enhancements (Optional)
 1. **MediaStore API 완전 마이그레이션**: 현재 app-specific directory로 우회 중
-2. **Storage.java 현대화**: Scoped Storage 완전 대응 
+2. **Storage.java 현대화**: Scoped Storage 완전 대응
 3. **성능 최적화**: 추가적인 인코딩 최적화
+4. **Prebuilt FFmpeg 16KB 재빌드**: libavcodec-56.so 등 prebuilt 라이브러리 16KB 대응
 
 ## Test Environment
 - **Device**: Android 15 (API 35) ✅ 테스트 완료
 - **Target SDK**: 35 ✅ 적용 완료
 - **Build Tools**: Gradle 8.x ✅ 호환 확인
+- **NDK Version**: 26.3.11579264 ✅ (16KB 지원, -O3 정상)
+
+## Native Build Configuration
+
+### NDK 버전 주의사항
+```
+⚠️ 중요: NDK 27 이상 버전 사용 금지!
+- NDK 27/29에서 -O3 최적화 시 파란색 색조 버그 발생
+- 반드시 NDK 26.3.11579264 사용
+```
+
+### 16KB Page Size 설정
+```makefile
+# Application.mk
+APP_SUPPORT_FLEXIBLE_PAGE_SIZES := true
+
+# Android.mk (각 shared library 모듈)
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
+```
+
+### 빌드 스크립트
+```bash
+# build_all_jni.sh 사용 (jniLibs 자동 삭제 포함)
+./build_all_jni.sh
+```
+
+**주의**: Android Studio Clean Project는 jniLibs를 삭제하지 않음!
 
 ## Language Instructions
 **IMPORTANT**: 모든 대화와 대답은 한글로 작성하십시오. Claude는 사용자와 소통할 때 반드시 한국어를 사용해야 합니다.

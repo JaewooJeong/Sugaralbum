@@ -11,10 +11,7 @@ import android.util.DisplayMetrics
 import android.util.TypedValue
 import androidx.core.content.ContextCompat
 import com.google.firebase.FirebaseApp
-import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-import com.google.firebase.remoteconfig.ktx.remoteConfig
-import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.sugarmount.common.listener.FinishClickEventListener
 import com.sugarmount.common.model.HttpKeyValue.*
 import com.sugarmount.common.env.MvConfig
@@ -24,6 +21,7 @@ import com.sugarmount.common.env.MvConfig.PERMISSIONS33
 import com.sugarmount.common.env.MvConfig.PERMISSIONS34
 import com.sugarmount.common.env.MvConfig.PERMISSIONS35
 import com.sugarmount.common.env.MvConfig.POPUP_TYPE
+import com.sugarmount.common.env.MvConfig.debug
 import com.sugarmount.common.room.AnyRepository
 import com.sugarmount.common.room.info.InfoT
 import com.sugarmount.common.room.version.VersionT
@@ -131,16 +129,16 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
 
         // Get Remote Config instance.
         // [START get_remote_config_instance]
-        remoteConfig = Firebase.remoteConfig
+        remoteConfig = FirebaseRemoteConfig.getInstance()
         // [END get_remote_config_instance]
 
         // Create a Remote Config Setting to enable developer mode, which you can use to increase
         // the number of fetches available per hour during development. Also use Remote Config
         // Setting to set the minimum fetch interval.
         // [START enable_dev_mode]
-        val configSettings = remoteConfigSettings {
-            minimumFetchIntervalInSeconds = 3600
-        }
+        val configSettings = com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings.Builder()
+            .setMinimumFetchIntervalInSeconds(if(debug) 0L else 3600L)
+            .build()
         remoteConfig.setConfigSettingsAsync(configSettings)
         // [END enable_dev_mode]
 
@@ -150,7 +148,6 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
         // information.
         // [START set_default_values]
         remoteConfig.setDefaultsAsync(R.xml.remote_config_defaults)
-        // [END set_default_values]
 
         // [START fetch_config_with_callback]
         remoteConfig.fetchAndActivate().addOnCompleteListener(this) { task ->
@@ -159,7 +156,7 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                 var goMarket = false
                 val appVer: String
                 var updateVer: String
-                val infoVer: String
+                var infoVer: String
                 var force:Boolean
 
                 try {
@@ -172,38 +169,37 @@ class ActivityEmpty : CustomAppCompatActivity(), FinishClickEventListener {
                         infoVer = json.getString("info_version")
                         force = json.getBoolean("force")
 
+                        log.e("appVer: ${appVer}")
+                        log.e("updateVer: ${updateVer}")
+
                         //xx debug
-//                        updateVer = "1.0.019"
-//                        force = true
+                        if(debug) {
+    //                        updateVer = "1.0.019"
+                            force = false
+                        }
 
                         // 1. 앱 버전 확인
                         if (appVer == updateVer) {
                             goMarket = false
                             force = false
                         } else {
-                            val partRegex = Regex("""^(\d+)""")
+                            val arrayAppVer =
+                                appVer.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
+                                    .toTypedArray()
+                            val arrayUpdateVer =
+                                updateVer.split("\\.".toRegex()).dropLastWhile { it.isEmpty() }
+                                    .toTypedArray()
 
-                            fun parseParts(v: String): List<BigInteger> =
-                                v.split(".")
-                                    .map { partRegex.find(it)?.groupValues?.get(1) ?: "0" } // 숫자만 취득
-                                    .map { it.trimStart('0').ifEmpty { "0" } }              // 001 -> 1
-                                    .map { BigInteger(it) }
-
-                            fun compareVersions(a: String, b: String): Int {
-                                val aa = parseParts(a)
-                                val bb = parseParts(b)
-                                val len = maxOf(aa.size, bb.size)
-                                for (i in 0 until len) {
-                                    val va = aa.getOrNull(i) ?: BigInteger.ZERO
-                                    val vb = bb.getOrNull(i) ?: BigInteger.ZERO
-                                    val cmp = va.compareTo(vb)
-                                    if (cmp != 0) return cmp   // a<b -> -1, a>b -> 1
+                            if (arrayAppVer.size == 3 && arrayUpdateVer.size == 3) {
+                                if (arrayAppVer[0] < arrayUpdateVer[0] || arrayAppVer[1] < arrayUpdateVer[1]) {
+                                    // If app, major version different must be go to google market.
+                                    // App, Major version
+                                    goMarket = true
                                 }
-                                return 0                       // 완전히 동일
                             }
-
-                            goMarket = compareVersions(appVer, updateVer) < 0
                         }
+
+                        log.e("force: $force")
 
                         if (force) {
                             goMarket = true

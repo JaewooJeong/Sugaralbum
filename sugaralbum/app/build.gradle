@@ -19,8 +19,8 @@ android {
         targetSdkVersion 36
         minSdk 24
 
-        versionCode 26
-        versionName "1.1.004"
+        versionCode 28
+        versionName "1.1.006"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86_64'
     }
@@ -118,18 +118,16 @@ dependencies {
     kapt 'androidx.room:room-compiler:2.4.3'
     implementation 'androidx.room:room-rxjava2:2.4.3'
 
-    // firebase
-    implementation 'com.google.firebase:firebase-core:21.1.1'
-    implementation 'com.google.firebase:firebase-messaging:23.1.1'
-    implementation 'com.google.android.gms:play-services-ads:21.3.0'
+    // firebase - Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')
 
-    // Import the BoM for the Firebase platform
-    implementation platform('com.google.firebase:firebase-bom:26.1.0')
-
-    // Declare the dependencies for the Remote Config and Analytics libraries
     // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation 'com.google.firebase:firebase-config-ktx'
-    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-config'
+
+    // Google Ads
+    implementation 'com.google.android.gms:play-services-ads:24.0.0'
 
     // https://square.github.io/okhttp/
     implementation 'com.squareup.okhttp3:okhttp:3.14.7'

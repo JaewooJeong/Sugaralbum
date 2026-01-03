@@ -71,12 +71,8 @@ public class GlobalApplication extends MultiDexApplication implements MvConfig {
         log.e("support abis: %s", Build.SUPPORTED_ABIS);
         log.e("os.arch: %s", System.getProperty("os.arch"));
 
-        // ADS SDK
-//        MobileAds.initialize(this);
-//        GoogleAds.Companion.loadInterstitialAd(this);
-
         appOpenManager = new AppOpenManager();
-        appOpenManager.initialize(this);
+        appOpenManager.application = instance;
 
         if(MvConfig.debug) {
             List<String> testDeviceIds = Collections.singletonList("1AAA21F530BFD426F7E5EB8B127D4796");

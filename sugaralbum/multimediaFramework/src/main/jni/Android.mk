@@ -15,10 +15,9 @@ LOCAL_SRC_FILES := $(filter-out $(wildcard $(LIBYUV_SOURCE_PATH)/*neon*.cc),$(LO
 LOCAL_SRC_FILES := $(filter-out $(wildcard $(LIBYUV_SOURCE_PATH)/*mips.cc),$(LOCAL_SRC_FILES))
 LOCAL_SRC_FILES := $(filter-out $(wildcard $(LIBYUV_SOURCE_PATH)/*win.cc),$(LOCAL_SRC_FILES))
 
-# ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
-	LOCAL_CFLAGS += -DLIBYUV_NEON -Werror=shorten-64-to-32 -Wdeprecated-declarations 
-	LOCAL_SRC_FILES += $(addsuffix .neon,$(wildcard $(LIBYUV_SOURCE_PATH)/*neon*.cc))
-# endif
+# NEON 활성화
+LOCAL_CFLAGS += -DLIBYUV_NEON -Werror=shorten-64-to-32 -Wdeprecated-declarations
+LOCAL_SRC_FILES += $(addsuffix .neon,$(wildcard $(LIBYUV_SOURCE_PATH)/*neon*.cc))
 
 LOCAL_C_INCLUDES := $(LIBYUV_INCLUDE_PATH)
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
@@ -49,6 +48,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := PixelCanvas
 LOCAL_CPPFLAGS := -std=c++11 -O3
 LOCAL_LDLIBS := -llog
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
 
 LOCAL_SRC_FILES := $(call rwildcard, $(LOCAL_PATH)/canvas, *.cpp)
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/canvas \
@@ -63,6 +63,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := PixelUtils
 LOCAL_CPPFLAGS := -std=c++11 -O3
 LOCAL_LDLIBS := -llog
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
 
 LOCAL_SHARED_LIBRARIES := libYUV PixelCanvas
 LOCAL_SRC_FILES := PixelUtils.cpp
@@ -78,6 +79,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := BeatTracker
 LOCAL_CPPFLAGS := -std=c++11 -O3
 LOCAL_LDLIBS := -latomic -llog
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
 
 LOCAL_SHARED_LIBRARIES := libMasp
 LOCAL_SRC_FILES := BeatTracker.cpp

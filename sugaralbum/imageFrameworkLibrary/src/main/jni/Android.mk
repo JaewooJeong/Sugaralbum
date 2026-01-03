@@ -6,11 +6,12 @@ LOCAL_MODULE    := native_filter
 LOCAL_SRC_FILES := ImageFilter.c \
 				   Spline.c
 
-#Ãß°¡ ¶óÀÌºê·¯¸®¸¦ »ç¿ëÇÒ°æ¿ì ¾Æ·¡ ÀÛ¼º ÇÊ¿ä!
+#ï¿½ß°ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò°ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½Û¼ï¿½ ï¿½Ê¿ï¿½!
 #where : NDK/platforms/<level>/arch-arm/usr/include
 #math.h : m
 #log.h : log
 #jnigraphics : bitmap.h
 LOCAL_LDLIBS	:= -llog
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
 
 include $(BUILD_SHARED_LIBRARY)
